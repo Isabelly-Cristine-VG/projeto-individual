@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Gothic+Expanded+One&display=swap');
+
+body{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    background-color: white;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(87, 87, 87);
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid 2px rgb(177, 3, 3);
+    gap: 1rem;
+}
+
+.header img {
+    width: 7rem;
+    margin-left: 2%;
+
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin-right: 3%;
+    width: 100%;
+}
+
+
+.header a {
+    text-decoration: none;
+    color: rgb(204, 204, 204);
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.navbar svg{
+    font-size: 1rem;
+    padding-top: 2%;
+}
+
+.navbar a:hover{
+    color: #ffffff;
+    border-bottom: solid 5px rgb(177, 3, 3);
+    border-radius: 1.5px;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    
+}
+
+.container{
+    background-image: url(assets/backgrounds/background4.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+}
+
+.bemVindo{
+    display: flex;
+    font-family: "Press Start 2P", system-ui;
+    flex-direction:row;
+    justify-content: center;
+    color: rgb(255, 208, 0);
+}
+
+.bemVindo img{
+    width: 5%;
+    height: 7%;
+}
+
+.texto-inicial{
+    display: flex;
+    justify-content: center;
+    color: rgb(48, 48, 48);
+}
+
+.topico1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 5%;
+    color: rgb(48, 48, 48);
+}
+
+.topico1 h1{
+    font-family: "Press Start 2P", system-ui;
+}
+
+.topico1 img{
+    width: 20%;
+}
+
+.paragrafo{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.paragrafo img{
+    margin-top: -8%;
+}
+
+.paragrafo2{
+    margin-top: -7%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.paragrafo2 img{
+    margin-top: -7%;
+    width: 17%;
+}
+
+.tipos{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.tipos img{
+    width: 50px;
+    height: 50px;
+    margin-top: -1%;
+}
+
+.tipo-texto{
+    display: flex;
+    flex-direction: row;
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(56, 145, 204);
+    margin-top: 2%;
+    margin-bottom: 1%;
+    
+}
+
+.tipo-texto h4, .tipo-texto2 h4, .tipo-texto3 h4{
+    margin-top: -1%;
+}
+
+.tipo-texto2{
+    display: flex;
+    flex-direction: row;
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(19, 126, 33);
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.tipo-texto3{
+    display: flex;
+    flex-direction: row;
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(204, 56, 56);
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.tipo-texto .fraqueza, .tipo-texto .vantagem,.tipo-texto2 .fraqueza, .tipo-texto2 .vantagem ,.tipo-texto3 .fraqueza, .tipo-texto3 .vantagem{
+    margin-top: -0.9%;
+    width: 4%;
+    height: 60%;
+}
+
+.tipo-texto h4, .tipo-texto2 h4, .tipo-texto3 h4{
+    margin-top: 0.5%;
+}
+
+.final{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.final img{
+    width: 45%;
+    height: 20%;
+    margin-top: -10%;
+}
+
+
+
+/* Estilos do Footer */
+.footer {
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding: 2rem 0;
+    border-top: 2px solid rgb(177, 3, 3);
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    gap: 2rem;
+    margin-left: 3%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section2 {
+    display: flex;
+    margin-left: 40%;
+    flex: 1;
+    justify-content: flex-end;
+    min-width: 200px;
+    padding: 0 1rem;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.footer-section h3, .footer-section2 h3 {
+    color: rgb(255, 208, 0);
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section2 ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section2 ul li a {
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section2 ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: rgb(179, 179, 179);
+}
