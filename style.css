@@ -6,15 +6,16 @@ body{
     width: 100%; 
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header {
     display: flex;
-    background-color: rgb(87, 87, 87);
+    background-color: rgb(172, 172, 172);
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
-    border-bottom: solid 2px rgb(177, 3, 3);
+    border-bottom: solid 3px rgb(228, 28, 28);
     gap: 1rem;
 }
 
@@ -38,7 +39,7 @@ body{
 
 .header a {
     text-decoration: none;
-    color: rgb(204, 204, 204);
+    color: rgb(241, 241, 241);
     font-size: 1rem;
     white-space: nowrap;
 }
@@ -50,7 +51,7 @@ body{
 
 .navbar a:hover{
     color: #ffffff;
-    border-bottom: solid 5px rgb(177, 3, 3);
+    border-bottom: solid 5px rgb(228, 28, 28);
     border-radius: 1.5px;
     font-size: 1.3rem;
     transition: 0.3s;
@@ -58,7 +59,7 @@ body{
 }
 
 .container{
-    background-image: url(assets/backgrounds/background4.png);
+    background-image: url(assets/backgrounds/background3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,15 +68,15 @@ body{
     padding: 0;
 }
 
-.bemVindo{
+.titulo{
     display: flex;
     font-family: "Press Start 2P", system-ui;
     flex-direction:row;
     justify-content: center;
-    color: rgb(255, 208, 0);
+    color: rgb(207, 38, 38);
 }
 
-.bemVindo img{
+.titulo img{
     width: 5%;
     height: 7%;
 }
@@ -83,16 +84,16 @@ body{
 .texto-inicial{
     display: flex;
     justify-content: center;
-    color: rgb(48, 48, 48);
+    color: rgb(95, 95, 95);
 }
 
 .topico1{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 3rem;
-    margin-left: 5%;
-    color: rgb(48, 48, 48);
+    gap: 4rem;
+    color: rgb(95, 95, 95);
 }
 
 .topico1 h1{
@@ -103,47 +104,59 @@ body{
     width: 20%;
 }
 
-.paragrafo{
+.paragrafo, .paragrafo-jogo{
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
     flex-direction: row;
+}
+
+.paragrafo-jogo h3{
+    margin-top: -2%;
 }
 
 .paragrafo img{
     margin-top: -8%;
 }
 
+.paragrafo-jogo img{
+    margin-top: -3%;
+    width: 10%;
+}
+
 .paragrafo2{
-    margin-top: -7%;
+    margin-top: -5%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
 }
 
 .paragrafo2 img{
-    margin-top: -7%;
+    margin-top: -4%;
     width: 17%;
 }
 
 .tipos{
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
 }
 
-.tipos img{
-    width: 50px;
-    height: 50px;
-    margin-top: -1%;
+.tipos h2{
+    color: rgb(207, 38, 38);
+}
+
+.tipos .tipo-pokemon{
+    width: 4%;
+    margin-bottom: -1%;
 }
 
 .tipo-texto{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     font-family: "Press Start 2P", system-ui;
     color: rgb(56, 145, 204);
-    margin-top: 2%;
-    margin-bottom: 1%;
     
 }
 
@@ -152,6 +165,8 @@ body{
 }
 
 .tipo-texto2{
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     font-family: "Press Start 2P", system-ui;
@@ -161,6 +176,8 @@ body{
 }
 
 .tipo-texto3{
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     font-family: "Press Start 2P", system-ui;
@@ -197,10 +214,10 @@ body{
 
 /* Estilos do Footer */
 .footer {
-    background-color: rgb(54, 54, 54);
+    background-color: rgb(107, 107, 107);
     color: white;
     padding: 2rem 0;
-    border-top: 2px solid rgb(177, 3, 3);
+    border-top: 3px solid rgb(228, 28, 28);
     font-family: "Special Gothic Expanded One", sans-serif;
 }
 
@@ -250,7 +267,7 @@ body{
 }
 
 .footer-section2 ul li a {
-    color: rgb(179, 179, 179);
+    color: rgb(201, 201, 201);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -266,4 +283,596 @@ body{
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.8rem;
     color: rgb(179, 179, 179);
+}
+
+/*Style dos cards dos jogos*/
+
+.jogos{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    width: 200rem;
+}
+
+.geracao1{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(199, 61, 61);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(255, 128, 128);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao1 img{
+    width: 85%;
+}
+
+.geracao1 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(255, 234, 234);
+    color: rgb(199, 61, 61);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(255, 128, 128);
+}
+
+.geracao1 a{
+    text-decoration: none;
+    color: rgb(199, 61, 61);
+}
+
+/*Style da geração2*/
+.geracao2{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(189, 140, 7);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(255, 227, 150);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao2 img{
+    width: 85%;
+}
+
+.geracao2 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(255, 216, 109);
+    color: rgb(189, 140, 7);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(240, 187, 42);
+}
+
+/*Style da geração3*/
+.geracao3{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(70, 96, 245);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(129, 147, 252);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao3 img{
+    width: 85%;
+}
+
+.geracao3 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(214, 219, 252);
+    color: rgb(32, 57, 199);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(129, 147, 252);
+}
+
+/*Style da geração4*/
+.geracao4{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(98, 200, 218);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(186, 245, 255);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao4 img{
+    width: 85%;
+}
+
+.geracao4 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(203, 247, 255);
+    color: rgb(98, 200, 218);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(150, 228, 241);
+}
+
+/*Style da geração5*/
+.geracao5{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(44, 44, 44);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(94, 94, 94);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao5 img{
+    width: 85%;
+}
+
+.geracao5 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(192, 192, 192);
+    color: rgb(44, 44, 44);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(94, 94, 94);
+}
+
+/*Style da geração6*/
+.geracao6{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(45, 114, 241);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(137, 181, 255);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao6 img{
+    width: 85%;
+}
+
+.geracao6 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(192, 215, 255);
+    color: rgb(45, 114, 241);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(106, 161, 255);
+}
+
+/*Style da geração7*/
+.geracao7{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(114, 62, 197);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(179, 132, 255);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao7 img{
+    width: 85%;
+}
+
+.geracao7 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(211, 184, 255);
+    color: rgb(114, 62, 197);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(179, 132, 255);
+}
+
+/*Style da geração8*/
+.geracao8{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: rgb(209, 19, 124);
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(201, 102, 156);
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.geracao8 img{
+    width: 85%;
+}
+
+.geracao8 button{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(253, 216, 236);
+    color: rgb(209, 19, 124);
+    border-style: double;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(201, 102, 156);
+}
+
+/*HOVER GERACAO1*/
+
+.geracao1:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(199, 61, 61);
+    color: #ffffff;
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(255, 196, 196);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao1 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(255, 255, 255);
+    color: rgb(199, 61, 61);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(253, 204, 204);
+    transition: 0.4s;
+}
+
+/*HOVER GERACAO2*/
+
+.geracao2:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(212, 160, 14);
+    color: rgb(255, 255, 255);
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(228, 228, 228);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao2 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(255, 246, 222);
+    color: rgb(189, 140, 7);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(253, 216, 112);
+    transition: 0.4s;
+}
+
+/*HOVER GERACAO3*/
+.geracao3:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(70, 96, 245);
+    color: rgb(255, 255, 255);
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(204, 212, 255);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao3 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(245, 246, 255);
+    color: rgb(32, 57, 199);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(129, 147, 252);
+    transition: 0.4s;
+}
+/*HOVER GERACAO4*/
+.geracao4:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(98, 200, 218);
+    color: rgb(255, 255, 255);
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(222, 250, 255);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao4 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(232, 252, 255);
+    color: rgb(98, 200, 218);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(186, 245, 255);
+    transition: 0.4s;
+}
+
+/*HOVER GERACAO5*/
+.geracao5:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(160, 160, 160);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao5 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(240, 240, 240);
+    color: rgb(44, 44, 44);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(94, 94, 94);
+    transition: 0.4s;
+}
+
+/*HOVER GERACAO6*/
+.geracao6:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(45, 114, 241);
+    color: rgb(255, 255, 255);
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(182, 207, 252);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao6 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(234, 242, 255);
+    color: rgb(45, 114, 241);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(137, 181, 255);
+    transition: 0.4s;
+}
+
+
+/*HOVER GERACAO7*/
+.geracao7:hover{
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(114, 62, 197);
+    color: rgb(255, 255, 255);
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: rgb(219, 197, 255);
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.geracao7 button:hover{
+    font-family: "Press Start 2P", system-ui;
+    background-color: rgb(240, 230, 255);
+    color: rgb(114, 62, 197);
+    border-style: double;
+    width: 160px;
+    height: 60px;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(165, 111, 252);
+    transition: 0.4s;
+}
+
+
+/*HOVER GERACAO8*/
+
+
+/*PÁGINA GERAÇÃO 1*/
+
+.LeafGreen{
+    color: rgb(118, 226, 45);
+}
+
+.redGreen{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(82, 82, 82);
+    flex-flow: column nowrap;
+}
+
+.redGreen img{
+    width: 50%;
+    border-radius: 10px;
+    margin: 5rem;
+}
+
+.tituloRed{
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(204, 56, 56);
+}
+
+.tituloGreen{
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(118, 226, 45);
+}
+
+.Protagonistas, .iniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.Protagonistas img{
+    width: 25%;
+    
+}
+
+.blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue img{
+    width: 45%;
+}
+
+.iniciais img{
+    width: 20%;
+}
+
+.PokemonsIniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: -3rem;
+}
+
+.PokemonsIniciais p{
+    margin-top: -5rem;
 }
