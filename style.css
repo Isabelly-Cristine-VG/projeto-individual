@@ -876,3 +876,86 @@ body{
 .PokemonsIniciais p{
     margin-top: -5rem;
 }
+
+.ginasio{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4rem;
+}
+
+.tipo-ginasio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    width: 45rem;
+
+}
+
+.tipo-pedra{
+    display: flex;
+    background-color: rgb(161, 121, 69);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(212, 178, 132);
+    color: #ffefd1;
+}
+
+.tipo-pedra img{
+    margin-left: -10%;
+}
+
+.texto-ginasio h2{
+    font-family: "Press Start 2P", system-ui;
+    margin-left: -25%;
+}
+
+.texto-ginasio {
+    display: flex;
+    flex-direction: column;
+    margin-left: -15%;
+}
+
+.paragrafo-ginasio{
+    display: flex;
+    margin-top: 2%;
+    margin-left: -9%;
+    width: 30rem;
+}
+
+.fundo-pedra{
+    display: flex;
+    background-color: rgb(207, 155, 87);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(223, 194, 156);
+    padding: 1.5rem;
+}
+
+.pokemons-pedra{
+    display: flex;
+    background-color: rgb(207, 155, 87);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(223, 194, 156);
+    padding: 1.5rem;
+    width: 20rem;
+    height: 3rem;
+    margin-top: 2%;
+
+}
+
+.pokemons-pedra img{
+    width: 25rem;
+    height: 5rem;
+    margin-left: 2%;
+    margin-top: -7%;
+}
