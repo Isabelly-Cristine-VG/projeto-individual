@@ -881,7 +881,6 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 4rem;
 }
 
 .tipo-ginasio{
@@ -897,23 +896,22 @@ body{
 
 }
 
-.tipo-pedra{
-    display: flex;
-    background-color: rgb(161, 121, 69);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 10px;
-    border-color: rgb(212, 178, 132);
-    color: #ffefd1;
-}
-
-.tipo-pedra img{
-    margin-left: -10%;
-}
-
-.texto-ginasio h2{
+.texto-ginasio h2, .texto-ginasio-venenoso h2{
     font-family: "Press Start 2P", system-ui;
-    margin-left: -25%;
+    margin-left: -12%;
+    margin-right: 8%;
+}
+
+.texto-ginasio h4, .texto-ginasio-venenoso h4{
+    font-family: "Press Start 2P", system-ui;
+}
+
+.h4-ginasio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    margin-left: -8%;
 }
 
 .texto-ginasio {
@@ -927,6 +925,30 @@ body{
     margin-top: 2%;
     margin-left: -9%;
     width: 30rem;
+}
+
+.row-ginasio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 7.5rem;
+}
+
+
+/*GINÁSIO DO TIPO PEDRA*/
+
+.tipo-pedra{
+    display: flex;
+    background-color: rgb(161, 121, 69);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(212, 178, 132);
+    color: #ffefd1;
+}
+
+.tipo-pedra img{
+    margin-left: -10%;
 }
 
 .fundo-pedra{
@@ -947,15 +969,443 @@ body{
     border-width: 7px;
     border-color: rgb(223, 194, 156);
     padding: 1.5rem;
-    width: 20rem;
+    width: 8rem;
     height: 3rem;
-    margin-top: 2%;
+    margin-left: -9%;
 
 }
+
+.insignia-pedra{
+    display: flex;
+    background-color: rgb(207, 155, 87);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(223, 194, 156);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
 
 .pokemons-pedra img{
     width: 25rem;
     height: 5rem;
     margin-left: 2%;
-    margin-top: -7%;
+    margin-top: -12%;
+}
+
+.insignia-pedra img{
+    width: 15rem;
+    height: 5rem;
+    margin-left: 4%;
+    margin-top: -19%;
+}
+
+.pokemons-pedra .onix{
+    margin-right: 15%;
+}
+
+.pokemons-pedra .geodude{
+    margin-right: -15%;
+    margin-left: -7%;
+    width: 72%;
+}
+
+/*GINÁSIO TIPO AGUA*/
+
+
+.tipo-agua{
+    display: flex;
+    background-color: rgb(11, 126, 179);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(132, 183, 212);
+    color: #d1f6ff;
+}
+
+.tipo-agua img{
+    margin-left: -10%;
+}
+
+.fundo-agua{
+    display: flex;
+    background-color: rgb(94, 179, 228);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(156, 202, 223);
+    padding: 1.5rem;
+}
+
+.pokemons-agua{
+    display: flex;
+    background-color: rgb(94, 179, 228);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(156, 202, 223);
+    padding: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.insignia-agua{
+    display: flex;
+    background-color: rgb(94, 179, 228);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(156, 202, 223);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+
+.pokemons-agua img{
+    width: 25rem;
+    height: 5rem;
+    margin-left: 2%;
+    margin-top: -12%;
+}
+
+.insignia-agua img{
+    width: 15rem;
+    height: 5rem;
+    margin-left: 4%;
+    margin-top: -19%;
+}
+
+.pokemons-agua .staryu{
+    margin-right: 30%;
+}
+
+.pokemons-agua .starmie{
+    margin-right: -10%;
+    margin-left: -7%;
+
+}
+
+/*GINÁSIO TIPO PLANTA*/
+
+
+.tipo-planta{
+    display: flex;
+    background-color: rgb(11, 179, 39);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(148, 212, 132);
+    color: #d1ffd9;
+}
+
+.tipo-planta img{
+    margin-left: -10%;
+}
+
+.fundo-planta{
+    display: flex;
+    background-color: rgb(98, 211, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(162, 223, 156);
+    padding: 1.5rem;
+}
+
+.pokemons-planta{
+    display: flex;
+    background-color: rgb(98, 211, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(162, 223, 156);
+    padding: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.insignia-planta{
+    display: flex;
+    background-color: rgb(98, 211, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(162, 223, 156);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.pokemons-planta img{
+    width: 25rem;
+    height: 5rem;
+    margin-left: 2%;
+    margin-top: -12%;
+}
+
+.insignia-planta img{
+    width: 15rem;
+    height: 5rem;
+    margin-left: 4%;
+    margin-top: -19%;
+}
+
+.pokemons-planta .onix{
+    margin-right: 15%;
+}
+
+.pokemons-planta .geodude{
+    margin-right: -15%;
+    margin-left: -7%;
+    width: 72%;
+}
+
+/*GINÁSIO TIPO ELÉTRICO*/
+
+
+.tipo-eletrico{
+    display: flex;
+    background-color: rgb(179, 162, 11);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(212, 207, 132);
+    color: #feffd1;
+}
+
+.tipo-eletrico img{
+    margin-left: -10%;
+}
+
+.fundo-eletrico{
+    display: flex;
+    background-color: rgb(211, 200, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(222, 223, 156);
+    padding: 1.5rem;
+}
+
+.pokemons-eletrico{
+    display: flex;
+    background-color: rgb(211, 200, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(222, 223, 156);
+    padding: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.insignia-eletrico{
+    display: flex;
+    background-color: rgb(211, 200, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(222, 223, 156);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.pokemons-eletrico img{
+    width: 25rem;
+    height: 5rem;
+    margin-left: 2%;
+    margin-top: -12%;
+}
+
+.insignia-eletrico img{
+    width: 15rem;
+    height: 5rem;
+    margin-left: 4%;
+    margin-top: -19%;
+}
+
+.pokemons-eletrico .onix{
+    margin-right: 15%;
+}
+
+.pokemons-eletrico .geodude{
+    margin-right: -15%;
+    margin-left: -7%;
+    width: 72%;
+}
+
+/*GINÁSIO TIPO VENENOSO*/
+
+
+.tipo-venenoso{
+    display: flex;
+    background-color: rgb(75, 11, 179);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(167, 132, 212);
+    color: #e7d1ff;
+}
+
+.tipo-venenoso img{
+    margin-left: -10%;
+}
+
+.fundo-venenoso{
+    display: flex;
+    background-color: rgb(137, 98, 211);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(187, 156, 223);
+    padding: 1.5rem;
+}
+
+.pokemons-venenoso{
+    display: flex;
+    background-color: rgb(137, 98, 211);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(187, 156, 223);
+    padding: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.insignia-venenoso{
+    display: flex;
+    background-color: rgb(137, 98, 211);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(187, 156, 223);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.pokemons-venenoso img{
+    width: 25rem;
+    height: 5rem;
+    margin-left: 2%;
+    margin-top: -12%;
+}
+
+.insignia-venenoso img{
+    width: 15rem;
+    height: 5rem;
+    margin-left: 4%;
+    margin-top: -19%;
+}
+
+.pokemons-venenoso .onix{
+    margin-right: 15%;
+}
+
+.pokemons-venenoso .geodude{
+    margin-right: -15%;
+    margin-left: -7%;
+    width: 72%;
+}
+
+
+/*GINÁSIO TIPO PSIQUICO*/
+
+.tipo-psiquico{
+    display: flex;
+    background-color: rgb(179, 11, 89);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(212, 132, 169);
+    color: #ffd1e3;
+}
+
+.tipo-psiquico img{
+    margin-left: -10%;
+}
+
+.fundo-psiquico{
+    display: flex;
+    background-color: rgb(211, 98, 145);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(223, 156, 184);
+    padding: 1.5rem;
+}
+
+.pokemons-psiquico{
+    display: flex;
+    background-color: rgb(211, 98, 145);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(223, 156, 184);
+    padding: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.insignia-psiquico{
+    display: flex;
+    background-color: rgb(211, 98, 145);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(223, 156, 184);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: -9%;
+
+}
+
+.pokemons-psiquico img{
+    width: 25rem;
+    height: 5rem;
+    margin-left: 2%;
+    margin-top: -12%;
+}
+
+.insignia-psiquico img{
+    width: 15rem;
+    height: 5rem;
+    margin-left: 4%;
+    margin-top: -19%;
+}
+
+.pokemons-psiquico .onix{
+    margin-right: 15%;
+}
+
+.pokemons-psiquico .geodude{
+    margin-right: -15%;
+    margin-left: -7%;
+    width: 72%;
 }
