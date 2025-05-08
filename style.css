@@ -931,7 +931,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 7.5rem;
+    gap: 7.8rem;
 }
 
 
@@ -972,6 +972,7 @@ body{
     width: 8rem;
     height: 3rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -983,9 +984,10 @@ body{
     border-width: 7px;
     border-color: rgb(223, 194, 156);
     padding: 1.5rem;
-    width: 5rem;
+    width: 4rem;
     height: 3rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -994,14 +996,11 @@ body{
     width: 25rem;
     height: 5rem;
     margin-left: 2%;
-    margin-top: -12%;
 }
 
 .insignia-pedra img{
     width: 15rem;
     height: 5rem;
-    margin-left: 4%;
-    margin-top: -19%;
 }
 
 .pokemons-pedra .onix{
@@ -1052,6 +1051,7 @@ body{
     width: 8rem;
     height: 3rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -1063,9 +1063,10 @@ body{
     border-width: 7px;
     border-color: rgb(156, 202, 223);
     padding: 1.5rem;
-    width: 5rem;
+    width: 4rem;
     height: 3rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -1074,14 +1075,11 @@ body{
     width: 25rem;
     height: 5rem;
     margin-left: 2%;
-    margin-top: -12%;
 }
 
 .insignia-agua img{
     width: 15rem;
     height: 5rem;
-    margin-left: 4%;
-    margin-top: -19%;
 }
 
 .pokemons-agua .staryu{
@@ -1129,9 +1127,10 @@ body{
     border-width: 7px;
     border-color: rgb(162, 223, 156);
     padding: 1.5rem;
-    width: 8rem;
+    width: 10.2rem;
     height: 3rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -1143,9 +1142,10 @@ body{
     border-width: 7px;
     border-color: rgb(162, 223, 156);
     padding: 1.5rem;
-    width: 5rem;
+    width: 4rem;
     height: 3rem;
-    margin-left: -9%;
+    margin-left: -15%;
+    align-items: center;
 
 }
 
@@ -1153,24 +1153,23 @@ body{
     width: 25rem;
     height: 5rem;
     margin-left: 2%;
-    margin-top: -12%;
 }
 
 .insignia-planta img{
     width: 15rem;
     height: 5rem;
-    margin-left: 4%;
-    margin-top: -19%;
 }
 
-.pokemons-planta .onix{
-    margin-right: 15%;
+.pokemons-planta .Victreebel{
+    margin-left: -16%;
 }
 
-.pokemons-planta .geodude{
-    margin-right: -15%;
-    margin-left: -7%;
-    width: 72%;
+.pokemons-planta .tangela{
+    margin-left: -57%;
+}
+
+.pokemons-planta .vileplume{
+    margin-left: -59%;
 }
 
 /*GINÁSIO TIPO ELÉTRICO*/
@@ -1208,9 +1207,10 @@ body{
     border-width: 7px;
     border-color: rgb(222, 223, 156);
     padding: 1.5rem;
-    width: 8rem;
+    width: 9.3rem;
     height: 3rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -1222,34 +1222,33 @@ body{
     border-width: 7px;
     border-color: rgb(222, 223, 156);
     padding: 1.5rem;
-    width: 5rem;
+    width: 4rem;
     height: 3rem;
-    margin-left: -9%;
+    margin-left: -12%;
+    align-items: center;
 
 }
 
 .pokemons-eletrico img{
-    width: 25rem;
+    width: 30rem;
     height: 5rem;
-    margin-left: 2%;
-    margin-top: -12%;
 }
 
 .insignia-eletrico img{
     width: 15rem;
     height: 5rem;
-    margin-left: 4%;
-    margin-top: -19%;
 }
 
-.pokemons-eletrico .onix{
-    margin-right: 15%;
+.pokemons-eletrico .voltorb{
+    margin-left: -30%;
 }
 
-.pokemons-eletrico .geodude{
-    margin-right: -15%;
-    margin-left: -7%;
-    width: 72%;
+.pokemons-eletrico .pikachu{
+    margin-left: -65%;
+}
+
+.pokemons-eletrico .raichu{
+    margin-left: -59%;
 }
 
 /*GINÁSIO TIPO VENENOSO*/
