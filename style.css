@@ -1370,7 +1370,7 @@ body{
     border-width: 7px;
     border-color: rgb(223, 156, 184);
     padding: 1.5rem;
-    width: 10rem;
+    width: 10.5rem;
     height: 2.5rem;
     margin-left: -9%;
     align-items: center;
@@ -1385,9 +1385,10 @@ body{
     border-width: 7px;
     border-color: rgb(223, 156, 184);
     padding: 1.5rem;
-    width: 5rem;
+    width: 4rem;
     height: 3rem;
-    margin-left: -9%;
+    margin-left: -15%;
+    align-items: center;
 
 }
 
@@ -1398,8 +1399,6 @@ body{
 .insignia-psiquico img{
     width: 15rem;
     height: 5rem;
-    margin-left: 4%;
-    margin-top: -19%;
 }
 
 .pokemons-psiquico .kadabra{
@@ -1415,5 +1414,90 @@ body{
 }
 
 .pokemons-psiquico .alakazam{
-    margin-left: -27%;
+    margin-left: -56%;
+}
+
+/*GINÁSIO TIPO FOGO*/
+
+.tipo-fogo{
+    display: flex;
+    background-color: rgb(179, 11, 11);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(212, 132, 132);
+    color: #ffd1d1;
+    margin-left: 5%;
+}
+
+.tipo-fogo img{
+    margin-left: -5%;
+    width: 40%;
+}
+
+.fundo-fogo{
+    display: flex;
+    background-color: rgb(211, 98, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(223, 156, 156);
+    padding: 1.5rem;
+}
+
+.pokemons-fogo{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(211, 98, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(223, 156, 156);
+    padding: 1.5rem;
+    width: 11.5rem;
+    height: 2.5rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+.insignia-fogo{
+    display: flex;
+    background-color: rgb(211, 98, 98);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(223, 156, 156);
+    padding: 1.5rem;
+    width: 4rem;
+    height: 3rem;
+    margin-left: -17%;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.pokemons-fogo img{
+    width: 10rem;
+}
+
+.insignia-fogo img{
+    width: 15rem;
+    height: 5rem;
+}
+
+.pokemons-fogo .growlithe{
+    margin-left: -17%;
+}
+
+.pokemons-fogo .ponyta{
+    margin-left: -53%;
+}
+
+.pokemons-fogo .rapidash{
+    margin-left: -48%;
+}
+
+.pokemons-fogo .arcanine{
+    margin-left: -40%;
 }
