@@ -1280,15 +1280,17 @@ body{
 
 .pokemons-venenoso{
     display: flex;
+    flex-direction: row;
     background-color: rgb(137, 98, 211);
     border-style: double;
     border-radius: 25px;
     border-width: 7px;
     border-color: rgb(187, 156, 223);
     padding: 1.5rem;
-    width: 8rem;
-    height: 3rem;
+    width: 10.5rem;
+    height: 2.5rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -1300,34 +1302,36 @@ body{
     border-width: 7px;
     border-color: rgb(187, 156, 223);
     padding: 1.5rem;
-    width: 5rem;
+    width: 4rem;
     height: 3rem;
-    margin-left: -9%;
+    margin-left: -17%;
+    align-items: center;
 
 }
 
 .pokemons-venenoso img{
-    width: 25rem;
-    height: 5rem;
-    margin-left: 2%;
-    margin-top: -12%;
+    width: 70%;
 }
 
 .insignia-venenoso img{
     width: 15rem;
     height: 5rem;
-    margin-left: 4%;
-    margin-top: -19%;
 }
 
-.pokemons-venenoso .onix{
-    margin-right: 15%;
+.pokemons-venenoso .koffing{
+    margin-left: -20%;
 }
 
-.pokemons-venenoso .geodude{
-    margin-right: -15%;
-    margin-left: -7%;
-    width: 72%;
+.pokemons-venenoso .mulk{
+    margin-left: -55%;
+}
+
+.pokemons-venenoso .koffing2{
+    margin-left: -55%;
+}
+
+.pokemons-venenoso .weezing{
+    margin-left: -50%;
 }
 
 
@@ -1359,15 +1363,17 @@ body{
 
 .pokemons-psiquico{
     display: flex;
+    flex-direction: row;
     background-color: rgb(211, 98, 145);
     border-style: double;
     border-radius: 25px;
     border-width: 7px;
     border-color: rgb(223, 156, 184);
     padding: 1.5rem;
-    width: 8rem;
-    height: 3rem;
+    width: 10rem;
+    height: 2.5rem;
     margin-left: -9%;
+    align-items: center;
 
 }
 
@@ -1386,10 +1392,7 @@ body{
 }
 
 .pokemons-psiquico img{
-    width: 25rem;
-    height: 5rem;
-    margin-left: 2%;
-    margin-top: -12%;
+    width: 10rem;
 }
 
 .insignia-psiquico img{
@@ -1399,12 +1402,18 @@ body{
     margin-top: -19%;
 }
 
-.pokemons-psiquico .onix{
-    margin-right: 15%;
+.pokemons-psiquico .kadabra{
+    margin-left: -15%;
 }
 
-.pokemons-psiquico .geodude{
-    margin-right: -15%;
-    margin-left: -7%;
-    width: 72%;
+.pokemons-psiquico .mime{
+    margin-left: -55%;
+}
+
+.pokemons-psiquico .venomoth{
+    margin-left: -55%;
+}
+
+.pokemons-psiquico .alakazam{
+    margin-left: -27%;
 }
