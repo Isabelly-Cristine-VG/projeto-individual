@@ -368,6 +368,11 @@ body{
     border-color: rgb(240, 187, 42);
 }
 
+.geracao2 a{
+    text-decoration: none;
+    color: rgb(189, 140, 7);;
+}
+
 /*Style da geração3*/
 .geracao3{
     font-family: "Press Start 2P", system-ui;
@@ -1500,4 +1505,49 @@ body{
 
 .pokemons-fogo .arcanine{
     margin-left: -40%;
+}
+
+/*PÁGINA GERAÇÃO 2*/
+
+.SoulSilver{
+    color: rgb(168, 186, 190);
+}
+
+.GoldSilver{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(82, 82, 82);
+    flex-flow: column nowrap;
+}
+
+.GoldSilver img{
+    width: 50%;
+    border-radius: 10px;
+    margin: 5rem;
+}
+
+.tituloGold{
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(196, 172, 39);
+}
+
+.tituloSilver{
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(168, 186, 190);
+}
+
+.Protagonistas, .iniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.Protagonistas img{
+    width: 25%;
+    
 }

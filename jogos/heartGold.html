@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokeblog</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/pikachuLogo.png" type="image/x-icon">
+    <style>
+        /* Estilos do Carousel */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .ginasio-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .indicator.active {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li class="agora">
+                <a href="../index.html">home</a>
+            </li>
+            <li>
+                <a href="../jogos.html"><b>Jogos</b></a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="index.html">dicas</a>
+            </li>
+            <li>
+                <a href="index.html">entrar </a>
+            </li>
+            <li>
+                <a href="index.html">cadastre-se</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="titulo">
+            <h1> <span class="tituloGold">heartgold & </span> <span class="SoulSilver">SoulSilver</span></h1>
+        </div>
+        <div class="GoldSilver">
+            <img src="../assets/geracao2/heartgold.jpg" alt="">
+            <p>
+                Pokemon FireRed e Pokemon LeafGreen são jogos remasters dos primeiros jogos da franquia(Pokemon red e
+                Pokemon green),
+                <br>
+                lançados para o gameboy advance. Ambos contam a história da primeira geração dos jogos, que se passa na
+                região de Kanto.
+            </p>
+
+            <h2><span class="tituloGold">Prólogo do jogo</span></h2>
+
+            <p>
+                O jogo começa com o Professor Carvalho explicando levemente como será a jornada do jogador e um pouco
+                sobre o universo pokemon.
+            </p>
+            <img src="../assets/geracao1/professor.jpg" alt="">
+
+            <p>
+                No meio disso, você chega na parte onde o professor carvalho pergunta se você é menino ou menina, te
+                permitindo escolher entre
+                <br>
+                jogar com Red(O rapaz) ou Green(A garota). Assim que você faz essa escolha, você pode escrever seu nome.
+            </p>
+            <div class="Protagonistas">
+                <img src="../assets/geracao1/42.png" alt="">
+                <img src="../assets/geracao1/43.png" alt="">
+            </div>
+            <p>
+                Professor carvalho também te apresenta para o seu rival do jogo. Ele será alguém que estará competindo
+                contra <br> você em meio a sua jornada. Ali, você poderá dar um nome a ele(mesmo que canonicamente o seu
+                nome seja Blue). <br>
+                Terminando isso, você poderá começar sua jornada na região de kanto e começar a sua jornada no mundo
+                pokemon!
+            </p>
+
+            <h2><span class="tituloSilver">Início do jogo</span></h2>
+
+            <p>
+                Você começa o jogo com o personagem que escolheu na sua casa, e ao falar com a sua
+                mãe que está no andar <br> abaixo, você descobre que hoje é o dia em que sua jornada como treinador
+                pokemon começa!
+                <br>
+                após isso, você vai até o laboratório do professor carvalho, onde acabará trombando com o neto do
+                professor - e seu <br> rival desde a infancia. Vocês dois estão ali para escolher seus pokemons
+                iniciais.
+            </p>
+
+            <img src="../assets/geracao1/laboratório.png" alt="">
+
+            <p>
+                Suas opções estarão entre os três iniciais de Kanto: Charmander(tipo fogo), bulbasaur(tipo planta)<br> e
+                squirtle(tipo água). O seu rival sempre irá escolher o pokemon que tenha vantagem em cima do seu.
+            </p>
+
+            <div class="iniciais">
+                <div class="PokemonsIniciais">
+                    <img src="../assets/geracao1/55.png" alt="">
+                    <p>
+                        <span style="color: rgb(218, 129, 13);">
+                            Charmander
+                        </span>
+                    </p>
+                </div>
+                <div class="PokemonsIniciais">
+                    <img src="../assets/geracao1/56.png" alt="">
+                    <p>
+                        <span style="color: rgb(59, 161, 59);">
+                            Bulbasaur
+                        </span>
+                    </p>
+                </div>
+                <div class="PokemonsIniciais">
+                    <img src="../assets/geracao1/57.png" alt="">
+                    <p>
+                        <span style="color: rgb(85, 132, 219);">
+                            Squirtle
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <p>
+                Assim que ambos escolherem seus pokemons, blue irá te chamar para uma batalha entre <br> os seus
+                iniciais. Como ele sempre escolhe um pokemon com vantagem contra o seu, precisa tomar cuidado, mas no
+                final <br> ambos os pokemons estão em um nível baixo, então não corre riscos do jogador perder tão
+                facilmente.
+            </p>
+            <img src="../assets/geracao1/batalha.png" alt="">
+
+            <p>
+                A partir disso, você estará livre para ir atrás das suas insignias para participar da liga Pokémon, <br>
+                o torneio que decide quem vai ser o mestre pokemon mais forte!
+            </p>
+
+            <h2><span class="tituloSilver">Insígnias e ginásios</span></h2>
+
+            <p>As Insígnias são pequenos broches que demonstram a sua vitória em cima dos líderes de ginásio. <br>
+                Em FireRed, são um total de oito ginásios, sendo eles do tipo: <span
+                    style="color: rgb(164, 129, 64);">Pedra, </span> <span style="color: rgb(85, 132, 219);">Agua,
+                </span> <span style="color: rgb(222, 210, 36);">Elétrico, </span> <span
+                    style="color: rgb(239, 106, 161);">Psíquico, </span> <span style="color: rgb(59, 161, 59);">Planta,
+                </span> <span style="color: rgb(177, 89, 236);">Venenoso, </span> <span
+                    style="color: rgb(218, 129, 13);"> Fogo </span> e <span
+                    style="color: rgb(111, 59, 35);">Terra.</span>
+            </p>
+
+            <!-- Carousel de Ginásios -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Ginásio do tipo Pedra -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-pedra">
+                                <img src="../assets/geracao1/lider-rock.png" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo pedra</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-pedra">
+                                            <p>
+                                                O ginásio do tipo pedra é o primeiro ginásio que o jogador irá encontrar
+                                                na sua
+                                                jornada até a liga indigo. Seu lider é o Brock e ele utiliza apenas dois
+                                                pokemons. Ao vencer, você é condecorado com a insignia do tipo-pedra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-pedra">
+                                            <img src="../assets/geracao1/Geodude.png" class="geodude" alt="">
+                                            <img src="../assets/geracao1/onix.png" class="onix" alt="">
+                                        </div>
+                                        <div class="insignia-pedra">
+                                            <img src="../assets/geracao1/tipo-rock.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ginásio do tipo Água -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-agua">
+                                <img src="../assets/geracao1/lider-agua.png" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo água</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-agua">
+                                            <p>
+                                                O ginásio do tipo água é liderado por Misty, uma treinadora
+                                                especializada em Pokémon
+                                                aquáticos. Seu time inclui Staryu e Starmie. A Insígnia Cascata é sua
+                                                recompensa pela vitória.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-agua">
+                                            <img src="../assets/geracao1/starmie.png" class="starmie" alt="">
+                                            <img src="../assets/geracao1/staryu.png" class="staryu" alt="">
+                                        </div>
+                                        <div class="insignia-agua">
+                                            <img src="../assets/geracao1/tipo-agua.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ginásio do tipo Elétrico -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-eletrico">
+                                <img src="../assets/geracao1/lider-eletrico.png" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo elétrico</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-eletrico">
+                                            <p>
+                                                O ginásio de Vermilion City é liderado por Lt. Surge, um veterano de
+                                                guerra que usa
+                                                Pokémon elétricos. Seu time inclui Voltorb, Pikachu e Raichu. A Insígnia
+                                                Trovão é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-eletrico">
+                                            <img src="../assets/geracao1/voltorb.png" class="voltorb" alt="">
+                                            <img src="../assets/geracao1/pikachu.png" class="pikachu" alt="">
+                                            <img src="../assets/geracao1/raichu.png" class="raichu" alt="">
+                                        </div>
+                                        <div class="insignia-eletrico">
+                                            <img src="../assets/geracao1/tipo-eletrico.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!--TIPO PLANTA-->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-planta">
+                                <img src="../assets/geracao1/lider-planta.png" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo planta</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-planta">
+                                            <p>
+                                                O ginásio de Celadon City é liderado por Erika, uma mestre em Pokémon do tipo Planta que também é conhecida por sua paixão por perfumes. Seu time inclui Victreebel, Tangela e Vileplume. A Insígnia Arco-Íris é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-planta">
+                                            <img src="../assets/geracao1/Victreebel.png" class="Victreebel" alt="">
+                                            <img src="../assets/geracao1/tangela.png" class="tangela" alt="">
+                                            <img src="../assets/geracao1/vileplume.png" class="vileplume" alt="">
+                                        </div>
+                                        <div class="insignia-planta">
+                                            <img src="../assets/geracao1/tipo-planta.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!--TIPO VENENOSO-->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-venenoso">
+                                <img src="../assets/geracao1/lider-venenoso.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo venenoso</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-venenoso">
+                                            <p>
+                                                O ginásio de Fuchsia City é comandado por Koga, um ninja especializado em Pokémon do tipo Veneno. Ele usa truques e fumaça para confundir seus oponentes. Seu time inclui Koffing, Muk e Weezing. A Insígnia Alma é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-venenoso">
+                                            <img src="../assets/geracao1/koffing.png" class="koffing" alt="">
+                                            <img src="../assets/geracao1/mulk.png" class="mulk" alt="">
+                                            <br>
+                                            <img src="../assets/geracao1/koffing2.png" class="koffing2" alt="">
+                                            <img src="../assets/geracao1/weezing.png" class="weezing" alt="">
+                                        </div>
+                                        <div class="insignia-venenoso">
+                                            <img src="../assets/geracao1/tipo-venenoso.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!--TIPO PSÍQUICO-->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-psiquico">
+                                <img src="../assets/geracao1/lider-psiquico.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo psíquico</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-psiquico">
+                                            <p>
+                                                O ginásio de Saffron City é liderado por Sabrina, uma poderosa médium que treina Pokémon do tipo Psíquico. Ela possui habilidades telecinéticas assustadoras. Seu time inclui Kadabra, Mr. Mime e Alakazam. A Insígnia Marsh é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-psiquico">
+                                            <img src="../assets/geracao1/kadabra.png" class="kadabra" alt="">
+                                            <img src="../assets/geracao1/mime.png" class="mime" alt="">
+                                            <img src="../assets/geracao1/venomoth.png" class="venomoth" alt="">
+                                            <img src="../assets/geracao1/alakazam.png" class="alakazam" alt="">
+                                        </div>
+                                        <div class="insignia-psiquico">
+                                            <img src="../assets/geracao1/tipo-psíquico.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!--TIPO FOGO-->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-fogo">
+                                <img src="../assets/geracao1/lider-fogo.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo Fogo</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-fogo">
+                                            <p>
+                                                O ginásio de Cinnabar Island é liderado por Blaine, um cientista excêntrico e especialista em Pokémon do tipo Fogo. Seu ginásio é conhecido por seus enigmas. Seu time inclui Growlithe, Ponyta e Arcanine. A Insígnia Vulcão é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-fogo">
+                                            <img src="../assets/geracao1/growlithe.png" class="growlithe" alt="">
+                                            <img src="../assets/geracao1/ponyta.png" class="ponyta" alt="">
+                                            <img src="../assets/geracao1/rapidash.png" class="rapidash" alt="">
+                                            <img src="../assets/geracao1/arcanine.png" class="arcanine" alt="">
+                                        </div>
+                                        <div class="insignia-fogo">
+                                            <img src="../assets/geracao1/tipo-fogo.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!--TIPO TERRA-->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-pedra">
+                                <img src="../assets/geracao1/lider-terra.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo terra</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-pedra">
+                                            <p>
+                                                O ginásio de Viridian City é liderado por Giovanni, o chefe da Equipe Rocket. Ele treina Pokémon do tipo Terrestre com táticas implacáveis. Seu time inclui Dugtrio, Nidoqueen e Rhydon. A Insígnia Terra é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Time pokemon</h4>
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        <div class="pokemons-pedra">
+                                            <img src="../assets/geracao1/Geodude.png" class="geodude" alt="">
+                                            <img src="../assets/geracao1/onix.png" class="onix" alt="">
+                                        </div>
+                                        <div class="insignia-pedra">
+                                            <img src="../assets/geracao1/tipo-terra.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-indicators">
+                    <!-- indicador  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção 1: Logo e descrição -->
+            <div class="footer-section">
+                <img src="../assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Regiões</a></li>
+                    <li><a href="#">Dicas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel');
+            const slides = document.querySelectorAll('.ginasio-slide');
+            const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            let autoplayInterval;
+
+            // Criar indicadores
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                    resetAutoplay();
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            // Atualizar carousel
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Atualizar indicadores
+                document.querySelectorAll('.indicator').forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            // Navegação automática
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            // Iniciar autoplay
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 3000); // Muda a cada 3 segundos
+            }
+
+            // Reiniciar autoplay quando interagir
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            // Pausar autoplay quando o mouse estiver sobre o carousel
+            carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+            carousel.addEventListener('mouseleave', startAutoplay);
+
+            // Iniciar o carrossel
+            startAutoplay();
+
+            // Teclado (opcional - pode remover se quiser)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    resetAutoplay();
+                }
+                if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                    resetAutoplay();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
