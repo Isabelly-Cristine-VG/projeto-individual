@@ -1963,9 +1963,9 @@ body{
     border-width: 7px;
     border-color: rgb(224, 144, 79);
     padding: 1.5rem;
-    width: 11.7rem;
+    width: 8.4rem;
     height: 3rem;
-    margin-left: -9%;
+    margin-left: -7%;
     align-items: center;
 
 }
@@ -1980,7 +1980,7 @@ body{
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -23%;
+    margin-left: -20%;
     align-items: center;
 
 }
@@ -1996,18 +1996,11 @@ body{
     height: 5rem;
 }
 
-.pokemons-lutador .gastly{
-    margin-left: -22%;
+.pokemons-lutador .primeape{
+    margin-left: -18%;
 }
 
-.pokemons-lutador .haunter{
+.pokemons-lutador .poliwrath{
     margin-left: -56%;
 }
 
-.pokemons-lutador .haunter2{
-    margin-left: -48%;
-}
-
-.pokemons-lutador .gengar{
-    margin-left: -54%;
-}
