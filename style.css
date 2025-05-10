@@ -1574,7 +1574,7 @@ body{
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 3rem;
-    width: 45rem;
+    width: 46rem;
 
 }
 
@@ -1583,6 +1583,7 @@ body{
     margin-left: -12%;
     margin-right: 8%;
 }
+
 
 .texto-ginasio h4, .texto-ginasio-venenoso h4{
     font-family: "Press Start 2P", system-ui;
@@ -1666,8 +1667,8 @@ body{
     border-color: rgb(180, 203, 247);
     padding: 1.5rem;
     width: 4rem;
-    height: 2rem;
-    margin-left: -9%;
+    height: 3rem;
+    margin-left: -15%;
     align-items: center;
 
 }
@@ -1740,9 +1741,9 @@ body{
     border-width: 7px;
     border-color: rgb(208, 241, 155);
     padding: 1.5rem;
-    width: 3.7rem;
-    height: 2.5rem;
-    margin-left: -11%;
+    width: 4rem;
+    height: 3rem;
+    margin-left: -13%;
     align-items: center;
 
 }
@@ -1767,4 +1768,246 @@ body{
 
 .pokemons-inseto .scyther{
     margin-left: -33%;
+}
+
+/*GINÁSIO DO TIPO INSETO*/
+
+.tipo-normal{
+    display: flex;
+    background-color: rgb(161, 107, 121);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(209, 163, 175);
+    color: rgb(247, 202, 214);
+}
+
+.tipo-normal img{
+    margin-left: -8%;
+}
+
+.fundo-normal{
+    display: flex;
+    background-color: rgb(199, 124, 144);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(247, 202, 214);
+    padding: 1.5rem;
+}
+
+.pokemons-normal{
+    display: flex;
+    background-color: rgb(199, 124, 144);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(247, 202, 214);
+    padding: 1.5rem;
+    width: 5rem;
+    height: 2rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+.insignia-normal{
+    display: flex;
+    background-color: rgb(199, 124, 144);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(247, 202, 214);
+    padding: 1.5rem;
+    width: 4rem;
+    height: 3rem;
+    margin-left: -7%;
+    align-items: center;
+
+}
+
+.pokemons-normal img{
+    width: 100%;
+    margin-right: 2%;
+}
+
+.insignia-normal img{
+    width: 15rem;
+    height: 5rem;
+}
+
+.pokemons-normal .miltank{
+    margin-left: -40%;
+}
+
+.pokemons-normal .clefairy{
+    margin-left: -40%;
+}
+
+
+/*GINÁSIO TIPO FANTASMA*/
+.tipo-fantasma{
+    display: flex;
+    background-color: rgb(52, 54, 153);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(130, 132, 240);
+    color: rgb(197, 198, 255);
+}
+
+.tipo-fantasma img{
+    margin-left: -10%;
+}
+
+.fundo-fantasma{
+    display: flex;
+    background-color: rgb(60, 63, 214);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(130, 132, 240);
+    padding: 1.5rem;
+}
+
+.pokemons-fantasma{
+    display: flex;
+    background-color: rgb(60, 63, 214);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(130, 132, 240);
+    padding: 1.5rem;
+    width: 11.7rem;
+    height: 3rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+.insignia-fantasma{
+    display: flex;
+    background-color: rgb(60, 63, 214);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(130, 132, 240);
+    padding: 1.5rem;
+    width: 4rem;
+    height: 3rem;
+    margin-left: -23%;
+    align-items: center;
+
+}
+
+.pokemons-fantasma img{
+    width: 25rem;
+    height: 5rem;
+
+}
+
+.insignia-fantasma img{
+    width: 15rem;
+    height: 5rem;
+}
+
+.pokemons-fantasma .gastly{
+    margin-left: -22%;
+}
+
+.pokemons-fantasma .haunter{
+    margin-left: -56%;
+}
+
+.pokemons-fantasma .haunter2{
+    margin-left: -48%;
+}
+
+.pokemons-fantasma .gengar{
+    margin-left: -54%;
+}
+
+/*GINÁSIO TIPO LUTADOR*/
+
+.tipo-lutador{
+    display: flex;
+    background-color: rgb(167, 88, 25);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(224, 144, 79);
+    color: rgb(253, 218, 188);
+    
+}
+
+.tipo-lutador img{
+    margin-left: -5%;
+}
+
+.fundo-lutador{
+    display: flex;
+    background-color: rgb(230, 125, 40);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(224, 144, 79);
+    padding: 1.5rem;
+    width: 21.5rem;
+}
+
+.pokemons-lutador{
+    display: flex;
+    background-color: rgb(230, 125, 40);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(224, 144, 79);
+    padding: 1.5rem;
+    width: 11.7rem;
+    height: 3rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+.insignia-lutador{
+    display: flex;
+    background-color: rgb(230, 125, 40);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(224, 144, 79);
+    padding: 1.5rem;
+    width: 4rem;
+    height: 3rem;
+    margin-left: -23%;
+    align-items: center;
+
+}
+
+.pokemons-lutador img{
+    width: 25rem;
+    height: 5rem;
+
+}
+
+.insignia-lutador img{
+    width: 15rem;
+    height: 5rem;
+}
+
+.pokemons-lutador .gastly{
+    margin-left: -22%;
+}
+
+.pokemons-lutador .haunter{
+    margin-left: -56%;
+}
+
+.pokemons-lutador .haunter2{
+    margin-left: -48%;
+}
+
+.pokemons-lutador .gengar{
+    margin-left: -54%;
 }
