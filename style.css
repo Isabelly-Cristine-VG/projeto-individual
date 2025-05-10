@@ -855,16 +855,6 @@ body{
     
 }
 
-.blue{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blue img{
-    width: 45%;
-}
-
 .iniciais img{
     width: 20%;
 }
@@ -1550,4 +1540,231 @@ body{
 .Protagonistas img{
     width: 25%;
     
+}
+
+.iniciais img{
+    width: 20%;
+}
+
+.PokemonsIniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: -3rem;
+}
+
+.PokemonsIniciais p{
+    margin-top: -5rem;
+}
+
+.ginasio{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.tipo-ginasio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    width: 45rem;
+
+}
+
+.texto-ginasio h2, .texto-ginasio-venenoso h2{
+    font-family: "Press Start 2P", system-ui;
+    margin-left: -12%;
+    margin-right: 8%;
+}
+
+.texto-ginasio h4, .texto-ginasio-venenoso h4{
+    font-family: "Press Start 2P", system-ui;
+}
+
+.h4-ginasio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    margin-left: -8%;
+}
+
+.texto-ginasio {
+    display: flex;
+    flex-direction: column;
+    margin-left: -15%;
+}
+
+.paragrafo-ginasio{
+    display: flex;
+    margin-top: 2%;
+    margin-left: -9%;
+    width: 30rem;
+}
+
+.row-ginasio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10.5rem;
+}
+
+/*GINÁSIO DO TIPO VOADOR*/
+
+.tipo-voador{
+    display: flex;
+    background-color: rgb(64, 110, 196);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(180, 203, 247);
+    color: rgb(201, 219, 252);
+}
+
+.tipo-voador img{
+    margin-left: -10%;
+}
+
+.fundo-voador{
+    display: flex;
+    background-color: rgb(109, 155, 241);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(180, 203, 247);
+    padding: 1.5rem;
+}
+
+.pokemons-voador{
+    display: flex;
+    background-color: rgb(109, 155, 241);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(180, 203, 247);
+    padding: 1.5rem;
+    width: 6rem;
+    height: 2rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+.insignia-voador{
+    display: flex;
+    background-color: rgb(109, 155, 241);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(180, 203, 247);
+    padding: 1.5rem;
+    width: 4rem;
+    height: 2rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+
+.pokemons-voador img{
+    width: 100%;
+    margin-right: 2%;
+}
+
+.insignia-voador img{
+    width: 15rem;
+    height: 5rem;
+}
+
+.pokemons-voador .pidgey{
+    margin-left: -24%;
+}
+
+.pokemons-voador .pidgeotto{
+    margin-left: -23%;
+}
+
+/*GINÁSIO DO TIPO INSETO*/
+
+.tipo-inseto{
+    display: flex;
+    background-color: rgb(96, 129, 43);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(208, 241, 155);
+    color: rgb(226, 248, 190);
+}
+
+.tipo-inseto img{
+    margin-left: -10%;
+}
+
+.fundo-inseto{
+    display: flex;
+    background-color: rgb(138, 189, 55);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 10px;
+    border-color: rgb(208, 241, 155);
+    padding: 1.5rem;
+}
+
+.pokemons-inseto{
+    display: flex;
+    background-color: rgb(138, 189, 55);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(208, 241, 155);
+    padding: 1.5rem;
+    width: 6.3rem;
+    height: 2rem;
+    margin-left: -9%;
+    align-items: center;
+
+}
+
+.insignia-inseto{
+    display: flex;
+    background-color: rgb(138, 189, 55);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(208, 241, 155);
+    padding: 1.5rem;
+    width: 3.7rem;
+    height: 2.5rem;
+    margin-left: -11%;
+    align-items: center;
+
+}
+
+.pokemons-inseto img{
+    width: 100%;
+    margin-right: 2%;
+}
+
+.insignia-inseto img{
+    width: 15rem;
+    height: 5rem;
+}
+
+.pokemons-inseto .metapod{
+    margin-left: -40%;
+}
+
+.pokemons-inseto .kakuna{
+    margin-left: -45%;
+}
+
+.pokemons-inseto .scyther{
+    margin-left: -33%;
 }
