@@ -408,6 +408,11 @@ body{
     border-color: rgb(129, 147, 252);
 }
 
+.geracao3 a {
+    text-decoration: none;
+   color: rgb(32, 57, 199); 
+}
+
 /*Style da geração4*/
 .geracao4{
     font-family: "Press Start 2P", system-ui;
@@ -1503,7 +1508,7 @@ body{
     color: rgb(168, 186, 190);
 }
 
-.GoldSilver{
+.rubySapphire{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1513,20 +1518,20 @@ body{
     flex-flow: column nowrap;
 }
 
-.GoldSilver img{
+.rubySapphire img{
     width: 50%;
     border-radius: 10px;
     margin: 5rem;
 }
 
-.tituloGold{
+.ruby{
     font-family: "Press Start 2P", system-ui;
-    color: rgb(196, 172, 39);
+    color: rgb(196, 39, 60);
 }
 
-.tituloSilver{
+.sapphire{
     font-family: "Press Start 2P", system-ui;
-    color: rgb(168, 186, 190);
+    color: rgb(39, 81, 196);;
 }
 
 .Protagonistas, .iniciais{
