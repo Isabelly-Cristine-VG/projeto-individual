@@ -101,6 +101,7 @@
     border-width: 10px;
     border-color: rgb(156, 202, 223);
     padding: 1.5rem;
+    margin-right: 5%;
 }
 
 .pokemons-agua{
@@ -153,6 +154,10 @@
     margin-right: -10%;
     margin-left: -7%;
 
+}
+
+.tipo-agua .lider-ag{
+    margin-left: -5%;
 }
 
 /*GINÁSIO TIPO PLANTA*/
@@ -915,7 +920,7 @@
     height: 3rem;
     margin-left: -7%;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -953,6 +958,19 @@
     margin-left: -56%;
 }
 
+.tipo-lutador-diamond{
+        display: flex;
+        background-color: rgb(167, 88, 25);
+        border-style: double;
+        border-radius: 25px;
+        border-width: 10px;
+        border-color: rgb(224, 144, 79);
+        color: rgb(253, 218, 188);
+    }
+    
+    .tipo-lutador-diamond img{
+        margin-left: -3%;
+    }
 
 /*GINÁSIO DO TIPO AÇO*/
 
