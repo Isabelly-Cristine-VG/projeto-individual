@@ -448,6 +448,11 @@ body{
     border-color: rgb(150, 228, 241);
 }
 
+.geracao4 a {
+    text-decoration: none;
+    color: rgb(98, 200, 218);
+}
+
 /*Style da geração5*/
 .geracao5{
     font-family: "Press Start 2P", system-ui;
