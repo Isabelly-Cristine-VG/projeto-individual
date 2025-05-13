@@ -488,6 +488,11 @@ body{
     border-color: rgb(94, 94, 94);
 }
 
+.geracao5 a{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
 /*Style da geração6*/
 .geracao6{
     font-family: "Press Start 2P", system-ui;
@@ -996,64 +1001,6 @@ body{
     margin-top: -5rem;
 }
 
-.ginasio{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.tipo-ginasio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-    width: 46rem;
-
-}
-
-.texto-ginasio h2, .texto-ginasio-venenoso h2{
-    font-family: "Press Start 2P", system-ui;
-    margin-left: -12%;
-    margin-right: 8%;
-}
-
-
-.texto-ginasio h4, .texto-ginasio-venenoso h4{
-    font-family: "Press Start 2P", system-ui;
-}
-
-.h4-ginasio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5rem;
-    margin-left: -8%;
-}
-
-.texto-ginasio {
-    display: flex;
-    flex-direction: column;
-    margin-left: -15%;
-}
-
-.paragrafo-ginasio{
-    display: flex;
-    margin-top: 2%;
-    margin-left: -9%;
-    width: 30rem;
-}
-
-.row-ginasio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10.5rem;
-}
-
 /*PÁGINA GERAÇÃO 3*/
 
 .rubySapphire{
@@ -1090,6 +1037,14 @@ body{
     flex-wrap: nowrap;
 }
 
+.Protagonistas, .iniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .Protagonistas img{
     width: 25%;
     
@@ -1110,64 +1065,6 @@ body{
 
 .PokemonsIniciais p{
     margin-top: -5rem;
-}
-
-.ginasio{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.tipo-ginasio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-    width: 46rem;
-
-}
-
-.texto-ginasio h2, .texto-ginasio-venenoso h2{
-    font-family: "Press Start 2P", system-ui;
-    margin-left: -12%;
-    margin-right: 8%;
-}
-
-
-.texto-ginasio h4, .texto-ginasio-venenoso h4{
-    font-family: "Press Start 2P", system-ui;
-}
-
-.h4-ginasio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5rem;
-    margin-left: -8%;
-}
-
-.texto-ginasio {
-    display: flex;
-    flex-direction: column;
-    margin-left: -15%;
-}
-
-.paragrafo-ginasio{
-    display: flex;
-    margin-top: 2%;
-    margin-left: -9%;
-    width: 30rem;
-}
-
-.row-ginasio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10.5rem;
 }
 
 /*PÁGINA GERAÇÃO 4*/
@@ -1206,6 +1103,14 @@ body{
     flex-wrap: nowrap;
 }
 
+.Protagonistas, .iniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .Protagonistas img{
     width: 25%;
     
@@ -1228,60 +1133,68 @@ body{
     margin-top: -5rem;
 }
 
-.ginasio{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
+/*PAGINA GERAÇÃO 5*/
 
-.tipo-ginasio{
+.blackWhite{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 100%;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-    width: 46rem;
-
+    color: rgb(82, 82, 82);
+    flex-flow: column nowrap;
 }
 
-.texto-ginasio h2{
+.blackWhite img{
+    width: 50%;
+    border-radius: 10px;
+    margin: 5rem;
+}
+
+.black{
     font-family: "Press Start 2P", system-ui;
-    margin-left: -12%;
-    margin-right: 8%;
+    color: rgb(41, 41, 41);
 }
 
-
-.texto-ginasio h4{
+.white{
     font-family: "Press Start 2P", system-ui;
+    color: rgb(183, 197, 196);
 }
 
-.h4-ginasio{
+.Protagonistas, .iniciais{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 5rem;
-    margin-left: -8%;
 }
 
-.texto-ginasio {
+.Protagonistas, .iniciais{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.Protagonistas img{
+    width: 25%;
+    
+}
+
+.iniciais img{
+    width: 20%;
+}
+
+.PokemonsIniciais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin-left: -15%;
-}
-
-.paragrafo-ginasio{
-    display: flex;
-    margin-top: 2%;
-    margin-left: -9%;
-    width: 30rem;
-}
-
-.row-ginasio{
-    display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
-    gap: 10.5rem;
+    margin-top: -3rem;
+}
+
+.PokemonsIniciais p{
+    margin-top: -5rem;
 }
