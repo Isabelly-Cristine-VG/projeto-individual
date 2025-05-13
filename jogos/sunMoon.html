@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokeblog</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../ginasios.css">
+    <link rel="shortcut icon" href="../assets/pikachuLogo.png" type="image/x-icon">
+    <style>
+        /* Estilos do Carousel */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .ginasio-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .indicator.active {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li class="agora">
+                <a href="../index.html">home</a>
+            </li>
+            <li>
+                <a href="../jogos.html"><b>Jogos</b></a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="index.html">entrar </a>
+            </li>
+            <li>
+                <a href="index.html">cadastre-se</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="titulo">
+            <h1> <span class="black">Black & </span> <span class="white">White</span></h1>
+        </div>
+        <div class="blackWhite">
+            <img style="width: 45%;" src="../assets/geracao5/blackWhite.png" alt="">
+            <p> Pokémon DIamond e Pokémon Pearl são jogos da quarta geração lançados para o Nintendo DS.<br> Ambos contam a história da região de Sinnoh, com a possibilidade de explorar também as regiões de anteriores após a conclusão da história principal.
+            </p>
+
+            <h2><span class="black">Prólogo do jogo</span></h2>
+
+            <p>
+                Diferente dos ultimos jogos, quem lhe introduz o mundo de ruby e sapphire é o professor titular do jogo. O professor Birch. Ele basicamente faz as mesmas explicações.
+            </p>
+            <img style="width: 35%;" src="../assets/geracao4/professor.png" alt="Professor Carvalho">
+
+            <p>
+                Em seguida, você escolhe entre ser um menino (Lukas) ou uma menina (Dawn) e define o nome do seu
+                personagem.
+            </p>
+            <div class="Protagonistas">
+                <img src="../assets/geracao4/lucas.png">
+                <img src="../assets/geracao4/dawn.png">
+            </div>
+            <p>
+                Diferente dos ultimos jogos, você já tem o seu rival afirmado assim que escolhe com qual personagem jogar, sendo seu rival
+                <br> May caso tenha escolhido Brendan, e Brendan caso tenha escolhido May.
+            </p>
+
+            <h2><span class="white">Início do jogo</span></h2>
+
+            <p>
+                Você começa dentro de um caminhão de mudanças, com o jogador recebendo a informação  <br> de que eles estão se mudando para aquela cidade porque seu pai irá ser o líder de ginásio ali. 
+
+
+            </p>
+
+            <img style="width: 35%; height: 20%;" src="../assets/geracao3/inicio.png" alt="">
+
+            <p>
+                Assim que vocês chegam, sua mãe pede para que vá até a casa de um amigo de longa data do seu pai, o professor Birch. Chegando lá, você encontra o  <br> seu rival, que se revela ser o filho(a) do professor, mas a questão era queseu pai não estava em casa fazia um tempo
+            </p>
+            <p>
+                Ao sabermos disso, temos que ir procurar pelo professor, onde o encontramos sendo perseguido por um pokemon selvagem, onde ele pede por nossa ajuda.
+            </p>
+
+            <img style="width: 30%;" src="../assets/geracao3/ajuda.png" alt="Laboratório do Professor Elm">
+
+            <p>
+                Para o ajudar, você precisará escolher um pokemon inicial dentro da bolsa do professor, sendo ali a sua escolha de pokemon.
+            </p>
+
+            <img style="width: 30%;" src="../assets/geracao3/escolha.png" alt="Laboratório do Professor Elm">
+
+            <p>
+                Nessa escolha de pokemon inicial, teremos:
+            </p>
+
+            <div class="iniciais">
+                <div class="PokemonsIniciais">
+                    <img src="../assets/geracao7/litten.gif">
+                    <p>
+                        <span style="color: rgb(218, 129, 13);">
+                            litten
+                        </span>
+                    </p>
+                </div>
+                <div class="PokemonsIniciais">
+                    <img src="../assets/geracao7/howllet.gif">
+                    <p>
+                        <span style="color: rgb(59, 161, 59);">
+                            snivy
+                        </span>
+                    </p>
+                </div>
+                <div class="PokemonsIniciais">
+                    <img src="../assets/geracao7/popplio.gif">
+                    <p>
+                        <span style="color: rgb(85, 132, 219);">
+                            oshawott
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                Após escolher seu Pokémon e ajudar seu professor, vocês voltam para o laboratório, <br> onde após ele lhe explicar sobre as coisas na sua jornada, com o seu rival logo depois pedindo para batalhar com você. 
+
+            </p>
+            <img style="width: 35%;" src="../assets/geracao3/batalha.jpg" alt="Batalha contra o rival">
+
+            <p>
+                Depois disso, você voltará para a sua casa, onde ali seu personagem poderá se preparar para a sua
+                jornada.
+                <br>
+                A partir daí, sua jornada em Hoenn começa de verdade, e você poderá desafiar os líderes de ginásio para
+                se tornar o melhor treinador!
+            </p>
+
+            <h2><span class="black">Insígnias e ginásios</span></h2>
+
+            <p>
+                As Insígnias de Hoenn são concedidas após derrotar os líderes de ginásio. São oito no total,
+                representando diferentes tipos:
+                <br>
+                <span style="color: rgb(164, 129, 64);">Tipo pedra, </span>
+                <span style="color: rgb(190, 102, 29);">Tipo lutador, </span>
+                <span style="color: rgb(222, 210, 36);">Tipo elétrico, </span>
+                <span style="color: rgb(218, 88, 13);">Tipo fogo, </span>
+                <span style="color: rgb(185, 145, 155);">Tipo normal, </span>
+                <span style="color: rgb(150, 180, 236);">Tipo voador, </span>
+                <span style="color: rgb(239, 106, 161);">Tipo psiquico, </span>
+                e <span style="color: rgb(85, 132, 219);">Tipo água. </span>
+                <br>
+                Após conquistar todas, você poderá desafiar a Liga Pokémon e, mais tarde, se desafiar na captura de pokemons lendários!
+            </p>
+
+            <!-- Carousel de Ginásios -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Ginásio do tipo pedra -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-pedra">
+                                <img src="../assets/geracao4/lider-pedra.png" class="lider" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo pedra</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-pedra">
+                                            <p>
+                                                O ginásio de Rustboro City é liderado por Roxanne, uma professora especialista em Pokémon do tipo Pedra. Sua abordagem estratégica e conhecimento geológico fazem dela uma oponente inteligente. Seu time inclui Geodude e Nosepass. A Insígnia Pedra é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-pedra">
+                                            <img src="../assets/geracao4/pedra.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ginásio do tipo planta -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-planta">
+                                <img src="../assets/geracao4/lider-planta.png" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo <br> Planta</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-planta">
+                                            <p>
+                                                O ginásio de Dewford Town é liderado por Brawly, um surfista e expert em Pokémon do tipo Lutador. Suas batalhas são cheias de energia, refletindo sua conexão com as ondas e a força física. Seu time inclui Machop e Makuhita. A Insígnia Maré é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-planta">
+                                            <img src="../assets/geracao4/planta.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ginásio do tipo lutador -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-lutador">
+                                <img  src="../assets/geracao4/lider-lutador.png" class="lider-luta" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo lutador</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-lutador">
+                                            <p>
+                                                O ginásio de Mauville City é liderado por Wattson, um veterano animado que usa Pokémon do tipo Elétrico. Sua personalidade energética e táticas imprevisíveis deixam os desafiantes em alerta. Seu time inclui Voltorb, Electrike e Manectric. A Insígnia Dinamo é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-lutador">
+                                            <img src="../assets/geracao4/lutador.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ginásio do tipo Água -->
+                    <div class="ginasio-slide">
+                        <div class="tipo-ginasio">
+                            <div class="tipo-agua">
+                                <img src="../assets/geracao4/lider-agua.png" class="lider-ag">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo <br> água</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-agua">
+                                            <p>
+                                                O ginásio do tipo água é liderado por Misty, uma treinadora
+                                                especializada em Pokémon
+                                                aquáticos. Seu time inclui Staryu e Starmie. A Insígnia Cascata é sua
+                                                recompensa pela vitória.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-agua">
+                                            <img src="../assets/geracao4/agua.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!-- Ginásio do tipo fantasma -->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-fantasma">
+                                <img src="../assets/geracao4/lider-fantasma.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo fantasma</h2>
+                                    <div class="paragrafo-lutador">
+                                        <div class="fundo-fantasma">
+                                            <p>
+                                                O ginásio de Petalburg City é liderado por Norman, um mestre de Pokémon do tipo Normal e pai do protagonista. Suas batalhas são equilibradas e táticas, testando a resistência do oponente. Seu time inclui Slaking, Vigoroth e Spinda. A Insígnia Equilíbrio é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-fantasma">
+                                            <img src="../assets/geracao4/fantasma.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!-- Ginásio do tipo aço -->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-aco">
+                                <img src="../assets/geracao4/lider-aço.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo <br> aço</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-aco">
+                                            <p>
+                                                O ginásio de Fortree City é liderado por Winona, uma especialista em Pokémon do tipo Voador. Graciosa como uma ave, ela comanda batalhas aéreas com precisão. Seu time inclui Swellow, Pelipper, Skarmory e Altaria. A Insígnia Asa é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-aco">
+                                            <img src="../assets/geracao4/aço.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ginasio-slide">
+                        <!-- Ginásio do tipo gelo -->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-gelo">
+                                <img src="../assets/geracao4/lider-gelo.png" alt="">
+
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo gelo</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-gelo">
+                                            <p>
+                                                O ginásio de Mossdeep City é liderado por Tate & Liza, gêmeos psíquicos que usam Pokémon do tipo Psíquico. Sua sincronia e ataques em dupla desafiam até os treinadores mais preparados. Seu time inclui Solrock e Lunatone. A Insígnia Mente é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-gelo">
+                                            <img src="../assets/geracao4/gelo.png" class="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ginasio-slide">
+                        <!-- Ginásio do tipo elétrico -->
+                        <div class="tipo-ginasio">
+                            <div class="tipo-eletrico">
+                                <img src="../assets/geracao4/lider-eletrico.png" alt="">
+                                <div class="texto-ginasio">
+                                    <h2>Ginásio do tipo elétrico</h2>
+                                    <div class="paragrafo-ginasio">
+                                        <div class="fundo-eletrico">
+                                            <p>
+                                                O ginásio de Sootopolis City é liderado por Juan (em Emerald, é Wallace), um treinador elegante de Pokémon do tipo Água. Seus movimentos fluidos e Pokémon graciosos tornam a batalha uma verdadeira performance. Seu time inclui Luvdisc, Whiscash, Sealeo (Juan) ou Milotic (Wallace) e Kingdra. A Insígnia Chuva é sua recompensa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h4-ginasio">
+                                        
+                                        <h4>Insignía</h4>
+                                    </div>
+                                    <div class="row-ginasio">
+                                        
+                                        <div class="insignia-eletrico">
+                                            <img src="../assets/geracao4/elétrico.png" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-indicators">
+                    <!-- indicador  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção 1: Logo e descrição -->
+            <div class="footer-section">
+                <img src="../assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Regiões</a></li>
+                    <li><a href="#">Dicas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel');
+            const slides = document.querySelectorAll('.ginasio-slide');
+            const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            let autoplayInterval;
+
+            // Criar indicadores
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                    resetAutoplay();
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            // Atualizar carousel
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Atualizar indicadores
+                document.querySelectorAll('.indicator').forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            // Navegação automática
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            // Iniciar autoplay
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 3000); // Muda a cada 3 segundos
+            }
+
+            // Reiniciar autoplay quando interagir
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            // Pausar autoplay quando o mouse estiver sobre o carousel
+            carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+            carousel.addEventListener('mouseleave', startAutoplay);
+
+            // Iniciar o carrossel
+            startAutoplay();
+
+            // Teclado (opcional - pode remover se quiser)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    resetAutoplay();
+                }
+                if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                    resetAutoplay();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

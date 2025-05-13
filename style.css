@@ -1210,8 +1210,8 @@ body{
 }
 
 .rottomdex{
-    width: 70%;
-    margin-top: -10%;
+    width: 65%;
+    margin-top: -8%;
     margin-left: -10%;
 }
 
@@ -1222,13 +1222,14 @@ body{
 .lado-esquerdo h1{
     font-family: "Press Start 2P", system-ui;
     margin-left: 50%;
-    margin-top: -20%;
+    margin-top: -27%;
     width: 100%;
 }
 
 .lado-esquerdo h3{
     font-family: "Press Start 2P", system-ui;
-    margin-bottom: -10%;
+    margin-top: 10%;
+    margin-bottom: -12%;
 } 
 
 /* Lado esquerdo (vermelho) */
