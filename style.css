@@ -1198,3 +1198,111 @@ body{
 .PokemonsIniciais p{
     margin-top: -5rem;
 }
+
+/*PAGINA CADASTRO*/
+
+.container-cadastro {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas pequenas */
+    min-height: calc(100vh - 150px);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.rottomdex{
+    width: 70%;
+    margin-top: -10%;
+    margin-left: -10%;
+}
+
+.pokemons-cadastro{
+    margin-bottom: -20%;
+}
+
+.lado-esquerdo h1{
+    font-family: "Press Start 2P", system-ui;
+    margin-left: 50%;
+    margin-top: -20%;
+    width: 100%;
+}
+
+.lado-esquerdo h3{
+    font-family: "Press Start 2P", system-ui;
+    margin-bottom: -10%;
+} 
+
+/* Lado esquerdo (vermelho) */
+.lado-esquerdo {
+    flex: 1; /* Ocupa espaço disponível */
+    min-width: 300px;
+    padding: 2rem 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: rgb(177, 37, 44);;
+}
+
+/* Texto no lado esquerdo */
+.lado-esquerdo p {
+    font-size: 1.3rem;
+}
+
+.texto-cadastro{
+    display: flex;
+    justify-content: center;
+}
+
+/* Lado direito (branco com formulário) */
+.lado-direito {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Formulários */
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Centraliza */
+}
+
+/* Grupos de campos do formulário */
+.formulario .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels dos formulários */
+.formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* Inputs dos formulários */
+.formulario input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* Botões dos formulários */
+.formulario button {
+    background-color: #df2323;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+}

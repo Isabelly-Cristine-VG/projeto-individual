@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokeblog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <img src="assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li class="agora">
+                <a href="index.html"><b>home</b></a>
+            </li>
+            <li>
+                <a href="jogos.html">Jogos</a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="index.html">entrar </a>
+            </li>
+            <li>
+                <a href="index.html">cadastre-se</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container-cadastro">
+
+        <div class="lado-esquerdo">
+            <img class="rottomdex" src="assets/46.png" alt="">
+
+           <h1>É hora de se cadastrar!</h1>
+           <h3>Faça o cadastro no nosso site e fique por dentro do universo pokemon e tenha uma profunda imersão nesse mundo!</h3>
+           <img class="pokemons-cadastro" src="assets/34.png" alt="">
+        </div>
+
+        <!-- Lado direito branco com formulário -->
+        <div class="lado-direito">
+            <form class="formulario">
+                <div class="form-group">
+                    <label for="nome">Nome do usuário:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Numero do celular(opicional):</label>
+                    <input type="tel" id="telefone">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar_senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar_senha" required>
+                </div>
+                <button type="button" onclick="cadastrar()">Cadastrar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção 1: Logo e descrição -->
+            <div class="footer-section">
+                <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Regiões</a></li>
+                    <li><a href="#">Dicas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé inferior (créditos) -->
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
