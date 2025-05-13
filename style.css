@@ -882,12 +882,6 @@ body{
     margin-top: -5rem;
 }
 
-.ginasio{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
 .tipo-ginasio{
     display: flex;
     flex-direction: row;
@@ -897,7 +891,6 @@ body{
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 3rem;
-    width: 45rem;
 
 }
 
@@ -914,9 +907,10 @@ body{
 .h4-ginasio{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    text-align: center;
     flex-wrap: nowrap;
     gap: 5rem;
-    margin-left: -8%;
 }
 
 .texto-ginasio {
@@ -935,6 +929,7 @@ body{
 .row-ginasio{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: nowrap;
     gap: 7.8rem;
 }

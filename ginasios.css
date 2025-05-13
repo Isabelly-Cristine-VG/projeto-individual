@@ -8,6 +8,7 @@
     border-width: 10px;
     border-color: rgb(212, 178, 132);
     color: #ffefd1;
+    
 }
 
 .tipo-pedra img{
@@ -24,21 +25,6 @@
     padding: 1.5rem;
 }
 
-.pokemons-pedra{
-    display: flex;
-    background-color: rgb(207, 155, 87);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(223, 194, 156);
-    padding: 1.5rem;
-    width: 8rem;
-    height: 3rem;
-    margin-left: -9%;
-    align-items: center;
-
-}
-
 .insignia-pedra{
     display: flex;
     background-color: rgb(207, 155, 87);
@@ -49,16 +35,9 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -9%;
     align-items: center;
+    margin-left: -3rem;
 
-}
-
-
-.pokemons-pedra img{
-    width: 25rem;
-    height: 5rem;
-    margin-left: 2%;
 }
 
 .insignia-pedra img{
@@ -66,15 +45,6 @@
     height: 5rem;
 }
 
-.pokemons-pedra .onix{
-    margin-right: 15%;
-}
-
-.pokemons-pedra .geodude{
-    margin-right: -15%;
-    margin-left: -7%;
-    width: 72%;
-}
 
 /*GINÁSIO TIPO AGUA*/
 
@@ -129,8 +99,8 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -9%;
     align-items: center;
+    margin-left: -3rem;
 
 }
 
@@ -212,8 +182,9 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -15%;
+    margin-left: -3rem;
     align-items: center;
+
 
 }
 
@@ -292,7 +263,7 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -12%;
+    margin-left: -3rem;
     align-items: center;
 
 }
@@ -372,7 +343,7 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -17%;
+    margin-left: -3rem;
     align-items: center;
 
 }
@@ -455,7 +426,7 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -15%;
+    margin-left: -3rem;
     align-items: center;
 
 }
@@ -539,7 +510,7 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -17%;
+    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
 
