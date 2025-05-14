@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokeblog</title>
+    <script src="./js/sessao.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <img src="assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li class="agora">
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="jogos.html">Jogos</a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="index.html"><b>entrar</b> </a>
+            </li>
+            <li>
+                <a href="index.html">cadastre-se</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container-cadastro">
+
+        <div class="lado-esquerdo">
+            <img class="rottomdex" src="assets/46.png" alt="">
+
+           <h1>É hora de se cadastrar!</h1>
+           <h3>Faça o cadastro no nosso site e fique por dentro do universo pokemon e tenha uma profunda imersão nesse mundo!</h3>
+           <img class="pokemons-cadastro" src="assets/34.png" alt="">
+        </div>
+
+        <!-- Lado direito branco com formulário -->
+        <div class="lado-direito">
+            <form class="formulario">
+                <div class="form-group">
+                    <label for="email_input">E-mail:</label>
+                    <input type="email" id="email_input" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha_input">Senha:</label>
+                    <input type="password" id="senha_input" required>
+                </div>
+                <button type="button" onclick="entrar()">Entrar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção 1: Logo e descrição -->
+            <div class="footer-section">
+                <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Regiões</a></li>
+                    <li><a href="#">Dicas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé inferior (créditos) -->
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+
+</body>
+<script>
+
+
+    function entrar() {
+
+var emailVar = email_input.value;
+var senhaVar = senha_input.value;
+
+if (emailVar == "" || senhaVar == "") {
+    alert("Todos os campos devem ser preenchidos!");
+    return false;
+}
+
+
+console.log("FORM LOGIN: ", emailVar);
+console.log("FORM SENHA: ", senhaVar);
+
+fetch("/usuarios/autenticar", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar
+    })
+}).then(function (resposta) {
+    console.log("ESTOU NO THEN DO entrar()!")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+            sessionStorage.EMAIL_USUARIO = json.email;
+            sessionStorage.NOME_USUARIO = json.nome;
+            sessionStorage.ID_USUARIO = json.id;
+
+            setTimeout(function () {
+                window.location = "index.html";
+            }, 1000); // apenas para exibir o loading
+
+        });
+
+    } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+        alert('E-mail ou senha inválidos!')
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+return false;
+}
+
+
+</script>
+</html>

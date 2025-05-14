@@ -2,103 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pokeblog</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/sessao.js"></script>
-    <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pokeblog</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/sessao.js"></script>
+  <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
 </head>
 
 <body>
-    <header class="header">
-        <img src="assets/pikachuLogo.png" alt="" class="logo">
-        <ul class="navbar">
-            <li class="agora">
-                <a href="index.html">home</a>
-            </li>
-            <li>
-                <a href="jogos.html">Jogos</a>
-            </li>
-            <li>
-                <a href="index.html">Regiões</a>
-            </li>
-            <li>
-                <a href="index.html">entrar </a>
-            </li>
-            <li>
-                <a href="index.html"><b>cadastre-se</b> </a>
-            </li>
-        </ul>
-    </header>
-    <div class="container-cadastro">
+  <header class="header">
+    <img src="assets/pikachuLogo.png" alt="" class="logo">
+    <ul class="navbar">
+      <li class="agora">
+        <a href="index.html">home</a>
+      </li>
+      <li>
+        <a href="jogos.html">Jogos</a>
+      </li>
+      <li>
+        <a href="index.html">Regiões</a>
+      </li>
+      <li>
+        <a href="login.html">entrar </a>
+      </li>
+      <li>
+        <a href="index.html"><b>cadastre-se</b> </a>
+      </li>
+    </ul>
+  </header>
+  <div class="container-cadastro">
 
-        <div class="lado-esquerdo">
-            <img class="rottomdex" src="assets/46.png" alt="">
+    <div class="lado-esquerdo">
+      <img class="rottomdex" src="assets/46.png" alt="">
 
-           <h1>É hora de se cadastrar!</h1>
-           <h3>Faça o cadastro no nosso site e fique por dentro do universo pokemon e tenha uma profunda imersão nesse mundo!</h3>
-           <img class="pokemons-cadastro" src="assets/34.png" alt="">
-        </div>
-
-        <!-- Lado direito branco com formulário -->
-        <div class="lado-direito">
-            <form class="formulario">
-                <div class="form-group">
-                    <label for="nome_input">Nome do usuário:</label>
-                    <input type="text" id="nome_input" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefone_input">Numero do celular(opicional):</label>
-                    <input type="tel" id="telefone_input">
-                </div>
-                <div class="form-group">
-                    <label for="email_input">E-mail:</label>
-                    <input type="email" id="email_input" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha_input">Senha:</label>
-                    <input type="password" id="senha_input" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirmacao_senha_input">Confirmar Senha:</label>
-                    <input type="password" id="confirmacao_senha_input" required>
-                </div>
-                <button type="button" onclick="cadastrar()">Cadastrar</button>
-            </form>
-        </div>
-
+      <h1>É hora de se cadastrar!</h1>
+      <h3>Faça o cadastro no nosso site e fique por dentro do universo pokemon e tenha uma profunda imersão nesse mundo!
+      </h3>
+      <img class="pokemons-cadastro" src="assets/34.png" alt="">
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <!-- Seção 1: Logo e descrição -->
-            <div class="footer-section">
-                <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
-                <p>O seu site favorito sobre o mundo Pokémon!</p>
-            </div>
-
-            <!-- Seção 2: Links rápidos -->
-            <div class="footer-section2">
-                <h3>Links Rápidos</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Jogos</a></li>
-                    <li><a href="#">Regiões</a></li>
-                    <li><a href="#">Dicas</a></li>
-                </ul>
-            </div>
+    <!-- Lado direito branco com formulário -->
+    <div class="lado-direito">
+      <form class="formulario">
+        <div class="form-group">
+          <label for="nome_input">Nome do usuário:</label>
+          <input type="text" id="nome_input" required>
         </div>
-
-        <!-- Rodapé inferior (créditos) -->
-        <div class="footer-bottom">
-            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        <div class="form-group">
+          <label for="telefone_input">Numero do celular(opicional):</label>
+          <input type="tel" id="telefone_input">
         </div>
-    </footer>
+        <div class="form-group">
+          <label for="email_input">E-mail:</label>
+          <input type="email" id="email_input" required>
+        </div>
+        <div class="form-group">
+          <label for="senha_input">Senha:</label>
+          <input type="password" id="senha_input" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmacao_senha_input">Confirmar Senha:</label>
+          <input type="password" id="confirmacao_senha_input" required>
+        </div>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Seção 1: Logo e descrição -->
+      <div class="footer-section">
+        <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+        <p>O seu site favorito sobre o mundo Pokémon!</p>
+      </div>
+
+      <!-- Seção 2: Links rápidos -->
+      <div class="footer-section2">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Jogos</a></li>
+          <li><a href="#">Regiões</a></li>
+          <li><a href="#">Dicas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Rodapé inferior (créditos) -->
+    <div class="footer-bottom">
+      <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+    </div>
+  </footer>
 
 </body>
 <script>
-    function cadastrar() {
+  function cadastrar() {
     // aguardar();
 
     //Recupere o valor da nova input pelo nome do id
@@ -108,26 +109,32 @@
     var senhaVar = senha_input.value;
     var telefoneVar = telefone_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    
+
 
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
-      telefoneVar == ""||
+      telefoneVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
-
-      finalizarAguardar();
+      alert("Todos os campos devem ser preenchidos!");
       return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
+    }  if (nomeVar.length <= 1) {
+      alert("Nome inválido!");
+      return;
     }
 
+    if (!emailVar.includes("@") || !emailVar.includes(".")) {
+      alert("E-mail inválido! Precisa conter @ e .");
+      return;
+    }
+
+    if (senhaVar != confirmacaoSenhaVar) {
+      alert("As senhas não coincidem!");
+      return;
+    }
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
@@ -147,31 +154,24 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
           setTimeout(() => {
             window.location = "login.html";
-          }, "2000");
+          }, "1000");
 
-          limparFormulario();
-          finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
       });
 
     return false;
-  }
 
-  function sumirMensagem() {
-    cardErro.style.display = "none";
   }
 </script>
+
 </html>
