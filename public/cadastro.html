@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokeblog</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/sessao.js"></script>
     <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
 </head>
 
@@ -44,24 +45,24 @@
         <div class="lado-direito">
             <form class="formulario">
                 <div class="form-group">
-                    <label for="nome">Nome do usuário:</label>
-                    <input type="text" id="nome" required>
+                    <label for="nome_input">Nome do usuário:</label>
+                    <input type="text" id="nome_input" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefone">Numero do celular(opicional):</label>
-                    <input type="tel" id="telefone">
+                    <label for="telefone_input">Numero do celular(opicional):</label>
+                    <input type="tel" id="telefone_input">
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" required>
+                    <label for="email_input">E-mail:</label>
+                    <input type="email" id="email_input" required>
                 </div>
                 <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" required>
+                    <label for="senha_input">Senha:</label>
+                    <input type="password" id="senha_input" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirmar_senha">Confirmar Senha:</label>
-                    <input type="password" id="confirmar_senha" required>
+                    <label for="confirmacao_senha_input">Confirmar Senha:</label>
+                    <input type="password" id="confirmacao_senha_input" required>
                 </div>
                 <button type="button" onclick="cadastrar()">Cadastrar</button>
             </form>
@@ -96,5 +97,81 @@
     </footer>
 
 </body>
+<script>
+    function cadastrar() {
+    // aguardar();
 
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = nome_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    var telefoneVar = telefone_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    
+
+    // Verificando se há algum campo em branco
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      telefoneVar == ""||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        telefoneServer: telefoneVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>
 </html>
