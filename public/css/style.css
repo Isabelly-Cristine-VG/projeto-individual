@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Gothic+Expanded+One&display=swap');
 
-body{
-    font-family: "Special Gothic Expanded One", sans-serif;
-    background-color: white;
-    width: 100%; 
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
+
+body {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
 
 .header {
     display: flex;
@@ -44,50 +51,53 @@ body{
     white-space: nowrap;
 }
 
-.navbar svg{
+.navbar svg {
     font-size: 1rem;
     padding-top: 2%;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #ffffff;
     border-bottom: solid 5px rgb(228, 28, 28);
     border-radius: 1.5px;
     font-size: 1.3rem;
     transition: 0.3s;
-    
+
 }
 
-.container{
-    background-image: url(assets/backgrounds/background3.png);
+.container {
+    background-image: url(../assets/backgrounds/background3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
+    min-height: 100vh; /* Adicionado */
+    width: 100%; /* Adicionado */
     margin: 0;
-    padding: 0;
+    padding: 20px 0; /* Adicionado um pouco de padding */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
 }
 
-.titulo{
+.titulo {
     display: flex;
     font-family: "Press Start 2P", system-ui;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
     color: rgb(207, 38, 38);
 }
 
-.titulo img{
+.titulo img {
     width: 5%;
     height: 7%;
 }
 
-.texto-inicial{
+.texto-inicial {
     display: flex;
     justify-content: center;
     color: rgb(95, 95, 95);
 }
 
-.topico1{
+.topico1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,34 +106,35 @@ body{
     color: rgb(95, 95, 95);
 }
 
-.topico1 h1{
+.topico1 h1 {
     font-family: "Press Start 2P", system-ui;
 }
 
-.topico1 img{
+.topico1 img {
     width: 20%;
 }
 
-.paragrafo, .paragrafo-jogo{
+.paragrafo,
+.paragrafo-jogo {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
 }
 
-.paragrafo-jogo h3{
+.paragrafo-jogo h3 {
     margin-top: -2%;
 }
 
-.paragrafo img{
+.paragrafo img {
     margin-top: -8%;
 }
 
-.paragrafo-jogo img{
+.paragrafo-jogo img {
     margin-top: -3%;
     width: 10%;
 }
 
-.paragrafo2{
+.paragrafo2 {
     margin-top: -5%;
     display: flex;
     justify-content: center;
@@ -131,40 +142,42 @@ body{
     flex-direction: row;
 }
 
-.paragrafo2 img{
+.paragrafo2 img {
     margin-top: -4%;
     width: 17%;
 }
 
-.tipos{
+.tipos {
     display: flex;
     flex-direction: column;
 }
 
-.tipos h2{
+.tipos h2 {
     color: rgb(207, 38, 38);
 }
 
-.tipos .tipo-pokemon{
+.tipos .tipo-pokemon {
     width: 4%;
     margin-bottom: -1%;
 }
 
-.tipo-texto{
+.tipo-texto {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     font-family: "Press Start 2P", system-ui;
     color: rgb(56, 145, 204);
-    
+
 }
 
-.tipo-texto h4, .tipo-texto2 h4, .tipo-texto3 h4{
+.tipo-texto h4,
+.tipo-texto2 h4,
+.tipo-texto3 h4 {
     margin-top: -1%;
 }
 
-.tipo-texto2{
+.tipo-texto2 {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -175,7 +188,7 @@ body{
     margin-bottom: 1%;
 }
 
-.tipo-texto3{
+.tipo-texto3 {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -186,17 +199,24 @@ body{
     margin-bottom: 1%;
 }
 
-.tipo-texto .fraqueza, .tipo-texto .vantagem,.tipo-texto2 .fraqueza, .tipo-texto2 .vantagem ,.tipo-texto3 .fraqueza, .tipo-texto3 .vantagem{
+.tipo-texto .fraqueza,
+.tipo-texto .vantagem,
+.tipo-texto2 .fraqueza,
+.tipo-texto2 .vantagem,
+.tipo-texto3 .fraqueza,
+.tipo-texto3 .vantagem {
     margin-top: -0.9%;
     width: 4%;
     height: 60%;
 }
 
-.tipo-texto h4, .tipo-texto2 h4, .tipo-texto3 h4{
+.tipo-texto h4,
+.tipo-texto2 h4,
+.tipo-texto3 h4 {
     margin-top: 0.5%;
 }
 
-.final{
+.final {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -204,7 +224,7 @@ body{
 
 }
 
-.final img{
+.final img {
     width: 45%;
     height: 20%;
     margin-top: -10%;
@@ -250,7 +270,8 @@ body{
     margin-bottom: 1rem;
 }
 
-.footer-section h3, .footer-section2 h3 {
+.footer-section h3,
+.footer-section2 h3 {
     color: rgb(255, 208, 0);
     font-family: "Press Start 2P", system-ui;
     font-size: 1rem;
@@ -287,14 +308,14 @@ body{
 
 /*Style dos cards dos jogos*/
 
-.jogos{
+.jogos {
     display: flex;
     flex-direction: row;
     gap: 4rem;
     width: 200rem;
 }
 
-.geracao1{
+.geracao1 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -312,11 +333,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao1 img{
+.geracao1 img {
     width: 85%;
 }
 
-.geracao1 button{
+.geracao1 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(255, 234, 234);
     color: rgb(199, 61, 61);
@@ -328,13 +349,13 @@ body{
     border-color: rgb(255, 128, 128);
 }
 
-.geracao1 a{
+.geracao1 a {
     text-decoration: none;
     color: rgb(199, 61, 61);
 }
 
 /*Style da geração2*/
-.geracao2{
+.geracao2 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -352,11 +373,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao2 img{
+.geracao2 img {
     width: 85%;
 }
 
-.geracao2 button{
+.geracao2 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(255, 216, 109);
     color: rgb(189, 140, 7);
@@ -368,13 +389,14 @@ body{
     border-color: rgb(240, 187, 42);
 }
 
-.geracao2 a{
+.geracao2 a {
     text-decoration: none;
-    color: rgb(189, 140, 7);;
+    color: rgb(189, 140, 7);
+    ;
 }
 
 /*Style da geração3*/
-.geracao3{
+.geracao3 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -392,11 +414,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao3 img{
+.geracao3 img {
     width: 85%;
 }
 
-.geracao3 button{
+.geracao3 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(214, 219, 252);
     color: rgb(32, 57, 199);
@@ -410,11 +432,11 @@ body{
 
 .geracao3 a {
     text-decoration: none;
-   color: rgb(32, 57, 199); 
+    color: rgb(32, 57, 199);
 }
 
 /*Style da geração4*/
-.geracao4{
+.geracao4 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -432,11 +454,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao4 img{
+.geracao4 img {
     width: 85%;
 }
 
-.geracao4 button{
+.geracao4 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(203, 247, 255);
     color: rgb(98, 200, 218);
@@ -454,7 +476,7 @@ body{
 }
 
 /*Style da geração5*/
-.geracao5{
+.geracao5 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -472,11 +494,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao5 img{
+.geracao5 img {
     width: 85%;
 }
 
-.geracao5 button{
+.geracao5 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(192, 192, 192);
     color: rgb(44, 44, 44);
@@ -488,13 +510,13 @@ body{
     border-color: rgb(94, 94, 94);
 }
 
-.geracao5 a{
+.geracao5 a {
     text-decoration: none;
     color: rgb(44, 44, 44);
 }
 
 /*Style da geração6*/
-.geracao6{
+.geracao6 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -512,11 +534,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao6 img{
+.geracao6 img {
     width: 85%;
 }
 
-.geracao6 button{
+.geracao6 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(192, 215, 255);
     color: rgb(45, 114, 241);
@@ -529,7 +551,7 @@ body{
 }
 
 /*Style da geração7*/
-.geracao7{
+.geracao7 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -547,11 +569,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao7 img{
+.geracao7 img {
     width: 85%;
 }
 
-.geracao7 button{
+.geracao7 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(211, 184, 255);
     color: rgb(114, 62, 197);
@@ -564,7 +586,7 @@ body{
 }
 
 /*Style da geração8*/
-.geracao8{
+.geracao8 {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -582,11 +604,11 @@ body{
     flex-shrink: 0;
 }
 
-.geracao8 img{
+.geracao8 img {
     width: 85%;
 }
 
-.geracao8 button{
+.geracao8 button {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(253, 216, 236);
     color: rgb(209, 19, 124);
@@ -600,7 +622,7 @@ body{
 
 /*HOVER GERACAO1*/
 
-.geracao1:hover{
+.geracao1:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -617,7 +639,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao1 button:hover{
+.geracao1 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(255, 255, 255);
     color: rgb(199, 61, 61);
@@ -632,7 +654,7 @@ body{
 
 /*HOVER GERACAO2*/
 
-.geracao2:hover{
+.geracao2:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -649,7 +671,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao2 button:hover{
+.geracao2 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(255, 246, 222);
     color: rgb(189, 140, 7);
@@ -663,7 +685,7 @@ body{
 }
 
 /*HOVER GERACAO3*/
-.geracao3:hover{
+.geracao3:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -680,7 +702,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao3 button:hover{
+.geracao3 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(245, 246, 255);
     color: rgb(32, 57, 199);
@@ -692,8 +714,9 @@ body{
     border-color: rgb(129, 147, 252);
     transition: 0.4s;
 }
+
 /*HOVER GERACAO4*/
-.geracao4:hover{
+.geracao4:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -711,7 +734,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao4 button:hover{
+.geracao4 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(232, 252, 255);
     color: rgb(98, 200, 218);
@@ -725,7 +748,7 @@ body{
 }
 
 /*HOVER GERACAO5*/
-.geracao5:hover{
+.geracao5:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -743,7 +766,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao5 button:hover{
+.geracao5 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(240, 240, 240);
     color: rgb(44, 44, 44);
@@ -757,7 +780,7 @@ body{
 }
 
 /*HOVER GERACAO6*/
-.geracao6:hover{
+.geracao6:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -775,7 +798,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao6 button:hover{
+.geracao6 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(234, 242, 255);
     color: rgb(45, 114, 241);
@@ -790,7 +813,7 @@ body{
 
 
 /*HOVER GERACAO7*/
-.geracao7:hover{
+.geracao7:hover {
     font-family: "Press Start 2P", system-ui;
     display: flex;
     flex-direction: column;
@@ -808,7 +831,7 @@ body{
     transition: 0.4s;
 }
 
-.geracao7 button:hover{
+.geracao7 button:hover {
     font-family: "Press Start 2P", system-ui;
     background-color: rgb(240, 230, 255);
     color: rgb(114, 62, 197);
@@ -827,11 +850,11 @@ body{
 
 /*PÁGINA GERAÇÃO 1*/
 
-.LeafGreen{
+.LeafGreen {
     color: rgb(118, 226, 45);
 }
 
-.redGreen{
+.redGreen {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -841,23 +864,24 @@ body{
     flex-flow: column nowrap;
 }
 
-.redGreen img{
+.redGreen img {
     width: 50%;
     border-radius: 10px;
     margin: 5rem;
 }
 
-.tituloRed{
+.tituloRed {
     font-family: "Press Start 2P", system-ui;
     color: rgb(204, 56, 56);
 }
 
-.tituloGreen{
+.tituloGreen {
     font-family: "Press Start 2P", system-ui;
     color: rgb(118, 226, 45);
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -865,16 +889,16 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas img{
+.Protagonistas img {
     width: 25%;
-    
+
 }
 
-.iniciais img{
+.iniciais img {
     width: 20%;
 }
 
-.PokemonsIniciais{
+.PokemonsIniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -883,11 +907,11 @@ body{
     margin-top: -3rem;
 }
 
-.PokemonsIniciais p{
+.PokemonsIniciais p {
     margin-top: -5rem;
 }
 
-.tipo-ginasio{
+.tipo-ginasio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -899,17 +923,19 @@ body{
 
 }
 
-.texto-ginasio h2, .texto-ginasio-venenoso h2{
+.texto-ginasio h2,
+.texto-ginasio-venenoso h2 {
     font-family: "Press Start 2P", system-ui;
     margin-left: -12%;
     margin-right: 8%;
 }
 
-.texto-ginasio h4, .texto-ginasio-venenoso h4{
+.texto-ginasio h4,
+.texto-ginasio-venenoso h4 {
     font-family: "Press Start 2P", system-ui;
 }
 
-.h4-ginasio{
+.h4-ginasio {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -924,14 +950,14 @@ body{
     margin-left: -15%;
 }
 
-.paragrafo-ginasio{
+.paragrafo-ginasio {
     display: flex;
     margin-top: 2%;
     margin-left: -9%;
     width: 30rem;
 }
 
-.row-ginasio{
+.row-ginasio {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -941,11 +967,11 @@ body{
 
 /*PÁGINA GERAÇÃO 2*/
 
-.SoulSilver{
+.SoulSilver {
     color: rgb(168, 186, 190);
 }
 
-.GoldSilver{
+.GoldSilver {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -955,23 +981,24 @@ body{
     flex-flow: column nowrap;
 }
 
-.GoldSilver img{
+.GoldSilver img {
     width: 50%;
     border-radius: 10px;
     margin: 5rem;
 }
 
-.tituloGold{
+.tituloGold {
     font-family: "Press Start 2P", system-ui;
     color: rgb(196, 172, 39);
 }
 
-.tituloSilver{
+.tituloSilver {
     font-family: "Press Start 2P", system-ui;
     color: rgb(168, 186, 190);
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -979,16 +1006,16 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas img{
+.Protagonistas img {
     width: 25%;
-    
+
 }
 
-.iniciais img{
+.iniciais img {
     width: 20%;
 }
 
-.PokemonsIniciais{
+.PokemonsIniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -997,13 +1024,13 @@ body{
     margin-top: -3rem;
 }
 
-.PokemonsIniciais p{
+.PokemonsIniciais p {
     margin-top: -5rem;
 }
 
 /*PÁGINA GERAÇÃO 3*/
 
-.rubySapphire{
+.rubySapphire {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1013,23 +1040,25 @@ body{
     flex-flow: column nowrap;
 }
 
-.rubySapphire img{
+.rubySapphire img {
     width: 50%;
     border-radius: 10px;
     margin: 5rem;
 }
 
-.ruby{
+.ruby {
     font-family: "Press Start 2P", system-ui;
     color: rgb(196, 39, 60);
 }
 
-.sapphire{
+.sapphire {
     font-family: "Press Start 2P", system-ui;
-    color: rgb(39, 81, 196);;
+    color: rgb(39, 81, 196);
+    ;
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1037,7 +1066,8 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1045,16 +1075,16 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas img{
+.Protagonistas img {
     width: 25%;
-    
+
 }
 
-.iniciais img{
+.iniciais img {
     width: 20%;
 }
 
-.PokemonsIniciais{
+.PokemonsIniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1063,13 +1093,13 @@ body{
     margin-top: -3rem;
 }
 
-.PokemonsIniciais p{
+.PokemonsIniciais p {
     margin-top: -5rem;
 }
 
 /*PÁGINA GERAÇÃO 4*/
 
-.diamondPearl{
+.diamondPearl {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1079,23 +1109,25 @@ body{
     flex-flow: column nowrap;
 }
 
-.diamondPearl img{
+.diamondPearl img {
     width: 50%;
     border-radius: 10px;
     margin: 5rem;
 }
 
-.diamond{
+.diamond {
     font-family: "Press Start 2P", system-ui;
     color: rgb(37, 165, 204);
 }
 
-.pearl{
+.pearl {
     font-family: "Press Start 2P", system-ui;
-    color: rgb(163, 117, 152);;
+    color: rgb(163, 117, 152);
+    ;
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1103,7 +1135,8 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1111,16 +1144,16 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas img{
+.Protagonistas img {
     width: 25%;
-    
+
 }
 
-.iniciais img{
+.iniciais img {
     width: 20%;
 }
 
-.PokemonsIniciais{
+.PokemonsIniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1129,13 +1162,13 @@ body{
     margin-top: -3rem;
 }
 
-.PokemonsIniciais p{
+.PokemonsIniciais p {
     margin-top: -5rem;
 }
 
 /*PAGINA GERAÇÃO 5*/
 
-.blackWhite{
+.blackWhite {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1145,23 +1178,24 @@ body{
     flex-flow: column nowrap;
 }
 
-.blackWhite img{
+.blackWhite img {
     width: 50%;
     border-radius: 10px;
     margin: 5rem;
 }
 
-.black{
+.black {
     font-family: "Press Start 2P", system-ui;
     color: rgb(41, 41, 41);
 }
 
-.white{
+.white {
     font-family: "Press Start 2P", system-ui;
     color: rgb(183, 197, 196);
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1169,7 +1203,8 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas, .iniciais{
+.Protagonistas,
+.iniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1177,16 +1212,16 @@ body{
     flex-wrap: nowrap;
 }
 
-.Protagonistas img{
+.Protagonistas img {
     width: 25%;
-    
+
 }
 
-.iniciais img{
+.iniciais img {
     width: 20%;
 }
 
-.PokemonsIniciais{
+.PokemonsIniciais {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1195,7 +1230,7 @@ body{
     margin-top: -3rem;
 }
 
-.PokemonsIniciais p{
+.PokemonsIniciais p {
     margin-top: -5rem;
 }
 
@@ -1203,45 +1238,48 @@ body{
 
 .container-cadastro {
     display: flex;
-    flex-wrap: wrap; /* Permite quebra em telas pequenas */
+    flex-wrap: wrap;
+    /* Permite quebra em telas pequenas */
     min-height: calc(100vh - 150px);
     width: 100%;
     min-height: 100vh;
 }
 
-.rottomdex{
+.rottomdex {
     width: 65%;
     margin-top: -8%;
     margin-left: -10%;
 }
 
-.pokemons-cadastro{
+.pokemons-cadastro {
     margin-bottom: -20%;
 }
 
-.lado-esquerdo h1{
+.lado-esquerdo h1 {
     font-family: "Press Start 2P", system-ui;
     margin-left: 50%;
     margin-top: -27%;
     width: 100%;
 }
 
-.lado-esquerdo h3{
+.lado-esquerdo h3 {
     font-family: "Press Start 2P", system-ui;
     margin-top: 10%;
     margin-bottom: -12%;
-} 
+}
 
 /* Lado esquerdo (vermelho) */
 .lado-esquerdo {
-    flex: 1; /* Ocupa espaço disponível */
+    flex: 1;
+    /* Ocupa espaço disponível */
     min-width: 300px;
     padding: 2rem 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
-    background-color: rgb(177, 37, 44);;
+    background-color: rgb(177, 37, 44);
+    ;
 }
 
 /* Texto no lado esquerdo */
@@ -1249,7 +1287,7 @@ body{
     font-size: 1.3rem;
 }
 
-.texto-cadastro{
+.texto-cadastro {
     display: flex;
     justify-content: center;
 }
@@ -1269,7 +1307,8 @@ body{
 .formulario {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto; /* Centraliza */
+    margin: 0 auto;
+    /* Centraliza */
 }
 
 /* Grupos de campos do formulário */
@@ -1306,4 +1345,32 @@ body{
     cursor: pointer;
     width: 100%;
     font-weight: 600;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10rem;
+    margin-bottom: 30px;
+}
+
+.chart-wrapper {
+    width: 300px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.chart-wrapper h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+    height: 250px !important;
 }

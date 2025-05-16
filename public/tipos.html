@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokeblog</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="Style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -41,9 +39,22 @@
     <div class="container">
         <select name="" id="ipt_tipo" class="tipoPokemon">
             <option value="">selecione o tipo</option>
-
         </select>
 
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h3>Fraquezas (2x)</h3>
+                <canvas id="fraquezasChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Resistências (0.5x)</h3>
+                <canvas id="resistenciasChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Imunidades (0x)</h3>
+                <canvas id="imunidadesChart"></canvas>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -77,5 +88,35 @@
     $(document).ready(function () {
         $('#ipt_tipo').select2();
     });
+
+    function debugCheck() {
+        // Verifica se o Chart.js está carregado
+        if (typeof Chart === 'undefined') {
+            console.error('Chart.js não está carregado!');
+            alert('Erro: Biblioteca Chart.js não encontrada');
+        } else {
+            console.log('Chart.js carregado com sucesso:', Chart.version);
+        }
+
+        // Verifica elementos do DOM
+        const checkElements = ['ipt_tipo', 'fraquezasChart', 'resistenciasChart', 'imunidadesChart'];
+        checkElements.forEach(id => {
+            const el = document.getElementById(id);
+            console.log(`Elemento #${id}:`, el ? 'Encontrado' : 'NÃO ENCONTRADO');
+        });
+
+        // Verifica estilos
+        const canvas = document.getElementById('fraquezasChart');
+        if (canvas) {
+            console.log('Dimensões do canvas:', {
+                width: canvas.offsetWidth,
+                height: canvas.offsetHeight,
+                styleWidth: canvas.style.width,
+                styleHeight: canvas.style.height
+            });
+        }
+    }
+    $(document).ready(debugCheck);
 </script>
+
 </html>

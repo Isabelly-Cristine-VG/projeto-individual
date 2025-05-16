@@ -3,8 +3,13 @@ var router = express.Router();
 
 var tipoController = require("../controllers/tipoController");
 
-router.post("/buscarTipo", function (req, res) {
+router.get("/buscarTipo", function (req, res) {
     tipoController.buscarTipo(req, res);
+});
+
+router.get('/buscarVantagensPorTipo/:idTipo(\\d+)', function (req, res) {
+    console.log(`Acessando endpoint com ID: ${req.params.idTipo}`);
+    tipoController.buscarVantagensPorTipo(req, res);
 });
 
 module.exports = router;
