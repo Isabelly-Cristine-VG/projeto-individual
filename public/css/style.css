@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Gothic+Expanded+One&display=swap');
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -1351,8 +1350,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10rem;
+    gap: 10rem;
+    margin-top: 7rem;
     margin-bottom: 30px;
 }
 
@@ -1373,4 +1372,15 @@ body {
 .chart-wrapper canvas {
     width: 100% !important;
     height: 250px !important;
+}
+
+.select-style{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    
+}
+
+.tipoPokemon{
+    width: 13rem;
 }
