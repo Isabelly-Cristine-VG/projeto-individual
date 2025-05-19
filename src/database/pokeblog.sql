@@ -251,40 +251,58 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Omanyte', 'Pokémon Espiral', 'Um Pokémon pré-histórico que foi regenerado a partir de um fóssil.', 0.4, 7.5, 3, 13, 35, 40, 100, 90, 55, 35, 45, 87.5, NULL, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/138.png'),
 ('Kabuto', 'Pokémon Cascudo', 'Um Pokémon fóssil que foi regenerado. Viveu no fundo do mar há 300 milhões de anos.', 0.5, 11.5, 3, 13, 30, 80, 90, 55, 45, 55, 45, 87.5, NULL, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/140.png'),
 ('Aerodactyl', 'Pokémon Fóssil', 'Um Pokémon feroz e pré-histórico que ataca com mandíbulas serrilhadas.', 1.8, 59.0, 13, 10, 80, 105, 65, 60, 75, 130, 45, 87.5, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/142.png'),
-('Dugtrio', 'Pokémon Toupeira', 'Um trio de Diglett. Causa terremotos massivos ao cavar 100 km abaixo da terra.', 0.7, 33.3, 9, NULL, 35, 80, 50, 50, 70, 120, 50, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/051.png'),
+('Dugtrio', 'Pokémon Toupeira', 'Um trio de Diglett. Causa terremotos massivos ao cavar 100 km abaixo da terra.', 0.7, 33.3, 9, NULL, 35, 80, 50, 50, 70, 120, 50, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/051.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon Elétricos sem pré-evolução
 ('Pichu', 'Pokémon Ratinho', 'Ainda não consegue armazenar eletricidade. Frequentemente se choca acidentalmente.', 0.3, 2.0, 4, NULL, 20, 40, 15, 35, 35, 60, 190, 50.0, NULL, 'Amizade alta', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/172.png'),
 ('Voltorb', 'Pokémon Bola', 'Muito semelhante a uma Pokébola. Já causou muitos acidentes por causa disso.', 0.5, 10.4, 4, NULL, 40, 30, 50, 55, 55, 100, 190, NULL, NULL, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/frlg/100.png'),
 ('Magnemite', 'Pokémon Ímã', 'Usa eletricidade para se mover. Frequentemente encontrado perto de usinas de energia.', 0.3, 6.0, 4, 17, 25, 35, 70, 95, 55, 45, 190, NULL, NULL, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/hgss/081.png'),
 ('Electabuzz', 'Pokémon Elétrico', 'Armazena eletricidade em seu corpo. Frequentemente encontrado perto de usinas.', 1.1, 30.0, 4, NULL, 65, 83, 57, 95, 85, 105, 45, 75.0, NULL, 'Trade com Electirizer', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/125.png'),
-('Elekid', 'Pokémon Elétrico', 'Gira os braços para gerar eletricidade, mas frequentemente se cansa rapidamente.', 0.6, 23.5, 4, NULL, 45, 63, 37, 65, 55, 95, 45, 75.0, NULL, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/hgss/239.png'),
+('Elekid', 'Pokémon Elétrico', 'Gira os braços para gerar eletricidade, mas frequentemente se cansa rapidamente.', 0.6, 23.5, 4, NULL, 45, 63, 37, 65, 55, 95, 45, 75.0, NULL, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/hgss/239.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon Aquáticos sem pré-evolução
 ('Staryu', 'Pokémon Estrela', 'No centro de seu corpo está um olho vermelho que brilha misteriosamente.', 0.8, 34.5, 3, NULL, 30, 45, 55, 70, 55, 85, 225, NULL, NULL, 'Pedra da Água', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/120.png'),
 ('Psyduck', 'Pokémon Pato', 'Sofre constantemente de dores de cabeça. Quando a dor piora, usa poderes psíquicos.', 0.8, 19.6, 3, NULL, 50, 52, 48, 65, 50, 55, 190, 50.0, NULL, 'Level 33', 33, 'https://pokeportuga.pt/img/jogos/sprites/hgss/054.png'),
-('Poliwag', 'Pokémon Girino', 'Suas pernas recém-nascidas não podem suportar seu peso. Apenas nada em padrões espirais.', 0.6, 12.4, 3, NULL, 40, 50, 40, 40, 40, 90, 255, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/060.png'),
+('Poliwag', 'Pokémon Girino', 'Suas pernas recém-nascidas não podem suportar seu peso. Apenas nada em padrões espirais.', 0.6, 12.4, 3, NULL, 40, 50, 40, 40, 40, 90, 255, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/060.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon de Planta sem pré-evolução
 ('Tangela', 'Pokémon Vinha', 'Seu corpo é coberto por vinhas semelhantes a algas. Elas balançam quando se move.', 1.0, 35.0, 5, NULL, 65, 55, 115, 100, 40, 60, 45, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/114.png'),
 ('Exeggcute', 'Pokémon Ovo', 'Seis ovos formam um grupo que se comunica telepaticamente. Podese fundir com outros grupos.', 0.4, 2.5, 5, 11, 60, 40, 80, 60, 45, 40, 90, 50.0, NULL, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/102.png'),
 ('Oddish', 'Pokémon Erva Daninha', 'Durante o dia, fica enterrado no solo. À noite, vagueia para espalhar suas sementes.', 0.5, 5.4, 5, 8, 45, 50, 55, 75, 65, 30, 255, 50.0, NULL, 'Level 21', 21, 'https://pokeportuga.pt/img/jogos/sprites/hgss/043.png'),
 ('Bellsprout', 'Pokémon Flor', 'Prefere locais quentes e úmidos. Captura pequenos insetos com suas folhas em forma de concha.', 0.7, 4.0, 5, 8, 50, 75, 35, 70, 30, 40, 255, 50.0, NULL, 'Level 21', 21, 'https://pokeportuga.pt/img/jogos/sprites/hgss/069.png'),
-('Hoppip', 'Pokémon Algodão', 'Flutua no vento para evitar ataques terrestres. Pode viajar milhas se pego por uma forte corrente de ar.', 0.4, 0.5, 5, 10, 35, 35, 40, 35, 55, 50, 255, 50.0, NULL, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/hgss/187.png'),
+('Hoppip', 'Pokémon Algodão', 'Flutua no vento para evitar ataques terrestres. Pode viajar milhas se pego por uma forte corrente de ar.', 0.4, 0.5, 5, 10, 35, 35, 40, 35, 55, 50, 255, 50.0, NULL, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/hgss/187.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon Venenosos sem pré-evolução
 ('Koffing', 'Pokémon Gás Venenoso', 'Como seu corpo está cheio de gases venenosos, ele balança enquanto voa.', 0.6, 1.0, 8, NULL, 40, 65, 95, 60, 45, 35, 190, 50.0, NULL, 'Nível', 35, 'https://pokeportuga.pt/img/jogos/sprites/frlg/109.png'),
 ('Grimer', 'Pokémon Lodo', 'Feito de lixo tóxico que se reuniu em esgotos. Pode derreter qualquer coisa com seu corpo ácido.', 0.9, 30.0, 8, NULL, 80, 80, 50, 40, 50, 25, 190, 50.0, NULL, 'Nível', 38, 'https://pokeportuga.pt/img/jogos/sprites/hgss/088.png'),
-('Nidoran♀', 'Pokémon Venenoso', 'Tem um temperamento dócil. Libera veneno fraco quando ameaçado para se proteger.', 0.4, 7.0, 8, NULL, 55, 47, 52, 40, 40, 41, 235, 100.0, NULL, 'Pedra da Lua', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/029.png'),
+('Nidoran♀', 'Pokémon Venenoso', 'Tem um temperamento dócil. Libera veneno fraco quando ameaçado para se proteger.', 0.4, 7.0, 8, NULL, 55, 47, 52, 40, 40, 41, 235, null, NULL, 'Pedra da Lua', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/029.png'),
 ('Nidoran♂', 'Pokémon Venenoso', 'Mais agressivo que a fêmea. Seus grandes chifres secretam um poderoso veneno.', 0.5, 9.0, 8, NULL, 46, 57, 40, 40, 40, 50, 235, 0.0, NULL, 'Pedra da Lua', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/032.png'),
 ('Zubat', 'Pokémon Morcego', 'Não tem olhos, então emite ondas ultrassônicas para navegar e caçar presas.', 0.8, 7.5, 8, 10, 40, 45, 35, 30, 40, 55, 255, 50.0, NULL, 'Amizade', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/041.png'),
-('Spinarak', 'Pokémon Aranha', 'Constrói uma teia fina, mas resistente. Fica imóvel, esperando por presas incautas.', 0.5, 8.5, 12, 8, 40, 60, 40, 40, 40, 30, 255, 50.0, NULL, 'Nível', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/167.png'),
+('Spinarak', 'Pokémon Aranha', 'Constrói uma teia fina, mas resistente. Fica imóvel, esperando por presas incautas.', 0.5, 8.5, 12, 8, 40, 60, 40, 40, 40, 30, 255, 50.0, NULL, 'Nível', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/167.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon Psíquicos sem pré-evolução
 ('Abra', 'Pokémon Psíquico', 'Dorme 18 horas por dia. Mesmo dormindo, pode usar telepatia para escapar do perigo.', 0.9, 19.5, 11, NULL, 25, 20, 15, 105, 55, 90, 200, 75.0, NULL, 'Nível', 16, 'https://pokeportuga.pt/img/jogos/sprites/hgss/063.png'),
 ('Mr. Mime', 'Pokémon Barreira', 'Um mestre da pantomima. Suas barreiras invisíveis são na verdade paredes de ar comprimido.', 1.3, 54.5, 11, 18, 40, 45, 65, 100, 120, 90, 45, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/122.png'),
-('Eevee', 'Pokémon Evolução', 'Seu código genético irregular permite evoluir para várias formas quando exposto a estímulos.', 0.3, 6.5, 1, NULL, 55, 55, 50, 45, 65, 55, 45, 87.5, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/133.png'),
+('Eevee', 'Pokémon Evolução', 'Seu código genético irregular permite evoluir para várias formas quando exposto a estímulos.', 0.3, 6.5, 1, NULL, 55, 55, 50, 45, 65, 55, 45, 87.5, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/133.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon de Fogo sem pré-evolução
 ('Growlithe', 'Pokémon Cachorro', 'Muito protetor de seu território. Late e morde para afastar intrusos.', 0.7, 19.0, 2, NULL, 55, 70, 45, 70, 50, 60, 190, 75.0, NULL, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/058.png'),
 ('Ponyta', 'Pokémon Cavalo de Fogo', 'Seus cascos são 10 vezes mais duros que diamante. Pode esmagar qualquer coisa ao galopar.', 1.0, 30.0, 2, NULL, 50, 85, 55, 65, 65, 90, 190, 50.0, NULL, 'Nível', 40, 'https://pokeportuga.pt/img/jogos/sprites/frlg/077.png'),
@@ -310,23 +328,32 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Omastar', 'Pokémon Espiral', 'Um Pokémon pré-histórico que foi regenerado a partir de um fóssil. Usa tentáculos para capturar presas.', 1.0, 35.0, 3, 13, 70, 60, 125, 115, 70, 55, 45, 87.5, 6, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/139.png'),
 
 -- Evolução de Kabuto (assumindo idPokemon = 7)
-('Kabutops', 'Pokémon Cascudo', 'Seu corpo aerodinâmico permite que nade rapidamente. Corta presas com suas garras afiadas.', 1.3, 40.5, 3, 13, 60, 115, 105, 65, 70, 80, 45, 87.5, 7, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/141.png'),
+('Kabutops', 'Pokémon Cascudo', 'Seu corpo aerodinâmico permite que nade rapidamente. Corta presas com suas garras afiadas.', 1.3, 40.5, 3, 13, 60, 115, 105, 65, 70, 80, 45, 87.5, 7, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/141.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções elétricas (assumindo Pichu = 8, Voltorb = 9, Magnemite = 10, Elekid = 11)
 ('Pikachu', 'Pokémon Rato', 'Quando vários deles se reúnem, sua eletricidade pode construir e causar tempestades.', 0.4, 6.0, 4, NULL, 35, 55, 40, 50, 50, 90, 190, 50.0, 8, 'Amizade alta', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/025.png'),
 ('Raichu', 'Pokémon Rato', 'Sua cauda descarga eletricidade no ar, causando faíscas que podem incendiar florestas.', 0.8, 30.0, 4, NULL, 60, 90, 55, 90, 80, 110, 75, 50.0, 12, 'Pedra do Trovão', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/026_m.png'),
 ('Electrode', 'Pokémon Bola', 'Armazena energia elétrica em seu corpo. Explode em resposta a estímulos mínimos.', 1.2, 66.6, 4, NULL, 60, 50, 70, 80, 80, 150, 60, NULL, 9, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/hgss/101.png'),
 ('Magneton', 'Pokémon Ímã', 'Formado por três Magnemites unidos. Gera ondas de rádio que derrubam aparelhos eletrônicos.', 1.0, 60.0, 4, 17, 50, 60, 95, 120, 70, 70, 60, NULL, 10, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/hgss/082.png'),
 ('Magnezone', 'Pokémon Ímã', 'Controla campos magnéticos para flutuar. Evoluiu quando exposto a um campo magnético especial.', 1.2, 180.0, 4, 17, 70, 70, 115, 130, 90, 60, 30, NULL, 13, 'Trade com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/462.png'),
-('Electivire', 'Pokémon Trovão', 'Segura seus chifres para liberar eletricidade. Pode derrubar um edifício com uma descarga.', 1.8, 138.6, 4, NULL, 75, 123, 67, 95, 85, 95, 30, 75.0, 11, 'Trade com Electirizer', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/466.png'),
+('Electivire', 'Pokémon Trovão', 'Segura seus chifres para liberar eletricidade. Pode derrubar um edifício com uma descarga.', 1.8, 138.6, 4, NULL, 75, 123, 67, 95, 85, 95, 30, 75.0, 11, 'Trade com Electirizer', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/466.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções aquáticas (assumindo Staryu = 14, Psyduck = 15, Poliwag = 16)
 ('Starmie', 'Pokémon Misterioso', 'Dizem que seu núcleo brilha com as sete cores do arco-íris.', 1.1, 80.0, 3, 11, 60, 75, 85, 100, 85, 115, 60, NULL, 14, 'Pedra da Água', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/121.png'),
 ('Golduck', 'Pokémon Pato', 'Nadador habilidoso, frequentemente visto em rios e lagos. Conhecido por seus poderes psíquicos.', 1.7, 76.6, 3, NULL, 80, 82, 78, 95, 80, 85, 75, 50.0, 15, 'Level 33', 33, 'https://pokeportuga.pt/img/jogos/sprites/hgss/055.png'),
 ('Poliwhirl', 'Pokémon Girino', 'Capaz de viver dentro ou fora da água. Quando fora, sua pele permanece úmida com suor.', 1.0, 20.0, 3, NULL, 65, 65, 65, 50, 50, 90, 120, 50.0, 16, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/061.png'),
 ('Poliwrath', 'Pokémon Girino', 'Nadador especialista. Usa todos os seus músculos para golpes poderosos.', 1.3, 54.0, 3, 7, 90, 95, 95, 70, 90, 70, 45, 50.0, 22, 'Pedra da Água', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/062.png'),
-('Politoed', 'Pokémon Sapo', 'Quando Poliwag evolui, o redemoinho em sua barriga se transforma em padrões elegantes.', 1.1, 33.9, 3, NULL, 90, 75, 75, 90, 100, 70, 45, 50.0, 22, 'Trade com King\'s Rock', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/186.png'),
+('Politoed', 'Pokémon Sapo', 'Quando Poliwag evolui, o redemoinho em sua barriga se transforma em padrões elegantes.', 1.1, 33.9, 3, NULL, 90, 75, 75, 90, 100, 70, 45, 50.0, 22, 'Trade com King\'s Rock', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/186.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções de planta (assumindo Oddish = 17, Bellsprout = 18, Exeggcute = 19, Hoppip = 20)
 ('Gloom', 'Pokémon Erva Daninha', 'Secreta um néctar fedorento da boca. O odor pode causar desmaios a 2 km de distância.', 0.8, 8.6, 5, 8, 60, 65, 70, 85, 75, 40, 120, 50.0, 17, 'Level 21', 21, 'https://pokeportuga.pt/img/jogos/sprites/hgss/044.png'),
 ('Vileplume', 'Pokémon Flor', 'Tem as maiores pétalas do mundo. Com cada passo, espalha pólen altamente alergênico.', 1.2, 18.6, 5, 8, 75, 80, 85, 110, 90, 50, 45, 50.0, 23, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/045.png'),
@@ -335,29 +362,21 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Victreebel', 'Pokémon Planta Carnívora', 'Atrai a presa com um aroma doce de mel. Dissolve a vítima em seu interior em apenas um dia.', 1.7, 15.5, 5, 8, 80, 105, 65, 100, 70, 70, 45, 50.0, 25, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/071.png'),
 ('Exeggutor', 'Pokémon Coco', 'Dizem que quando uma cabeça cresce muito grande, ela cai e se torna um Exeggcute.', 2.0, 120.0, 5, 11, 95, 95, 85, 125, 75, 55, 45, 50.0, 19, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/103.png'),
 ('Skiploom', 'Pokémon Algodão', 'Flutua no ar para ajustar sua temperatura corporal. Abre sua flor em temperaturas acima de 18°C.', 0.6, 1.0, 5, 10, 55, 45, 50, 45, 65, 80, 120, 50.0, 20, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/hgss/188.png'),
-('Jumpluff', 'Pokémon Algodão', 'Flutua com o vento para viajar. Pode controlar sua direção ajustando as pétalas.', 0.8, 3.0, 5, 10, 75, 55, 70, 55, 95, 110, 45, 50.0, 28, 'Level 27', 27, 'https://pokeportuga.pt/img/jogos/sprites/hgss/189.png'),
+('Jumpluff', 'Pokémon Algodão', 'Flutua com o vento para viajar. Pode controlar sua direção ajustando as pétalas.', 0.8, 3.0, 5, 10, 75, 55, 70, 55, 95, 110, 45, 50.0, 28, 'Level 27', 27, 'https://pokeportuga.pt/img/jogos/sprites/hgss/189.png');
 
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções venenosas (assumindo Koffing = 21, Grimer = 22, Nidoran♀ = 23, Nidoran♂ = 24, Zubat = 25, Spinarak = 26)
 ('Weezing', 'Pokémon Gás Venenoso', 'Raramente visto na natureza. Dois Koffings podem se fundir para formar um Weezing.', 1.2, 9.5, 8, NULL, 65, 90, 120, 85, 70, 60, 60, 50.0, 21, 'Level 35', 35, 'https://pokeportuga.pt/img/jogos/sprites/hgss/110.png'),
 ('Muk', 'Pokémon Lodo', 'Deixa um rastro fedorento atrás de si. A grama não cresce no local por um ano.', 1.2, 30.0, 8, NULL, 105, 105, 75, 65, 100, 50, 75, 50.0, 22, 'Level 38', 38, 'https://pokeportuga.pt/img/jogos/sprites/frlg/089.png'),
-('Nidorina', 'Pokémon Venenoso', 'O chifre feminino se desenvolve lentamente. Prefere ataques físicos como arranhões e mordidas.', 0.8, 20.0, 8, NULL, 70, 62, 67, 55, 55, 56, 120, 100.0, 23, 'Level 16', 16, 'https://pokeportuga.pt/img/jogos/sprites/hgss/030.png'),
+('Nidorina', 'Pokémon Venenoso', 'O chifre feminino se desenvolve lentamente. Prefere ataques físicos como arranhões e mordidas.', 0.8, 20.0, 8, NULL, 70, 62, 67, 55, 55, 56, 120, null, 23, 'Level 16', 16, 'https://pokeportuga.pt/img/jogos/sprites/hgss/030.png'),
 ('Nidoqueen', 'Pokémon Broca', 'Seu corpo é coberto por escamas duras. Protege ferozmente seus filhotes.', 1.3, 60.0, 8, 9, 90, 92, 87, 75, 85, 76, 45, 0.0, 29, 'Pedra da Lua', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/031.png'),
 ('Nidorino', 'Pokémon Venenoso', 'Tem um temperamento violento. Quando ataca, seu chifre secreta um veneno poderoso.', 0.9, 19.5, 8, NULL, 61, 72, 57, 55, 55, 65, 120, 0.0, 24, 'Level 16', 16, 'https://pokeportuga.pt/img/jogos/sprites/hgss/033.png'),
-('Nidoking', 'Pokémon Broca', 'Usa seu rabo poderoso para esmagar o inimigo. Quebra até diamante com facilidade.', 1.4, 62.0, 8, 9, 81, 102, 77, 85, 75, 85, 45, 100.0, 31, 'Pedra da Lua', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/034.png'),
+('Nidoking', 'Pokémon Broca', 'Usa seu rabo poderoso para esmagar o inimigo. Quebra até diamante com facilidade.', 1.4, 62.0, 8, 9, 81, 102, 77, 85, 75, 85, 45, null, 31, 'Pedra da Lua', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/034.png'),
 ('Golbat', 'Pokémon Morcego', 'Drena o sangue de presas vivas com seus dentes afiados como agulhas. Bebe até ficar satisfeito.', 1.6, 55.0, 8, 10, 75, 80, 70, 65, 75, 90, 90, 50.0, 25, 'Amizade', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/042.png'),
 ('Crobat', 'Pokémon Morcego', 'Voam silenciosamente à noite, usando ondas ultrassônicas para identificar presas.', 1.8, 75.0, 8, 10, 85, 90, 80, 70, 80, 130, 90, 50.0, 32, 'Amizade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/169.png'),
-('Ariados', 'Pokémon Aranha', 'Tece teias com fios finos, mas resistentes, que podem deter até aves em voo.', 1.1, 33.5, 12, 8, 70, 90, 70, 60, 70, 40, 90, 50.0, 26, 'Level 22', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/168.png'),
+('Ariados', 'Pokémon Aranha', 'Tece teias com fios finos, mas resistentes, que podem deter até aves em voo.', 1.1, 33.5, 12, 8, 70, 90, 70, 60, 70, 40, 90, 50.0, 26, 'Level 22', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/168.png');
 
 
--- Pokémon Psíquicos
-('Kadabra', 'Pokémon Psíquico', 'Dorme enquanto flutua no ar. Seu rabo está conectado a dimensões alternativas.', 1.3, 56.5, 11, NULL, 40, 35, 30, 120, 70, 105, 100, 75.0, 63, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/064.png'),
-('Alakazam', 'Pokémon Psíquico', 'Seu cérebro superdesenvolvido pode realizar cálculos como um supercomputador.', 1.5, 48.0, 11, NULL, 55, 50, 45, 135, 95, 120, 50, 75.0, 64, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/065.png'),
-('Mr. Mime', 'Pokémon Barreira', 'Um mestre da pantomima. Suas barreiras invisíveis são na verdade paredes de ar comprimido.', 1.3, 54.5, 11, 18, 40, 45, 65, 100, 120, 90, 45, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/122.png'),
-('Espeon', 'Pokémon Sol', 'Usa seus poderes psíquicos para prever os movimentos do inimigo e o clima.', 0.9, 26.5, 11, NULL, 65, 65, 60, 130, 95, 110, 45, 12.5, 133, 'Amizade (Dia)', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/196.png'),
-
--- Pokémon de Fogo
-('Arcanine', 'Pokémon Lendário', 'Um Pokémon lendário na China. Corre elegantemente com passos graciosos.', 1.9, 155.0, 2, NULL, 90, 110, 80, 100, 80, 95, 75, 75.0, 58, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/059.png'),
-('Rapidash', 'Pokémon Cavalo de Fogo', 'Adora correr. Se vir algo mais rápido que ele, perseguirá em velocidade máxima.', 1.7, 95.0, 2, NULL, 65, 100, 70, 80, 80, 105, 60, 50.0, 77, 'Nível', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/078.png'),
-('Magcargo', 'Pokémon Lava', 'Seu corpo é tão quente que a chuva evapora ao tocar nele. Vive em crateras vulcânicas.', 0.8, 55.0, 2, 9, 60, 50, 120, 90, 80, 30, 75, 50.0, 218, 'Nível', 38, 'https://pokeportuga.pt/img/jogos/sprites/hgss/219.png'),
-('Magmar', 'Pokémon Cuspe de Fogo', 'Nascido em um vulcão ativo. Seu corpo queima com chamas que atingem 1.100 graus Celsius.', 1.3, 44.5, 2, NULL, 65, 95, 57, 100, 85, 93, 45, 75.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/126.png');
-
+select * from pokemon;
