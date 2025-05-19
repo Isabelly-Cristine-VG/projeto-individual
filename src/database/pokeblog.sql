@@ -5,47 +5,111 @@ USE pokeblog;
 -- Tabela de usuários
 CREATE TABLE usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    nome VARCHAR(45),
-    email VARCHAR(45) UNIQUE,
+    nome VARCHAR(45) NOT NULL,
+    email VARCHAR(45) UNIQUE NOT NULL,
     telefone VARCHAR(15),
-    senha VARCHAR(255), 
+    senha VARCHAR(255) NOT NULL,
     data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabela de tipos de Pokémon (simplificada)
-CREATE TABLE tipoPokemon(
+-- Tabela de regiões
+CREATE TABLE regiao (
+    idRegiao INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nomeRegiao VARCHAR(50) NOT NULL
+);
+
+-- Tabela de jogos
+CREATE TABLE jogo (
+    idJogo INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    idRegiao INT NOT NULL,
+    lancamento DATE,
+    plataforma VARCHAR(30),
+    FOREIGN KEY (idRegiao) REFERENCES regiao(idRegiao)
+);
+
+-- Tabela de tipos de Pokémon
+CREATE TABLE tipoPokemon (
     idTipoPokemon INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    tipo VARCHAR(20) UNIQUE,
-    cor VARCHAR(20) -- Adicionado para representação visual
+    tipo VARCHAR(20) UNIQUE NOT NULL,
+    cor VARCHAR(20) NOT NULL
 );
 
 -- Tabela para relações de vantagem/desvantagem
 CREATE TABLE vantagemTipo (
-    idTipoAtacante INT,
-    idTipoDefensor INT,
-    multiplicador DECIMAL(2,1), -- 0.5 para resistência, 1 para neutro, 2 para fraqueza
+    idTipoAtacante INT NOT NULL,
+    idTipoDefensor INT NOT NULL,
+    multiplicador DECIMAL(2,1) NOT NULL, -- 0.5 para resistência, 1 para neutro, 2 para fraqueza
     PRIMARY KEY (idTipoAtacante, idTipoDefensor),
     FOREIGN KEY (idTipoAtacante) REFERENCES tipoPokemon(idTipoPokemon),
     FOREIGN KEY (idTipoDefensor) REFERENCES tipoPokemon(idTipoPokemon)
 );
 
 -- Tabela de Pokémon
-CREATE TABLE pokemon(
+CREATE TABLE pokemon (
     idPokemon INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    nome VARCHAR(45),
-    nivel INT,
+    nome VARCHAR(45) NOT NULL,
+    especie VARCHAR(45) NOT NULL, -- Ex.: "Pokémon Semente"
+    descricao TEXT, -- Descrição flavor text
+    altura DECIMAL(4,2) NULL, -- Em metros
+    peso DECIMAL(5,2) NULL, -- Em kg
     idTipoPokemon INT NOT NULL,
-    idTipoPokemon2 INT,
-    evolucao INT,
-    idUsuario INT, -- Dono do Pokémon
-    data_captura DATETIME DEFAULT CURRENT_TIMESTAMP,
-    genero ENUM('M', 'F', 'N'), -- Masculino, Feminino, Neutro/Desconhecido
+    idTipoPokemon2 INT NULL,
+    hp_base INT NOT NULL DEFAULT 1,
+    ataque_base INT NOT NULL DEFAULT 1,
+    defesa_base INT NOT NULL DEFAULT 1,
+    ataque_especial_base INT NOT NULL DEFAULT 1,
+    defesa_especial_base INT NOT NULL DEFAULT 1,
+    velocidade_base INT NOT NULL DEFAULT 1,
+    taxa_captura INT NULL, -- De 1 a 255
+    taxa_genero DECIMAL(3,1) NULL, -- Porcentagem de fêmeas (ex.: 87.5)
+    nivel_evolucao INT NULL, -- Nível para evoluir (se aplicável)
+    imagemUrl VARCHAR(255),
     FOREIGN KEY (idTipoPokemon) REFERENCES tipoPokemon(idTipoPokemon),
-    FOREIGN KEY (idTipoPokemon2) REFERENCES tipoPokemon(idTipoPokemon),
-    FOREIGN KEY (evolucao) REFERENCES pokemon(idPokemon),
-    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
+    FOREIGN KEY (idTipoPokemon2) REFERENCES tipoPokemon(idTipoPokemon)
 );
 
+-- Tabela de habilidades (ampliada)
+CREATE TABLE habilidade (
+    idHabilidade INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(45) NOT NULL,
+    descricao TEXT,
+    idTipoPokemon INT NULL,
+    poder INT NULL,
+    precisao INT NULL, -- Valor de 0 a 100
+    pp INT NULL, -- Poder Pontos
+    efeito TEXT, -- Descrição detalhada do efeito
+    categoria ENUM('Físico', 'Especial', 'Status') NULL,
+    alvo ENUM('Alvo Único', 'Todos', 'Auto', 'Campo') NULL,
+    FOREIGN KEY (idTipoPokemon) REFERENCES tipoPokemon(idTipoPokemon)
+);
+
+-- Tabela de habilidades que Pokémon podem aprender
+CREATE TABLE pokemon_habilidades (
+    idPokemon INT NOT NULL,
+    idHabilidade INT NOT NULL,
+    raridade ENUM('Comum', 'Incomum', 'Rara', 'Especial') DEFAULT 'Comum',
+    metodo_aprendizado ENUM('Level Up', 'TM/HM', 'Ovo', 'Tutor') NOT NULL,
+    nivel_aprender INT NULL, -- Se aprendido por level up
+    PRIMARY KEY (idPokemon, idHabilidade, metodo_aprendizado),
+    FOREIGN KEY (idPokemon) REFERENCES pokemon(idPokemon),
+    FOREIGN KEY (idHabilidade) REFERENCES habilidade(idHabilidade)
+);
+
+-- Tabela de evoluções (com mais detalhes)
+CREATE TABLE evolucao (
+    idPokemonBase INT NOT NULL,
+    idPokemonEvolucao INT NOT NULL,
+    metodo VARCHAR(100) NOT NULL, -- Ex.: "Level 16", "Pedra do Trovão"
+    condicao TEXT NULL, -- Condições especiais
+    nivel INT NULL, -- Nível necessário
+    item VARCHAR(45) NULL, -- Item necessário
+    felicidade BOOLEAN NULL, -- Requer felicidade máxima?
+    hora_dia ENUM('Dia', 'Noite', 'Qualquer') NULL,
+    PRIMARY KEY (idPokemonBase, idPokemonEvolucao, metodo),
+    FOREIGN KEY (idPokemonBase) REFERENCES pokemon(idPokemon),
+    FOREIGN KEY (idPokemonEvolucao) REFERENCES pokemon(idPokemon)
+);
 -- Tabela de tipos favoritos
 CREATE TABLE tiposFavoritos (
     idUsuario INT NOT NULL,
@@ -55,11 +119,11 @@ CREATE TABLE tiposFavoritos (
     FOREIGN KEY (idTipoPokemon) REFERENCES tipoPokemon(idTipoPokemon)
 );
 
--- Tabela de times (estrutura melhorada)
+-- Tabela de times
 CREATE TABLE timePokemon (
     idTimePokemon INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     idUsuario INT NOT NULL,
-    nomeTime VARCHAR(45),
+    nomeTime VARCHAR(45) NOT NULL,
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
@@ -68,10 +132,22 @@ CREATE TABLE timePokemon (
 CREATE TABLE timePokemon_membros (
     idTimePokemon INT NOT NULL,
     idPokemon INT NOT NULL,
-    posicao INT,
+    posicao_no_time TINYINT NOT NULL, -- Posição 1-6 no time
     PRIMARY KEY (idTimePokemon, idPokemon),
     FOREIGN KEY (idTimePokemon) REFERENCES timePokemon(idTimePokemon),
     FOREIGN KEY (idPokemon) REFERENCES pokemon(idPokemon)
+);
+
+-- Tabela de líderes de ginásio
+CREATE TABLE liderGinasio (
+    idLider INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nomeLider VARCHAR(45) NOT NULL,
+    imagemUrl VARCHAR(255),
+    cidade VARCHAR(45) NOT NULL,
+    idRegiao INT NOT NULL,
+    idTimePokemon INT NOT NULL,
+    FOREIGN KEY (idRegiao) REFERENCES regiao(idRegiao),
+    FOREIGN KEY (idTimePokemon) REFERENCES timePokemon(idTimePokemon)
 );
 
 -- INSERTS PARA TIPOS DE POKÉMON
@@ -97,13 +173,6 @@ INSERT INTO tipoPokemon (idTipoPokemon, tipo, cor) VALUES
 
 -- INSERTS PARA RELAÇÕES DE TIPO (VANTAGENS/DESVANTAGENS)
 -- Eficácia 2x (super efetivo)
--- Substitua a seção de INSERTS da tabela vantagemTipo por este código:
-
--- Primeiro, limpe a tabela se já existirem dados
-TRUNCATE TABLE vantagemTipo;
-
--- INSERTS PARA RELAÇÕES DE TIPO (VANTAGENS/DESVANTAGENS)
--- Eficácia 2x (super efetivo) - apenas relações únicas
 INSERT INTO vantagemTipo (idTipoAtacante, idTipoDefensor, multiplicador) VALUES
 -- Fogo
 (2, 5, 2), (2, 12, 2), (2, 6, 2), (2, 17, 2),
@@ -176,7 +245,7 @@ INSERT INTO vantagemTipo (idTipoAtacante, idTipoDefensor, multiplicador) VALUES
 -- Fada
 (18, 2, 0.5), (18, 8, 0.5), (18, 17, 0.5),
 
--- Eficácia 0x (imune) - apenas relações únicas
+-- Eficácia 0x (imune)
 (4, 9, 0),    -- Terra é imune a Elétrico
 (7, 14, 0),   -- Fantasma é imune a Lutador
 (9, 10, 0),   -- Voador é imune a Terra
@@ -185,21 +254,27 @@ INSERT INTO vantagemTipo (idTipoAtacante, idTipoDefensor, multiplicador) VALUES
 (1, 14, 0),   -- Fantasma é imune a Normal
 (8, 17, 0);   -- Aço é imune a Venenoso
 
-SELECT 
-    t.tipo AS 'Tipo',
-    (SELECT GROUP_CONCAT(t2.tipo SEPARATOR ', ') 
-     FROM vantagemTipo v
-     JOIN tipoPokemon t2 ON v.idTipoAtacante = t2.idTipoPokemon
-     WHERE v.idTipoDefensor = t.idTipoPokemon AND v.multiplicador = 2) AS 'Fraco contra',
-     
-    (SELECT GROUP_CONCAT(t2.tipo SEPARATOR ', ') 
-     FROM vantagemTipo v
-     JOIN tipoPokemon t2 ON v.idTipoAtacante = t2.idTipoPokemon
-     WHERE v.idTipoDefensor = t.idTipoPokemon AND v.multiplicador = 0.5) AS 'Resistente a',
-     
-    (SELECT GROUP_CONCAT(t2.tipo SEPARATOR ', ') 
-     FROM vantagemTipo v
-     JOIN tipoPokemon t2 ON v.idTipoAtacante = t2.idTipoPokemon
-     WHERE v.idTipoDefensor = t.idTipoPokemon AND v.multiplicador = 0) AS 'Imune a'
-FROM tipoPokemon t
-ORDER BY t.tipo;
+-- INSERTS PARA REGIÕES
+INSERT INTO regiao (idRegiao, nomeRegiao) VALUES
+(1, 'Kanto'),
+(2, 'Johto'),
+(3, 'Hoenn'),
+(4, 'Sinnoh'),
+(5, 'Unova'),
+(6, 'Kalos'),
+(7, 'Alola'),
+(8, 'Galar');
+
+-- INSERTS PARA JOGOS
+INSERT INTO jogo (idJogo, nome, idRegiao, lancamento, plataforma) VALUES
+(1, 'Pokémon Red', 1, '1996-09-28', 'Game Boy'),
+(2, 'Pokémon Blue', 1, '1996-10-15', 'Game Boy'),
+(3, 'Pokémon Yellow', 1, '1998-09-12', 'Game Boy'),
+(4, 'Pokémon Gold', 2, '1999-11-21', 'Game Boy Color'),
+(5, 'Pokémon Silver', 2, '1999-11-21', 'Game Boy Color'),
+(6, 'Pokémon Crystal', 2, '2000-12-14', 'Game Boy Color'),
+(7, 'Pokémon Ruby', 3, '2002-11-21', 'Game Boy Advance'),
+(8, 'Pokémon Sapphire', 3, '2002-11-21', 'Game Boy Advance'),
+(9, 'Pokémon Emerald', 3, '2004-09-16', 'Game Boy Advance'),
+(10, 'Pokémon Fire Red', 1, '2004-01-29', 'Game Boy Advance'),
+(11, 'Pokémon Leaf Green', 1, '2004-01-29', 'Game Boy Advance');
