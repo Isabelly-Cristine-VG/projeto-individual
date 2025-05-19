@@ -24,7 +24,22 @@ function buscarVantagensPorTipo(idTipo) {
     return database.executar(instrucaoSql); // Remova o array de parâmetros
 }
 
+function contarVantagensPorTipo(idTipo) {
+    const instrucaoSql = `
+        SELECT 
+            SUM(CASE WHEN multiplicador = 2 THEN 1 ELSE 0 END) AS totalFraquezas,
+            SUM(CASE WHEN multiplicador = 0.5 THEN 1 ELSE 0 END) AS totalResistencias,
+            SUM(CASE WHEN multiplicador = 0 THEN 1 ELSE 0 END) AS totalImunidades
+        FROM vantagemTipo
+        WHERE idTipoDefensor = ${idTipo};
+    `;
+    
+    console.log("SQL de contagem executado:", instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     buscarTipo,
-    buscarVantagensPorTipo
+    buscarVantagensPorTipo,
+    contarVantagensPorTipo
 };

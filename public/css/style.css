@@ -1384,3 +1384,37 @@ body {
 .tipoPokemon{
     width: 13rem;
 }
+
+.kpis-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.kpi-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 200px;
+}
+
+.kpi-box h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.kpi-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Cores específicas para cada KPI */
+#totalFraquezas { color: #e74c3c; }
+#totalResistencias { color: #2ecc71; }
+#totalImunidades { color: #f39c12; }

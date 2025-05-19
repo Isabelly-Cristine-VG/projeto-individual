@@ -12,4 +12,8 @@ router.get('/buscarVantagensPorTipo/:idTipo(\\d+)', function (req, res) {
     tipoController.buscarVantagensPorTipo(req, res);
 });
 
+router.get('/contarVantagensPorTipo/:idTipo(\\d+)', function (req, res) {
+    tipoController.contarVantagensPorTipo(req, res);
+});
+
 module.exports = router;

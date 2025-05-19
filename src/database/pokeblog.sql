@@ -378,5 +378,3 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Crobat', 'Pokémon Morcego', 'Voam silenciosamente à noite, usando ondas ultrassônicas para identificar presas.', 1.8, 75.0, 8, 10, 85, 90, 80, 70, 80, 130, 90, 50.0, 32, 'Amizade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/169.png'),
 ('Ariados', 'Pokémon Aranha', 'Tece teias com fios finos, mas resistentes, que podem deter até aves em voo.', 1.1, 33.5, 12, 8, 70, 90, 70, 60, 70, 40, 90, 50.0, 26, 'Level 22', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/168.png');
 
-
-select * from pokemon;
