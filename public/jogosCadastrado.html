@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokeblog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
+    <style>
+        /* ESTILOS ADICIONAIS PARA O CARROSSEL */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 50px;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0);
+            color: rgb(53, 53, 53);
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background: rgba(138, 138, 138, 0.205);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li class="agora">
+                <a href="indexCadastrado.html">home</a>
+            </li>
+            <li>
+                <a href="jogosCadastrado.html"><b>Jogos</b></a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="login.html">ginásios</a>
+            </li>
+            <li>
+                <a href="cadastro.html">perfil</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="titulo">
+            <h1>Vamos falar um pouco sobre os jogos?</h1>
+        </div>
+        <div class="texto-inicial">
+            <h3>Pokemon é uma franquia enorme, e por causa disso existem inúmeros jogos e os ditos "spin-offs". <br>
+                Vamos abordar um pouco deles aqui!
+            </h3>
+        </div>
+
+        <div class="topico1">
+            <h1>Jogos principais</h1>
+            <div class="paragrafo-jogo">
+                <img src="assets/12.gif" alt="">
+                <h3>Pokemon acaba sendo uma franquia enorme, mas seu foco sempre foi nos
+                    <br>seus jogos que levam otitulo da franquia, seguindo com um subtitulo a respeito do jogo.
+                    <br>Todos eles tem a sua temática principal de batalhas e ginásios,
+                    mas cada um <br> tem sua própria história sendo contada ao decorrer da franquia
+                </h3>
+            </div>
+
+            <!-- CARROSSEL DE JOGOS-->
+            <div class="carousel-container">
+                <div class="carousel" id="pokemonCarousel">
+                    <!-- Primeira geração -->
+                    <div class="geracao1">
+                        <img src="assets/49.png" alt="">
+                        <h4>Pokemon FireRed & LeafGreen</h4>
+                        <h6>primeira geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/fireRed.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Segunda geração -->
+                    <div class="geracao2">
+                        <img src="assets/50.png" alt="">
+                        <h4>Pokemon HeartGold & SoulSilver</h4>
+                        <h6>Segunda geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/heartGold.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Terceira geração -->
+                    <div class="geracao3">
+                        <img src="assets/30.png" alt="">
+                        <h4>Pokemon Ruby & Sapphire</h4>
+                        <h6>terceira geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/ruby.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Quarta geração -->
+                    <div class="geracao4">
+                        <img src="assets/32.png" alt="">
+                        <h4>Pokemon Diamond & Pearl</h4>
+                        <h6>quarta geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/diamond.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Quinta geração -->
+                    <div class="geracao5">
+                        <img src="assets/39.png" alt="">
+                        <h4>Pokemon Black & White</h4>
+                        <h6>Quinta geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/blackWhite.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Sexta geração -->
+                    <div class="geracao6">
+                        <img src="assets/31.png" alt="">
+                        <h4>Pokemon X & Y</h4>
+                        <h6>Sexta geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/xy.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Sétima geração -->
+                    <div class="geracao7">
+                        <img src="assets/48.png" alt="">
+                        <h4>Pokemon Sun & Moon</h4>
+                        <h6>sétima geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/sunMoon.html"> Ver mais</a></button>
+                    </div>
+
+                    <!-- Oitava geração -->
+                    <div class="geracao8">
+                        <img src="assets/51.png" alt="">
+                        <h4>Pokemon Sword & Shield</h4>
+                        <h6>oitava geração dos jogos</h6>
+                        <button type="button" class="info-btn"><a href="jogosCadastrados/sword.html"> Ver mais</a></button>
+                    </div>
+                </div>
+
+                <!-- Botões de navegação -->
+                <button class="nav-btn prev" onclick="moveCarousel(-1)">❮</button>
+                <button class="nav-btn next" onclick="moveCarousel(1)">❯</button>
+            </div>
+
+            <div class="paragrafo-jogo2">
+                <h1>TCG</h1>
+                <h3>TCG (Trading Card Game) como o próprio nome diz, é um jogo a partir de cartas colecionáveis. O seu
+                    intuito é </h3>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção 1: Logo e descrição -->
+            <div class="footer-section">
+                <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Regiões</a></li>
+                    <li><a href="#">Dicas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé inferior (créditos) -->
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+
+    <script>
+        // Declara uma variável para controlar a posição atual do carrossel
+        let posicao = 0;
+
+        // Obtém a referência do elemento do carrossel no HTML
+        const carousel = document.getElementById('pokemonCarousel');
+
+        // Obtém todos os elementos div que são filhos diretos do carrossel (cada card de geração)
+        const cards = document.querySelectorAll('.carousel > div');
+
+        // Define a largura estimada de cada card (incluindo margens/gaps)
+        const cardWidth = 300; // Valor estimado para a seta percorrer o carousel
+
+        // Função para mover o carrossel na direção especificada
+        function moveCarousel(direction) {
+            // Atualiza a posição:
+            // - direction é 1 (próximo) ou -1 (anterior)
+            // - cards.length é o número total de cards
+            // - O módulo (%) garante que a posição fique dentro dos limites (0 a cards.length-1)
+            posicao = (posicao + direction + cards.length) % cards.length;
+
+            // Aplica a transformação CSS para mover o carrossel horizontalmente
+            // Multiplica a posição pela largura do card para obter o deslocamento correto
+            carousel.style.transform = `translateX(-${posicao * cardWidth}px)`;
+        }
+    </script>
+</body>
+
+</html>
