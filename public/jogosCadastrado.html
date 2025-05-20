@@ -169,9 +169,11 @@
                 </div>
 
                 <!-- Botões de navegação -->
-                <button class="nav-btn prev" onclick="moveCarousel(-1)">❮</button>
-                <button class="nav-btn next" onclick="moveCarousel(1)">❯</button>
+                <button class="nav-btn prev" onclick="moverCarousel(-1)">❮</button>
+                <button class="nav-btn next" onclick="moverCarousel(1)">❯</button>
             </div>
+
+            
 
             <div class="paragrafo-jogo2">
                 <h1>TCG</h1>
@@ -208,28 +210,21 @@
     </footer>
 
     <script>
-        // Declara uma variável para controlar a posição atual do carrossel
         let posicao = 0;
 
-        // Obtém a referência do elemento do carrossel no HTML
         const carousel = document.getElementById('pokemonCarousel');
 
-        // Obtém todos os elementos div que são filhos diretos do carrossel (cada card de geração)
         const cards = document.querySelectorAll('.carousel > div');
 
-        // Define a largura estimada de cada card (incluindo margens/gaps)
-        const cardWidth = 300; // Valor estimado para a seta percorrer o carousel
+        
+        const cardWidth = 340; 
 
-        // Função para mover o carrossel na direção especificada
-        function moveCarousel(direction) {
-            // Atualiza a posição:
-            // - direction é 1 (próximo) ou -1 (anterior)
-            // - cards.length é o número total de cards
-            // - O módulo (%) garante que a posição fique dentro dos limites (0 a cards.length-1)
+        
+        function moverCarousel(direction) {
+            
             posicao = (posicao + direction + cards.length) % cards.length;
 
-            // Aplica a transformação CSS para mover o carrossel horizontalmente
-            // Multiplica a posição pela largura do card para obter o deslocamento correto
+            
             carousel.style.transform = `translateX(-${posicao * cardWidth}px)`;
         }
     </script>
