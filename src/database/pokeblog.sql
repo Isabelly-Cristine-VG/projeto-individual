@@ -80,24 +80,7 @@ CREATE TABLE tiposFavoritos (
     FOREIGN KEY (idTipoPokemon) REFERENCES tipoPokemon(idTipoPokemon)
 );
 
--- Tabela de times
-CREATE TABLE timePokemon (
-    idTimePokemon INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    idUsuario INT NOT NULL,
-    nomeTime VARCHAR(45) NOT NULL,
-    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
-);
 
--- Tabela de membros do time
-CREATE TABLE timePokemon_membros (
-    idTimePokemon INT NOT NULL,
-    idPokemon INT NOT NULL,
-    posicao_no_time TINYINT NOT NULL, -- Posição 1-6 no time
-    PRIMARY KEY (idTimePokemon, idPokemon),
-    FOREIGN KEY (idTimePokemon) REFERENCES timePokemon(idTimePokemon),
-    FOREIGN KEY (idPokemon) REFERENCES pokemon(idPokemon)
-);
 
 -- Tabela de líderes de ginásio
 CREATE TABLE liderGinasio (
@@ -106,10 +89,30 @@ CREATE TABLE liderGinasio (
     imagemUrl VARCHAR(255),
     cidade VARCHAR(45) NOT NULL,
     idRegiao INT NOT NULL,
-    idTimePokemon INT NOT NULL,
-    FOREIGN KEY (idRegiao) REFERENCES regiao(idRegiao),
-    FOREIGN KEY (idTimePokemon) REFERENCES timePokemon(idTimePokemon)
+    FOREIGN KEY (idRegiao) REFERENCES regiao(idRegiao)
 );
+
+-- Tabela de times
+CREATE TABLE timePokemon (
+    idTimePokemon INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    idUsuario INT,
+    idLider INT,
+    nomeTime VARCHAR(45) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
+    FOREIGN KEY (idLider) REFERENCES liderGinasio(idLider)
+);
+
+-- Tabela de membros do time
+CREATE TABLE timePokemon_membros (
+    idTimePokemon INT NOT NULL,
+    idPokemon INT NOT NULL,
+    posicao_no_time TINYINT NOT NULL, -- Posição 1-6 no time
+    PRIMARY KEY (idTimePokemon, posicao_no_time), -- Garante que cada posição no time seja única
+    FOREIGN KEY (idTimePokemon) REFERENCES timePokemon(idTimePokemon),
+    FOREIGN KEY (idPokemon) REFERENCES pokemon(idPokemon)
+);
+
 
 -- INSERTS PARA TIPOS DE POKÉMON
 INSERT INTO tipoPokemon (idTipoPokemon, tipo, cor) VALUES
@@ -377,4 +380,78 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Golbat', 'Pokémon Morcego', 'Drena o sangue de presas vivas com seus dentes afiados como agulhas. Bebe até ficar satisfeito.', 1.6, 55.0, 8, 10, 75, 80, 70, 65, 75, 90, 90, 50.0, 25, 'Amizade', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/042.png'),
 ('Crobat', 'Pokémon Morcego', 'Voam silenciosamente à noite, usando ondas ultrassônicas para identificar presas.', 1.8, 75.0, 8, 10, 85, 90, 80, 70, 80, 130, 90, 50.0, 32, 'Amizade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/169.png'),
 ('Ariados', 'Pokémon Aranha', 'Tece teias com fios finos, mas resistentes, que podem deter até aves em voo.', 1.1, 33.5, 12, 8, 70, 90, 70, 60, 70, 40, 90, 50.0, 26, 'Level 22', 22, 'https://pokeportuga.pt/img/jogos/sprites/hgss/168.png');
+
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+-- Pokémon Psíquicos
+('Kadabra', 'Pokémon Psíquico', 'Dorme enquanto flutua no ar. Seu rabo está conectado a dimensões alternativas.', 1.3, 56.5, 11, NULL, 40, 35, 30, 120, 70, 105, 100, 75.0, 27, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/064.png'),
+('Alakazam', 'Pokémon Psíquico', 'Seu cérebro superdesenvolvido pode realizar cálculos como um supercomputador.', 1.5, 48.0, 11, NULL, 55, 50, 45, 135, 95, 120, 50, 75.0, 69, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/065.png'),
+('Mr. Mime', 'Pokémon Barreira', 'Um mestre da pantomima. Suas barreiras invisíveis são na verdade paredes de ar comprimido.', 1.3, 54.5, 11, 18, 40, 45, 65, 100, 120, 90, 45, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/frlg/122.png'),
+('Espeon', 'Pokémon Sol', 'Usa seus poderes psíquicos para prever os movimentos do inimigo e o clima.', 0.9, 26.5, 11, NULL, 65, 65, 60, 130, 95, 110, 45, 12.5, 29, 'Amizade (Dia)', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/196.png');
+
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+-- Pokémon de Fogo
+('Arcanine', 'Pokémon Lendário', 'Um Pokémon lendário na China. Corre elegantemente com passos graciosos.', 1.9, 155.0, 2, NULL, 90, 110, 80, 100, 80, 95, 75, 75.0, 30, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/059.png'),
+('Rapidash', 'Pokémon Cavalo de Fogo', 'Adora correr. Se vir algo mais rápido que ele, perseguirá em velocidade máxima.', 1.7, 95.0, 2, NULL, 65, 100, 70, 80, 80, 105, 60, 50.0, 31, 'Nível', 40, 'https://pokeportuga.pt/img/jogos/sprites/hgss/078.png'),
+('Magcargo', 'Pokémon Lava', 'Seu corpo é tão quente que a chuva evapora ao tocar nele. Vive em crateras vulcânicas.', 0.8, 55.0, 2, 9, 60, 50, 120, 90, 80, 30, 75, 50.0, 33, 'Nível', 38, 'https://pokeportuga.pt/img/jogos/sprites/hgss/219.png');
+
+
+-- 1. INSERIR OS LÍDERES (agora sem referência a timePokemon)
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Brock', 'https://archives.bulbagarden.net/media/upload/3/3b/Spr_FRLG_Brock.png', 'Pewter City', 1),
+('Misty', 'https://archives.bulbagarden.net/media/upload/0/08/Spr_FRLG_Misty.png', 'Cerulean City', 1),
+('Lt. Surge', 'https://archives.bulbagarden.net/media/upload/4/4a/Spr_FRLG_Lt_Surge.png', 'Vermilion City', 1),
+('Erika', 'https://archives.bulbagarden.net/media/upload/4/4e/Spr_FRLG_Erika.png', 'Celadon City', 1),
+('Koga', 'https://archives.bulbagarden.net/media/upload/5/59/Spr_FRLG_Koga.png', 'Fuchsia City', 1),
+('Sabrina', 'https://archives.bulbagarden.net/media/upload/2/2e/Spr_FRLG_Sabrina.png', 'Saffron City', 1),
+('Blaine', 'https://archives.bulbagarden.net/media/upload/7/7f/Spr_FRLG_Blaine.png', 'Cinnabar Island', 1),
+('Giovanni', 'https://archives.bulbagarden.net/media/upload/4/44/Spr_FRLG_Giovanni.png', 'Viridian City', 1);
+
+-- 2. CRIAR OS TIMES REFERENCIANDO OS LÍDERES
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(1, 'Time de Brock', NOW()),
+(2, 'Time de Misty', NOW()),
+(3, 'Time de Lt. Surge', NOW()),
+(4, 'Time de Erika', NOW()),
+(5, 'Time de Koga', NOW()),
+(6, 'Time de Sabrina', NOW()),
+(7, 'Time de Blaine', NOW()),
+(8, 'Time de Giovanni', NOW());
+
+-- 3. INSERIR OS MEMBROS DOS TIMES
+-- Time de Brock (Pedra/Terra)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(1, 1, 1), (1, 2, 2);
+
+-- Time de Misty (Água)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(2, 13, 1), (2, 47, 2);
+
+-- Time de Lt. Surge (Elétrico)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(3, 9, 1), (3, 41, 2), (3, 42, 3);
+
+-- Time de Erika (Planta)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(4, 56, 1), (4, 16, 2), (4, 53, 3);
+
+-- Time de Koga (Venenoso)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(5, 21, 1), (5, 61, 2), (5, 21, 3), (5, 60, 4);
+
+-- Time de Sabrina (Psíquico)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(6, 69, 1), (6, 28, 2), (6, 70, 3);
+
+-- Time de Blaine (Fogo)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(7, 30, 1), (7, 31, 2), (7, 74, 3), (7, 73, 4);
+
+-- Time de Giovanni (Terra)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(8, 3, 1), (8, 7, 2), (8, 63, 3), (8, 65, 4), (8, 37, 5);
+
 
