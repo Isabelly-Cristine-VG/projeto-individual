@@ -61,7 +61,7 @@
 }
 
 .tipo-agua img{
-    margin-left: -10%;
+    margin-left: -6%;
 }
 
 .fundo-agua{
@@ -391,7 +391,7 @@
 }
 
 .tipo-psiquico img{
-    margin-left: -10%;
+    margin-left: -8%;
 }
 
 .fundo-psiquico{
@@ -445,21 +445,6 @@
     height: 5rem;
 }
 
-.pokemons-psiquico .kadabra{
-    margin-left: -15%;
-}
-
-.pokemons-psiquico .mime{
-    margin-left: -55%;
-}
-
-.pokemons-psiquico .venomoth{
-    margin-left: -55%;
-}
-
-.pokemons-psiquico .alakazam{
-    margin-left: -56%;
-}
 
 /*GINÁSIO TIPO FOGO*/
 
@@ -530,22 +515,6 @@
     height: 5rem;
 }
 
-.pokemons-fogo .growlithe{
-    margin-left: -17%;
-}
-
-.pokemons-fogo .ponyta{
-    margin-left: -53%;
-}
-
-.pokemons-fogo .rapidash{
-    margin-left: -48%;
-}
-
-.pokemons-fogo .arcanine{
-    margin-left: -40%;
-}
-
 /*GINÁSIO DO TIPO VOADOR*/
 
 .tipo-voador{
@@ -559,7 +528,7 @@
 }
 
 .tipo-voador img{
-    margin-left: -10%;
+    margin-left: -8%;
 }
 
 .fundo-voador{
@@ -701,7 +670,7 @@
 }
 
 .tipo-normal img{
-    margin-left: -8%;
+    margin-left: -10%;
 }
 
 .fundo-normal{
@@ -714,20 +683,6 @@
     padding: 1.5rem;
 }
 
-.pokemons-normal{
-    display: flex;
-    background-color: rgb(199, 124, 144);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(247, 202, 214);
-    padding: 1.5rem;
-    width: 5rem;
-    height: 2rem;
-    margin-left: -9%;
-    align-items: center;
-
-}
 
 .insignia-normal{
     display: flex;
@@ -755,13 +710,6 @@
     height: 5rem;
 }
 
-.pokemons-normal .miltank{
-    margin-left: -40%;
-}
-
-.pokemons-normal .clefairy{
-    margin-left: -40%;
-}
 
 
 /*GINÁSIO TIPO FANTASMA*/
@@ -831,21 +779,6 @@
     height: 5rem;
 }
 
-.pokemons-fantasma .gastly{
-    margin-left: -22%;
-}
-
-.pokemons-fantasma .haunter{
-    margin-left: -56%;
-}
-
-.pokemons-fantasma .haunter2{
-    margin-left: -48%;
-}
-
-.pokemons-fantasma .gengar{
-    margin-left: -54%;
-}
 
 /*GINÁSIO TIPO LUTADOR*/
 
@@ -986,17 +919,6 @@
     height: 5rem;
 }
 
-.pokemons-aco .magnemite{
-    margin-left: -40%;
-}
-
-.pokemons-aco .magnemite2{
-    margin-left: -35%;
-}
-
-.pokemons-aco .steelix{
-    margin-left: -20%;
-}
 
 /*GINÁSIO DO TIPO GELO*/
 
@@ -1064,19 +986,6 @@
     width: 15rem;
     height: 5rem;
 }
-
-.pokemons-gelo .seel{
-    margin-left: -31%;
-}
-
-.pokemons-gelo .dewgong{
-    margin-left: -22%;
-}
-
-.pokemons-gelo .piloswine{
-    margin-left: -17%;
-}
-
 
 
 /*GINÁSIO TIPO FANTASMA*/
@@ -1147,18 +1056,3 @@
     height: 5rem;
 }
 
-.pokemons-dragao .gyarados{
-    margin-left: -12%;
-}
-
-.pokemons-dragao .dragonair{
-    margin-left: -48%;
-}
-
-.pokemons-dragao .dragonair2{
-    margin-left: -49%;
-}
-
-.pokemons-dragao .kingdra{
-    margin-left: -55%;
-}

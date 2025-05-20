@@ -12,7 +12,7 @@
         /* Estilos do Carousel */
         .carousel-container {
             position: relative;
-            max-width: 800px;
+            max-width: 100%;
             margin: 2rem auto;
             overflow: hidden;
             border-radius: 10px;
@@ -273,7 +273,7 @@
                                 <img src="../assets/geracao4/lider-lutador.png" class="lider-luta" alt="">
                                 <div class="texto-ginasio">
                                     <h2>Ginásio do tipo lutador</h2>
-                                    <div class="paragrafo-ginasio">
+                                    <div class="paragrafo-lutador">
                                         <div class="fundo-lutador">
                                             <p>
                                                 O ginásio de Mauville City é liderado por Wattson, um veterano animado
@@ -334,11 +334,11 @@
                         <!-- Ginásio do tipo fantasma -->
                         <div class="tipo-ginasio">
                             <div class="tipo-fantasma">
-                                <img src="../assets/geracao4/lider-fantasma.png" alt="">
+                                <img style="width: 50%; margin-left: -6%;" src="../assets/geracao4/lider-fantasma.png" alt="">
 
                                 <div class="texto-ginasio">
                                     <h2>Ginásio do tipo fantasma</h2>
-                                    <div class="paragrafo-lutador">
+                                    <div class="paragrafo-ginasio">
                                         <div class="fundo-fantasma">
                                             <p>
                                                 O ginásio de Petalburg City é liderado por Norman, um mestre de Pokémon
@@ -552,8 +552,8 @@
 
             // Inicia o autoplay (troca automática de slides)
             function startAutoplay() {
-                // Configura um intervalo para trocar de slide a cada 3 segundos
-                autoplayInterval = setInterval(nextSlide, 3000);
+                // Configura um intervalo para trocar de slide a cada 5 segundos
+                autoplayInterval = setInterval(nextSlide, 5000);
             }
 
             // Reinicia o autoplay (útil após interação manual)
