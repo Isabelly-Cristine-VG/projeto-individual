@@ -455,3 +455,12 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 (8, 3, 1), (8, 7, 2), (8, 63, 3), (8, 65, 4), (8, 37, 5);
 
 
+liderGinasio.cidade AS cidade, regiao.idRegiao, timePokemon.nomeTime AS nomeT, timePokemon_membros.posicao_no_time AS posicao,
+pokemon.nome AS nomeP, pokemon.imagemUrl AS pokemon, tipoPokemon.tipo AS tipo, tipoPokemon.cor AS tipoCor
+FROM timePokemon_membros
+JOIN pokemon ON timePokemon_membros.idPokemon = pokemon.idPokemon
+JOIN tipoPokemon ON pokemon.idTipoPokemon = tipoPokemon.idTipoPokemon
+JOIN timePokemon ON timePokemon_membros.idTimePokemon = timePokemon.idTimePokemon
+JOIN liderGinasio ON timePokemon.idLider = liderGinasio.idLider
+JOIN regiao ON liderGinasio.idRegiao = regiao.idRegiao
+where liderGinasio.idRegiao = 1;
