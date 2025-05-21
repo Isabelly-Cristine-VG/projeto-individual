@@ -2,16 +2,9 @@ var database = require("../database/config")
 
 function buscarGinasios(idRegiao) {
     const instrucaoSql = `
-        SELECT 
-            lg.nomeLider AS lider, 
-            lg.cidade, 
-            r.nomeRegiao, 
-            tm.nomeTime AS nomeT,
-            tpm.posicao_no_time AS posicao,
-            p.nome AS nomeP, 
-            p.imagemUrl AS pokemon, 
-            tp.tipo, 
-            tp.cor AS tipoCor
+        SELECT lg.nomeLider AS lider, lg.cidade, r.nomeRegiao, 
+        tm.nomeTime AS nomeT, tpm.posicao_no_time AS posicao,
+        p.nome AS nomeP, p.imagemUrl AS pokemon, tp.tipo, tp.cor AS tipoCor
         FROM timePokemon_membros tpm
         JOIN pokemon p ON tpm.idPokemon = p.idPokemon
         JOIN tipoPokemon tp ON p.idTipoPokemon = tp.idTipoPokemon
