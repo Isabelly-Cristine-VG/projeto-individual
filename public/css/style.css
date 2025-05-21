@@ -1420,3 +1420,64 @@ body {
 #totalFraquezas { color: #e74c3c; }
 #totalResistencias { color: #2ecc71; }
 #totalImunidades { color: #f39c12; }
+
+
+.pokemons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os cards quebrem para próxima linha */
+    gap: 15px; /* Espaço entre os cards */
+}
+
+.pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    min-height: 150px; /* Alterado para min-height */
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    overflow: hidden; /* Impede que o conteúdo vaze */
+}
+
+.pokemon-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 5px 0; /* Espaço equilibrado */
+}
+
+.pokemon-card p {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0 5px; /* Padding interno para textos longos */
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+}
+
+.tipo-pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem; /* Tamanho reduzido */
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    height: 25px; /* Altura reduzida */
+    width: 100%;
+    padding: 0 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
