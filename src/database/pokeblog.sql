@@ -325,7 +325,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Golem', 'Pokémon Megaton', 'Seu corpo é duro como pedra e pode suportar explosões de dinamite sem sofrer danos.', 1.4, 300.0, 13, 9, 80, 120, 130, 55, 65, 45, 45, 50.0, 2, 'Trade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/076.png'),
 
 -- Evolução de Onix (assumindo idPokemon = 3)
-('Steelix', 'Pokémon Cobra de Ferro', 'Seu corpo foi comprimido sob o solo. É mais duro que diamante.', 9.2, 400.0, 17, 9, 75, 85, 200, 55, 65, 30, 25, 50.0, 3, 'Trade com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/208.png'),
+('Steelix', 'Pokémon Cobra de Ferro', 'Seu corpo foi comprimido sob o solo. É mais duro que diamante.', 9.2, 400.0, 17, 9, 75, 85, 200, 55, 65, 30, 25, 50.0, 3, 'Trade com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/208_f.png'),
 
 -- Evolução de Rhyhorn (assumindo idPokemon = 4)
 ('Rhydon', 'Pokémon Broca', 'Protegido por uma armadura, é capaz de viver em lava de 3.600 graus.', 1.9, 120.0, 9, 13, 105, 130, 120, 45, 45, 40, 60, 50.0, 4, 'Level 42', 42, 'https://pokeportuga.pt/img/jogos/sprites/hgss/112_m.png'),
@@ -427,7 +427,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon inseto/voador sem pré-evolução
 ('Weedle', 'Pokémon Lagarta Venenosa', 'Possui um ferrão venenoso na cabeça. Usa-o para se defender enquanto se esconde em árvores.', 0.3, 3.2, 7, 4, 40, 35, 30, 20, 20, 50, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/013.png'),
-('Scyther', 'Pokémon Louva-a-Deus', 'Move-se tão rápido que parece invisível. Suas garras afiadas cortam qualquer coisa como uma lâmina.', 1.5, 56.0, 7, 3, 70, 110, 80, 55, 80, 105, 45, 50.0, NULL, 'Troca com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/123.png'),
+('Scyther', 'Pokémon Louva-a-Deus', 'Move-se tão rápido que parece invisível. Suas garras afiadas cortam qualquer coisa como uma lâmina.', 1.5, 56.0, 7, 3, 70, 110, 80, 55, 80, 105, 45, 50.0, NULL, 'Troca com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/123_f.png'),
 ('Caterpie', 'Pokémon Lagarta', 'Se alimenta avidamente de folhas. Seu corpo libera um líquido fedorento para se proteger de predadores.', 0.3, 2.9, 7, NULL, 45, 30, 35, 20, 20, 45, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/010.png');
 
 
@@ -469,10 +469,10 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 8, 14, 45, 50, 45, 115, 55, 95, 90, 50.0, 85, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/093.png'),
 ('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 8, 14, 60, 65, 60, 130, 75, 110, 45, 50.0, 98, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/094.png'),
 ('Primeape', 'Pokémon Porco Macaco', 'Sua raiva nunca acaba. Persegue inimigos até exaustão, mesmo que isso o machuque.', 1.0, 32.0, 7, NULL, 65, 105, 60, 60, 70, 95, 75, 50.0, 86, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/057.png'),
-('Piloswine', 'Pokémon Porco', 'Seus longos pelos o protegem do frio. Ataca com presas afiadas cobertas de gelo.', 1.1, 55.8, 6, 9, 100, 100, 80, 60, 60, 50, 75, 50.0, 87, 'Level up movendo Ancient Power', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/221.png'),
+('Piloswine', 'Pokémon Porco', 'Seus longos pelos o protegem do frio. Ataca com presas afiadas cobertas de gelo.', 1.1, 55.8, 6, 9, 100, 100, 80, 60, 60, 50, 75, 50.0, 87, 'Level up movendo Ancient Power', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/221_m.png'),
 ('Mamoswine', 'Pokémon Porco', 'Surgiu durante a Era do Gelo. Seu pelo grosso o protege do frio extremo.', 2.5, 291.0, 6, 9, 110, 130, 80, 70, 60, 80, 50, 50.0, 101, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/473.png'),
 ('Dewgong', 'Pokémon Foca', 'Seu corpo é branco como a neve. Armazena calor sob sua pele para sobreviver em icebergs.', 1.7, 120.0, 3, 6, 90, 70, 80, 70, 95, 70, 75, 50.0, 88, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/087.png'),
-('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 11, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/130.png');
+('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 11, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/130_f.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
@@ -487,8 +487,154 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 7, 4, 45, 25, 50, 25, 25, 35, 120, 50.0, 82, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/014.png'),
 ('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 7, 4, 65, 90, 40, 45, 80, 75, 45, 50.0, 107, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/015.png');
 
-select * from pokemon;
 
+-- Pokémon dos Líderes de Ginásio de Hoenn 
+
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, 
+ataqueBase, defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase,
+ taxaCaptura, taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+-- Líder Roxanne (Pedra)
+('Aron', 'Pokémon Ferro', 'Se alimenta de minérios de ferro. Seu corpo de aço é mais duro que diamante.', 0.4, 60.0, 17, 13, 50, 70, 100, 40, 40, 30, 180, 50.0, NULL, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/rse/304.png'),
+
+-- Líder Brawly (Lutador)
+('Makuhita', 'Pokémon Gordura', 'Treina derrubando árvores com golpes de palma.', 1.0, 86.4, 7, NULL, 72, 60, 30, 20, 30, 25, 180, 75.0, NULL, 'Level 24', 24, 'https://pokeportuga.pt/img/jogos/sprites/rs/296.png'),
+('Meditite', 'Pokémon Meditação', 'Medita para aumentar sua energia interior.', 0.6, 11.2, 7, 11, 30, 40, 55, 40, 55, 60, 180, 50.0, NULL, 'Level 37', 37, 'https://pokeportuga.pt/img/jogos/sprites/rse/307.png'),
+
+-- Líder Wattson (Elétrico)
+('Electrike', 'Pokémon Relâmpago', 'Armazena eletricidade na pelagem.', 0.6, 15.2, 4, NULL, 40, 45, 40, 65, 40, 65, 120, 50.0, NULL, 'Level 26', 26, 'https://pokeportuga.pt/img/jogos/sprites/rse/309.png'),
+
+-- Líder Norman (Normal)
+('Slakoth', 'Pokémon Preguiça', 'Dorme 20 horas por dia.', 0.8, 24.0, 1, NULL, 60, 60, 60, 35, 35, 30, 255, 50.0, NULL, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/rse/287.png'),
+
+-- Líder Winona (Voador)
+('Swablu', 'Pokémon Pássaro de Algodão', 'Cobre inimigos com penas fofas.', 0.4, 1.2, 1, 10, 45, 40, 60, 40, 75, 50, 255, 50.0, NULL, 'Level 35', 35, 'https://pokeportuga.pt/img/jogos/sprites/rse/333.png'),
+
+-- Líder Wallace/Juan (Água)
+('Feebas', 'Pokémon Peixe Feio', 'Vive em águas sujas.', 0.6, 7.4, 3, NULL, 20, 15, 20, 10, 55, 80, 255, 50.0, NULL, 'Beleza máxima + Level up', NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/349.png');select * from pokemon;
+
+
+-- Evolução de Aron (ID 127 - assumindo que é o próximo ID disponível)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2,
+ hpBase, ataqueBase, defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura,
+ taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+-- Evolução de Aron (assumindo que Aron é o ID 109)
+('Lairon', 'Pokémon Ferro', 'Esmaga rochas com seu corpo resistente.', 0.9, 120.0, 17, 13, 60, 90, 140, 50, 50, 40, 90, 50.0, 109, 'Level 42', 42, 'https://pokeportuga.pt/img/jogos/sprites/rse/305.png'),
+('Aggron', 'Pokémon Armadura', 'Protege ferozmente seu território.', 2.1, 360.0, 17, 13, 70, 110, 180, 60, 60, 50, 45, 50.0, 110, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/306.png'),
+
+-- Evolução de Makuhita (assumindo ID 110) e Meditite (ID 111)
+('Hariyama', 'Pokémon Gordura', 'Aplaude antes de atacar para intimidar.', 2.3, 253.8, 7, NULL, 144, 120, 60, 40, 60, 50, 200, 75.0, 110, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/297.png'),
+('Medicham', 'Pokémon Meditação', 'Pode prever movimentos do oponente.', 1.3, 31.5, 7, 11, 60, 60, 75, 60, 75, 80, 90, 50.0, 111, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/308.png'),
+
+-- Evolução de Electrike (assumindo ID 112)
+('Manectric', 'Pokémon Descarga', 'Dispara poderosos raios.', 1.5, 40.2, 4, NULL, 70, 75, 60, 105, 60, 105, 45, 50.0, 112, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/310.png'),
+
+-- Evolução de Slakoth (assumindo ID 113)
+('Vigoroth', 'Pokémon Selvagem', 'Fica agitado se parar de se mover.', 1.4, 46.5, 1, NULL, 80, 80, 80, 55, 55, 90, 120, 50.0, 113, 'Level 36', 36, 'https://pokeportuga.pt/img/jogos/sprites/rs/288.png'),
+('Slaking', 'Pokémon Preguiça', 'Só ataca a cada 3 segundos.', 2.0, 130.5, 1, NULL, 150, 160, 100, 95, 65, 100, 45, 50.0, 114, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/289.png'),
+
+-- Evolução de Swablu (assumindo ID 115)
+('Altaria', 'Pokémon Pássaro', 'Voam nas nuvens.', 1.1, 20.6, 15, 10, 75, 70, 90, 70, 105, 80, 45, 50.0, 115, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/334.png'),
+
+-- Evolução de Feebas (assumindo ID 116)
+('Milotic', 'Pokémon Terno', 'Escamas mudam de cor sob a luz lunar.', 6.2, 162.0, 3, NULL, 95, 60, 79, 100, 125, 81, 60, 50.0, 116, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/350.png');
+
+-- Nosepass (Pokémon original da 3ª geração - Hoenn)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Nosepass', 'Pokémon Bússola', 'Seu nariz magnético sempre aponta para o norte. Fica imóvel para não perder a direção.', 1.0, 97.0, 13, NULL, 30, 45, 135, 45, 90, 30, 255, 50.0, NULL, 'Evolui em área magnética (Mt. Coronet/Sinnoh)', NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/299.png');
+
+-- Probopass (Evolução de Nosepass introduzida na 4ª geração)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Probopass', 'Pokémon Bússola', 'Controla três unidades chamadas "Mini-Noses" com campos magnéticos.', 1.4, 340.0, 13, 17, 60, 55, 145, 75, 150, 40, 60, 50.0, 117, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/299.png');
+
+-- Skarmory (Pokémon Aço/Voador - Comum em rotas de Hoenn)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Skarmory', 'Pokémon Armadura', 'Suas penas de aço afiadas são usadas como lâminas. Constrói ninhos em penhascos íngremes.', 1.7, 50.5, 17, 10, 65, 80, 140, 40, 70, 70, 25, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/227.png');
+
+-- Wingull (Pré-evolução do Pelipper)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Wingull', 'Pokémon Gaivota', 'Voam sobre o mar buscando comida. Armazenam sal em seus corpos.', 0.6, 9.5, 3, 10, 40, 30, 30, 55, 30, 85, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/rs/278.png');
+
+-- Pelipper (Evolução do Wingull - Usado pelo Líder de Ginásio Wallace)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Pelipper', 'Pokémon Ave Aquática', 'Transporta pequenos Pokémon em seu bico. Caça mergulhando na água.', 1.2, 28.0, 3, 10, 60, 50, 100, 95, 70, 65, 45, 50.0, 119, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/279.png');
+
+-- Taillow (Pré-evolução do Swellow)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Taillow', 'Pokémon Andorinha', 'Corajoso mesmo contra oponentes maiores. Mostra resistência em batalhas.', 0.3, 2.3, 1, 10, 40, 55, 30, 30, 30, 85, 200, 50.0, NULL, 'Level 22', 22, 'https://pokeportuga.pt/img/jogos/sprites/rs/276.png');
+
+-- Swellow (Evolução do Taillow - Pokémon emblemático de Hoenn)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Swellow', 'Pokémon Andorinha', 'Voam em círculos acima de presas. Atacam com mergulhos precisos a 300km/h.', 0.7, 19.8, 1, 10, 60, 85, 60, 75, 50, 125, 45, 50.0, 120, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/277.png');
+
+-- Lunatone (Pokémon Meteorito Lunar - Especialista em ataques especiais)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Lunatone', 'Pokémon Meteorito', 'Descoberto após queda de meteorito. Flutua misteriosamente e ataca com energia lunar.', 1.0, 168.0, 13, 11, 90, 55, 65, 95, 85, 70, 45, NULL, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/337.png');
+
+-- Solrock (Pokémon Meteorito Solar - Especialista em ataques físicos)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Solrock', 'Pokémon Meteorito', 'Emite luz solar intensa durante a batalha. Dizem que roda para absorver energia do sol.', 1.2, 154.0, 13, 11, 90, 95, 85, 55, 65, 70, 45, NULL, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/338.png');
+
+-- Luvdisc (ID 133)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Luvdisc', 'Pokémon Afeição', 'Seu formato de coração simboliza o amor. Vive em mares tropicais e é dado como presente romântico.', 0.6, 8.7, 3, NULL, 43, 30, 55, 40, 65, 97, 225, 25.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/370.png');
+
+-- Spheal (ID 134 - pré-evolução do Sealeo)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Spheal', 'Pokémon Bola', 'Rola para se locomover. Seus olhos grandes veem bem na escuridão das águas profundas.', 0.8, 39.5, 6, 3, 70, 40, 50, 55, 50, 25, 255, 50.0, NULL, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/rs/363.png');
+
+-- Sealeo (ID 135)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Sealeo', 'Pokémon Bola', 'Equilibra objetos no nariz para treinar. Vive em icebergs e adora brincar na neve.', 1.1, 87.6, 6, 3, 90, 60, 70, 75, 70, 45, 120, 50.0, 135, 'Level 44', 44, 'https://pokeportuga.pt/img/jogos/sprites/rs/364.png');
+
+-- Goldeen (ID 136 - pré-evolução do Seaking)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Goldeen', 'Pokémon Peixe', 'Sua barbatana caudal flutuante atrai parceiros. Nada contra correntes fortes.', 0.6, 15.0, 3, NULL, 45, 67, 60, 35, 50, 63, 225, 50.0, NULL, 'Nível 33', 33, 'https://pokeportuga.pt/img/jogos/sprites/rs/118.png');
+
+-- Seaking (ID 137)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Seaking', 'Pokémon Peixe', 'Usa seu chifre para escavar pedras no leito dos rios. Suas cores vivas mudam no outono.', 1.3, 39.0, 3, NULL, 80, 92, 65, 65, 80, 68, 60, 50.0, 137, 'Nível 33', 33, 'https://pokeportuga.pt/img/jogos/sprites/rs/119.png');
+
+-- Barboach (ID 138 - pré-evolução do Whiscash)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Barboach', 'Pokémon Catfish', 'Sensível a vibrações na água, detecta presas mesmo na escuridão total.', 0.4, 1.9, 3, 9, 50, 48, 43, 46, 41, 60, 190, 50.0, NULL, 'Nível 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/rs/339.png');
+
+-- Whiscash (ID 139)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Whiscash', 'Pokémon Catfish', 'Dorme enterrado na lama. Lendas dizem que seu bocejo causa terremotos.', 0.9, 23.6, 3, 9, 110, 78, 73, 76, 71, 60, 75, 50.0, 139, 'Nível 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/rs/340.png');
+
+select * from pokemon;
 
 -- 1. INSERIR OS LÍDERES (agora sem referência a timePokemon)
 INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
@@ -533,6 +679,29 @@ INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
 (15, 'Time de Pryce', NOW()),
 (16, 'Time de Clair', NOW());
 
+-- Líderes de Hoenn (assumindo que idRegiao = 3)
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+( 'Roxanne', 'https://archives.bulbagarden.net/media/upload/6/6e/Spr_RS_Roxanne.png', 'Rustboro City', 3),
+( 'Brawly', 'https://archives.bulbagarden.net/media/upload/3/3e/Spr_RS_Brawly.png', 'Dewford Town', 3),
+( 'Wattson', 'https://archives.bulbagarden.net/media/upload/2/2a/Spr_RS_Wattson.png', 'Mauville City', 3),
+( 'Flannery', 'https://archives.bulbagarden.net/media/upload/6/6f/Spr_RS_Flannery.png', 'Lavaridge Town', 3),
+( 'Norman', 'https://archives.bulbagarden.net/media/upload/8/8b/Spr_RS_Norman.png', 'Petalburg City', 3),
+( 'Winona', 'https://archives.bulbagarden.net/media/upload/5/5c/Spr_RS_Winona.png', 'Fortree City', 3),
+( 'Tate & Liza', 'https://archives.bulbagarden.net/media/upload/6/6e/Spr_RS_Tate_and_Liza.png', 'Mossdeep City', 3),
+( 'Wallace', 'https://archives.bulbagarden.net/media/upload/5/5b/Spr_RS_Wallace.png', 'Sootopolis City', 3);
+
+
+-- Times de Hoenn
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(17, 'Time de Roxanne', NOW()),
+(18, 'Time de Brawly', NOW()),
+(19, 'Time de Wattson', NOW()),
+(20, 'Time de Flannery', NOW()),
+(21, 'Time de Norman', NOW()),
+(22, 'Time de Winona', NOW()),
+(23, 'Time de Tate & Liza', NOW()),
+(24, 'Time de Wallace', NOW());
+
 -- 3. INSERIR OS MEMBROS DOS TIMES
 -- Time de Brock (Pedra/Terra)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
@@ -540,35 +709,34 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 
 -- Time de Misty (Água)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(2, 13, 1), (2, 47, 2);
+(2, 13, 1), (2, 48, 2);
 
+select * from timePokemon_membros;
 -- Time de Lt. Surge (Elétrico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(3, 9, 1), (3, 41, 2), (3, 42, 3);
+(3, 9, 1), (3, 42, 2), (3, 43, 3);
 
 -- Time de Erika (Planta)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(4, 56, 1), (4, 16, 2), (4, 53, 3);
+(4, 57, 1), (4, 17, 2), (4, 54, 3);
 
 -- Time de Koga (Venenoso)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(5, 21, 1), (5, 61, 2), (5, 21, 3), (5, 60, 4);
+(5, 22, 1), (5, 62, 2), (5, 22, 3), (5, 61, 4);
 
 -- Time de Sabrina (Psíquico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(6, 69, 1), (6, 28, 2), (6, 70, 3);
+(6, 70, 1), (6, 29, 2), (6, 71, 3);
 
 -- Time de Blaine (Fogo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(7, 30, 1), (7, 31, 2), (7, 74, 3), (7, 73, 4);
+(7, 31, 1), (7, 32, 2), (7, 75, 3), (7, 74, 4);
 
 -- Time de Giovanni (Terra)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(8, 3, 1), (8, 7, 2), (8, 63, 3), (8, 65, 4), (8, 37, 5);
+(8, 3, 1), (8, 7, 2), (8, 64, 3), (8, 66, 4), (8, 38, 5);
 
 -- JOHTO
-
-select * from pokemon;
 
 -- Time de Falkner (Voador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
@@ -584,23 +752,58 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 
 -- Time de Morty (Fantasma)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(12, 14, 1), (12, 28, 2), (12, 29, 3);
+(12, 85, 1), (12, 98, 2), (12, 98, 3), (12, 99, 4);
 
 -- Time de Chuck (Lutador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(13, 7, 1), (13, 8, 2);
+(13, 86, 1), (13, 51, 2);
 
 -- Time de Jasmine (Aço)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(14, 3, 1), (14, 4, 2), (14, 5, 3);
+(14, 10, 1), (14, 10, 2), (14, 37, 3);
 
 -- Time de Pryce (Gelo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(15, 6, 1), (15, 19, 2), (15, 20, 3);
+(15, 88, 1), (15, 103, 2), (15, 101, 3);
 
 -- Time de Clair (Dragão)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(16, 15, 1), (16, 16, 2), (16, 17, 3);
+(16, 104, 1), (16, 93, 2), (16, 93, 3), (16, 96, 4);
+
+-- HOENN
+
+-- Time da Roxanne (Pedra)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(17, 1, 1), 
+(17, 125, 2);
+
+-- Time de Brawly (Lutador)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(18, 110, 1), (18, 111, 2);  -- Makuhita e Meditite
+
+-- Time de Wattson (Elétrico)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(19, 10, 1), (19, 9, 2), (19, 45, 3);    -- Electrike e Voltorb
+
+-- Time de Flannery (Fogo)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(20, 33, 1), (20, 33, 2), (20, 34, 3);   -- Torkoal e Slugma
+
+-- Time de Norman (Normal)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(21, 122, 1), (21, 121, 2), (21, 122, 3);  -- Slakoth, Vigoroth, Slaking
+
+-- Time de Winona (Voador)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(22, 131, 1), (22, 129, 2), (22, 127, 3), (22, 123, 4);  -- Swablu, Altaria, Skarmory
+
+-- Time de Tate & Liza (Psíquico)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(23, 132, 1), (23, 133, 2);  -- Lunatone, Solrock, Claydol
+
+-- Time de Wallace (Água)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(24, 134, 1), (24, 136, 2), (24, 138, 3), (24, 140, 4), (24, 124, 5);  -- Feebas, Milotic, Luvdisc, Whiscash
 
 SELECT liderGinasio.nomeLider AS lider, liderGinasio.cidade AS cidade, regiao.nomeRegiao, timePokemon.nomeTime AS nomeT, timePokemon_membros.posicao_no_time AS posicao,
 pokemon.nome AS nomeP, pokemon.imagemUrl AS pokemon, tipoPokemon.tipo AS tipo, tipoPokemon.cor AS tipoCor
