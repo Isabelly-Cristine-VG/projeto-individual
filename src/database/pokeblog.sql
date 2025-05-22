@@ -426,22 +426,22 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon inseto/voador sem pré-evolução
-('Weedle', 'Pokémon Lagarta Venenosa', 'Possui um ferrão venenoso na cabeça. Usa-o para se defender enquanto se esconde em árvores.', 0.3, 3.2, 7, 4, 40, 35, 30, 20, 20, 50, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/013.png'),
-('Scyther', 'Pokémon Louva-a-Deus', 'Move-se tão rápido que parece invisível. Suas garras afiadas cortam qualquer coisa como uma lâmina.', 1.5, 56.0, 7, 3, 70, 110, 80, 55, 80, 105, 45, 50.0, NULL, 'Troca com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/123_f.png'),
-('Caterpie', 'Pokémon Lagarta', 'Se alimenta avidamente de folhas. Seu corpo libera um líquido fedorento para se proteger de predadores.', 0.3, 2.9, 7, NULL, 45, 30, 35, 20, 20, 45, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/010.png');
+('Weedle', 'Pokémon Lagarta Venenosa', 'Possui um ferrão venenoso na cabeça. Usa-o para se defender enquanto se esconde em árvores.', 0.3, 3.2, 12, 4, 40, 35, 30, 20, 20, 50, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/013.png'),
+('Scyther', 'Pokémon Louva-a-Deus', 'Move-se tão rápido que parece invisível. Suas garras afiadas cortam qualquer coisa como uma lâmina.', 1.5, 56.0, 12, 3, 70, 110, 80, 55, 80, 105, 45, 50.0, NULL, 'Troca com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/123_f.png'),
+('Caterpie', 'Pokémon Lagarta', 'Se alimenta avidamente de folhas. Seu corpo libera um líquido fedorento para se proteger de predadores.', 0.3, 2.9, 12, NULL, 45, 30, 35, 20, 20, 45, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/010.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon fantasma sem pré-evolução
-('Gastly', 'Pokémon Gasoso', 'Feito quase inteiramente de gás venenoso. Pode sufocar inimigos envolvendo-os com seu corpo gasoso.', 1.3, 0.1, 8, 4, 30, 35, 30, 100, 35, 80, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/092.png');
+('Gastly', 'Pokémon Gasoso', 'Feito quase inteiramente de gás venenoso. Pode sufocar inimigos envolvendo-os com seu corpo gasoso.', 1.3, 0.1, 14, 8, 30, 35, 30, 100, 35, 80, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/092.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon lutador sem pré-evolução
-('Mankey', 'Pokémon Porco Macaco', 'Extremamente irritável. Fica furioso com nada e ataca qualquer coisa que se mova.', 0.5, 28.0, 2, NULL, 40, 80, 35, 35, 45, 70, 190, 50.0, NULL, 'Level 28', 28, 'https://pokeportuga.pt/img/jogos/sprites/hgss/056.png');
+('Mankey', 'Pokémon Porco Macaco', 'Extremamente irritável. Fica furioso com nada e ataca qualquer coisa que se mova.', 0.5, 28.0, 7, NULL, 40, 80, 35, 35, 45, 70, 190, 50.0, NULL, 'Level 28', 28, 'https://pokeportuga.pt/img/jogos/sprites/hgss/056.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -466,26 +466,27 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Seadra', 'Pokémon Dragão', 'Espinhos venenosos cobrem seu corpo. Esmaga presas com sua cauda musculosa.', 1.2, 25.0, 3, NULL, 55, 65, 95, 95, 45, 85, 75, 50.0, 81, 'Troca com Dragon Scale', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/117.png'),
 ('Kingdra', 'Pokémon Dragão', 'Dorme em cavernas submarinas. Quando desperta, causa redemoinhos gigantes.', 1.8, 152.0, 3, 15, 75, 95, 95, 95, 95, 85, 45, 50.0, 95, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/230.png'),
 ('Scizor', 'Pokémon Pinça', 'Seu corpo duro como aço o torna resistente. Usa suas pinças para esmagar inimigos com força incrível.', 1.8, 118.0, 12, 17, 70, 130, 100, 55, 80, 65, 25, 50.0, 83, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/212.png'),
-('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 8, 14, 45, 50, 45, 115, 55, 95, 90, 50.0, 85, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/093.png'),
-('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 8, 14, 60, 65, 60, 130, 75, 110, 45, 50.0, 98, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/094.png'),
+('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 14, 8, 45, 50, 45, 115, 55, 95, 90, 50.0, 85, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/093.png'),
+('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 14, 8, 60, 65, 60, 130, 75, 110, 45, 50.0, 98, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/094.png'),
 ('Primeape', 'Pokémon Porco Macaco', 'Sua raiva nunca acaba. Persegue inimigos até exaustão, mesmo que isso o machuque.', 1.0, 32.0, 7, NULL, 65, 105, 60, 60, 70, 95, 75, 50.0, 86, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/057.png'),
 ('Piloswine', 'Pokémon Porco', 'Seus longos pelos o protegem do frio. Ataca com presas afiadas cobertas de gelo.', 1.1, 55.8, 6, 9, 100, 100, 80, 60, 60, 50, 75, 50.0, 87, 'Level up movendo Ancient Power', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/221_m.png'),
 ('Mamoswine', 'Pokémon Porco', 'Surgiu durante a Era do Gelo. Seu pelo grosso o protege do frio extremo.', 2.5, 291.0, 6, 9, 110, 130, 80, 70, 60, 80, 50, 50.0, 101, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/473.png'),
 ('Dewgong', 'Pokémon Foca', 'Seu corpo é branco como a neve. Armazena calor sob sua pele para sobreviver em icebergs.', 1.7, 120.0, 3, 6, 90, 70, 80, 70, 95, 70, 75, 50.0, 88, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/087.png'),
-('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 11, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/130_f.png');
+('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 10, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/130_f.png');
+
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Metapod', 'Pokémon Casulo', 'Endurece seu casulo para se proteger enquanto se prepara para evoluir. Só consegue usar o movimento "Endure".', 0.7, 9.9, 7, NULL, 50, 20, 55, 25, 25, 30, 120, 50.0, 84, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/011.png'),
+('Metapod', 'Pokémon Casulo', 'Endurece seu casulo para se proteger enquanto se prepara para evoluir. Só consegue usar o movimento "Endure".', 0.7, 9.9, 12, NULL, 50, 20, 55, 25, 25, 30, 120, 50.0, 84, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/011.png'),
 ('Butterfree', 'Pokémon Borboleta', 'Suas asas liberam pólen tóxico ao bater. Adora néctar de flores e pode carregar pequenos objetos.', 1.1, 32.0, 7, 3, 60, 45, 50, 90, 80, 70, 45, 50.0, 105, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/012.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 7, 4, 45, 25, 50, 25, 25, 35, 120, 50.0, 82, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/014.png'),
-('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 7, 4, 65, 90, 40, 45, 80, 75, 45, 50.0, 107, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/015.png');
+('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 12, 8, 45, 25, 50, 25, 25, 35, 120, 50.0, 82, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/014.png'),
+('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 12, 8, 65, 90, 40, 45, 80, 75, 45, 50.0, 107, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/015.png');
 
 
 -- Pokémon dos Líderes de Ginásio de Hoenn 
@@ -805,11 +806,4 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
 (24, 134, 1), (24, 136, 2), (24, 138, 3), (24, 140, 4), (24, 124, 5);  -- Feebas, Milotic, Luvdisc, Whiscash
 
-SELECT liderGinasio.nomeLider AS lider, liderGinasio.cidade AS cidade, regiao.nomeRegiao, timePokemon.nomeTime AS nomeT, timePokemon_membros.posicao_no_time AS posicao,
-pokemon.nome AS nomeP, pokemon.imagemUrl AS pokemon, tipoPokemon.tipo AS tipo, tipoPokemon.cor AS tipoCor
-FROM timePokemon_membros
-JOIN pokemon ON timePokemon_membros.idPokemon = pokemon.idPokemon
-JOIN tipoPokemon ON pokemon.idTipoPokemon = tipoPokemon.idTipoPokemon
-JOIN timePokemon ON timePokemon_membros.idTimePokemon = timePokemon.idTimePokemon
-JOIN liderGinasio ON timePokemon.idLider = liderGinasio.idLider
-JOIN regiao ON liderGinasio.idRegiao = regiao.idRegiao;
+select * from pokemon;
