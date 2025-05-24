@@ -229,7 +229,8 @@ INSERT INTO regiao (idRegiao, nomeRegiao) VALUES
 (5, 'Unova'),
 (6, 'Kalos'),
 (7, 'Alola'),
-(8, 'Galar');
+(8, 'Galar'),
+(9, 'Paldea');
 
 -- INSERTS PARA JOGOS
 INSERT INTO jogo (idJogo, nome, idRegiao, lancamento, plataforma) VALUES
@@ -426,22 +427,22 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon inseto/voador sem pré-evolução
-('Weedle', 'Pokémon Lagarta Venenosa', 'Possui um ferrão venenoso na cabeça. Usa-o para se defender enquanto se esconde em árvores.', 0.3, 3.2, 12, 4, 40, 35, 30, 20, 20, 50, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/013.png'),
-('Scyther', 'Pokémon Louva-a-Deus', 'Move-se tão rápido que parece invisível. Suas garras afiadas cortam qualquer coisa como uma lâmina.', 1.5, 56.0, 12, 3, 70, 110, 80, 55, 80, 105, 45, 50.0, NULL, 'Troca com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/123_f.png'),
-('Caterpie', 'Pokémon Lagarta', 'Se alimenta avidamente de folhas. Seu corpo libera um líquido fedorento para se proteger de predadores.', 0.3, 2.9, 12, NULL, 45, 30, 35, 20, 20, 45, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/010.png');
+('Weedle', 'Pokémon Lagarta Venenosa', 'Possui um ferrão venenoso na cabeça. Usa-o para se defender enquanto se esconde em árvores.', 0.3, 3.2, 7, 4, 40, 35, 30, 20, 20, 50, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/013.png'),
+('Scyther', 'Pokémon Louva-a-Deus', 'Move-se tão rápido que parece invisível. Suas garras afiadas cortam qualquer coisa como uma lâmina.', 1.5, 56.0, 7, 3, 70, 110, 80, 55, 80, 105, 45, 50.0, NULL, 'Troca com Metal Coat', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/123_f.png'),
+('Caterpie', 'Pokémon Lagarta', 'Se alimenta avidamente de folhas. Seu corpo libera um líquido fedorento para se proteger de predadores.', 0.3, 2.9, 7, NULL, 45, 30, 35, 20, 20, 45, 255, 50.0, NULL, 'Level 7', 7, 'https://pokeportuga.pt/img/jogos/sprites/hgss/010.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon fantasma sem pré-evolução
-('Gastly', 'Pokémon Gasoso', 'Feito quase inteiramente de gás venenoso. Pode sufocar inimigos envolvendo-os com seu corpo gasoso.', 1.3, 0.1, 14, 8, 30, 35, 30, 100, 35, 80, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/092.png');
+('Gastly', 'Pokémon Gasoso', 'Feito quase inteiramente de gás venenoso. Pode sufocar inimigos envolvendo-os com seu corpo gasoso.', 1.3, 0.1, 8, 4, 30, 35, 30, 100, 35, 80, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/hgss/092.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon lutador sem pré-evolução
-('Mankey', 'Pokémon Porco Macaco', 'Extremamente irritável. Fica furioso com nada e ataca qualquer coisa que se mova.', 0.5, 28.0, 7, NULL, 40, 80, 35, 35, 45, 70, 190, 50.0, NULL, 'Level 28', 28, 'https://pokeportuga.pt/img/jogos/sprites/hgss/056.png');
+('Mankey', 'Pokémon Porco Macaco', 'Extremamente irritável. Fica furioso com nada e ataca qualquer coisa que se mova.', 0.5, 28.0, 2, NULL, 40, 80, 35, 35, 45, 70, 190, 50.0, NULL, 'Level 28', 28, 'https://pokeportuga.pt/img/jogos/sprites/hgss/056.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -466,27 +467,26 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Seadra', 'Pokémon Dragão', 'Espinhos venenosos cobrem seu corpo. Esmaga presas com sua cauda musculosa.', 1.2, 25.0, 3, NULL, 55, 65, 95, 95, 45, 85, 75, 50.0, 81, 'Troca com Dragon Scale', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/117.png'),
 ('Kingdra', 'Pokémon Dragão', 'Dorme em cavernas submarinas. Quando desperta, causa redemoinhos gigantes.', 1.8, 152.0, 3, 15, 75, 95, 95, 95, 95, 85, 45, 50.0, 95, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/230.png'),
 ('Scizor', 'Pokémon Pinça', 'Seu corpo duro como aço o torna resistente. Usa suas pinças para esmagar inimigos com força incrível.', 1.8, 118.0, 12, 17, 70, 130, 100, 55, 80, 65, 25, 50.0, 83, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/212.png'),
-('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 14, 8, 45, 50, 45, 115, 55, 95, 90, 50.0, 85, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/093.png'),
-('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 14, 8, 60, 65, 60, 130, 75, 110, 45, 50.0, 98, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/094.png'),
+('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 8, 14, 45, 50, 45, 115, 55, 95, 90, 50.0, 85, 'Troca', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/093.png'),
+('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 8, 14, 60, 65, 60, 130, 75, 110, 45, 50.0, 98, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/094.png'),
 ('Primeape', 'Pokémon Porco Macaco', 'Sua raiva nunca acaba. Persegue inimigos até exaustão, mesmo que isso o machuque.', 1.0, 32.0, 7, NULL, 65, 105, 60, 60, 70, 95, 75, 50.0, 86, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/057.png'),
 ('Piloswine', 'Pokémon Porco', 'Seus longos pelos o protegem do frio. Ataca com presas afiadas cobertas de gelo.', 1.1, 55.8, 6, 9, 100, 100, 80, 60, 60, 50, 75, 50.0, 87, 'Level up movendo Ancient Power', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/221_m.png'),
 ('Mamoswine', 'Pokémon Porco', 'Surgiu durante a Era do Gelo. Seu pelo grosso o protege do frio extremo.', 2.5, 291.0, 6, 9, 110, 130, 80, 70, 60, 80, 50, 50.0, 101, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/473.png'),
 ('Dewgong', 'Pokémon Foca', 'Seu corpo é branco como a neve. Armazena calor sob sua pele para sobreviver em icebergs.', 1.7, 120.0, 3, 6, 90, 70, 80, 70, 95, 70, 75, 50.0, 88, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/087.png'),
-('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 10, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/130_f.png');
-
+('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 11, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/130_f.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Metapod', 'Pokémon Casulo', 'Endurece seu casulo para se proteger enquanto se prepara para evoluir. Só consegue usar o movimento "Endure".', 0.7, 9.9, 12, NULL, 50, 20, 55, 25, 25, 30, 120, 50.0, 84, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/011.png'),
+('Metapod', 'Pokémon Casulo', 'Endurece seu casulo para se proteger enquanto se prepara para evoluir. Só consegue usar o movimento "Endure".', 0.7, 9.9, 7, NULL, 50, 20, 55, 25, 25, 30, 120, 50.0, 84, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/011.png'),
 ('Butterfree', 'Pokémon Borboleta', 'Suas asas liberam pólen tóxico ao bater. Adora néctar de flores e pode carregar pequenos objetos.', 1.1, 32.0, 7, 3, 60, 45, 50, 90, 80, 70, 45, 50.0, 105, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/012.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 12, 8, 45, 25, 50, 25, 25, 35, 120, 50.0, 82, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/014.png'),
-('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 12, 8, 65, 90, 40, 45, 80, 75, 45, 50.0, 107, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/015.png');
+('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 7, 4, 45, 25, 50, 25, 25, 35, 120, 50.0, 82, 'Level 10', 10, 'https://pokeportuga.pt/img/jogos/sprites/hgss/014.png'),
+('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 7, 4, 65, 90, 40, 45, 80, 75, 45, 50.0, 107, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/015.png');
 
 
 -- Pokémon dos Líderes de Ginásio de Hoenn 
@@ -495,23 +495,23 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ataqueBase, defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase,
  taxaCaptura, taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Líder Roxanne (Pedra)
-('Aron', 'Pokémon Ferro', 'Se alimenta de minérios de ferro. Seu corpo de aço é mais duro que diamante.', 0.4, 60.0, 17, 13, 50, 70, 100, 40, 40, 30, 180, 50.0, NULL, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/rse/304.png'),
+('Aron', 'Pokémon Ferro', 'Se alimenta de minérios de ferro. Seu corpo de aço é mais duro que diamante.', 0.4, 60.0, 17, 13, 50, 70, 100, 40, 40, 30, 180, 50.0, NULL, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/rs/304.png'),
 
 -- Líder Brawly (Lutador)
 ('Makuhita', 'Pokémon Gordura', 'Treina derrubando árvores com golpes de palma.', 1.0, 86.4, 7, NULL, 72, 60, 30, 20, 30, 25, 180, 75.0, NULL, 'Level 24', 24, 'https://pokeportuga.pt/img/jogos/sprites/rs/296.png'),
-('Meditite', 'Pokémon Meditação', 'Medita para aumentar sua energia interior.', 0.6, 11.2, 7, 11, 30, 40, 55, 40, 55, 60, 180, 50.0, NULL, 'Level 37', 37, 'https://pokeportuga.pt/img/jogos/sprites/rse/307.png'),
+('Meditite', 'Pokémon Meditação', 'Medita para aumentar sua energia interior.', 0.6, 11.2, 7, 11, 30, 40, 55, 40, 55, 60, 180, 50.0, NULL, 'Level 37', 37, 'https://pokeportuga.pt/img/jogos/sprites/rs/307.png'),
 
 -- Líder Wattson (Elétrico)
-('Electrike', 'Pokémon Relâmpago', 'Armazena eletricidade na pelagem.', 0.6, 15.2, 4, NULL, 40, 45, 40, 65, 40, 65, 120, 50.0, NULL, 'Level 26', 26, 'https://pokeportuga.pt/img/jogos/sprites/rse/309.png'),
+('Electrike', 'Pokémon Relâmpago', 'Armazena eletricidade na pelagem.', 0.6, 15.2, 4, NULL, 40, 45, 40, 65, 40, 65, 120, 50.0, NULL, 'Level 26', 26, 'https://pokeportuga.pt/img/jogos/sprites/rs/309.png'),
 
 -- Líder Norman (Normal)
-('Slakoth', 'Pokémon Preguiça', 'Dorme 20 horas por dia.', 0.8, 24.0, 1, NULL, 60, 60, 60, 35, 35, 30, 255, 50.0, NULL, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/rse/287.png'),
+('Slakoth', 'Pokémon Preguiça', 'Dorme 20 horas por dia.', 0.8, 24.0, 1, NULL, 60, 60, 60, 35, 35, 30, 255, 50.0, NULL, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/rs/287.png'),
 
 -- Líder Winona (Voador)
-('Swablu', 'Pokémon Pássaro de Algodão', 'Cobre inimigos com penas fofas.', 0.4, 1.2, 1, 10, 45, 40, 60, 40, 75, 50, 255, 50.0, NULL, 'Level 35', 35, 'https://pokeportuga.pt/img/jogos/sprites/rse/333.png'),
+('Swablu', 'Pokémon Pássaro de Algodão', 'Cobre inimigos com penas fofas.', 0.4, 1.2, 1, 10, 45, 40, 60, 40, 75, 50, 255, 50.0, NULL, 'Level 35', 35, 'https://pokeportuga.pt/img/jogos/sprites/rs/333.png'),
 
 -- Líder Wallace/Juan (Água)
-('Feebas', 'Pokémon Peixe Feio', 'Vive em águas sujas.', 0.6, 7.4, 3, NULL, 20, 15, 20, 10, 55, 80, 255, 50.0, NULL, 'Beleza máxima + Level up', NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/349.png');select * from pokemon;
+('Feebas', 'Pokémon Peixe Feio', 'Vive em águas sujas.', 0.6, 7.4, 3, NULL, 20, 15, 20, 10, 55, 80, 255, 50.0, NULL, 'Beleza máxima + Level up', NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/349.png');
 
 
 -- Evolução de Aron (ID 127 - assumindo que é o próximo ID disponível)
@@ -524,7 +524,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 
 -- Evolução de Makuhita (assumindo ID 110) e Meditite (ID 111)
 ('Hariyama', 'Pokémon Gordura', 'Aplaude antes de atacar para intimidar.', 2.3, 253.8, 7, NULL, 144, 120, 60, 40, 60, 50, 200, 75.0, 110, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/297.png'),
-('Medicham', 'Pokémon Meditação', 'Pode prever movimentos do oponente.', 1.3, 31.5, 7, 11, 60, 60, 75, 60, 75, 80, 90, 50.0, 111, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/308.png'),
+('Medicham', 'Pokémon Meditação', 'Pode prever movimentos do oponente.', 1.3, 31.5, 7, 11, 60, 60, 75, 60, 75, 80, 90, 50.0, 111, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/308.png'),
 
 -- Evolução de Electrike (assumindo ID 112)
 ('Manectric', 'Pokémon Descarga', 'Dispara poderosos raios.', 1.5, 40.2, 4, NULL, 70, 75, 60, 105, 60, 105, 45, 50.0, 112, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/310.png'),
@@ -534,10 +534,11 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Slaking', 'Pokémon Preguiça', 'Só ataca a cada 3 segundos.', 2.0, 130.5, 1, NULL, 150, 160, 100, 95, 65, 100, 45, 50.0, 114, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/289.png'),
 
 -- Evolução de Swablu (assumindo ID 115)
-('Altaria', 'Pokémon Pássaro', 'Voam nas nuvens.', 1.1, 20.6, 15, 10, 75, 70, 90, 70, 105, 80, 45, 50.0, 115, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/334.png'),
+('Altaria', 'Pokémon Pássaro', 'Voam nas nuvens.', 1.1, 20.6, 15, 10, 75, 70, 90, 70, 105, 80, 45, 50.0, 115, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/334.png'),
 
 -- Evolução de Feebas (assumindo ID 116)
-('Milotic', 'Pokémon Terno', 'Escamas mudam de cor sob a luz lunar.', 6.2, 162.0, 3, NULL, 95, 60, 79, 100, 125, 81, 60, 50.0, 116, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rse/350.png');
+('Milotic', 'Pokémon Terno', 'Escamas mudam de cor sob a luz lunar.', 6.2, 162.0, 3, NULL, 95, 60, 79, 100, 125, 81, 60, 50.0, 116, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/rs/350.png');
+
 
 -- Nosepass (Pokémon original da 3ª geração - Hoenn)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -635,7 +636,281 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 ('Whiscash', 'Pokémon Catfish', 'Dorme enterrado na lama. Lendas dizem que seu bocejo causa terremotos.', 0.9, 23.6, 3, 9, 110, 78, 73, 76, 71, 60, 75, 50.0, 139, 'Nível 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/rs/340.png');
 
-select * from pokemon;
+-- Pokémon dos Líderes de Sinnoh --
+
+-- Linha do Cranidos (Líder Roark - Pedra) - IDs 140-141
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Cranidos', 'Pokémon Cabeça Dura', 'Reviveu de um fóssil. Ataca com cabeçadas poderosas, mas é fraco em defesa.', 0.9, 31.5, 13, NULL, 67, 125, 40, 30, 30, 58, 45, 87.5, NULL, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/dp/408.png'),
+( 'Rampardos', 'Pokémon Cabeça Dura', 'Seu crânio é extremamente duro. Destruiu montanhas com cabeçadas em tempos pré-históricos.', 1.6, 102.5, 13, NULL, 97, 165, 60, 65, 50, 58, 45, 87.5, 140, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/409.png');
+
+-- Linha do Turtwig (Líder Gardenia - Grama) - IDs 142-144
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Turtwig', 'Pokémon Minitartaruga', 'A concha em suas costas é feita de solo e endurece quando bebe água.', 0.4, 10.2, 5, NULL, 55, 68, 64, 45, 55, 31, 45, 87.5, NULL, 'Level 18', 18, 'https://pokeportuga.pt/img/jogos/sprites/dp/387.png'),
+( 'Grotle', 'Pokémon Tartaruga', 'Armazena energia em sua concha para fotossíntese. Seu cheiro lembra floresta fresca.', 1.1, 97.0, 5, NULL, 75, 89, 85, 55, 65, 36, 45, 87.5, 142, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/dp/388.png'),
+( 'Torterra', 'Pokémon Continente', 'Pokémon enorme que carrega um pequeno ecossistema em seu casco.', 2.2, 310.0, 5, 9, 95, 109, 105, 75, 85, 56, 45, 87.5, 143, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/389.png');
+
+-- Linha do Cherubi (Líder Gardenia - Grama) - IDs 145-146
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Cherubi', 'Pokémon Cereja', 'A cereja em sua cabeça é cheia de nutrientes e dobra de tamanho quando madura.', 0.4, 3.3, 5, NULL, 45, 35, 45, 62, 53, 35, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/dp/420.png'),
+( 'Cherrim', 'Pokémon Florescência', 'Muda de forma com a luz solar. Em dias nublados fica fechado e quieto.', 0.5, 9.3, 5, NULL, 70, 60, 70, 87, 78, 85, 75, 50.0, 145, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/421.png');
+
+
+-- Linha do Riolu (Líder Maylene - Lutador) - IDs 147-148
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Riolu', 'Pokémon Aura', 'Consegue sentir a aura das pessoas. Evolui quando treina com forte vínculo emocional.', 0.7, 20.2, 7, NULL, 40, 70, 40, 35, 40, 60, 75, 87.5, NULL, 'Amizade durante dia', NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/447.png'),
+( 'Lucario', 'Pokémon Aura', 'Consegue sentir a aura de todos os seres vivos. É leal apenas a treinadores dignos.', 1.2, 54.0, 7, 17, 70, 110, 70, 115, 70, 90, 45, 87.5, 147, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/448.png');
+
+-- Linha do Buizel (Líder Wake - Água) - IDs 149-150
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Buizel', 'Pokémon Lontra', 'Nada girando como uma hélice usando sua cauda. Vive em rios de correnteza forte.', 0.7, 29.5, 3, NULL, 55, 65, 35, 60, 30, 85, 190, 50.0, NULL, 'Level 26', 26, 'https://pokeportuga.pt/img/jogos/sprites/dp/418.png'),
+( 'Floatzel', 'Pokémon Lontra', 'Nada a 60 km/h usando sua cauda como hélice. Caça presas em rios rápidos.', 1.1, 33.5, 3, NULL, 85, 105, 55, 85, 50, 115, 75, 50.0, 149, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/419.png');
+
+-- Linha do Machop (Líder Maylene - Lutador) - IDs 151-153
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Machop', 'Pokémon Superpoder', 'Treina seus músculos todos os dias. Pode levantar pessoas com apenas um dedo.', 0.8, 19.5, 7, NULL, 70, 80, 50, 35, 35, 35, 180, 75.0, NULL, 'Level 28', 28, 'https://pokeportuga.pt/img/jogos/sprites/hgss/066.png'),
+( 'Machoke', 'Pokémon Superpoder', 'Seu corpo musculoso é tão forte que precisa de um cinto para limitar seus movimentos.', 1.5, 70.5, 7, NULL, 80, 100, 70, 50, 60, 45, 90, 75.0, 151, 'Trade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/067.png'),
+( 'Machamp', 'Pokémon Superpoder', 'Seus quatro braços podem lançar mil socos em dois segundos. Domina todas as artes marciais.', 1.6, 130.0, 7, NULL, 90, 130, 80, 65, 85, 55, 45, 75.0, 152, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/068.png');
+
+-- Pokémon dos Líderes de Unova --
+
+-- Linha do Pansage (Líder Cilan - Grama) - IDs 154-155
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Pansage', 'Pokémon Macaco Folha', 'Come folhas que crescem em sua cabeça. Ajuda Pokémon fracos compartilhando comida.', 0.6, 10.5, 5, NULL, 50, 53, 48, 53, 48, 64, 190, 87.5, NULL, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/511.png'),
+( 'Simisage', 'Pokémon Macaco Folha', 'Provoca incêndios florestais balançando sua cauda flamejante para assustar inimigos.', 1.1, 30.5, 5, NULL, 75, 98, 63, 98, 63, 101, 75, 87.5, 154, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/512.png');
+
+-- Linha do Pansear (Líder Chili - Fogo) - IDs 156-157
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Pansear', 'Pokémon Macaco Chama', 'A chama em sua cabeça queima mais forte quando está animado. Come frutas assadas.', 0.6, 11.0, 2, NULL, 50, 53, 48, 53, 48, 64, 190, 87.5, NULL, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/513.png'),
+( 'Simisear', 'Pokémon Macaco Chama', 'Provoca incêndios florestais balançando sua cauda flamejante para assustar inimigos.', 1.0, 28.0, 2, NULL, 75, 98, 63, 98, 63, 101, 75, 87.5, 156, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/514.png');
+
+-- Linha do Panpour (Líder Cress - Água) - IDs 158-159
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Panpour', 'Pokémon Macaco Água', 'A água que jorra de sua cabeça pode curar feridas. Vive perto de rios.', 0.6, 13.5, 3, NULL, 50, 53, 48, 53, 48, 64, 190, 87.5, NULL, 'Pedra Evolutiva', NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/515.png'),
+( 'Simipour', 'Pokémon Macaco Água', 'A água que jorra de sua cabeça tem propriedades curativas. Pode apagar grandes incêndios.', 1.0, 29.0, 3, NULL, 75, 98, 63, 98, 63, 101, 75, 87.5, 158, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/516.png');
+
+-- Linha do Lillipup (Líder Lenora - Normal) - IDs 160-162
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Lillipup', 'Pokémon Filhote', 'Inteligente e obediente. Seu pelo bem cuidado é um ponto de orgulho para treinadores.', 0.4, 4.1, 1, NULL, 45, 60, 45, 25, 45, 55, 255, 50.0, NULL, 'Level 16', 16, 'https://pokeportuga.pt/img/jogos/sprites/bw/506.png'),
+( 'Herdier', 'Pokémon Leal', 'Extremamente leal ao seu treinador. Usa seu bigode para sentir perigos próximos.', 0.9, 14.7, 1, NULL, 65, 80, 65, 35, 65, 60, 120, 50.0, 160, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/bw/507.png'),
+( 'Stoutland', 'Pokémon Grande Cão', 'Seu bigode sensível detecta perigos. Resgata pessoas perdidas em nevascas.', 1.2, 61.0, 1, NULL, 85, 110, 90, 45, 90, 80, 45, 50.0, 161, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/508.png');
+
+-- Linha do Patrat (Líder Lenora - Normal) - IDs 163-164
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Patrat', 'Pokémon Vigia', 'Extremamente vigilante. Fica em pé sobre as patas traseiras para ver melhor ao longe.', 0.5, 11.6, 1, NULL, 45, 55, 39, 35, 39, 42, 255, 50.0, NULL, 'Level 20', 20, 'https://pokeportuga.pt/img/jogos/sprites/bw/504.png'),
+( 'Watchog', 'Pokémon Vigilância', 'Usa os padrões em seu corpo para hipnotizar oponentes. Nunca dorme.', 1.1, 27.0, 1, NULL, 60, 85, 69, 60, 69, 77, 255, 50.0, 163, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/505.png');
+
+-- Linha do Dwebble (Líder Burgh - Inseto) - IDs 165-166
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Dwebble', 'Pokémon Caranguejo Rocha', 'Escava tocas em rochas macias para viver. A rocha em suas costas é sua casa.', 0.3, 14.5, 12, 13, 50, 65, 85, 35, 35, 55, 190, 50.0, NULL, 'Level 34', 34, 'https://pokeportuga.pt/img/jogos/sprites/bw/557.png'),
+( 'Crustle', 'Pokémon Caranguejo Rocha', 'Carrega uma enorme rocha nas costas. É forte o suficiente para esmagar aço.', 1.4, 200.0, 12, 13, 70, 105, 125, 65, 75, 45, 75, 50.0, 165, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/558.png');
+
+-- Linha do Sewaddle (Líder Burgh - Inseto) - IDs 167-169
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Sewaddle', 'Pokémon Costura', 'Vive dentro de capas feitas de folhas que ele mesmo cose. Adora folhas frescas.', 0.3, 2.5, 12, 5, 45, 53, 70, 40, 60, 42, 255, 50.0, NULL, 'Level 20', 20, 'https://pokeportuga.pt/img/jogos/sprites/bw/540.png'),
+( 'Swadloon', 'Pokémon Casulo de Folha', 'Protege-se com folhas duras. Reage a carícias balançando seu corpo.', 0.5, 7.3, 12, 5, 55, 63, 90, 50, 80, 42, 120, 50.0, 167, 'Amizade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/541.png'),
+( 'Leavanny', 'Pokémon Corte de Folha', 'Cria roupas para outros Pokémon com folhas. Extremamente protetor com seus amigos.', 1.2, 20.5, 12, 5, 75, 103, 80, 70, 80, 92, 45, 50.0, 168, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/542.png');
+
+-- Linha do Joltik (Líder Elesa - Elétrico) - IDs 170-171
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Joltik', 'Pokémon Aranha', 'Se alimenta de eletricidade estática. Pode grudar em grandes Pokémon para sugar energia.', 0.1, 0.6, 12, 4, 50, 47, 50, 57, 50, 65, 190, 50.0, NULL, 'Level 36', 36, 'https://pokeportuga.pt/img/jogos/sprites/bw/595.png'),
+( 'Galvantula', 'Pokémon Aranha Elétrica', 'Cria teias elétricas para capturar presas. Trabalha em grupo para derrubar alvos grandes.', 0.8, 14.3, 12, 4, 70, 77, 60, 97, 60, 108, 75, 50.0, 170, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/596.png');
+
+-- Pokémon individuais (sem pré-evoluções) - IDs 172-173
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+( 'Emolga', 'Pokémon Esquilo Voador', 'Armazena eletricidade em suas bochechas. Planando, libera choques em inimigos.', 0.4, 5.0, 4, 10, 55, 75, 60, 75, 60, 103, 200, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/587.png'),
+( 'Zebstrika', 'Pokémon Relâmpago', 'Seus cascos produzem eletricidade quando galopa. Seus gritos soam como trovões.', 1.6, 79.5, 4, NULL, 75, 100, 63, 80, 63, 116, 75, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/523.png');
+
+-- Quagsire e sua pré-evolução (ID 175-176)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Wooper', 'Pokémon Peixe DÁgua', 'Vive em água fria. Sai da água para procurar comida quando esfria demais.', 0.4, 8.5, 3, 9, 55, 45, 45, 25, 25, 15, 255, 50.0, NULL, 'Level 20', 20, 'https://pokeportuga.pt/img/jogos/sprites/hgs/194.png'),
+('Quagsire', 'Pokémon Peixe DÁgua', 'Sua mente é lenta e despreocupada. Não sente dor mesmo quando atacado.', 1.4, 75.0, 3, 9, 95, 85, 85, 65, 65, 35, 90, 50.0, 175, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgs/195.png');
+
+
+-- Drifblim e sua pré-evolução (ID 177-178)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Drifloon', 'Pokémon Balão', 'Atrai crianças com sua aparência de balão e as leva para o mundo espiritual.', 0.4, 1.2, 14, 10, 90, 50, 34, 60, 44, 70, 125, 50.0, NULL, 'Level 28', 28, 'https://pokeportuga.pt/img/jogos/sprites/dp/425.png'),
+('Drifblim', 'Pokémon Balão', 'Vaga pelos céus carregando pessoas e Pokémon. Dizem que leva para o além.', 1.2, 15.0, 14, 10, 150, 80, 44, 90, 54, 80, 60, 50.0, 177, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/426.png');
+
+-- Mismagius e sua pré-evolução (ID 179-180)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Misdreavus', 'Pokémon Grito', 'Adora assustar pessoas com gritos assustadores. Alimenta-se de medo.', 0.7, 1.0, 14, NULL, 60, 60, 60, 85, 85, 85, 45, 50.0, NULL, 'Pedra Dusk', NULL, 'https://pokeportuga.pt/img/jogos/sprites/hgss/200.png'),
+('Mismagius', 'Pokémon Mágico', 'Seus feitiços causam alucinações. Dizem que traz má sorte a quem o vê.', 0.9, 4.4, 14, NULL, 60, 60, 60, 105, 105, 105, 45, 50.0, 179, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/429.png');
+
+-- Bronzor e sua evolução (ID 181-182)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Bronzor', 'Pokémon Bronze', 'Antigamente era usado como espelho. Reflete energia misteriosa.', 0.5, 60.5, 17, 11, 57, 24, 86, 24, 86, 23, 255, NULL, NULL, 'Level 33', 33, 'https://pokeportuga.pt/img/jogos/sprites/dp/436.png'),
+('Bronzong', 'Pokémon Sino', 'Dizem que traz chuva ou sol. Adorado em tempos antigos como causador de colheitas.', 1.3, 187.0, 17, 11, 67, 89, 116, 79, 116, 33, 90, NULL, 181, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/437.png');
+
+-- Bastiodon e sua linha evolutiva (ID 183-184)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Shieldon', 'Pokémon Escudo', 'Viveu na floresta há 100 milhões de anos. Seu rosto é extremamente resistente.', 0.5, 57.0, 13, 17, 30, 42, 118, 42, 88, 30, 45, 87.5, NULL, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/dp/410.png'),
+('Bastiodon', 'Pokémon Muralha', 'Seu rosto pode repelir ataques de qualquer criatura. Vive em pequenos grupos.', 1.3, 149.5, 13, 17, 60, 52, 168, 47, 138, 30, 45, 87.5, 183, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/411.png');
+
+-- Abomasnow e sua pré-evolução (ID 185-186)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Snover', 'Pokémon Árvore de Neve', 'Vive em regiões montanhosas cobertas de neve. Produz neve de seus galhos.', 1.0, 50.5, 5, 6, 60, 62, 50, 62, 60, 40, 120, 50.0, NULL, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/dp/459_f.png'),
+('Abomasnow', 'Pokémon Árvore de Neve', 'Chama nevascas para esconder-se. Seus braços são poderosos o suficiente para esmagar rochas.', 2.2, 135.5, 5, 6, 90, 92, 75, 92, 85, 60, 60, 50.0, 185, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/460_f.png');
+
+-- Sneasel e sua evolução (ID 187-188)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Sneasel', 'Pokémon Garras', 'Ataca silenciosamente à noite. Suas garras afiadas deixam feridas que não param de sangrar.', 0.9, 28.0, 16, 6, 55, 95, 55, 35, 75, 115, 60, 50.0, NULL, 'Nível up à noite segurando Razor Claw', NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/215_f.png'),
+('Weavile', 'Pokémon Garras Afiadas', 'Caça em grupos táticos. Comunica-se com sinais de garra em árvores e gelo.', 1.1, 34.0, 16, 6, 70, 120, 65, 45, 85, 125, 45, 50.0, 187, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/461_f.png');
+
+-- Roserade e sua linha evolutiva (ID 189-191)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Budew', 'Pokémon Broto', 'Aprende movimentos poderosos rapidamente. Libera pólen venenoso quando ameaçado.', 0.2, 1.2, 5, 8, 40, 30, 35, 50, 70, 55, 255, 50.0, NULL, 'Amizade durante dia', NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/405_f.png'),
+('Roselia', 'Pokémon Espinho', 'Suas flores contêm óleos que acalmam e curam. Os espinhos são venenosos.', 0.3, 2.0, 5, 8, 50, 60, 45, 100, 80, 65, 150, 50.0, 189, 'Pedra Shiny', NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/406_f.png'),
+('Roserade', 'Pokémon Buquê', 'Atrai presas com flores doces e depois ataca com chicotes venenosos.', 0.9, 14.5, 5, 8, 60, 70, 65, 125, 105, 90, 75, 50.0, 190, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/407_f.png');
+
+-- Octillery e sua pré-evolução (ID 192-193)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Remoraid', 'Pokémon Atirador', 'Dispara água com precisão para derrubar insetos voadores. Pode atirar até 100m.', 0.6, 12.0, 3, NULL, 35, 65, 35, 65, 35, 65, 190, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/dp/223_m.png'),
+('Octillery', 'Pokémon Canhão', 'Usa seus tentáculos como armas. Se agarra em rochas enquanto atira jatos de tinta.', 0.9, 28.5, 3, NULL, 75, 105, 75, 105, 75, 45, 75, 50.0, 192, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/224_m.png');
+
+-- Ambipom e sua pré-evolução (ID 194-195)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Aipom', 'Pokémon Cauda de Mão', 'Usa sua cauda ágil como uma mão extra. Vive no topo das árvores.', 0.8, 11.5, 1, NULL, 55, 70, 55, 40, 55, 85, 45, 50.0, NULL, 'Level up conhecendo Double Hit', NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/423_m.png'),
+('Ambipom', 'Pokémon Cauda Longa', 'Usa suas duas caudas com habilidade. Pode digitar em dois teclados ao mesmo tempo.', 1.2, 20.3, 1, NULL, 75, 100, 66, 60, 66, 115, 45, 50.0, 194, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/424_m.png');
+
+-- Luxray e sua linha evolutiva (ID 196-198)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Shinx', 'Pokémon Brilho', 'Seus olhos brilham no escuro. Comunica-se com outros com flashes de luz.', 0.5, 9.5, 4, NULL, 45, 65, 34, 40, 34, 45, 235, 50.0, NULL, 'Level 15', 15, 'https://pokeportuga.pt/img/jogos/sprites/dp/403_m.png'),
+('Luxio', 'Pokémon Faísca', 'Vive em pequenos grupos. Seus pelos conduzem eletricidade quando excitado.', 0.9, 30.5, 4, NULL, 60, 85, 49, 60, 49, 60, 120, 50.0, 196, 'Level 30', 30, 'https://pokeportuga.pt/img/jogos/sprites/dp/404_m.png'),
+('Luxray', 'Pokémon Brilho', 'Pode ver através de objetos sólidos com seus olhos. Localiza presas escondidas.', 1.4, 42.0, 4, NULL, 80, 120, 79, 95, 79, 70, 45, 50.0, 197, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/dp/405_m.png');
+
+
+-- Krokorok e sua linha evolutiva (ID 199-201)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Sandile', 'Pokémon Crocodilo da Areia', 'Vive enterrado na areia do deserto. Só deixa visíveis seus olhos e nariz enquanto espera por presas.', 0.7, 15.2, 9, 16, 50, 72, 35, 35, 35, 65, 180, 50.0, NULL, 'Level 29', 29, 'https://pokeportuga.pt/img/jogos/sprites/bw/551.png'),
+('Krokorok', 'Pokémon Crocodilo do Deserto', 'Protegido por uma película sobre os olhos, pode caçar mesmo em tempestades de areia.', 1.0, 33.4, 9, 16, 60, 82, 45, 45, 45, 74, 90, 50.0, 199, 'Level 40', 40, 'https://pokeportuga.pt/img/jogos/sprites/bw/552.png'),
+('Krookodile', 'Pokémon Intimidador', 'Seus olhos vermelhos podem enxergar presas mesmo através da areia. Tem mandíbulas que esmagam aço.', 1.5, 96.3, 9, 16, 95, 117, 80, 65, 70, 92, 45, 50.0, 200, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/553.png');
+
+-- Palpitoad e sua linha evolutiva (ID 202-204)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Tympole', 'Pokémon Girino', 'Usa vibrações na água para comunicar-se. Quando em perigo, faz um barulho ensurdecedor.', 0.5, 4.5, 3, NULL, 50, 50, 40, 50, 40, 64, 255, 50.0, NULL, 'Level 25', 25, 'https://pokeportuga.pt/img/jogos/sprites/bw/535.png'),
+('Palpitoad', 'Pokémon Vibração', 'Cria ondas de choque batendo os dedos contra o solo. Pode derrubar uma casa com vibrações.', 0.8, 17.0, 3, 9, 75, 65, 55, 65, 55, 69, 120, 50.0, 202, 'Level 36', 36, 'https://pokeportuga.pt/img/jogos/sprites/bw/536.png'),
+('Seismitoad', 'Pokémon Vibração', 'Pode fazer o chão tremer com as almofadas em seus dedos. Sua força muscular é incrível.', 1.5, 62.0, 3, 9, 105, 95, 75, 85, 75, 74, 45, 50.0, 203, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/537.png');
+
+-- Excadrill e sua pré-evolução (ID 205-206)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Drilbur', 'Pokémon Broca', 'Cava túneis em alta velocidade usando suas garras afiadas. Vive no subsolo.', 0.3, 8.5, 9, NULL, 60, 85, 40, 30, 45, 68, 120, 50.0, NULL, 'Level 31', 31, 'https://pokeportuga.pt/img/jogos/sprites/bw/529.png'),
+('Excadrill', 'Pokémon Broca', 'Suas garras de aço podem perfurar até rochas duras. Trabalha em equipe para cavar túneis.', 0.7, 40.4, 9, 17, 110, 135, 60, 50, 65, 88, 60, 50.0, 205, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/530.png');
+
+-- Swoobat e sua pré-evolução (ID 207-208)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Woobat', 'Pokémon Morcego Beijo', 'Vive em cavernas escuras. Mostra afeto deixando marcas de coração com seu nariz.', 0.4, 2.1, 11, 10, 65, 45, 43, 55, 43, 72, 190, 50.0, NULL, 'Amizade', NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/527.png'),
+('Swoobat', 'Pokémon Morcego Beijo', 'Libera ondas ultrassônicas em forma de coração para confundir presas e predadores.', 0.9, 10.5, 11, 10, 67, 57, 55, 77, 55, 114, 45, 50.0, 207, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/528.png');
+
+-- Unfezant e sua linha evolutiva (ID 209-211)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Pidove', 'Pokémon Pombo Pequeno', 'Muito dócil e obediente. Segue seu treinador fielmente como um pombo-correio.', 0.3, 2.1, 1, 10, 50, 55, 50, 36, 30, 43, 255, 50.0, NULL, 'Level 21', 21, 'https://pokeportuga.pt/img/jogos/sprites/bw/519.png'),
+('Tranquill', 'Pokémon Pombo Selvagem', 'Marca seu território com gritos altos. Extremamente protetor com seu grupo.', 0.6, 15.0, 1, 10, 62, 77, 62, 50, 42, 65, 120, 50.0, 209, 'Level 32', 32, 'https://pokeportuga.pt/img/jogos/sprites/bw/520.png'),
+('Unfezant', 'Pokémon Pombo Orgulhoso', 'Diferenças visíveis entre machos e fêmeas. Os machos têm plumagem mais colorida e são mais agressivos.', 1.2, 29.0, 1, 10, 80, 115, 80, 65, 55, 93, 45, 50.0, 210, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/521.png');
+
+-- Swanna e sua pré-evolução (ID 212-213)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Ducklett', 'Pokémon Pato', 'Flutua na água enquanto procura comida. Suas penas repelem a água e o frio.', 0.5, 5.5, 3, 10, 62, 44, 50, 44, 50, 55, 190, 50.0, NULL, 'Level 35', 35, 'https://pokeportuga.pt/img/jogos/sprites/bw/580.png'),
+('Swanna', 'Pokémon Cisne', 'Elegante ao nadar e voar. Ataca com danças graciosas e golpes de asa poderosos.', 1.3, 24.2, 3, 10, 75, 87, 63, 87, 63, 98, 45, 50.0, 212, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/581.png');
+
+-- Vanillish e sua linha evolutiva (ID 214-216)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Vanillite', 'Pokémon Neve Fresca', 'Nascido de gotículas de neve congeladas. Exala ar frio a -50°C.', 0.4, 5.7, 6, NULL, 36, 50, 50, 65, 60, 44, 255, 50.0, NULL, 'Level 35', 35, 'https://pokeportuga.pt/img/jogos/sprites/bw/582.png'),
+('Vanillish', 'Pokémon Neve', 'Coberto por uma camada de gelo duro como aço. Congela inimigos com ar -50°C.', 1.1, 41.0, 6, NULL, 51, 65, 65, 80, 75, 59, 120, 50.0, 214, 'Level 47', 47, 'https://pokeportuga.pt/img/jogos/sprites/bw/583.png'),
+('Vanilluxe', 'Pokémon Nevasca', 'As duas cabeças pensam em uníssono. Causa nevascas ao liberar ar congelante.', 1.3, 57.5, 6, NULL, 71, 95, 85, 110, 95, 79, 45, 50.0, 215, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/584.png');
+
+-- Cryogonal (ID 217 - sem pré-evolução)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Cryogonal', 'Pokémon Cristal de Gelo', 'Formado a partir de partículas de gelo na atmosfera. Congela inimigos com ar -100°C.', 1.1, 148.0, 6, NULL, 80, 50, 50, 95, 135, 105, 25, NULL, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/615.png');
+
+-- Beartic e sua pré-evolução (ID 218-219)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Cubchoo', 'Pokémon Urso Chorão', 'Seu nariz escorre quando está resfriado. A muco se torna gelado e é usado em ataques.', 0.5, 8.5, 6, NULL, 55, 70, 40, 60, 40, 40, 120, 50.0, NULL, 'Level 37', 37, 'https://pokeportuga.pt/img/jogos/sprites/bw/613.png'),
+('Beartic', 'Pokémon Urso Congelante', 'Congela sua respiração para criar garras e presas de gelo. Pode esmagar rochas facilmente.', 2.6, 260.0, 6, NULL, 95, 130, 80, 70, 80, 50, 60, 50.0, 218, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/614.png');
+
+-- Fraxure e sua linha evolutiva (ID 220-222)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Axew', 'Pokémon Presa', 'Treina constantemente suas presas em troncos de árvores. Suas marcas podem ser vistas em florestas.', 0.6, 18.0, 15, NULL, 46, 87, 60, 30, 40, 57, 75, 50.0, NULL, 'Level 38', 38, 'https://pokeportuga.pt/img/jogos/sprites/bw/610.png'),
+('Fraxure', 'Pokémon Machado', 'Suas presas podem cortar aço. Vive em florestas e protege seu território ferozmente.', 1.0, 36.0, 15, NULL, 66, 117, 70, 40, 50, 67, 60, 50.0, 220, 'Level 48', 48, 'https://pokeportuga.pt/img/jogos/sprites/bw/611.png'),
+('Haxorus', 'Pokémon Machado', 'Seu corpo é coberto por placas duras. Suas presas afiadas podem cortar qualquer coisa.', 1.8, 105.5, 15, NULL, 76, 147, 90, 60, 70, 97, 45, 50.0, 221, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/612.png');
+
+-- Druddigon (ID 223 - sem pré-evolução)
+INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
+                    defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
+                    taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
+('Druddigon', 'Pokémon Caverna', 'Esculpe seu ninho em paredes de cavernas com suas garras afiadas. Tem pele dura como pedra.', 1.6, 139.0, 15, NULL, 77, 120, 90, 60, 90, 48, 45, 50.0, NULL, NULL, NULL, 'https://pokeportuga.pt/img/jogos/sprites/bw/621.png');
+
 
 -- 1. INSERIR OS LÍDERES (agora sem referência a timePokemon)
 INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
@@ -702,6 +977,137 @@ INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
 (22, 'Time de Winona', NOW()),
 (23, 'Time de Tate & Liza', NOW()),
 (24, 'Time de Wallace', NOW());
+
+-- Líderes de Sinnoh (idRegiao = 4)
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Roark', 'https://archives.bulbagarden.net/media/upload/3/33/Spr_DP_Roark.png', 'Oreburgh City', 4),
+('Gardenia', 'https://archives.bulbagarden.net/media/upload/6/6d/Spr_DP_Gardenia.png', 'Eterna City', 4),
+('Maylene', 'https://archives.bulbagarden.net/media/upload/0/0d/Spr_DP_Maylene.png', 'Veilstone City', 4),
+('Wake', 'https://archives.bulbagarden.net/media/upload/9/9b/Spr_DP_Wake.png', 'Pastoria City', 4),
+('Fantina', 'https://archives.bulbagarden.net/media/upload/6/6d/Spr_DP_Fantina.png', 'Hearthome City', 4),
+('Byron', 'https://archives.bulbagarden.net/media/upload/4/4b/Spr_DP_Byron.png', 'Canalave City', 4),
+('Candice', 'https://archives.bulbagarden.net/media/upload/3/3e/Spr_DP_Candice.png', 'Snowpoint City', 4),
+('Volkner', 'https://archives.bulbagarden.net/media/upload/3/3f/Spr_DP_Volkner.png', 'Sunyshore City', 4);
+
+-- Times de Sinnoh
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(25, 'Time de Roark', NOW()),
+(26, 'Time de Gardenia', NOW()),
+(27, 'Time de Maylene', NOW()),
+(28, 'Time de Wake', NOW()),
+(29, 'Time de Fantina', NOW()),
+(30, 'Time de Byron', NOW()),
+(31, 'Time de Candice', NOW()),
+(32, 'Time de Volkner', NOW());
+
+
+-- Líderes de Unova
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Cilan', 'https://archives.bulbagarden.net/media/upload/3/3b/Spr_BW_Cilan.png', 'Striaton City', 5),
+('Chili', 'https://archives.bulbagarden.net/media/upload/4/4e/Spr_BW_Chili.png', 'Striaton City', 5),
+('Cress', 'https://archives.bulbagarden.net/media/upload/0/0d/Spr_BW_Cress.png', 'Striaton City', 5),
+('Lenora', 'https://archives.bulbagarden.net/media/upload/0/0f/Spr_BW_Lenora.png', 'Nacrene City', 5),
+('Burgh', 'https://archives.bulbagarden.net/media/upload/0/0a/Spr_BW_Burgh.png', 'Castelia City', 5),
+('Elesa', 'https://archives.bulbagarden.net/media/upload/3/3a/Spr_BW_Elesa.png', 'Nimbasa City', 5),
+('Clay', 'https://archives.bulbagarden.net/media/upload/3/3d/Spr_BW_Clay.png', 'Driftveil City', 5),
+('Skyla', 'https://archives.bulbagarden.net/media/upload/5/5e/Spr_BW_Skyla.png', 'Mistralton City', 5),
+('Brycen', 'https://archives.bulbagarden.net/media/upload/1/1a/Spr_BW_Brycen.png', 'Icirrus City', 5),
+('Drayden', 'https://archives.bulbagarden.net/media/upload/8/8c/Spr_BW_Drayden.png', 'Opelucid City', 5);
+
+-- Times de Unova
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(33, 'Time de Cilan', NOW()),
+(34, 'Time de Chili', NOW()),
+(35, 'Time de Cress', NOW()),
+(36, 'Time de Lenora', NOW()),
+(37, 'Time de Burgh', NOW()),
+(38, 'Time de Elesa', NOW()),
+(39, 'Time de Clay', NOW()),
+(40, 'Time de Skyla', NOW()),
+(41, 'Time de Brycen', NOW()),
+(42, 'Time de Drayden', NOW());
+
+-- Líderes de Kalos
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Viola', 'https://archives.bulbagarden.net/media/upload/0/0e/Spr_XY_Viola.png', 'Santalune City', 6),
+('Grant', 'https://archives.bulbagarden.net/media/upload/1/1f/Spr_XY_Grant.png', 'Cyllage City', 6),
+('Korrina', 'https://archives.bulbagarden.net/media/upload/9/9c/Spr_XY_Korrina.png', 'Shalour City', 6),
+('Ramos', 'https://archives.bulbagarden.net/media/upload/2/2e/Spr_XY_Ramos.png', 'Coumarine City', 6),
+('Clemont', 'https://archives.bulbagarden.net/media/upload/5/5f/Spr_XY_Clemont.png', 'Lumiose City', 6),
+('Valerie', 'https://archives.bulbagarden.net/media/upload/4/4d/Spr_XY_Valerie.png', 'Laverre City', 6),
+('Olympia', 'https://archives.bulbagarden.net/media/upload/5/5e/Spr_XY_Olympia.png', 'Anistar City', 6),
+('Wulfric', 'https://archives.bulbagarden.net/media/upload/5/5f/Spr_XY_Wulfric.png', 'Snowbelle City', 6);
+
+-- Times de Kalos
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(41, 'Time de Viola', NOW()),
+(42, 'Time de Grant', NOW()),
+(43, 'Time de Korrina', NOW()),
+(44, 'Time de Ramos', NOW()),
+(45, 'Time de Clemont', NOW()),
+(46, 'Time de Valerie', NOW()),
+(47, 'Time de Olympia', NOW()),
+(48, 'Time de Wulfric', NOW());
+
+-- Kahunas e Líderes de Prova de Alola
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Hala', 'https://archives.bulbagarden.net/media/upload/7/7a/Spr_SM_Hala.png', 'Iki Town', 7),
+('Olivia', 'https://archives.bulbagarden.net/media/upload/6/6a/Spr_SM_Olivia.png', 'Konikoni City', 7),
+('Nanu', 'https://archives.bulbagarden.net/media/upload/2/2b/Spr_SM_Nanu.png', 'Po Town', 7),
+('Hapu', 'https://archives.bulbagarden.net/media/upload/4/4e/Spr_SM_Hapu.png', 'Vast Poni Canyon', 7);
+
+-- Times de Alola
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(49, 'Time de Hala', NOW()),
+(50, 'Time de Olivia', NOW()),
+(51, 'Time de Nanu', NOW()),
+(52, 'Time de Hapu', NOW());
+
+-- Líderes de Galar
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Milo', 'https://archives.bulbagarden.net/media/upload/6/6c/SwSh_Milo.png', 'Turffield', 8),
+('Nessa', 'https://archives.bulbagarden.net/media/upload/3/3e/SwSh_Nessa.png', 'Hulbury', 8),
+('Kabu', 'https://archives.bulbagarden.net/media/upload/8/8c/SwSh_Kabu.png', 'Motostoke', 8),
+('Bea', 'https://archives.bulbagarden.net/media/upload/5/5e/SwSh_Bea.png', 'Stow-on-Side', 8),
+('Allister', 'https://archives.bulbagarden.net/media/upload/1/1b/SwSh_Allister.png', 'Stow-on-Side', 8),
+('Opal', 'https://archives.bulbagarden.net/media/upload/1/1e/SwSh_Opal.png', 'Ballonlea', 8),
+('Gordie', 'https://archives.bulbagarden.net/media/upload/7/7a/SwSh_Gordie.png', 'Circhester', 8),
+('Melony', 'https://archives.bulbagarden.net/media/upload/3/3a/SwSh_Melony.png', 'Circhester', 8),
+('Piers', 'https://archives.bulbagarden.net/media/upload/1/1f/SwSh_Piers.png', 'Spikemuth', 8),
+('Raihan', 'https://archives.bulbagarden.net/media/upload/3/3c/SwSh_Raihan.png', 'Hammerlocke', 8);
+
+-- Times de Galar
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(53, 'Time de Milo', NOW()),
+(54, 'Time de Nessa', NOW()),
+(55, 'Time de Kabu', NOW()),
+(56, 'Time de Bea/Allister', NOW()),  -- Depende da versão (Espada/Escudo)
+(57, 'Time de Opal', NOW()),
+(58, 'Time de Gordie/Melony', NOW()), -- Depende da versão
+(59, 'Time de Piers', NOW()),
+(60, 'Time de Raihan', NOW());
+
+-- Líderes de Ginásio de Paldea
+INSERT INTO liderGinasio (nomeLider, imagemUrl, cidade, idRegiao) VALUES
+('Katy', 'https://archives.bulbagarden.net/media/upload/thumb/5/5e/SV_Katy.png/250px-SV_Katy.png', 'Cortondo', 9),
+('Brassius', 'https://archives.bulbagarden.net/media/upload/thumb/9/9e/SV_Brassius.png/250px-SV_Brassius.png', 'Artazon', 9),
+('Iono', 'https://archives.bulbagarden.net/media/upload/thumb/4/4b/SV_Iono.png/250px-SV_Iono.png', 'Levincia', 9),
+('Kofu', 'https://archives.bulbagarden.net/media/upload/thumb/1/1e/SV_Kofu.png/250px-SV_Kofu.png', 'Cascarrafa', 9),
+('Larry', 'https://archives.bulbagarden.net/media/upload/thumb/1/1e/SV_Larry.png/250px-SV_Larry.png', 'Medali', 9),
+('Ryme', 'https://archives.bulbagarden.net/media/upload/thumb/4/4b/SV_Ryme.png/250px-SV_Ryme.png', 'Montenevera', 9),
+('Tulip', 'https://archives.bulbagarden.net/media/upload/thumb/0/0a/SV_Tulip.png/250px-SV_Tulip.png', 'Alfornada', 9),
+('Grusha', 'https://archives.bulbagarden.net/media/upload/thumb/5/5a/SV_Grusha.png/250px-SV_Grusha.png', 'Glaseado Mountain', 9);
+
+-- Times de Paldea
+INSERT INTO timePokemon (idLider, nomeTime, data_criacao) VALUES
+(61, 'Time de Katy', NOW()),
+(62, 'Time de Brassius', NOW()),
+(63, 'Time de Iono', NOW()),
+(64, 'Time de Kofu', NOW()),
+(65, 'Time de Larry', NOW()),
+(66, 'Time de Ryme', NOW()),
+(67, 'Time de Tulip', NOW()),
+(68, 'Time de Grusha', NOW());
 
 -- 3. INSERIR OS MEMBROS DOS TIMES
 -- Time de Brock (Pedra/Terra)
@@ -806,4 +1212,85 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
 (24, 134, 1), (24, 136, 2), (24, 138, 3), (24, 140, 4), (24, 124, 5);  -- Feebas, Milotic, Luvdisc, Whiscash
 
-select * from pokemon;
+-- TIMES DE SINNOH
+
+-- Time de Roark (Pedra)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(25, 1, 1), (25, 2, 2), (25, 141, 3);
+
+-- Time de Gardenia (Planta)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(26, 146, 1), (26, 143, 2), (26, 55, 3);
+
+-- Time de Maylene (Lutador)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(27, 111, 1), (27, 153, 2), (27, 149, 3);
+
+-- Time de Wake (Água)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(28, 104, 1), (28, 176, 2), (28, 151, 3);
+
+-- Time de Fantina (Fantasma)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(29, 178, 1), (29, 99, 2), (29, 180, 3);
+
+-- Time de Byron (Aço)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(30, 181, 1), (30, 37, 2), (30, 184, 3);
+
+-- Time de Candice (Gelo)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(31, 185, 1), (31, 187, 2), (31, 119, 3), (31, 186, 4);
+
+-- Time de Volkner (Elétrico)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(32, 43, 1), (32, 193, 2), (32, 195, 3), (32, 198, 4);
+
+
+-- TIMES DE UNOVA 
+
+-- Time de Cilan/Chili/Cress (Planta/Fogo/Água)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(33, 161, 1), (33, 155, 2);  -- Cilan (Planta)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(34, 161, 1), (34, 157, 2);  -- Chili (Fogo)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(35, 161, 1), (35, 159, 2);  -- Cress (Água)
+
+
+-- Time de Lenora (Normal)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(36, 162, 1), (36, 165, 2);
+
+-- Time de Burgh (Inseto)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(37, 165, 1), (37, 166, 2), (37, 170, 3);
+
+-- Time de Elesa (Elétrico)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(38, 173, 1), (38, 173, 2), (38, 174, 3);
+
+-- Time de Clay (Terra)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(39, 200, 1), (39, 203, 2), (39, 206, 3);
+
+-- Time de Skyla (Voador)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(40, 208, 1), (40, 211, 2), (40, 213, 3);
+
+-- Time de Brycen (Gelo)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(41, 215, 1), (41, 217, 2), (41, 219, 3);
+
+-- Time de Drayden (Dragão)
+INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
+(42, 221, 1), (42, 223, 2), (42, 222, 3);
+
+SELECT liderGinasio.nomeLider AS lider, liderGinasio.cidade AS cidade, regiao.nomeRegiao, timePokemon.nomeTime AS nomeT, timePokemon_membros.posicao_no_time AS posicao,
+pokemon.nome AS nomeP, pokemon.imagemUrl AS pokemon, tipoPokemon.tipo AS tipo, tipoPokemon.cor AS tipoCor
+FROM timePokemon_membros
+JOIN pokemon ON timePokemon_membros.idPokemon = pokemon.idPokemon
+JOIN tipoPokemon ON pokemon.idTipoPokemon = tipoPokemon.idTipoPokemon
+JOIN timePokemon ON timePokemon_membros.idTimePokemon = timePokemon.idTimePokemon
+JOIN liderGinasio ON timePokemon.idLider = liderGinasio.idLider
+JOIN regiao ON liderGinasio.idRegiao = regiao.idRegiao;
