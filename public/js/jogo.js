@@ -97,6 +97,72 @@ function ginasiosDadosRuby() {
         });
 }
 
+function ginasiosDadosDiamond() {
+    const loadingElement = document.getElementById('ginasios');
+    loadingElement.innerHTML = '<p class="loading">Carregando ginásios...</p>';
+
+    fetch('/jogos/buscarGinasios/4')
+        .then(async response => {
+            const data = await response.json();
+            if (!response.ok) {
+                const error = new Error(data.message || 'Erro ao carregar');
+                error.details = data;
+                throw error;
+            }
+            return data;
+        })
+        .then(data => {
+            if (data.success && data.data && data.data.length > 0) {
+                exibirTimesGinasio(data.data);
+            } else {
+                loadingElement.innerHTML = 
+                    `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
+            }
+        })
+        .catch(error => {
+            console.error('Erro completo:', error);
+            let errorMessage = error.message;
+            if (error.details?.sqlError) {
+                errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
+            }
+            loadingElement.innerHTML = 
+                `<p class="error">${errorMessage}</p>`;
+        });
+}
+
+function ginasiosDadosBlackWhite() {
+    const loadingElement = document.getElementById('ginasios');
+    loadingElement.innerHTML = '<p class="loading">Carregando ginásios...</p>';
+
+    fetch('/jogos/buscarGinasios/5')
+        .then(async response => {
+            const data = await response.json();
+            if (!response.ok) {
+                const error = new Error(data.message || 'Erro ao carregar');
+                error.details = data;
+                throw error;
+            }
+            return data;
+        })
+        .then(data => {
+            if (data.success && data.data && data.data.length > 0) {
+                exibirTimesGinasio(data.data);
+            } else {
+                loadingElement.innerHTML = 
+                    `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
+            }
+        })
+        .catch(error => {
+            console.error('Erro completo:', error);
+            let errorMessage = error.message;
+            if (error.details?.sqlError) {
+                errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
+            }
+            loadingElement.innerHTML = 
+                `<p class="error">${errorMessage}</p>`;
+        });
+}
+
 function exibirTimesGinasio(dados) {
     const timesPorLider = {};
     let html = '';
