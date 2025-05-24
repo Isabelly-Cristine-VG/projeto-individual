@@ -189,6 +189,7 @@ function exibirTimesGinasio(dados) {
                     <img src="${p.pokemon}" alt="${p.nomeP}">
                     <p>${p.nomeP}</p>
                     <span class="tipo-pokemon" style="background-color: ${p.tipoCor}">${p.tipo}</span>
+                     <span class="tipo-pokemon" style="background-color: ${p.tipoCor2}">${p.tipo2}</span>
                 </div>`;
         }
 

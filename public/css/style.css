@@ -1445,8 +1445,8 @@ body {
 }
 
 .pokemon-card img {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     margin: 5px 0; /* Espaço equilibrado */
 }
