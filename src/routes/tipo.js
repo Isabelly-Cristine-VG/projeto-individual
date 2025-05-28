@@ -16,4 +16,17 @@ router.get('/contarVantagensPorTipo/:idTipo(\\d+)', function (req, res) {
     tipoController.contarVantagensPorTipo(req, res);
 });
 
+
+//  rotas para favoritar tipos
+router.post('/favoritarTipo', function (req, res) {
+    tipoController.favoritarTipo(req, res);
+});
+
+router.post('/desfavoritarTipo', function (req, res) {
+    tipoController.desfavoritarTipo(req, res);
+});
+
+router.get('/buscarFavoritos/:idUsuario', function (req, res) {
+    tipoController.buscarFavoritos(req, res);
+});
 module.exports = router;

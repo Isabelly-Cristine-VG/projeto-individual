@@ -38,8 +38,48 @@ function contarVantagensPorTipo(idTipo) {
     return database.executar(instrucaoSql);
 }
 
+// Adicione estas novas funções ao tipoModel.js
+// Mantenha as funções existentes e atualize apenas estas:
+
+// Substitua TODAS as funções de favoritos por estas:
+
+function favoritarTipo(idUsuario, idTipo) {
+    const instrucaoSql = `
+        INSERT INTO tiposFavoritos (idUsuario, idTipoPokemon, dataFavoritado)
+        VALUES (${idUsuario}, ${idTipo}, CURRENT_TIMESTAMP)
+        ON DUPLICATE KEY UPDATE dataFavoritado = CURRENT_TIMESTAMP;
+    `;
+    return database.executar(instrucaoSql);
+}
+
+function desfavoritarTipo(idUsuario, idTipo) {
+    const instrucaoSql = `
+        DELETE FROM tiposFavoritos 
+        WHERE idUsuario = ${idUsuario} AND idTipoPokemon = ${idTipo};
+    `;
+    return database.executar(instrucaoSql);
+}
+
+function buscarFavoritos(idUsuario) {
+    const instrucaoSql = `
+        SELECT tf.idTipoPokemon as idTipo, tf.dataFavoritado, tp.tipo, tp.cor
+        FROM tiposFavoritos tf
+        JOIN tipoPokemon tp ON tf.idTipoPokemon = tp.idTipoPokemon
+        WHERE tf.idUsuario = ${idUsuario}
+        ORDER BY tf.dataFavoritado DESC;
+    `;
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
+    // Consultas básicas de tipos
     buscarTipo,
     buscarVantagensPorTipo,
-    contarVantagensPorTipo
+    contarVantagensPorTipo,
+    
+    // Gestão de favoritos
+    favoritarTipo,
+    desfavoritarTipo,
+    buscarFavoritos
+  
 };

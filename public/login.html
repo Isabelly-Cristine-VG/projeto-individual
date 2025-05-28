@@ -7,7 +7,7 @@
     <title>pokeblog</title>
     <script src="./js/sessao.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    
+
     <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
 </head>
 
@@ -37,9 +37,10 @@
         <div class="lado-esquerdo">
             <img class="rottomdex" src="assets/46.png" alt="">
 
-           <h1>É hora de se cadastrar!</h1>
-           <h3>Faça o cadastro no nosso site e fique por dentro do universo pokemon e tenha uma profunda imersão nesse mundo!</h3>
-           <img class="pokemons-cadastro" src="assets/34.png" alt="">
+            <h1>É hora de se cadastrar!</h1>
+            <h3>Faça o cadastro no nosso site e fique por dentro do universo pokemon e tenha uma profunda imersão nesse
+                mundo!</h3>
+            <img class="pokemons-cadastro" src="assets/34.png" alt="">
         </div>
 
         <!-- Lado direito branco com formulário -->
@@ -91,64 +92,69 @@
 
     function entrar() {
 
-var emailVar = email_input.value;
-var senhaVar = senha_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
 
-if (emailVar == "" || senhaVar == "") {
-    alert("Todos os campos devem ser preenchidos!");
-    return false;
-}
+        if (emailVar == "" || senhaVar == "") {
+            alert("Todos os campos devem ser preenchidos!");
+            return false;
+        }
 
 
-console.log("FORM LOGIN: ", emailVar);
-console.log("FORM SENHA: ", senhaVar);
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
 
-fetch("/usuarios/autenticar", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        emailServer: emailVar,
-        senhaServer: senhaVar
-    })
-}).then(function (resposta) {
-    console.log("ESTOU NO THEN DO entrar()!")
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
 
-    if (resposta.ok) {
-        console.log(resposta);
+            if (resposta.ok) {
+                console.log(resposta);
 
-        resposta.json().then(json => {
-            console.log(json);
-            console.log(JSON.stringify(json));
-            sessionStorage.EMAIL_USUARIO = json.email;
-            sessionStorage.NOME_USUARIO = json.nome;
-            sessionStorage.ID_USUARIO = json.id;
+                resposta.json().then(json => {
+                    console.log("Dados recebidos do login:", json);
 
-            setTimeout(function () {
-                window.location = "indexCadastrado.html";
-            }, 1000); // apenas para exibir o loading
+                    if (json && json.idUsuario) {  // Verifique se json existe e tem idUsuario
+                        sessionStorage.setItem('ID_USUARIO', json.idUsuario.toString());
+                        sessionStorage.setItem('NOME_USUARIO', json.nome || '');
+                        sessionStorage.setItem('EMAIL_USUARIO', json.email || '');
 
-        });
+                        setTimeout(function () {
+                            window.location = "indexCadastrado.html";
+                        }, 1000);
+                    } else {
+                        console.error("Dados de usuário inválidos:", json);
+                        alert("Erro ao fazer login: dados do usuário não recebidos corretamente");
+                    }
+                });
 
-    } else {
+            } else {
 
-        console.log("Houve um erro ao tentar realizar o login!");
-        alert('E-mail ou senha inválidos!')
+                console.log("Houve um erro ao tentar realizar o login!");
+                alert('E-mail ou senha inválidos!')
 
-        resposta.text().then(texto => {
-            console.error(texto);
-            finalizarAguardar(texto);
-        });
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
-
-}).catch(function (erro) {
-    console.log(erro);
-})
-
-return false;
-}
 
 
 </script>
+
 </html>

@@ -2,27 +2,30 @@
 
 .tipo-pedra{
     display: flex;
+    justify-content: center;
     background-color: rgb(161, 121, 69);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(212, 178, 132);
     color: #ffefd1;
-    
+    padding-right: 3rem;
 }
 
 .tipo-pedra img{
-    margin-left: -10%;
+    margin-right: 10%;
+    width: 60%;
 }
 
 .fundo-pedra{
-    display: flex;
     background-color: rgb(207, 155, 87);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(223, 194, 156);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+
 }
 
 .insignia-pedra{
@@ -36,7 +39,6 @@
     width: 4rem;
     height: 3rem;
     align-items: center;
-    margin-left: -3rem;
     margin-bottom: 1rem;
 
 }
@@ -44,6 +46,7 @@
 .insignia-pedra img{
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
 
@@ -52,16 +55,19 @@
 
 .tipo-agua{
     display: flex;
+    justify-content: center;
     background-color: rgb(11, 126, 179);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(132, 183, 212);
     color: #d1f6ff;
+    padding-right: 3rem;
 }
 
 .tipo-agua img{
-    margin-left: -6%;
+    margin-right: 6%;
+    width: 60%;
 }
 
 .fundo-agua{
@@ -71,24 +77,11 @@
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(156, 202, 223);
-    padding: 1.5rem;
-    margin-right: 5%;
+    margin-left: 2%;
+    padding: 1rem;
+    width: 70%;
 }
 
-.pokemons-agua{
-    display: flex;
-    background-color: rgb(94, 179, 228);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(156, 202, 223);
-    padding: 1.5rem;
-    width: 8rem;
-    height: 3rem;
-    margin-left: -9%;
-    align-items: center;
-
-}
 
 .insignia-agua{
     display: flex;
@@ -101,52 +94,36 @@
     width: 4rem;
     height: 3rem;
     align-items: center;
-    margin-left: -3rem;
     margin-bottom: 1rem;
 
 }
 
 
-.pokemons-agua img{
-    width: 25rem;
-    height: 5rem;
-    margin-left: 2%;
-}
-
 .insignia-agua img{
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-.pokemons-agua .staryu{
-    margin-right: 30%;
-}
-
-.pokemons-agua .starmie{
-    margin-right: -10%;
-    margin-left: -7%;
-
-}
-
-.tipo-agua .lider-ag{
-    margin-left: -5%;
-}
 
 /*GINÁSIO TIPO PLANTA*/
 
 
 .tipo-planta{
     display: flex;
+    justify-content: center;
     background-color: rgb(11, 179, 39);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(148, 212, 132);
     color: #d1ffd9;
+    padding-right: 3rem;
 }
 
 .tipo-planta img{
-    margin-left: -10%;
+    margin-right: 7%;
+    width: 60%;
 }
 
 .fundo-planta{
@@ -156,22 +133,9 @@
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(162, 223, 156);
-    padding: 1.5rem;
-}
-
-.pokemons-planta{
-    display: flex;
-    background-color: rgb(98, 211, 98);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(162, 223, 156);
-    padding: 1.5rem;
-    width: 10.2rem;
-    height: 3rem;
-    margin-left: -9%;
-    align-items: center;
-
+    margin-left: 2%;
+    padding: 1rem;
+    width: 70%;
 }
 
 .insignia-planta{
@@ -184,50 +148,37 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
 
 }
 
-.pokemons-planta img{
-    width: 25rem;
-    height: 5rem;
-    margin-left: 2%;
-}
 
 .insignia-planta img{
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-.pokemons-planta .Victreebel{
-    margin-left: -16%;
-}
-
-.pokemons-planta .tangela{
-    margin-left: -57%;
-}
-
-.pokemons-planta .vileplume{
-    margin-left: -59%;
-}
 
 /*GINÁSIO TIPO ELÉTRICO*/
 
 
 .tipo-eletrico{
     display: flex;
+    justify-content: center; /* Adicionado para padronizar */
     background-color: rgb(179, 162, 11);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(212, 207, 132);
     color: #feffd1;
+    padding-right: 3rem; /* Adicionado para padronizar */
 }
 
 .tipo-eletrico img{
-    margin-left: -10%;
+    margin-right: 10%; /* Padronizado */
+    width: 60%; /* Padronizado */
 }
 
 .fundo-eletrico{
@@ -237,22 +188,9 @@
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(222, 223, 156);
-    padding: 1.5rem;
-}
-
-.pokemons-eletrico{
-    display: flex;
-    background-color: rgb(211, 200, 98);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(222, 223, 156);
-    padding: 1.5rem;
-    width: 9.3rem;
-    height: 3rem;
-    margin-left: -9%;
-    align-items: center;
-
+    margin-left: 2%; /* Adicionado para padronizar */
+    padding: 1rem; /* Padronizado */
+    width: 70%; /* Padronizado */
 }
 
 .insignia-eletrico{
@@ -265,49 +203,35 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
-    align-items: center;
-    margin-bottom: 1rem;
-
-}
-
-.pokemons-eletrico img{
-    width: 30rem;
-    height: 5rem;
+    align-items: center; /* Adicionado para padronizar */
+    margin-bottom: 1rem; /* Adicionado para padronizar */
 }
 
 .insignia-eletrico img{
     width: 15rem;
     height: 5rem;
+    margin-left: -20%; /* Padronizado */
 }
 
-.pokemons-eletrico .voltorb{
-    margin-left: -30%;
-}
-
-.pokemons-eletrico .pikachu{
-    margin-left: -65%;
-}
-
-.pokemons-eletrico .raichu{
-    margin-left: -59%;
-}
 
 /*GINÁSIO TIPO VENENOSO*/
 
 
 .tipo-venenoso{
     display: flex;
+    justify-content: center; /* Adicionado */
     background-color: rgb(75, 11, 179);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(167, 132, 212);
     color: #e7d1ff;
+    padding-right: 3rem; /* Adicionado */
 }
 
 .tipo-venenoso img{
-    margin-left: -10%;
+    margin-right: 10%; /* Padronizado */
+    width: 60%; /* Padronizado */
 }
 
 .fundo-venenoso{
@@ -317,23 +241,9 @@
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(187, 156, 223);
-    padding: 1.5rem;
-}
-
-.pokemons-venenoso{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(137, 98, 211);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(187, 156, 223);
-    padding: 1.5rem;
-    width: 10.5rem;
-    height: 2.5rem;
-    margin-left: -9%;
-    align-items: center;
-
+    margin-left: 2%; /* Adicionado */
+    padding: 1rem; /* Padronizado */
+    width: 70%; /* Padronizado */
 }
 
 .insignia-venenoso{
@@ -346,35 +256,14 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
-    align-items: center;
-    margin-bottom: 1rem;
-
-}
-
-.pokemons-venenoso img{
-    width: 70%;
+    align-items: center; /* Adicionado */
+    margin-bottom: 1rem; /* Adicionado */
 }
 
 .insignia-venenoso img{
     width: 15rem;
     height: 5rem;
-}
-
-.pokemons-venenoso .koffing{
-    margin-left: -20%;
-}
-
-.pokemons-venenoso .mulk{
-    margin-left: -55%;
-}
-
-.pokemons-venenoso .koffing2{
-    margin-left: -55%;
-}
-
-.pokemons-venenoso .weezing{
-    margin-left: -50%;
+    margin-left: -20%; /* Padronizado */
 }
 
 
@@ -382,16 +271,19 @@
 
 .tipo-psiquico{
     display: flex;
+    justify-content: center; /* Adicionado */
     background-color: rgb(179, 11, 89);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(212, 132, 169);
     color: #ffd1e3;
+    padding-right: 3rem; /* Adicionado */
 }
 
 .tipo-psiquico img{
-    margin-left: -8%;
+    margin-right: 10%; /* Padronizado */
+    width: 60%; /* Padronizado */
 }
 
 .fundo-psiquico{
@@ -401,23 +293,9 @@
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(223, 156, 184);
-    padding: 1.5rem;
-}
-
-.pokemons-psiquico{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(211, 98, 145);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(223, 156, 184);
-    padding: 1.5rem;
-    width: 10.5rem;
-    height: 2.5rem;
-    margin-left: -9%;
-    align-items: center;
-
+    margin-left: 2%; /* Adicionado */
+    padding: 1rem; /* Padronizado */
+    width: 70%; /* Padronizado */
 }
 
 .insignia-psiquico{
@@ -430,19 +308,14 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
-    align-items: center;
-    margin-bottom: 1rem;
-
-}
-
-.pokemons-psiquico img{
-    width: 10rem;
+    align-items: center; /* Adicionado */
+    margin-bottom: 1rem; /* Adicionado */
 }
 
 .insignia-psiquico img{
     width: 15rem;
     height: 5rem;
+    margin-left: -20%; /* Padronizado */
 }
 
 
@@ -450,17 +323,19 @@
 
 .tipo-fogo{
     display: flex;
+    justify-content: center; /* Adicionado */
     background-color: rgb(179, 11, 11);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(212, 132, 132);
     color: #ffd1d1;
+    padding-right: 3rem; /* Adicionado */
     margin-left: 5%;
 }
 
 .tipo-fogo img{
-    margin-left: -5%;
+    margin-right: 10%; /* Padronizado */
     width: 40%;
 }
 
@@ -471,23 +346,9 @@
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(223, 156, 156);
-    padding: 1.5rem;
-}
-
-.pokemons-fogo{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(211, 98, 98);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(223, 156, 156);
-    padding: 1.5rem;
-    width: 11.5rem;
-    height: 2.5rem;
-    margin-left: -9%;
-    align-items: center;
-
+    margin-left: 2%; /* Adicionado */
+    padding: 1rem; /* Padronizado */
+    width: 70%; /* Padronizado */
 }
 
 .insignia-fogo{
@@ -500,50 +361,49 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
-    align-items: center;
-    margin-bottom: 1rem;
-
-}
-
-.pokemons-fogo img{
-    width: 10rem;
+    align-items: center; /* Adicionado */
+    margin-bottom: 1rem; /* Adicionado */
 }
 
 .insignia-fogo img{
     width: 15rem;
     height: 5rem;
+    margin-left: -20%; /* Padronizado */
 }
 
 /*GINÁSIO DO TIPO VOADOR*/
 
-.tipo-voador{
+/* GINÁSIO TIPO VOADOR */
+.tipo-voador {
     display: flex;
+    justify-content: center;
     background-color: rgb(64, 110, 196);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(180, 203, 247);
     color: rgb(201, 219, 252);
+    padding-right: 3rem;
 }
 
-.tipo-voador img{
-    margin-left: -8%;
+.tipo-voador img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-voador{
+.fundo-voador {
     display: flex;
     background-color: rgb(109, 155, 241);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(180, 203, 247);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
-
-
-.insignia-voador{
+.insignia-voador {
     display: flex;
     background-color: rgb(109, 155, 241);
     border-style: double;
@@ -553,58 +413,71 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
+.pokemons-voador {
+    display: flex;
+    background-color: rgb(109, 155, 241);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(180, 203, 247);
+    padding: 1.5rem;
+    align-items: center;
+}
 
-.pokemons-voador img{
+.pokemons-voador img {
     width: 100%;
     margin-right: 2%;
 }
 
-.insignia-voador img{
+.insignia-voador img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-.pokemons-voador .pidgey{
+.pokemons-voador .pidgey {
     margin-left: -24%;
 }
 
-.pokemons-voador .pidgeotto{
+.pokemons-voador .pidgeotto {
     margin-left: -23%;
 }
 
-/*GINÁSIO DO TIPO INSETO*/
-
-.tipo-inseto{
+/* GINÁSIO TIPO INSETO */
+.tipo-inseto {
     display: flex;
+    justify-content: center;
     background-color: rgb(96, 129, 43);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(208, 241, 155);
     color: rgb(226, 248, 190);
+    padding-right: 3rem;
 }
 
-.tipo-inseto img{
-    margin-left: -10%;
+.tipo-inseto img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-inseto{
+.fundo-inseto {
     display: flex;
     background-color: rgb(138, 189, 55);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(208, 241, 155);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
-.pokemons-inseto{
+.pokemons-inseto {
     display: flex;
     background-color: rgb(138, 189, 55);
     border-style: double;
@@ -614,12 +487,10 @@
     padding: 1.5rem;
     width: 6.3rem;
     height: 2rem;
-    margin-left: -9%;
     align-items: center;
-
 }
 
-.insignia-inseto{
+.insignia-inseto {
     display: flex;
     background-color: rgb(138, 189, 55);
     border-style: double;
@@ -629,62 +500,75 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-inseto img{
+.pokemons-inseto img {
     width: 100%;
     margin-right: 2%;
 }
 
-.insignia-inseto img{
+.insignia-inseto img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-.pokemons-inseto .metapod{
+.pokemons-inseto .metapod {
     margin-left: -40%;
 }
 
-.pokemons-inseto .kakuna{
+.pokemons-inseto .kakuna {
     margin-left: -45%;
 }
 
-.pokemons-inseto .scyther{
+.pokemons-inseto .scyther {
     margin-left: -33%;
 }
 
-/*GINÁSIO DO TIPO INSETO*/
-
-.tipo-normal{
+/* GINÁSIO TIPO NORMAL */
+.tipo-normal {
     display: flex;
+    justify-content: center;
     background-color: rgb(161, 107, 121);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(209, 163, 175);
     color: rgb(247, 202, 214);
+    padding-right: 3rem;
 }
 
-.tipo-normal img{
-    margin-left: -10%;
+.tipo-normal img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-normal{
+.fundo-normal {
     display: flex;
     background-color: rgb(199, 124, 144);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(247, 202, 214);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
+.pokemons-normal {
+    display: flex;
+    background-color: rgb(199, 124, 144);
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7px;
+    border-color: rgb(247, 202, 214);
+    padding: 1.5rem;
+    align-items: center;
+}
 
-.insignia-normal{
+.insignia-normal {
     display: flex;
     background-color: rgb(199, 124, 144);
     border-style: double;
@@ -694,50 +578,52 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-normal img{
+.pokemons-normal img {
     width: 100%;
     margin-right: 2%;
 }
 
-.insignia-normal img{
+.insignia-normal img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-
-
-/*GINÁSIO TIPO FANTASMA*/
-.tipo-fantasma{
+/* GINÁSIO TIPO FANTASMA */
+.tipo-fantasma {
     display: flex;
+    justify-content: center;
     background-color: rgb(52, 54, 153);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(130, 132, 240);
     color: rgb(197, 198, 255);
+    padding-right: 3rem;
 }
 
-.tipo-fantasma img{
-    margin-left: -10%;
+.tipo-fantasma img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-fantasma{
+.fundo-fantasma {
     display: flex;
     background-color: rgb(60, 63, 214);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(130, 132, 240);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
-.pokemons-fantasma{
+.pokemons-fantasma {
     display: flex;
     background-color: rgb(60, 63, 214);
     border-style: double;
@@ -747,12 +633,10 @@
     padding: 1.5rem;
     width: 11.7rem;
     height: 3rem;
-    margin-left: -9%;
     align-items: center;
-
 }
 
-.insignia-fantasma{
+.insignia-fantasma {
     display: flex;
     background-color: rgb(60, 63, 214);
     border-style: double;
@@ -762,69 +646,53 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-fantasma img{
+.pokemons-fantasma img {
     width: 25rem;
     height: 5rem;
-
 }
 
-.insignia-fantasma img{
+.insignia-fantasma img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-
-/*GINÁSIO TIPO LUTADOR*/
-
-.tipo-lutador{
+/* GINÁSIO TIPO LUTADOR */
+.tipo-lutador {
     display: flex;
+    justify-content: center;
     background-color: rgb(167, 88, 25);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(224, 144, 79);
     color: rgb(253, 218, 188);
+    padding-right: 3rem;
+}
+
+.tipo-lutador img {
+    margin-left: 28%;
+    width: 50%;
     
 }
 
-.tipo-lutador img{
-    margin-left: -5%;
-}
-
-.fundo-lutador{
+.fundo-lutador {
     display: flex;
     background-color: rgb(230, 125, 40);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(224, 144, 79);
-    padding: 1.5rem;
-    width: 21.5rem;
+    padding: 1rem;
+    width: 70%;
+    
 }
 
-.pokemons-lutador{
-    display: flex;
-    background-color: rgb(230, 125, 40);
-    border-style: double;
-    border-radius: 25px;
-    border-width: 7px;
-    border-color: rgb(224, 144, 79);
-    padding: 1.5rem;
-    width: 8.4rem;
-    height: 3rem;
-    margin-left: -7%;
-    align-items: center;
-    margin-bottom: 1rem;
-
-}
-
-.insignia-lutador{
+.insignia-lutador {
     display: flex;
     background-color: rgb(230, 125, 40);
     border-style: double;
@@ -834,51 +702,47 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-lutador img{
-    width: 25rem;
-    height: 5rem;
-
-}
-
-.insignia-lutador img{
+.insignia-lutador img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-
-/*GINÁSIO DO TIPO AÇO*/
-
-.tipo-aco{
+/* GINÁSIO TIPO AÇO */
+.tipo-aco {
     display: flex;
+    justify-content: center;
     background-color: rgb(64, 70, 71);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(154, 169, 173);
     color: rgb(198, 217, 223);
+    padding-right: 3rem;
 }
 
-.tipo-aco img{
-    margin-left: -10%;
+.tipo-aco img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-aco{
+.fundo-aco {
     display: flex;
     background-color: rgb(91, 104, 107);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(154, 169, 173);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
-.pokemons-aco{
+.pokemons-aco {
     display: flex;
     background-color: rgb(91, 104, 107);
     border-style: double;
@@ -888,12 +752,10 @@
     padding: 1.5rem;
     width: 7rem;
     height: 2rem;
-    margin-left: -5%;
     align-items: center;
-
 }
 
-.insignia-aco{
+.insignia-aco {
     display: flex;
     background-color: rgb(91, 104, 107);
     border-style: double;
@@ -903,50 +765,52 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-aco img{
+.pokemons-aco img {
     width: 100%;
     margin-right: 2%;
 }
 
-.insignia-aco img{
+.insignia-aco img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-
-/*GINÁSIO DO TIPO GELO*/
-
-.tipo-gelo{
+/* GINÁSIO TIPO GELO */
+.tipo-gelo {
     display: flex;
+    justify-content: center;
     background-color: rgb(79, 207, 230);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(182, 244, 255);
     color: rgb(226, 244, 247);
+    padding-right: 3rem;
 }
 
-.tipo-gelo img{
-    margin-left: -10%;
+.tipo-gelo img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-gelo{
+.fundo-gelo {
     display: flex;
     background-color: rgb(114, 228, 248);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(182, 244, 255);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
-.pokemons-gelo{
+.pokemons-gelo {
     display: flex;
     background-color: rgb(114, 228, 248);
     border-style: double;
@@ -956,12 +820,10 @@
     padding: 1.5rem;
     width: 7.7rem;
     height: 2rem;
-    margin-left: -9%;
     align-items: center;
-
 }
 
-.insignia-gelo{
+.insignia-gelo {
     display: flex;
     background-color: rgb(114, 228, 248);
     border-style: double;
@@ -971,49 +833,52 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-gelo img{
+.pokemons-gelo img {
     width: 100%;
     margin-right: 2%;
 }
 
-.insignia-gelo img{
+.insignia-gelo img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 
-
-/*GINÁSIO TIPO FANTASMA*/
-.tipo-dragao{
+/* GINÁSIO TIPO DRAGÃO */
+.tipo-dragao {
     display: flex;
+    justify-content: center;
     background-color: rgb(28, 45, 99);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(69, 96, 185);
     color: rgb(170, 190, 255);
+    padding-right: 3rem;
 }
 
-.tipo-dragao img{
-    margin-left: -8%;
+.tipo-dragao img {
+    margin-right: 10%;
+    width: 60%;
 }
 
-.fundo-dragao{
+.fundo-dragao {
     display: flex;
     background-color: rgb(43, 70, 158);
     border-style: double;
     border-radius: 25px;
     border-width: 10px;
     border-color: rgb(69, 96, 185);
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: 2%;
 }
 
-.pokemons-dragao{
+.pokemons-dragao {
     display: flex;
     background-color: rgb(43, 70, 158);
     border-style: double;
@@ -1023,13 +888,10 @@
     padding: 1.5rem;
     width: 12.4rem;
     height: 3.7rem;
-    margin-left: -11%;
     align-items: center;
-    margin-bottom: 2rem;
-
 }
 
-.insignia-dragao{
+.insignia-dragao {
     display: flex;
     background-color: rgb(43, 70, 158);
     border-style: double;
@@ -1039,20 +901,18 @@
     padding: 1.5rem;
     width: 4rem;
     height: 3rem;
-    margin-left: -3rem;
     align-items: center;
     margin-bottom: 1rem;
-
 }
 
-.pokemons-dragao img{
+.pokemons-dragao img {
     width: 25rem;
     height: 5rem;
-
 }
 
-.insignia-dragao img{
+.insignia-dragao img {
     width: 15rem;
     height: 5rem;
+    margin-left: -20%;
 }
 

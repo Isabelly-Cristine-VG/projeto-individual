@@ -19,7 +19,11 @@ function autenticar(req, res) {
 
                     if (resultadoAutenticar.length == 1) {
                         console.log(resultadoAutenticar);
-                        res.status(200).json(resultadoAutenticar)
+                        res.json({
+                            idUsuario: resultadoAutenticar[0].idUsuario,  // Nome consistente
+                            nome: resultadoAutenticar[0].nome,
+                            email: resultadoAutenticar[0].email
+                        });
 
                         aquarioModel.buscarAquariosPorEmpresa(resultadoAutenticar[0].empresaId)
                             .then((resultadoAquarios) => {

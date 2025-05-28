@@ -56,8 +56,78 @@ function contarVantagensPorTipo(req, res) {
         });
 }
 
+// Adicione estas novas funções ao tipoController.js
+function favoritarTipo(req, res) {
+    const idUsuario = req.body.idUsuario;
+    const idTipo = req.body.idTipo;
+
+    if (isNaN(idUsuario)) {
+        return res.status(400).json({ erro: "ID do usuário inválido" });
+    }
+    if (isNaN(idTipo)) {
+        return res.status(400).json({ erro: "ID do tipo inválido" });
+    }
+
+    tipoModel.favoritarTipo(idUsuario, idTipo)
+        .then(() => {
+            res.json({ success: true });
+        })
+        .catch((erro) => {
+            console.error("Erro ao favoritar tipo:", erro);
+            res.status(500).json({ erro: "Erro ao favoritar tipo" });
+        });
+}
+
+function desfavoritarTipo(req, res) {
+    const idUsuario = req.body.idUsuario;
+    const idTipo = req.body.idTipo;
+
+    if (isNaN(idUsuario)) {
+        return res.status(400).json({ erro: "ID do usuário inválido" });
+    }
+    if (isNaN(idTipo)) {
+        return res.status(400).json({ erro: "ID do tipo inválido" });
+    }
+
+    tipoModel.desfavoritarTipo(idUsuario, idTipo)
+        .then(() => {
+            res.json({ success: true });
+        })
+        .catch((erro) => {
+            console.error("Erro ao desfavoritar tipo:", erro);
+            res.status(500).json({ erro: "Erro ao desfavoritar tipo" });
+        });
+}
+
+function buscarFavoritos(req, res) {
+    const idUsuario = parseInt(req.params.idUsuario);
+    
+    if (isNaN(idUsuario)) {
+        return res.status(400).json({ erro: "ID do usuário inválido" });
+    }
+
+    tipoModel.buscarFavoritos(idUsuario)
+        .then((resultado) => {
+            // Garante que retorna um array com os IDs
+            res.json(resultado.map(item => ({
+                idTipoPokemon: item.idTipoPokemon || item.idTipo
+            })));
+        })
+        .catch((erro) => {
+            console.error("Erro ao buscar favoritos:", erro);
+            res.status(500).json({ erro: "Erro ao buscar favoritos" });
+        });
+}
+
 module.exports = {
+    // Consultas básicas de tipos
     buscarTipo,
     buscarVantagensPorTipo,
-    contarVantagensPorTipo
+    contarVantagensPorTipo,
+    
+    // Gestão de favoritos
+    favoritarTipo,
+    desfavoritarTipo,
+    buscarFavoritos
+  
 };
