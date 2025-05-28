@@ -7,7 +7,7 @@ var favoritosUsuario = [];
 var usuarioLogado = false;
 var idUsuario = null;
 
-// Modifique a função $(document).ready para incluir:
+
 $(document).ready(function () {
     // Verifica se o usuário está logado
     const idStorage = sessionStorage.getItem('ID_USUARIO');

@@ -38,10 +38,6 @@ function contarVantagensPorTipo(idTipo) {
     return database.executar(instrucaoSql);
 }
 
-// Adicione estas novas funções ao tipoModel.js
-// Mantenha as funções existentes e atualize apenas estas:
-
-// Substitua TODAS as funções de favoritos por estas:
 
 function favoritarTipo(idUsuario, idTipo) {
     const instrucaoSql = `

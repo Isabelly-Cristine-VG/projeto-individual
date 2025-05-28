@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokeblog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/perfil.js"></script>
+    <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
+</head>
+
+<body onload="MostrarDadosUsuario()">
+    <header class="header">
+        <img src="../assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li class="agora">
+                <a href="../indexCadastrado.html">home</a>
+            </li>
+            <li>
+                <a href="../jogosCadastrado.html"><b>Jogos</b></a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="login.html">pokemons</a>
+            </li>
+            <li>
+                <a href="perfil.html">perfil</a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="titulo">
+            <h1>Bem vindo!</h1>
+            <img src="assets/26.gif" alt="">
+        </div>
+        
+        <div class="tipoFavoritados" id="tiposUsuarios"></div>
+        <div class="timeUsuario" id="timeUsuario"></div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção 1: Logo e descrição -->
+            <div class="footer-section">
+                <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Regiões</a></li>
+                    <li><a href="#">Dicas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé inferior (créditos) -->
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
