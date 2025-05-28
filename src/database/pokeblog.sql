@@ -251,13 +251,13 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon de Pedra/Terra sem pré-evolução
-('Geodude', 'Pokémon Pedra', 'Encontrado em campos e montanhas. Gosta de rolar em trilhas montanhosas.', 0.4, 20.0, 13, 9, 40, 80, 100, 30, 30, 20, 255, 50.0, NULL, 'Level 25', 25, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/074.png'),
-('Onix', 'Pokémon Cobra de Pedra', 'Escava o solo a 80 km/h e deixa um túnel característico para trás.', 8.8, 210.0, 13, 9, 35, 45, 160, 30, 45, 70, 45, 50.0, NULL, 'Trade com Metal Coat', NULL, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/095.png'),
-('Rhyhorn', 'Pokémon Espinhoso', 'Seu cérebro é pequeno, mas sua força é enorme. Destrói edifícios sem perceber.', 1.0, 115.0, 9, 13, 80, 85, 95, 30, 30, 25, 120, 50.0, NULL, 'Level 42', 42, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/111.png'),
-('Omanyte', 'Pokémon Espiral', 'Um Pokémon pré-histórico que foi regenerado a partir de um fóssil.', 0.4, 7.5, 3, 13, 35, 40, 100, 90, 55, 35, 45, 87.5, NULL, 'Level 40', 40, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/138.png'),
-('Kabuto', 'Pokémon Cascudo', 'Um Pokémon fóssil que foi regenerado. Viveu no fundo do mar há 300 milhões de anos.', 0.5, 11.5, 3, 13, 30, 80, 90, 55, 45, 55, 45, 87.5, NULL, 'Level 40', 40, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/140.png'),
-('Aerodactyl', 'Pokémon Fóssil', 'Um Pokémon feroz e pré-histórico que ataca com mandíbulas serrilhadas.', 1.8, 59.0, 13, 10, 80, 105, 65, 60, 75, 130, 45, 87.5, NULL, NULL, NULL, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/142.png'),
-('Diglett', 'Pokémon Toupeira', 'Vive cerca de um metro abaixo do solo. Alimenta-se de raízes e aparece raramente na superfície.', 0.2, 0.8, 9, NULL, 10, 55, 25, 35, 45, 95, 255, 50.0, NULL, 'Nível', 26, 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/050.png');
+('Geodude', 'Pokémon Pedra', 'Encontrado em campos e montanhas. Gosta de rolar em trilhas montanhosas.', 0.4, 20.0, 13, 9, 40, 80, 100, 30, 30, 20, 255, 50.0, NULL, 'Level 25', 25, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/074.png'),
+('Onix', 'Pokémon Cobra de Pedra', 'Escava o solo a 80 km/h e deixa um túnel característico para trás.', 8.8, 210.0, 13, 9, 35, 45, 160, 30, 45, 70, 45, 50.0, NULL, 'Trade com Metal Coat', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/095.png'),
+('Rhyhorn', 'Pokémon Espinhoso', 'Seu cérebro é pequeno, mas sua força é enorme. Destrói edifícios sem perceber.', 1.0, 115.0, 9, 13, 80, 85, 95, 30, 30, 25, 120, 50.0, NULL, 'Level 42', 42, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/111.png'),
+('Omanyte', 'Pokémon Espiral', 'Um Pokémon pré-histórico que foi regenerado a partir de um fóssil.', 0.4, 7.5, 3, 13, 35, 40, 100, 90, 55, 35, 45, 87.5, NULL, 'Level 40', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/138.png'),
+('Kabuto', 'Pokémon Cascudo', 'Um Pokémon fóssil que foi regenerado. Viveu no fundo do mar há 300 milhões de anos.', 0.5, 11.5, 3, 13, 30, 80, 90, 55, 45, 55, 45, 87.5, NULL, 'Level 40', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/140.png'),
+('Aerodactyl', 'Pokémon Fóssil', 'Um Pokémon feroz e pré-histórico que ataca com mandíbulas serrilhadas.', 1.8, 59.0, 13, 10, 80, 105, 65, 60, 75, 130, 45, 87.5, NULL, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/142.png'),
+('Diglett', 'Pokémon Toupeira', 'Vive cerca de um metro abaixo do solo. Alimenta-se de raízes e aparece raramente na superfície.', 0.2, 0.8, 9, NULL, 10, 55, 25, 35, 45, 95, 255, 50.0, NULL, 'Nível', 26, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/050.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -1186,3 +1186,11 @@ JOIN tipoPokemon ON pokemon.idTipoPokemon = tipoPokemon.idTipoPokemon
 JOIN timePokemon ON timePokemon_membros.idTimePokemon = timePokemon.idTimePokemon
 JOIN liderGinasio ON timePokemon.idLider = liderGinasio.idLider
 JOIN regiao ON liderGinasio.idRegiao = regiao.idRegiao;
+
+select u.nome as nomeU, tp.tipo as tipoFavorito, tf.dataFavoritado, tp.cor
+        from tiposFavoritos tf
+        join usuario u on tf.idUsuario = u.idUsuario
+        join tipoPokemon tp on tf.idTipoPokemon = tp.idTipoPokemon;
+        
+        
+        
