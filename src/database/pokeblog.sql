@@ -75,11 +75,11 @@ CREATE TABLE pokemon (
 CREATE TABLE tiposFavoritos (
     idUsuario INT NOT NULL,
     idTipoPokemon INT NOT NULL,
+    dataFavoritado DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (idUsuario, idTipoPokemon),
     FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
     FOREIGN KEY (idTipoPokemon) REFERENCES tipoPokemon(idTipoPokemon)
 );
-
 
 
 -- Tabela de líderes de ginásio
@@ -1294,3 +1294,20 @@ JOIN tipoPokemon ON pokemon.idTipoPokemon = tipoPokemon.idTipoPokemon
 JOIN timePokemon ON timePokemon_membros.idTimePokemon = timePokemon.idTimePokemon
 JOIN liderGinasio ON timePokemon.idLider = liderGinasio.idLider
 JOIN regiao ON liderGinasio.idRegiao = regiao.idRegiao;
+
+SELECT 
+            t2.tipo AS tipoAtacante,
+            vt.multiplicador,
+            t2.cor
+        FROM vantagemTipo vt
+        JOIN tipoPokemon t ON vt.idTipoDefensor = t.idTipoPokemon
+        JOIN tipoPokemon t2 ON vt.idTipoAtacante = t2.idTipoPokemon
+        WHERE t.idTipoPokemon = 2
+        ORDER BY vt.multiplicador DESC, t2.tipo;
+        
+        select * from tiposFavoritos;
+        
+        SELECT tf.idTipoPokemon as idTipo, tf.dataFavoritado, tp.tipo, tp.cor
+        FROM tiposFavoritos tf
+        JOIN tipoPokemon tp ON tf.idTipoPokemon = tp.idTipoPokemon
+        ORDER BY tf.dataFavoritado DESC;
