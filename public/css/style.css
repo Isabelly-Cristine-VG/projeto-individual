@@ -53,6 +53,8 @@ body {
 .navbar svg {
     font-size: 1rem;
     padding-top: 2%;
+    transition: transform;
+
 }
 
 .navbar a:hover {
