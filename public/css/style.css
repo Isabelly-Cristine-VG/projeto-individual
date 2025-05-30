@@ -1590,12 +1590,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .botaoFechar button{
+    font-family: "Press Start 2P", system-ui;
+    width: 13rem;
     border-radius: 1rem;
-    height: 2.5rem;
+    height: 3.6rem;
     color: white;
+    text-align: center;
     background-color: #b32727;
     border-style: double;
     border-color: #ffb5ac;

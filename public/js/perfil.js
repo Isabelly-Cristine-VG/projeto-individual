@@ -134,7 +134,6 @@ function informacaoFavorito(idTipo) {
 
     const infoContainer = document.getElementById('infoContainer');
     infoContainer.style.display = 'block';
-    infoContainer.scrollIntoView({ behavior: "smooth" });
 
     fetch(`/perfilUsuario/informacaoTiposFavoritos/${idTipo}`)
         .then(res => {
