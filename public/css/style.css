@@ -1569,3 +1569,35 @@ body {
     white-space: nowrap;
     z-index: 10;
 }
+
+.tipoFavoritados{
+    display: flex;
+    flex-direction: row;
+}
+
+.informacaoGrafico{
+    display: flex;
+    border-style: hidden;
+    border-radius: 2rem;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    height: 2rem;
+    color: rgb(100, 100, 100);
+}
+
+.botaoFechar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoFechar button{
+    border-radius: 1rem;
+    height: 2.5rem;
+    color: white;
+    background-color: #b32727;
+    border-style: double;
+    border-color: #ffb5ac;
+}
+

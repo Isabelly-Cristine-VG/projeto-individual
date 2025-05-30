@@ -7,19 +7,23 @@
     <title>pokeblog</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/perfil.js"></script>
     <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
 </head>
 
 <body onload="MostrarDadosUsuario()">
     <header class="header">
-        <img src="../assets/pikachuLogo.png" alt="" class="logo">
+        <img src="assets/pikachuLogo.png" alt="" class="logo">
         <ul class="navbar">
             <li class="agora">
-                <a href="../indexCadastrado.html">home</a>
+                <a href="index.html">home</a>
             </li>
             <li>
-                <a href="../jogosCadastrado.html">Jogos</a>
+                <a href="tipos.html">Tipos</a>
+            </li>
+            <li>
+                <a href="jogosCadastrado.html">Jogos</a>
             </li>
             <li>
                 <a href="index.html">Regiões</a>
@@ -28,7 +32,7 @@
                 <a href="login.html">pokemons</a>
             </li>
             <li>
-                <a href="perfil.html"> <b>perfil</b></a>
+                <a href="perfil.html"><b>perfil</b></a>
             </li>
         </ul>
     </header>
@@ -36,9 +40,53 @@
         <div class="titulo">
             <h1>Bem vindo!</h1>
             <img src="assets/26.gif" alt="">
+            <br>
+
         </div>
-        
+        <h2>Tipos favoritados:</h2>
         <div class="tipoFavoritados" id="tiposUsuarios"></div>
+
+        <div class="info-container" id="infoContainer" style="display: none;">
+            <div class="titulo-info">
+                <h2>Informações Detalhadas</h2>
+
+            </div>
+
+            <div class="kpis-container">
+                <div class="kpi-box">
+                    <h3>Total de Fraquezas</h3>
+                    <div id="infoFraquezas" class="kpi-value">0</div>
+                </div>
+                <div class="kpi-box">
+                    <h3>Total de Resistências</h3>
+                    <div id="infoResistencias" class="kpi-value">0</div>
+                </div>
+                <div class="kpi-box">
+                    <h3>Total de Imunidades</h3>
+                    <div id="infoImunidades" class="kpi-value">0</div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Fraquezas (2x)</h3>
+                    <canvas id="infoFraquezasChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Resistências (0.5x)</h3>
+                    <canvas id="infoResistenciasChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Imunidades (0x)</h3>
+                    <canvas id="infoImunidadesChart"></canvas>
+                </div>
+            </div>
+            <div class="botaoFechar">
+                <button onclick="fecharInformacoes()" class="btn-fechar">Fechar Informações</button>
+            </div>
+
+        </div>
+
         <div class="timeUsuario" id="timeUsuario"></div>
 
     </div>

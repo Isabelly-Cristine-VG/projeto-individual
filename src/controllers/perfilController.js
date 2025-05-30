@@ -18,6 +18,54 @@ function mostrarTiposFavoritos(req, res) {
         });
 }
 
+function informacaoTiposFavoritos(req, res) {
+    const idTipo = req.params.idTipo;
+    console.log(`Controller - ID recebido: ${idTipo}`); // Novo log
+    
+    if (!idTipo || isNaN(idTipo)) {
+        console.log('ID inválido recebido'); // Novo log
+        return res.status(400).json({ erro: "ID do tipo inválido" });
+    }
+
+    perfilModel.informacaoTiposFavoritos(idTipo)
+        .then(resultado => {
+            console.log(`Resultado da query: ${JSON.stringify(resultado)}`); // Novo log
+            if (!resultado || resultado.length === 0) {
+                return res.status(404).json({ erro: "Nenhum dado encontrado" });
+            }
+            res.status(200).json(resultado);
+        })
+        .catch(erro => {
+            console.error("Erro completo no controller:", erro); // Log detalhado
+            res.status(500).json({ erro: "Erro interno no servidor" });
+        });
+}
+
+function contarTiposFavoritos(req, res) {
+    const idTipo = parseInt(req.params.idTipo);
+    
+    if (isNaN(idTipo)) {
+        return res.status(400).json({ erro: "ID do tipo deve ser um número" });
+    }
+
+    perfilModel.contarTiposFavoritos(idTipo)
+        .then((resultado) => {
+            // Certifique-se que está retornando um objeto com as propriedades corretas
+            res.json({
+                totalFraquezas: resultado[0].totalFraquezas || 0,
+                totalResistencias: resultado[0].totalResistencias || 0,
+                totalImunidades: resultado[0].totalImunidades || 0
+            });
+        })
+        .catch((erro) => {
+            console.error("Erro ao contar vantagens:", erro);
+            res.status(500).json({ erro: "Erro no servidor" });
+        });
+}
+
+// Não esqueça de adicionar ao module.exports no final:
 module.exports = {
-    mostrarTiposFavoritos
+    mostrarTiposFavoritos,
+    informacaoTiposFavoritos,
+    contarTiposFavoritos
 };

@@ -3,21 +3,18 @@ var usuarioLogado = false;
 var idUsuario = null;
 
 $(document).ready(function () {
-    // Verifica se o usuário está logado
     const idStorage = sessionStorage.getItem('ID_USUARIO');
-    
-    // Verificação mais robusta
+
     if (idStorage && idStorage !== "undefined" && idStorage !== "null") {
         idUsuario = parseInt(idStorage);
         usuarioLogado = !isNaN(idUsuario);
-        
+
         if (usuarioLogado) {
             console.log("Usuário logado com ID:", idUsuario);
             carregarFavoritos();
             MostrarDadosUsuario();
         } else {
             console.error("ID de usuário inválido:", idStorage);
-            // Redirecionar para login ou mostrar mensagem
             window.location.href = "login.html";
         }
     } else {
@@ -26,141 +23,79 @@ $(document).ready(function () {
     }
 });
 
-function carregarTipos() {
-    fetch("/tipo/buscarTipo")
+function MostrarDadosUsuario() {
+    const loadingElement = document.getElementById('tiposUsuarios');
+    loadingElement.innerHTML = '<p class="loading">Carregando tipos favoritos...</p>';
+
+    fetch(`/perfilUsuario/mostrarTiposFavoritos/${idUsuario}`)
         .then(res => {
-            if (!res.ok) throw new Error("Erro na requisição");
+            if (!res.ok) throw new Error(`Erro: ${res.status}`);
             return res.json();
         })
-        .then(dados => {
-            $('#ipt_tipo').empty().append(new Option('Selecione o tipo', ''));
-            dados.forEach(tipo => {
-                $('#ipt_tipo').append(new Option(tipo.tipo, tipo.idTipoPokemon));
-            });
-            
-            // Re-inicializa o Select2 após carregar os dados
-            $('#ipt_tipo').select2();
+        .then(data => {
+            favoritosUsuario = data.map(item => ({
+                tipo: item.tipoFavorito,
+                cor: item.cor,
+                data: item.dataFavoritado
+            }));
+            carregarTodosTipos();
         })
         .catch(erro => {
-            console.error("Erro ao carregar tipos:", erro);
-            alert("Erro ao carregar tipos. Recarregue a página.");
+            console.error("Erro ao carregar favoritos:", erro);
+            loadingElement.innerHTML = `<p style="color:red">Erro ao carregar tipos favoritos</p>`;
         });
 }
 
-function MostrarDadosUsuario(){
-    const loadingElement = document.getElementById('tiposUsuarios');
-    loadingElement.innerHTML = '<p class="loading">Carregando ginásios...</p>';
-
-    if (!usuarioLogado || isNaN(idUsuario)) {
-        console.error('ID de usuário inválido:', idUsuario);
-        return;
-    }
-
-    fetch(`/perfilUsuario/mostrarTiposFavoritos/${idUsuario}`)
-    .then(res => {
-        if (!res.ok) throw new Error(`Erro: ${res.status}`);
-        return res.json();
-    })
-    .then(data => {
-        console.log('Favoritos recebidos:', data);
-        favoritosUsuario = data.map(item => ({
-            tipo: item.tipoFavorito,  // Use tipoFavorito em vez de idTipo
-            cor: item.cor,
-            data: item.dataFavoritado,
-            nomeUsuario: item.nomeU  // Caso precise do nome do usuário
-        }));
-        carregarTodosTipos();
-    })
-    .catch(erro => {
-        console.error("Erro ao carregar favoritos:", erro);
-    });
-}
-
 function carregarFavoritos() {
-    if (!usuarioLogado || isNaN(idUsuario)) {
-        console.error('ID de usuário inválido:', idUsuario);
-        return;
-    }
-
     fetch(`/perfilUsuario/mostrarTiposFavoritos/${idUsuario}`)
-    .then(res => {
-        if (!res.ok) throw new Error(`Erro: ${res.status}`);
-        return res.json();
-    })
-    .then(data => {
-        console.log('Favoritos recebidos:', data); // Debug
-        favoritosUsuario = data.map(item => ({
-            idTipo: item.idTipo,
-            data: item.dataFavoritado
-        }));
-        carregarTodosTipos();
-    })
-    .catch(erro => {
-        console.error("Erro ao carregar favoritos:", erro);
-    });
+        .then(res => {
+            if (!res.ok) throw new Error(`Erro: ${res.status}`);
+            return res.json();
+        })
+        .then(data => {
+            favoritosUsuario = data.map(item => ({
+                idTipo: item.idTipoPokemon, // Corrigido aqui
+                data: item.dataFavoritado
+            }));
+        })
+        .catch(erro => {
+            console.error("Erro ao carregar favoritos:", erro);
+        });
 }
 
 function carregarTodosTipos() {
     const container = document.getElementById('tiposUsuarios');
-    if (!container) {
-        console.error('Erro: div #tiposUsuarios não encontrada!');
-        return;
-    }
-
-    console.log("Iniciando carregarTodosTipos..."); // Debug
     container.innerHTML = '<p>Carregando seus tipos favoritos...</p>';
 
     fetch(`/perfilUsuario/mostrarTiposFavoritos/${idUsuario}`)
-    .then(res => {
-        console.log("Resposta recebida, status:", res.status); // Debug
-        if (!res.ok) {
-            throw new Error(`Erro HTTP: ${res.status}`);
-        }
-        return res.json();
-    })
-    .then(data => {
-        console.log("Dados recebidos:", data); // Debug importante!
-        
-        if (!data) {
-            throw new Error("Dados são undefined");
-        }
-        
-        if (!Array.isArray(data)) {
-            console.warn("Dados não são um array:", data);
-            data = []; // Força ser um array vazio
-        }
+        .then(res => {
+            if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
+            return res.json();
+        })
+        .then(data => {
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = '<p>Você ainda não tem tipos favoritos.</p>';
+                return;
+            }
 
-        container.innerHTML = '';
-        
-        if (data.length === 0) {
-            container.innerHTML = '<p>Você ainda não tem tipos favoritos.</p>';
-            return;
-        }
-
-        // Mapeamento seguro dos dados
-        const tipos = data.map(item => ({
-            idTipoPokemon: item.idTipoPokemon || item.idTipo || 0,
-            tipo: item.tipoFavorito || item.tipo || 'Desconhecido',
-            cor: item.cor || '#cccccc'
-        }));
-
-        tipos.forEach(tipo => {
-            container.innerHTML += criarCardTipo(tipo, true);
+            container.innerHTML = '';
+            data.forEach(tipo => {
+                container.innerHTML += criarCardTipo({
+                    idTipoPokemon: tipo.idTipoPokemon,
+                    tipo: tipo.tipoFavorito,
+                    cor: tipo.cor
+                }, true);
+            });
+        })
+        .catch(erro => {
+            console.error("Erro ao carregar tipos:", erro);
+            container.innerHTML = `<p style="color:red">Erro: ${erro.message}</p>`;
         });
-    })
-    .catch(erro => {
-        console.error("Erro completo:", erro); // Debug detalhado
-        container.innerHTML = `
-            <p style="color:red">
-                Erro ao carregar favoritos: ${erro.message}
-            </p>
-        `;
-    });
 }
-// Função auxiliar para criar o HTML do card
+
 function criarCardTipo(tipo, estaFavoritado) {
     return `
-    <div class="tipo-card" style="background-color: ${tipo.cor || '#ccc'}; 
+    <div class="tipo-card" style="background-color: ${tipo.cor || '#ccc'};
         padding: 15px; margin: 10px; border-radius: 8px; color: white;">
         <h3 style="margin-top: 0;">${tipo.tipo}</h3>
         <p>${getDescricao(tipo.tipo)}</p>
@@ -169,9 +104,9 @@ function criarCardTipo(tipo, estaFavoritado) {
             style="background: none; border: none; font-size: 20px; cursor: pointer; color: rgb(255, 243, 178);">
             ${estaFavoritado ? '★' : '☆'}
         </button>` : ''}
+        <button class="informacaoGrafico" onclick="informacaoFavorito(${tipo.idTipoPokemon})">Mais informações</button>
     </div>`;
 }
-
 
 function getDescricao(tipo) {
     const descricoes = {
@@ -179,29 +114,158 @@ function getDescricao(tipo) {
         'Fogo': 'Fortes contra Planta e Gelo',
         'Planta': 'Fortes contra Água e Pedra',
         'Elétrico': 'Fortes contra Água e Voador',
-        
     };
     return descricoes[tipo] || `Pokémon do tipo ${tipo}`;
 }
 
+var infoCharts = {
+    fraquezas: null,
+    resistencias: null,
+    imunidades: null
+};
 
-function criarElementoTipo(tipo, estaFavoritado) {
-   
-    const htmlDoCard = `
-        <div class="tipo-card" style="background-color: ${tipo.cor || '#cccccc'}; padding: 10px; margin: 10px; border-radius: 5px;">
-            <h3 style="margin: 0;">${tipo.tipo}</h3>
-            <p style="margin: 5px 0;">${getDescricao(tipo.tipo)}</p>
-            ${usuarioLogado ? 
-                `<button onclick="toggleFavorito(${tipo.idTipoPokemon}, this)" 
-                 style="background: none; border: none; font-size: 20px; cursor: pointer;">
-                    ${estaFavoritado ? '★' : '☆'}
-                </button>` 
-                : ''
-            }
-        </div>
-    `;
-    
-    // Cria um elemento div temporário para converter a string em HTML
-    const divTemp = document.createElement('div');
-    divTemp.innerHTML = htmlDoCard;
+function informacaoFavorito(idTipo) {
+    if (!idTipo) {
+        console.error("ID do tipo não foi passado corretamente:", idTipo);
+        return;
+    }
+
+    console.log(`Buscando informações para tipo ID: ${idTipo}`);
+
+    const infoContainer = document.getElementById('infoContainer');
+    infoContainer.style.display = 'block';
+    infoContainer.scrollIntoView({ behavior: "smooth" });
+
+    fetch(`/perfilUsuario/informacaoTiposFavoritos/${idTipo}`)
+        .then(res => {
+            if (!res.ok) throw new Error(`Erro ${res.status}: ${res.statusText}`);
+            return res.json();
+        })
+        .then(dados => {
+            if (!dados || dados.length === 0) throw new Error("Nenhum dado retornado");
+
+            return fetch(`/perfilUsuario/contarTiposFavoritos/${idTipo}`)
+                .then(res => {
+                    if (!res.ok) throw new Error(`Erro ${res.status}: ${res.statusText}`);
+                    return res.json();
+                })
+                .then(contagens => {
+                    atualizarInfoKPIs(contagens);
+                    criarInfoGraficos(dados, 'Tipo Favorito');
+                });
+        })
+        .catch(erro => {
+            console.error("Erro detalhado:", erro);
+            infoContainer.innerHTML = `
+                <p style="color:red">Erro: ${erro.message}</p>
+                <button onclick="fecharInformacoes()">Fechar</button>
+            `;
+        });
+}
+
+function fecharInformacoes() {
+    const infoContainer = document.getElementById('infoContainer');
+    infoContainer.style.display = 'none';
+    destruirInfoGraficos();
+}
+
+function destruirInfoGraficos() {
+    Object.keys(infoCharts).forEach(key => {
+        if (infoCharts[key]) {
+            infoCharts[key].destroy();
+            infoCharts[key] = null;
         }
+    });
+}
+
+function atualizarInfoKPIs(contagens) {
+    document.getElementById('infoFraquezas').textContent = contagens.totalFraquezas || '0';
+    document.getElementById('infoResistencias').textContent = contagens.totalResistencias || '0';
+    document.getElementById('infoImunidades').textContent = contagens.totalImunidades || '0';
+}
+
+function criarInfoGraficos(dados, tipoNome) {
+    const dadosProcessados = dados.map(item => ({
+        ...item,
+        multiplicador: Number(item.multiplicador).toFixed(1)
+    }));
+
+    const fraquezas = dadosProcessados.filter(item => item.multiplicador === '2.0');
+    const resistencias = dadosProcessados.filter(item => item.multiplicador === '0.5');
+    const imunidades = dadosProcessados.filter(item => item.multiplicador === '0.0');
+
+    infoCharts.fraquezas = criarInfoGraficoRosca('infoFraquezasChart', fraquezas, `Fraquezas (2x) - ${tipoNome}`, fraquezas.length === 0);
+    infoCharts.resistencias = criarInfoGraficoRosca('infoResistenciasChart', resistencias, `Resistências (0.5x) - ${tipoNome}`, resistencias.length === 0);
+    infoCharts.imunidades = criarInfoGraficoRosca('infoImunidadesChart', imunidades, `Imunidades (0x) - ${tipoNome}`, imunidades.length === 0);
+}
+
+function criarInfoGraficoRosca(idCanvas, dados, titulo, semDados) {
+    const ctx = document.getElementById(idCanvas);
+    const container = ctx.parentNode;
+
+    const messages = container.querySelectorAll('.no-data-message');
+    messages.forEach(msg => msg.remove());
+
+    if (semDados || !dados || dados.length === 0) {
+        const noDataMsg = document.createElement('p');
+        noDataMsg.className = 'no-data-message';
+        noDataMsg.textContent = 'Nenhum dado disponível';
+        container.appendChild(noDataMsg);
+        ctx.style.display = 'none';
+        return null;
+    }
+
+    ctx.style.display = 'block';
+
+    const labels = dados.map(item => item.tipoAtacante);
+    const cores = dados.map(item => item.cor || getCorPadrao(idCanvas));
+    const valores = dados.map(() => 1);
+
+    return new Chart(ctx.getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: valores,
+                backgroundColor: cores,
+                borderWidth: 1
+            }]
+        },
+        options: getChartOptions(titulo)
+    });
+}
+
+function getCorPadrao(idCanvas) {
+    const cores = {
+        infoFraquezasChart: '#ff6384',
+        infoResistenciasChart: '#36a2eb',
+        infoImunidadesChart: '#ffce56'
+    };
+    return cores[idCanvas] || '#cccccc';
+}
+
+function getChartOptions(titulo) {
+    return {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            title: {
+                display: true,
+                text: titulo,
+                font: {
+                    size: 14,
+                    weight: 'bold'
+                }
+            },
+            legend: {
+                position: 'right',
+                labels: {
+                    boxWidth: 12,
+                    padding: 10,
+                    usePointStyle: true
+                }
+            }
+        },
+        cutout: '60%'
+    };
+}
