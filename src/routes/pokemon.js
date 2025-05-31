@@ -7,11 +7,14 @@ router.get("/buscarPokemon", function (req, res) {
     pokemonsController.buscarPokemon(req, res);
 });
 
-
 router.get('/habilidadesPorPokemon/:idPokemon(\\d+)', function (req, res) {
     pokemonsController.habilidadesPorPokemon(req, res);
 });
 
+// pokemon.js (routes)
+router.get('/buscarPokemonPorTipo/:idTipo', function (req, res) {
+    pokemonsController.buscarPokemonPorTipo(req, res);
+});
 
 //  rotas para favoritar tipos
 router.post('/timePokemon', function (req, res) {

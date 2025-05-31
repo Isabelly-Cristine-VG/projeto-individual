@@ -40,11 +40,21 @@ function carregarPokemons() {
 
 function carregarPokemonsPorTipo(idTipo) {
     fetch(`/pokemon/buscarPokemonPorTipo/${idTipo}`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                return response.text().then(text => {
+                    throw new Error(`Erro HTTP: ${response.status} - ${text}`);
+                });
+            }
+            return response.json();
+        })
         .then(pokemons => {
             exibirPokemons(pokemons);
         })
-        .catch(error => console.error('Erro ao carregar Pokémon por tipo:', error));
+        .catch(error => {
+            console.error('Erro completo:', error);
+            alert('Erro ao carregar Pokémon por tipo. Veja o console para detalhes.');
+        });
 }
 
 function exibirPokemons(pokemons) {
