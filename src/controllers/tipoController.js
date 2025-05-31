@@ -56,7 +56,6 @@ function contarVantagensPorTipo(req, res) {
         });
 }
 
-// Adicione estas novas funções ao tipoController.js
 function favoritarTipo(req, res) {
     const idUsuario = req.body.idUsuario;
     const idTipo = req.body.idTipo;

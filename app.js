@@ -20,6 +20,7 @@ var usuarioRouter = require("./src/routes/usuarios");
 var tipoRouter = require("./src/routes/tipo");
 var jogoRouter = require("./src/routes/jogos");
 var perfilUsuarioRouter = require('./src/routes/perfilUsuario');
+var pokemonRouter = require('./src/routes/pokemon');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -32,6 +33,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/tipo", tipoRouter);
 app.use("/jogos", jogoRouter);
 app.use('/perfilUsuario', perfilUsuarioRouter);
+app.use('/pokemon', pokemonRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

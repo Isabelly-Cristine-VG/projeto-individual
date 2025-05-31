@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex | PokéBlog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/pokemons.js"></script>
+    <script src="./js/tipos.js"></script>
+    <link rel="shortcut icon" href="assets/pikachuLogo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/pikachuLogo.png" alt="" class="logo">
+        <ul class="navbar">
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="tipos.html">Tipos</a>
+            </li>
+            <li class="agora">
+                <a href="pokemons.html"><b>Pokédex</b></a>
+            </li>
+            <li>
+                <a href="jogosCadastrado.html">Jogos</a>
+            </li>
+            <li>
+                <a href="index.html">Regiões</a>
+            </li>
+            <li>
+                <a href="login.html">ginásios</a>
+            </li>
+            <li>
+                <a href="perfil.html">perfil</a>
+            </li>
+        </ul>
+    </header>
+    
+    <div class="container">
+        <div class="titulo">
+            <h1>Pokédex Completa</h1>
+        </div>
+        
+        <div class="texto-inicial">
+            <h3>Explore todos os Pokémon cadastrados em nosso banco de dados. Use o filtro abaixo para buscar por tipo específico.</h3>
+        </div>
+        
+        <div class="filter-container">
+            <div class="select-style">
+                <select id="filtroTipo" class="tipoPokemon">
+                    <option value="">Todos os tipos</option>
+                    <!-- Os tipos serão carregados via JavaScript -->
+                </select>
+            </div>
+        </div>
+        
+        <div id="pokemonContainer" class="pokemon-grid">
+            <!-- Os Pokémon serão carregados aqui via JavaScript -->
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/pikachuLogo.png" alt="PokéBlog Logo" class="footer-logo">
+                <p>O seu site favorito sobre o mundo Pokémon!</p>
+            </div>
+            <div class="footer-section2">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pokemons.html">Pokédex</a></li>
+                    <li><a href="tipos.html">Tipos</a></li>
+                    <li><a href="jogosCadastrado.html">Jogos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 PokéBlog | Não afiliado à Nintendo ou The Pokémon Company</p>
+        </div>
+    </footer>
+</body>
+</html>

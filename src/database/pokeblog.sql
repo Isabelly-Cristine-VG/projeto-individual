@@ -266,8 +266,9 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Pichu', 'Pokémon Ratinho', 'Ainda não consegue armazenar eletricidade. Frequentemente se choca acidentalmente.', 0.3, 2.0, 4, NULL, 20, 40, 15, 35, 35, 60, 190, 50.0, NULL, 'Amizade alta', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/172.png'),
 ('Voltorb', 'Pokémon Bola', 'Muito semelhante a uma Pokébola. Já causou muitos acidentes por causa disso.', 0.5, 10.4, 4, NULL, 40, 30, 50, 55, 55, 100, 190, NULL, NULL, 'Level 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/100.png'),
 ('Magnemite', 'Pokémon Ímã', 'Usa eletricidade para se mover. Frequentemente encontrado perto de usinas de energia.', 0.3, 6.0, 4, 17, 25, 35, 70, 95, 55, 45, 190, NULL, NULL, 'Level 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/081.png'),
-('Electabuzz', 'Pokémon Elétrico', 'Armazena eletricidade em seu corpo. Frequentemente encontrado perto de usinas.', 1.1, 30.0, 4, NULL, 65, 83, 57, 95, 85, 105, 45, 75.0, NULL, 'Trade com Electirizer', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/125.png'),
-('Elekid', 'Pokémon Elétrico', 'Gira os braços para gerar eletricidade, mas frequentemente se cansa rapidamente.', 0.6, 23.5, 4, NULL, 45, 63, 37, 65, 55, 95, 45, 75.0, NULL, 'Level 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/239.png');
+('Elekid', 'Pokémon Elétrico', 'Gira os braços para gerar eletricidade, mas frequentemente se cansa rapidamente.', 0.6, 23.5, 4, NULL, 45, 63, 37, 65, 55, 95, 45, 75.0, NULL, 'Level 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/239.png'),
+('Electabuzz', 'Pokémon Elétrico', 'Armazena eletricidade em seu corpo. Frequentemente encontrado perto de usinas.', 1.1, 30.0, 4, NULL, 65, 83, 57, 95, 85, 105, 45, 75.0, 11, 'Trade com Electirizer', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/125.png');
+
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
@@ -316,90 +317,92 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 ('Slugma', 'Pokémon Lava', 'Seu corpo é composto de magma. Se esfria, sua pele se solidifica e racha, liberando mais magma.', 0.7, 35.0, 2, NULL, 40, 40, 40, 70, 40, 20, 190, 50.0, NULL, 'Nível', 38, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/218.png'),
 ('Magmar', 'Pokémon Cuspe de Fogo', 'Nascido em um vulcão ativo. Seu corpo queima com chamas que atingem 1.100 graus Celsius.', 1.3, 44.5, 2, NULL, 65, 95, 57, 100, 85, 93, 45, 75.0, NULL, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/126.png');
 
+
 -- Agora insira as evoluções (com preEvolucao)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções de Geodude (assumindo que Geodude recebeu idPokemon = 1)
 ('Graveler', 'Pokémon Pedra', 'Rola pelas encostas das montanhas para se mover. Esmaga qualquer obstáculo no caminho.', 1.0, 105.0, 13, 9, 55, 95, 115, 45, 45, 35, 120, 50.0, 1, 'Level 25', 25, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/075.png'),
-('Golem', 'Pokémon Megaton', 'Seu corpo é duro como pedra e pode suportar explosões de dinamite sem sofrer danos.', 1.4, 300.0, 13, 9, 80, 120, 130, 55, 65, 45, 45, 50.0, 2, 'Trade', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/076.png'),
+('Golem', 'Pokémon Megaton', 'Seu corpo é duro como pedra e pode suportar explosões de dinamite sem sofrer danos.', 1.4, 300.0, 13, 9, 80, 120, 130, 55, 65, 45, 45, 50.0, 35, 'Trade', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/076.png'),
 
 -- Evolução de Onix (assumindo idPokemon = 3)
-('Steelix', 'Pokémon Cobra de Ferro', 'Seu corpo foi comprimido sob o solo. É mais duro que diamante.', 9.2, 400.0, 17, 9, 75, 85, 200, 55, 65, 30, 25, 50.0, 3, 'Trade com Metal Coat', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/208.png'),
+('Steelix', 'Pokémon Cobra de Ferro', 'Seu corpo foi comprimido sob o solo. É mais duro que diamante.', 9.2, 400.0, 17, 9, 75, 85, 200, 55, 65, 30, 25, 50.0, 2, 'Trade com Metal Coat', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/208.png'),
 
 -- Evolução de Rhyhorn (assumindo idPokemon = 4)
-('Rhydon', 'Pokémon Broca', 'Protegido por uma armadura, é capaz de viver em lava de 3.600 graus.', 1.9, 120.0, 9, 13, 105, 130, 120, 45, 45, 40, 60, 50.0, 4, 'Level 42', 42, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/112.png'),
-('Rhyperior', 'Pokémon Broca', 'Pode disparar pedaços de rocha de seus buracos nas mãos como mísseis.', 2.4, 282.8, 9, 13, 115, 140, 130, 55, 55, 40, 30, 50.0, 5, 'Trade com Protector', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/464.png'),
+('Rhydon', 'Pokémon Broca', 'Protegido por uma armadura, é capaz de viver em lava de 3.600 graus.', 1.9, 120.0, 9, 13, 105, 130, 120, 45, 45, 40, 60, 50.0, 3, 'Level 42', 42, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/112.png'),
+('Rhyperior', 'Pokémon Broca', 'Pode disparar pedaços de rocha de seus buracos nas mãos como mísseis.', 2.4, 282.8, 9, 13, 115, 140, 130, 55, 55, 40, 30, 50.0, 38, 'Trade com Protector', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/464.png'),
 
 -- Evolução de Omanyte (assumindo idPokemon = 6)
-('Omastar', 'Pokémon Espiral', 'Um Pokémon pré-histórico que foi regenerado a partir de um fóssil. Usa tentáculos para capturar presas.', 1.0, 35.0, 3, 13, 70, 60, 125, 115, 70, 55, 45, 87.5, 6, 'Level 40', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/139.png'),
+('Omastar', 'Pokémon Espiral', 'Um Pokémon pré-histórico que foi regenerado a partir de um fóssil. Usa tentáculos para capturar presas.', 1.0, 35.0, 3, 13, 70, 60, 125, 115, 70, 55, 45, 87.5, 4, 'Level 40', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/139.png'),
 
 -- Evolução de Kabuto (assumindo idPokemon = 7)
-('Kabutops', 'Pokémon Cascudo', 'Seu corpo aerodinâmico permite que nade rapidamente. Corta presas com suas garras afiadas.', 1.3, 40.5, 3, 13, 60, 115, 105, 65, 70, 80, 45, 87.5, 7, 'Level 40', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/141.png');
+('Kabutops', 'Pokémon Cascudo', 'Seu corpo aerodinâmico permite que nade rapidamente. Corta presas com suas garras afiadas.', 1.3, 40.5, 3, 13, 60, 115, 105, 65, 70, 80, 45, 87.5, 5, 'Level 40', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/141.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções elétricas (assumindo Pichu = 8, Voltorb = 9, Magnemite = 10, Elekid = 11)
 ('Pikachu', 'Pokémon Rato', 'Quando vários deles se reúnem, sua eletricidade pode construir e causar tempestades.', 0.4, 6.0, 4, NULL, 35, 55, 40, 50, 50, 90, 190, 50.0, 8, 'Amizade alta', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png'),
-('Raichu', 'Pokémon Rato', 'Sua cauda descarga eletricidade no ar, causando faíscas que podem incendiar florestas.', 0.8, 30.0, 4, NULL, 60, 90, 55, 90, 80, 110, 75, 50.0, 12, 'Pedra do Trovão', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/026.png'),
+('Raichu', 'Pokémon Rato', 'Sua cauda descarga eletricidade no ar, causando faíscas que podem incendiar florestas.', 0.8, 30.0, 4, NULL, 60, 90, 55, 90, 80, 110, 75, 50.0, 42, 'Pedra do Trovão', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/026.png'),
 ('Electrode', 'Pokémon Bola', 'Armazena energia elétrica em seu corpo. Explode em resposta a estímulos mínimos.', 1.2, 66.6, 4, NULL, 60, 50, 70, 80, 80, 150, 60, NULL, 9, 'Level 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/101.png'),
 ('Magneton', 'Pokémon Ímã', 'Formado por três Magnemites unidos. Gera ondas de rádio que derrubam aparelhos eletrônicos.', 1.0, 60.0, 4, 17, 50, 60, 95, 120, 70, 70, 60, NULL, 10, 'Level 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/082.png'),
-('Magnezone', 'Pokémon Ímã', 'Controla campos magnéticos para flutuar. Evoluiu quando exposto a um campo magnético especial.', 1.2, 180.0, 4, 17, 70, 70, 115, 130, 90, 60, 30, NULL, 13, 'Trade com Metal Coat', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/462.png'),
-('Electivire', 'Pokémon Trovão', 'Segura seus chifres para liberar eletricidade. Pode derrubar um edifício com uma descarga.', 1.8, 138.6, 4, NULL, 75, 123, 67, 95, 85, 95, 30, 75.0, 11, 'Trade com Electirizer', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/466.png');
+('Magnezone', 'Pokémon Ímã', 'Controla campos magnéticos para flutuar. Evoluiu quando exposto a um campo magnético especial.', 1.2, 180.0, 4, 17, 70, 70, 115, 130, 90, 60, 45, NULL, 46, 'Trade com Metal Coat', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/462.png'),
+('Electivire', 'Pokémon Trovão', 'Segura seus chifres para liberar eletricidade. Pode derrubar um edifício com uma descarga.', 1.8, 138.6, 4, NULL, 75, 123, 67, 95, 85, 95, 30, 75.0, 12, 'Trade com Electirizer', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/466.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções aquáticas (assumindo Staryu = 14, Psyduck = 15, Poliwag = 16)
-('Starmie', 'Pokémon Misterioso', 'Dizem que seu núcleo brilha com as sete cores do arco-íris.', 1.1, 80.0, 3, 11, 60, 75, 85, 100, 85, 115, 60, NULL, 14, 'Pedra da Água', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/121.png'),
-('Golduck', 'Pokémon Pato', 'Nadador habilidoso, frequentemente visto em rios e lagos. Conhecido por seus poderes psíquicos.', 1.7, 76.6, 3, NULL, 80, 82, 78, 95, 80, 85, 75, 50.0, 15, 'Level 33', 33, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/055.png'),
-('Poliwhirl', 'Pokémon Girino', 'Capaz de viver dentro ou fora da água. Quando fora, sua pele permanece úmida com suor.', 1.0, 20.0, 3, NULL, 65, 65, 65, 50, 50, 90, 120, 50.0, 16, 'Level 25', 25, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/061.png'),
-('Poliwrath', 'Pokémon Girino', 'Nadador especialista. Usa todos os seus músculos para golpes poderosos.', 1.3, 54.0, 3, 7, 90, 95, 95, 70, 90, 70, 45, 50.0, 22, 'Pedra da Água', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/062.png'),
-('Politoed', 'Pokémon Sapo', 'Quando Poliwag evolui, o redemoinho em sua barriga se transforma em padrões elegantes.', 1.1, 33.9, 3, NULL, 90, 75, 75, 90, 100, 70, 45, 50.0, 22, 'Trade com King\s Rock', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/186.png');
+('Starmie', 'Pokémon Misterioso', 'Dizem que seu núcleo brilha com as sete cores do arco-íris.', 1.1, 80.0, 3, 11, 60, 75, 85, 100, 85, 115, 60, NULL, 13, 'Pedra da Água', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/121.png'),
+('Golduck', 'Pokémon Pato', 'Nadador habilidoso, frequentemente visto em rios e lagos. Conhecido por seus poderes psíquicos.', 1.7, 76.6, 3, NULL, 80, 82, 78, 95, 80, 85, 75, 50.0, 14, 'Level 33', 33, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/055.png'),
+('Poliwhirl', 'Pokémon Girino', 'Capaz de viver dentro ou fora da água. Quando fora, sua pele permanece úmida com suor.', 1.0, 20.0, 3, NULL, 65, 65, 65, 50, 50, 90, 120, 50.0, 15, 'Level 25', 25, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/061.png'),
+('Poliwrath', 'Pokémon Girino', 'Nadador especialista. Usa todos os seus músculos para golpes poderosos.', 1.3, 54.0, 3, 7, 90, 95, 95, 70, 90, 70, 45, 50.0, 50, 'Pedra da Água', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/062.png'),
+('Politoed', 'Pokémon Sapo', 'Quando Poliwag evolui, o redemoinho em sua barriga se transforma em padrões elegantes.', 1.1, 33.9, 3, NULL, 90, 75, 75, 90, 100, 70, 45, 50.0, 50, 'Trade com King\s Rock', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/186.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções de planta (assumindo Oddish = 17, Bellsprout = 18, Exeggcute = 19, Hoppip = 20)
-('Gloom', 'Pokémon Erva Daninha', 'Secreta um néctar fedorento da boca. O odor pode causar desmaios a 2 km de distância.', 0.8, 8.6, 5, 8, 60, 65, 70, 85, 75, 40, 120, 50.0, 17, 'Level 21', 21, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/044.png'),
-('Vileplume', 'Pokémon Flor', 'Tem as maiores pétalas do mundo. Com cada passo, espalha pólen altamente alergênico.', 1.2, 18.6, 5, 8, 75, 80, 85, 110, 90, 50, 45, 50.0, 23, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/045.png'),
-('Bellossom', 'Pokémon Flor', 'Quando dança, suas pétalas se esfregam e emitem um som agradável e relaxante.', 0.4, 5.8, 5, NULL, 75, 80, 95, 90, 100, 50, 45, 50.0, 23, 'Pedra do Sol', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/182.png'),
-('Weepinbell', 'Pokémon Planta Carnívora', 'Cospe ácido poderoso que derrete até ferro. Usa ganchos para se prender em árvores.', 1.0, 6.4, 5, 8, 65, 90, 50, 85, 45, 55, 120, 50.0, 18, 'Level 21', 21, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/070.png'),
-('Victreebel', 'Pokémon Planta Carnívora', 'Atrai a presa com um aroma doce de mel. Dissolve a vítima em seu interior em apenas um dia.', 1.7, 15.5, 5, 8, 80, 105, 65, 100, 70, 70, 45, 50.0, 25, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/071.png'),
-('Exeggutor', 'Pokémon Coco', 'Dizem que quando uma cabeça cresce muito grande, ela cai e se torna um Exeggcute.', 2.0, 120.0, 5, 11, 95, 95, 85, 125, 75, 55, 45, 50.0, 19, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/103.png'),
-('Skiploom', 'Pokémon Algodão', 'Flutua no ar para ajustar sua temperatura corporal. Abre sua flor em temperaturas acima de 18°C.', 0.6, 1.0, 5, 10, 55, 45, 50, 45, 65, 80, 120, 50.0, 20, 'Level 18', 18, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/188.png'),
-('Jumpluff', 'Pokémon Algodão', 'Flutua com o vento para viajar. Pode controlar sua direção ajustando as pétalas.', 0.8, 3.0, 5, 10, 75, 55, 70, 55, 95, 110, 45, 50.0, 28, 'Level 27', 27, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/189.png');
+('Gloom', 'Pokémon Erva Daninha', 'Secreta um néctar fedorento da boca. O odor pode causar desmaios a 2 km de distância.', 0.8, 8.6, 5, 8, 60, 65, 70, 85, 75, 40, 120, 50.0, 19, 'Level 21', 21, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/044.png'),
+('Vileplume', 'Pokémon Flor', 'Tem as maiores pétalas do mundo. Com cada passo, espalha pólen altamente alergênico.', 1.2, 18.6, 5, 8, 75, 80, 85, 110, 90, 50, 45, 50.0, 53, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/045.png'),
+('Bellossom', 'Pokémon Flor', 'Quando dança, suas pétalas se esfregam e emitem um som agradável e relaxante.', 0.4, 5.8, 5, NULL, 75, 80, 95, 90, 100, 50, 45, 50.0, 53, 'Pedra do Sol', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/182.png'),
+('Weepinbell', 'Pokémon Planta Carnívora', 'Cospe ácido poderoso que derrete até ferro. Usa ganchos para se prender em árvores.', 1.0, 6.4, 5, 8, 65, 90, 50, 85, 45, 55, 120, 50.0, 20, 'Level 21', 21, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/070.png'),
+('Victreebel', 'Pokémon Planta Carnívora', 'Atrai a presa com um aroma doce de mel. Dissolve a vítima em seu interior em apenas um dia.', 1.7, 15.5, 5, 8, 80, 105, 65, 100, 70, 70, 56, 50.0, 25, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/071.png'),
+('Exeggutor', 'Pokémon Coco', 'Dizem que quando uma cabeça cresce muito grande, ela cai e se torna um Exeggcute.', 2.0, 120.0, 5, 11, 95, 95, 85, 125, 75, 55, 45, 50.0, 18, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/103.png'),
+('Skiploom', 'Pokémon Algodão', 'Flutua no ar para ajustar sua temperatura corporal. Abre sua flor em temperaturas acima de 18°C.', 0.6, 1.0, 5, 10, 55, 45, 50, 45, 65, 80, 120, 50.0, 21, 'Level 18', 18, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/188.png'),
+('Jumpluff', 'Pokémon Algodão', 'Flutua com o vento para viajar. Pode controlar sua direção ajustando as pétalas.', 0.8, 3.0, 5, 10, 75, 55, 70, 55, 95, 110, 45, 50.0, 60, 'Level 27', 27, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/189.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evoluções venenosas (assumindo Koffing = 21, Grimer = 22, Nidoran♀ = 23, Nidoran♂ = 24, Zubat = 25, Spinarak = 26)
-('Weezing', 'Pokémon Gás Venenoso', 'Raramente visto na natureza. Dois Koffings podem se fundir para formar um Weezing.', 1.2, 9.5, 8, NULL, 65, 90, 120, 85, 70, 60, 60, 50.0, 21, 'Level 35', 35, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/110.png'),
-('Muk', 'Pokémon Lodo', 'Deixa um rastro fedorento atrás de si. A grama não cresce no local por um ano.', 1.2, 30.0, 8, NULL, 105, 105, 75, 65, 100, 50, 75, 50.0, 22, 'Level 38', 38, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/089.png'),
-('Nidorina', 'Pokémon Venenoso', 'O chifre feminino se desenvolve lentamente. Prefere ataques físicos como arranhões e mordidas.', 0.8, 20.0, 8, NULL, 70, 62, 67, 55, 55, 56, 120, null, 23, 'Level 16', 16, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/030.png'),
-('Nidoqueen', 'Pokémon Broca', 'Seu corpo é coberto por escamas duras. Protege ferozmente seus filhotes.', 1.3, 60.0, 8, 9, 90, 92, 87, 75, 85, 76, 45, 0.0, 29, 'Pedra da Lua', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/031.png'),
-('Nidorino', 'Pokémon Venenoso', 'Tem um temperamento violento. Quando ataca, seu chifre secreta um veneno poderoso.', 0.9, 19.5, 8, NULL, 61, 72, 57, 55, 55, 65, 120, 0.0, 24, 'Level 16', 16, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/033.png'),
-('Nidoking', 'Pokémon Broca', 'Usa seu rabo poderoso para esmagar o inimigo. Quebra até diamante com facilidade.', 1.4, 62.0, 8, 9, 81, 102, 77, 85, 75, 85, 45, null, 31, 'Pedra da Lua', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/034.png'),
-('Golbat', 'Pokémon Morcego', 'Drena o sangue de presas vivas com seus dentes afiados como agulhas. Bebe até ficar satisfeito.', 1.6, 55.0, 8, 10, 75, 80, 70, 65, 75, 90, 90, 50.0, 25, 'Amizade', 22, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/042.png'),
-('Crobat', 'Pokémon Morcego', 'Voam silenciosamente à noite, usando ondas ultrassônicas para identificar presas.', 1.8, 75.0, 8, 10, 85, 90, 80, 70, 80, 130, 90, 50.0, 32, 'Amizade', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/169.png'),
-('Ariados', 'Pokémon Aranha', 'Tece teias com fios finos, mas resistentes, que podem deter até aves em voo.', 1.1, 33.5, 12, 8, 70, 90, 70, 60, 70, 40, 90, 50.0, 26, 'Level 22', 22, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/168.png');
+('Weezing', 'Pokémon Gás Venenoso', 'Raramente visto na natureza. Dois Koffings podem se fundir para formar um Weezing.', 1.2, 9.5, 8, NULL, 65, 90, 120, 85, 70, 60, 60, 50.0, 22, 'Level 35', 35, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/110.png'),
+('Muk', 'Pokémon Lodo', 'Deixa um rastro fedorento atrás de si. A grama não cresce no local por um ano.', 1.2, 30.0, 8, NULL, 105, 105, 75, 65, 100, 50, 75, 50.0, 23, 'Level 38', 38, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/089.png'),
+('Nidorina', 'Pokémon Venenoso', 'O chifre feminino se desenvolve lentamente. Prefere ataques físicos como arranhões e mordidas.', 0.8, 20.0, 8, NULL, 70, 62, 67, 55, 55, 56, 120, null, 24, 'Level 16', 16, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/030.png'),
+('Nidoqueen', 'Pokémon Broca', 'Seu corpo é coberto por escamas duras. Protege ferozmente seus filhotes.', 1.3, 60.0, 8, 9, 90, 92, 87, 75, 85, 76, 45, 0.0, 63, 'Pedra da Lua', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/031.png'),
+('Nidorino', 'Pokémon Venenoso', 'Tem um temperamento violento. Quando ataca, seu chifre secreta um veneno poderoso.', 0.9, 19.5, 8, NULL, 61, 72, 57, 55, 55, 65, 120, 0.0, 25, 'Level 16', 16, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/033.png'),
+('Nidoking', 'Pokémon Broca', 'Usa seu rabo poderoso para esmagar o inimigo. Quebra até diamante com facilidade.', 1.4, 62.0, 8, 9, 81, 102, 77, 85, 75, 85, 45, null, 65, 'Pedra da Lua', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/034.png'),
+('Golbat', 'Pokémon Morcego', 'Drena o sangue de presas vivas com seus dentes afiados como agulhas. Bebe até ficar satisfeito.', 1.6, 55.0, 8, 10, 75, 80, 70, 65, 75, 90, 90, 50.0, 26, 'Amizade', 22, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/042.png'),
+('Crobat', 'Pokémon Morcego', 'Voam silenciosamente à noite, usando ondas ultrassônicas para identificar presas.', 1.8, 75.0, 8, 10, 85, 90, 80, 70, 80, 130, 90, 50.0, 67, 'Amizade', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/169.png'),
+('Ariados', 'Pokémon Aranha', 'Tece teias com fios finos, mas resistentes, que podem deter até aves em voo.', 1.1, 33.5, 12, 8, 70, 90, 70, 60, 70, 40, 90, 50.0, 27, 'Level 22', 22, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/168.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon Psíquicos
-('Kadabra', 'Pokémon Psíquico', 'Dorme enquanto flutua no ar. Seu rabo está conectado a dimensões alternativas.', 1.3, 56.5, 11, NULL, 40, 35, 30, 120, 70, 105, 100, 75.0, 27, 'Troca', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/064.png'),
-('Alakazam', 'Pokémon Psíquico', 'Seu cérebro superdesenvolvido pode realizar cálculos como um supercomputador.', 1.5, 48.0, 11, NULL, 55, 50, 45, 135, 95, 120, 50, 75.0, 69, 'Troca', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/065.png'),
-('Mr. Mime', 'Pokémon Barreira', 'Um mestre da pantomima. Suas barreiras invisíveis são na verdade paredes de ar comprimido.', 1.3, 54.5, 11, 18, 40, 45, 65, 100, 120, 90, 45, 50.0, NULL, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/122.png'),
-('Espeon', 'Pokémon Sol', 'Usa seus poderes psíquicos para prever os movimentos do inimigo e o clima.', 0.9, 26.5, 11, NULL, 65, 65, 60, 130, 95, 110, 45, 12.5, 29, 'Amizade (Dia)', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/196.png');
+('Kadabra', 'Pokémon Psíquico', 'Dorme enquanto flutua no ar. Seu rabo está conectado a dimensões alternativas.', 1.3, 56.5, 11, NULL, 40, 35, 30, 120, 70, 105, 100, 75.0, 28, 'Troca', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/064.png'),
+('Alakazam', 'Pokémon Psíquico', 'Seu cérebro superdesenvolvido pode realizar cálculos como um supercomputador.', 1.5, 48.0, 11, NULL, 55, 50, 45, 135, 95, 120, 50, 75.0, 71, 'Troca', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/065.png'),
+('Espeon', 'Pokémon Sol', 'Usa seus poderes psíquicos para prever os movimentos do inimigo e o clima.', 0.9, 26.5, 11, NULL, 65, 65, 60, 130, 95, 110, 45, 12.5, 30, 'Amizade (Dia)', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/196.png');
+
+
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Pokémon de Fogo
-('Arcanine', 'Pokémon Lendário', 'Um Pokémon lendário na China. Corre elegantemente com passos graciosos.', 1.9, 155.0, 2, NULL, 90, 110, 80, 100, 80, 95, 75, 75.0, 30, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/059.png'),
-('Rapidash', 'Pokémon Cavalo de Fogo', 'Adora correr. Se vir algo mais rápido que ele, perseguirá em velocidade máxima.', 1.7, 95.0, 2, NULL, 65, 100, 70, 80, 80, 105, 60, 50.0, 31, 'Nível', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/078.png'),
+('Arcanine', 'Pokémon Lendário', 'Um Pokémon lendário na China. Corre elegantemente com passos graciosos.', 1.9, 155.0, 2, NULL, 90, 110, 80, 100, 80, 95, 75, 75.0, 31, 'Pedra Evolutiva', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/059.png'),
+('Rapidash', 'Pokémon Cavalo de Fogo', 'Adora correr. Se vir algo mais rápido que ele, perseguirá em velocidade máxima.', 1.7, 95.0, 2, NULL, 65, 100, 70, 80, 80, 105, 60, 50.0, 32, 'Nível', 40, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/078.png'),
 ('Magcargo', 'Pokémon Lava', 'Seu corpo é tão quente que a chuva evapora ao tocar nele. Vive em crateras vulcânicas.', 0.8, 55.0, 2, 9, 60, 50, 120, 90, 80, 30, 75, 50.0, 33, 'Nível', 38, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/219.png');
 
 -- JOHTO
@@ -457,35 +460,35 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- EVOLUÇÕES
 
-('Pidgeotto', 'Pokémon Pássaro', 'Protege ferozmente seu território. Ataca com garras afiadas qualquer intruso.', 1.1, 30.0, 1, 10, 63, 60, 55, 50, 50, 71, 120, 50.0, 77, 'Level 36', 36, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/017.png'),
-('Pidgeot', 'Pokémon Pássaro', 'Voando a velocidades supersônicas, cria ondas de choque com suas asas poderosas.', 1.5, 39.5, 1, 10, 83, 80, 75, 70, 70, 101, 45, 50.0, 89, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/018.png'),
-('Clefairy', 'Pokémon Fada', 'Sua pele macia e delicada faz todos quererem abraçá-lo. Dança sob a luz da lua cheia.', 0.6, 7.5, 18, NULL, 70, 45, 48, 60, 65, 35, 150, 25.0, 78, 'Pedra da Lua', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png'),
-('Clefable', 'Pokémon Fada', 'Extremamente tímido, raramente é visto. Corre quando detecta a presença de pessoas.', 1.3, 40.0, 18, NULL, 95, 70, 73, 95, 90, 60, 25, 25.0, 91, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/036.png'),
-('Dragonair', 'Pokémon Dragão', 'Dizem que controla o clima. Vive em mares e lagos, cercado por uma aura misteriosa.', 4.0, 16.5, 15, NULL, 61, 84, 65, 70, 70, 70, 45, 50.0, 80, 'Level 55', 55, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/148.png'),
-('Dragonite', 'Pokémon Dragão', 'Inteligente e bondoso, voa ao redor do mundo para salvar pessoas em perigo no mar.', 2.2, 210.0, 15, 10, 91, 134, 95, 100, 100, 80, 45, 50.0, 93, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/149.png'),
-('Seadra', 'Pokémon Dragão', 'Espinhos venenosos cobrem seu corpo. Esmaga presas com sua cauda musculosa.', 1.2, 25.0, 3, NULL, 55, 65, 95, 95, 45, 85, 75, 50.0, 81, 'Troca com Dragon Scale', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/117.png'),
-('Kingdra', 'Pokémon Dragão', 'Dorme em cavernas submarinas. Quando desperta, causa redemoinhos gigantes.', 1.8, 152.0, 3, 15, 75, 95, 95, 95, 95, 85, 45, 50.0, 95, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/230.png'),
-('Scizor', 'Pokémon Pinça', 'Seu corpo duro como aço o torna resistente. Usa suas pinças para esmagar inimigos com força incrível.', 1.8, 118.0, 12, 17, 70, 130, 100, 55, 80, 65, 25, 50.0, 83, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/212.png'),
-('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 8, 14, 45, 50, 45, 115, 55, 95, 90, 50.0, 85, 'Troca', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/093.png'),
-('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 8, 14, 60, 65, 60, 130, 75, 110, 45, 50.0, 98, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/094.png'),
-('Primeape', 'Pokémon Porco Macaco', 'Sua raiva nunca acaba. Persegue inimigos até exaustão, mesmo que isso o machuque.', 1.0, 32.0, 7, NULL, 65, 105, 60, 60, 70, 95, 75, 50.0, 86, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/057.png'),
-('Piloswine', 'Pokémon Porco', 'Seus longos pelos o protegem do frio. Ataca com presas afiadas cobertas de gelo.', 1.1, 55.8, 6, 9, 100, 100, 80, 60, 60, 50, 75, 50.0, 87, 'Level up movendo Ancient Power', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/221.png'),
-('Mamoswine', 'Pokémon Porco', 'Surgiu durante a Era do Gelo. Seu pelo grosso o protege do frio extremo.', 2.5, 291.0, 6, 9, 110, 130, 80, 70, 60, 80, 50, 50.0, 101, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/473.png'),
-('Dewgong', 'Pokémon Foca', 'Seu corpo é branco como a neve. Armazena calor sob sua pele para sobreviver em icebergs.', 1.7, 120.0, 3, 6, 90, 70, 80, 70, 95, 70, 75, 50.0, 88, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/087.png'),
+('Pidgeotto', 'Pokémon Pássaro', 'Protege ferozmente seu território. Ataca com garras afiadas qualquer intruso.', 1.1, 30.0, 1, 10, 63, 60, 55, 50, 50, 71, 120, 50.0, 76, 'Level 36', 36, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/017.png'),
+('Pidgeot', 'Pokémon Pássaro', 'Voando a velocidades supersônicas, cria ondas de choque com suas asas poderosas.', 1.5, 39.5, 1, 10, 83, 80, 75, 70, 70, 101, 45, 50.0, 88, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/018.png'),
+('Clefairy', 'Pokémon Fada', 'Sua pele macia e delicada faz todos quererem abraçá-lo. Dança sob a luz da lua cheia.', 0.6, 7.5, 18, NULL, 70, 45, 48, 60, 65, 35, 150, 25.0, 77, 'Pedra da Lua', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png'),
+('Clefable', 'Pokémon Fada', 'Extremamente tímido, raramente é visto. Corre quando detecta a presença de pessoas.', 1.3, 40.0, 18, NULL, 95, 70, 73, 95, 90, 60, 25, 25.0, 90, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/036.png'),
+('Dragonair', 'Pokémon Dragão', 'Dizem que controla o clima. Vive em mares e lagos, cercado por uma aura misteriosa.', 4.0, 16.5, 15, NULL, 61, 84, 65, 70, 70, 70, 45, 50.0, 79, 'Level 55', 55, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/148.png'),
+('Dragonite', 'Pokémon Dragão', 'Inteligente e bondoso, voa ao redor do mundo para salvar pessoas em perigo no mar.', 2.2, 210.0, 15, 10, 91, 134, 95, 100, 100, 80, 45, 50.0, 92, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/149.png'),
+('Seadra', 'Pokémon Dragão', 'Espinhos venenosos cobrem seu corpo. Esmaga presas com sua cauda musculosa.', 1.2, 25.0, 3, NULL, 55, 65, 95, 95, 45, 85, 75, 50.0, 80, 'Troca com Dragon Scale', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/117.png'),
+('Kingdra', 'Pokémon Dragão', 'Dorme em cavernas submarinas. Quando desperta, causa redemoinhos gigantes.', 1.8, 152.0, 3, 15, 75, 95, 95, 95, 95, 85, 45, 50.0, 94, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/230.png'),
+('Scizor', 'Pokémon Pinça', 'Seu corpo duro como aço o torna resistente. Usa suas pinças para esmagar inimigos com força incrível.', 1.8, 118.0, 12, 17, 70, 130, 100, 55, 80, 65, 25, 50.0, 82, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/212.png'),
+('Haunter', 'Pokémon Sombrio', 'Adora assustar pessoas à noite. Se você sentir um arrepio repentino, pode ser um Haunter passando por você.', 1.6, 0.1, 8, 14, 45, 50, 45, 115, 55, 95, 90, 50.0, 84, 'Troca', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/093.png'),
+('Gengar', 'Pokémon Sombrio', 'Sombra sorridente que absorve calor do ambiente. Dizem que traz má sorte a quem o vê.', 1.5, 40.5, 8, 14, 60, 65, 60, 130, 75, 110, 45, 50.0, 97, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/094.png'),
+('Primeape', 'Pokémon Porco Macaco', 'Sua raiva nunca acaba. Persegue inimigos até exaustão, mesmo que isso o machuque.', 1.0, 32.0, 7, NULL, 65, 105, 60, 60, 70, 95, 75, 50.0, 85, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/057.png'),
+('Piloswine', 'Pokémon Porco', 'Seus longos pelos o protegem do frio. Ataca com presas afiadas cobertas de gelo.', 1.1, 55.8, 6, 9, 100, 100, 80, 60, 60, 50, 75, 50.0, 86, 'Level up movendo Ancient Power', NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/221.png'),
+('Mamoswine', 'Pokémon Porco', 'Surgiu durante a Era do Gelo. Seu pelo grosso o protege do frio extremo.', 2.5, 291.0, 6, 9, 110, 130, 80, 70, 60, 80, 50, 50.0, 100, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/473.png'),
+('Dewgong', 'Pokémon Foca', 'Seu corpo é branco como a neve. Armazena calor sob sua pele para sobreviver em icebergs.', 1.7, 120.0, 3, 6, 90, 70, 80, 70, 95, 70, 75, 50.0, 87, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/087.png'),
 ('Gyarados', 'Pokémon Atroz', 'Tem temperamento violento e destrói cidades com hiper-raios. Conhecido como "o demônio dos mares".', 6.5, 235.0, 11, 3, 95, 125, 79, 60, 100, 81, 45, 50.0, 16, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/130.png');
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Metapod', 'Pokémon Casulo', 'Endurece seu casulo para se proteger enquanto se prepara para evoluir. Só consegue usar o movimento "Endure".', 0.7, 9.9, 12, NULL, 50, 20, 55, 25, 25, 30, 120, 50.0, 84, 'Level 10', 10, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/011.png'),
-('Butterfree', 'Pokémon Borboleta', 'Suas asas liberam pólen tóxico ao bater. Adora néctar de flores e pode carregar pequenos objetos.', 1.1, 32.0, 12, 10, 60, 45, 50, 90, 80, 70, 45, 50.0, 105, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png');
+('Metapod', 'Pokémon Casulo', 'Endurece seu casulo para se proteger enquanto se prepara para evoluir. Só consegue usar o movimento "Endure".', 0.7, 9.9, 12, NULL, 50, 20, 55, 25, 25, 30, 120, 50.0, 83, 'Level 10', 10, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/011.png'),
+('Butterfree', 'Pokémon Borboleta', 'Suas asas liberam pólen tóxico ao bater. Adora néctar de flores e pode carregar pequenos objetos.', 1.1, 32.0, 12, 10, 60, 45, 50, 90, 80, 70, 45, 50.0, 104, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png');
 
 
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 12, 8, 45, 25, 50, 25, 25, 35, 120, 50.0, 82, 'Level 10', 10, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/014.png'),
-('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 12, 8, 65, 90, 40, 45, 80, 75, 45, 50.0, 107, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/015.png');
+('Kakuna', 'Pokémon Casulo', 'Quase incapaz de se mover. Endurece seu casulo para se proteger até evoluir.', 0.6, 10.0, 12, 8, 45, 25, 50, 25, 25, 35, 120, 50.0, 81, 'Level 10', 10, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/014.png'),
+('Beedrill', 'Pokémon Abelha', 'Extremamente territorial. Ataca em enxames com ferrões venenosos se seu ninho for ameaçado.', 1.0, 29.5, 12, 8, 65, 90, 40, 45, 80, 75, 45, 50.0, 106, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/015.png');
 
 
 -- Pokémon dos Líderes de Ginásio de Hoenn 
@@ -518,25 +521,25 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
  hpBase, ataqueBase, defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura,
  taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
 -- Evolução de Aron (assumindo que Aron é o ID 109)
-('Lairon', 'Pokémon Ferro', 'Esmaga rochas com seu corpo resistente.', 0.9, 120.0, 17, 13, 60, 90, 140, 50, 50, 40, 90, 50.0, 109, 'Level 42', 42, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/305.png'),
-('Aggron', 'Pokémon Armadura', 'Protege ferozmente seu território.', 2.1, 360.0, 17, 13, 70, 110, 180, 60, 60, 50, 45, 50.0, 110, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/306.png'),
+('Lairon', 'Pokémon Ferro', 'Esmaga rochas com seu corpo resistente.', 0.9, 120.0, 17, 13, 60, 90, 140, 50, 50, 40, 90, 50.0, 108, 'Level 42', 42, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/305.png'),
+('Aggron', 'Pokémon Armadura', 'Protege ferozmente seu território.', 2.1, 360.0, 17, 13, 70, 110, 180, 60, 60, 50, 45, 50.0, 115, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/306.png'),
 
 -- Evolução de Makuhita (assumindo ID 110) e Meditite (ID 111)
-('Hariyama', 'Pokémon Gordura', 'Aplaude antes de atacar para intimidar.', 2.3, 253.8, 7, NULL, 144, 120, 60, 40, 60, 50, 200, 75.0, 110, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/297.png'),
-('Medicham', 'Pokémon Meditação', 'Pode prever movimentos do oponente.', 1.3, 31.5, 7, 11, 60, 60, 75, 60, 75, 80, 90, 50.0, 111, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/308.png'),
+('Hariyama', 'Pokémon Gordura', 'Aplaude antes de atacar para intimidar.', 2.3, 253.8, 7, NULL, 144, 120, 60, 40, 60, 50, 200, 75.0, 109, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/297.png'),
+('Medicham', 'Pokémon Meditação', 'Pode prever movimentos do oponente.', 1.3, 31.5, 7, 11, 60, 60, 75, 60, 75, 80, 90, 50.0, 110, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/308.png'),
 
 -- Evolução de Electrike (assumindo ID 112)
-('Manectric', 'Pokémon Descarga', 'Dispara poderosos raios.', 1.5, 40.2, 4, NULL, 70, 75, 60, 105, 60, 105, 45, 50.0, 112, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/310.png'),
+('Manectric', 'Pokémon Descarga', 'Dispara poderosos raios.', 1.5, 40.2, 4, NULL, 70, 75, 60, 105, 60, 105, 45, 50.0, 111, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/310.png'),
 
 -- Evolução de Slakoth (assumindo ID 113)
-('Vigoroth', 'Pokémon Selvagem', 'Fica agitado se parar de se mover.', 1.4, 46.5, 1, NULL, 80, 80, 80, 55, 55, 90, 120, 50.0, 113, 'Level 36', 36, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/288.png'),
-('Slaking', 'Pokémon Preguiça', 'Só ataca a cada 3 segundos.', 2.0, 130.5, 1, NULL, 150, 160, 100, 95, 65, 100, 45, 50.0, 114, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/289.png'),
+('Vigoroth', 'Pokémon Selvagem', 'Fica agitado se parar de se mover.', 1.4, 46.5, 1, NULL, 80, 80, 80, 55, 55, 90, 120, 50.0, 112, 'Level 36', 36, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/288.png'),
+('Slaking', 'Pokémon Preguiça', 'Só ataca a cada 3 segundos.', 2.0, 130.5, 1, NULL, 150, 160, 100, 95, 65, 100, 45, 50.0, 120, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/289.png'),
 
 -- Evolução de Swablu (assumindo ID 115)
-('Altaria', 'Pokémon Pássaro', 'Voam nas nuvens.', 1.1, 20.6, 15, 10, 75, 70, 90, 70, 105, 80, 45, 50.0, 115, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/334.png'),
+('Altaria', 'Pokémon Pássaro', 'Voam nas nuvens.', 1.1, 20.6, 15, 10, 75, 70, 90, 70, 105, 80, 45, 50.0, 113, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/334.png'),
 
 -- Evolução de Feebas (assumindo ID 116)
-('Milotic', 'Pokémon Terno', 'Escamas mudam de cor sob a luz lunar.', 6.2, 162.0, 3, NULL, 95, 60, 79, 100, 125, 81, 60, 50.0, 116, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/350.png');
+('Milotic', 'Pokémon Terno', 'Escamas mudam de cor sob a luz lunar.', 6.2, 162.0, 3, NULL, 95, 60, 79, 100, 125, 81, 60, 50.0, 114, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/350.png');
 
 
 -- Nosepass (Pokémon original da 3ª geração - Hoenn)
@@ -549,7 +552,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Probopass', 'Pokémon Bússola', 'Controla três unidades chamadas "Mini-Noses" com campos magnéticos.', 1.4, 340.0, 13, 17, 60, 55, 145, 75, 150, 40, 60, 50.0, 117, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/299.png');
+('Probopass', 'Pokémon Bússola', 'Controla três unidades chamadas "Mini-Noses" com campos magnéticos.', 1.4, 340.0, 13, 17, 60, 55, 145, 75, 150, 40, 60, 50.0, 124, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/299.png');
 
 -- Skarmory (Pokémon Aço/Voador - Comum em rotas de Hoenn)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -567,7 +570,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Pelipper', 'Pokémon Ave Aquática', 'Transporta pequenos Pokémon em seu bico. Caça mergulhando na água.', 1.2, 28.0, 3, 10, 60, 50, 100, 95, 70, 65, 45, 50.0, 119, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/279.png');
+('Pelipper', 'Pokémon Ave Aquática', 'Transporta pequenos Pokémon em seu bico. Caça mergulhando na água.', 1.2, 28.0, 3, 10, 60, 50, 100, 95, 70, 65, 45, 50.0, 127, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/279.png');
 
 -- Taillow (Pré-evolução do Swellow)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -579,7 +582,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Swellow', 'Pokémon Andorinha', 'Voam em círculos acima de presas. Atacam com mergulhos precisos a 300km/h.', 0.7, 19.8, 1, 10, 60, 85, 60, 75, 50, 125, 45, 50.0, 120, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/277.png');
+('Swellow', 'Pokémon Andorinha', 'Voam em círculos acima de presas. Atacam com mergulhos precisos a 300km/h.', 0.7, 19.8, 1, 10, 60, 85, 60, 75, 50, 125, 45, 50.0, 129, NULL, NULL, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/277.png');
 
 -- Lunatone (Pokémon Meteorito Lunar - Especialista em ataques especiais)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -609,7 +612,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Sealeo', 'Pokémon Bola', 'Equilibra objetos no nariz para treinar. Vive em icebergs e adora brincar na neve.', 1.1, 87.6, 6, 3, 90, 60, 70, 75, 70, 45, 120, 50.0, 135, 'Level 44', 44, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/364.png');
+('Sealeo', 'Pokémon Bola', 'Equilibra objetos no nariz para treinar. Vive em icebergs e adora brincar na neve.', 1.1, 87.6, 6, 3, 90, 60, 70, 75, 70, 45, 120, 50.0, 134, 'Level 44', 44, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/364.png');
 
 -- Goldeen (ID 136 - pré-evolução do Seaking)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -621,7 +624,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Seaking', 'Pokémon Peixe', 'Usa seu chifre para escavar pedras no leito dos rios. Suas cores vivas mudam no outono.', 1.3, 39.0, 3, NULL, 80, 92, 65, 65, 80, 68, 60, 50.0, 137, 'Nível 33', 33, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/119.png');
+('Seaking', 'Pokémon Peixe', 'Usa seu chifre para escavar pedras no leito dos rios. Suas cores vivas mudam no outono.', 1.3, 39.0, 3, NULL, 80, 92, 65, 65, 80, 68, 60, 50.0, 136, 'Nível 33', 33, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/119.png');
 
 -- Barboach (ID 138 - pré-evolução do Whiscash)
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
@@ -633,7 +636,7 @@ INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTi
 INSERT INTO pokemon (nome, especie, descricao, altura, peso, idTipoPokemon, idTipoPokemon2, hpBase, ataqueBase, 
                     defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase, taxaCaptura, 
                     taxaGenero, preEvolucao, metodoEvolucao, nivelEvolucao, imagemUrl) VALUES
-('Whiscash', 'Pokémon Catfish', 'Dorme enterrado na lama. Lendas dizem que seu bocejo causa terremotos.', 0.9, 23.6, 3, 9, 110, 78, 73, 76, 71, 60, 75, 50.0, 139, 'Nível 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/340.png');
+('Whiscash', 'Pokémon Catfish', 'Dorme enterrado na lama. Lendas dizem que seu bocejo causa terremotos.', 0.9, 23.6, 3, 9, 110, 78, 73, 76, 71, 60, 75, 50.0, 138, 'Nível 30', 30, 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/340.png');
 
 -- Pokémon dos Líderes de Sinnoh --
 
@@ -1117,7 +1120,6 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
 (2, 13, 1), (2, 48, 2);
 
-select * from timePokemon_membros;
 -- Time de Lt. Surge (Elétrico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
 (3, 9, 1), (3, 42, 2), (3, 43, 3);
@@ -1136,7 +1138,8 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 
 -- Time de Blaine (Fogo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(7, 31, 1), (7, 32, 2), (7, 75, 3), (7, 74, 4);
+(7, 31, 1), (7, 32, 2), (7, 73, 3), (7, 74, 4);
+
 
 -- Time de Giovanni (Terra)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
@@ -1146,23 +1149,23 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 
 -- Time de Falkner (Voador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(9, 77, 1), (9, 89, 2);
+(9, 76, 1), (9, 89, 2);
 
 -- Time de Bugsy (Inseto)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(10, 105, 1), (10, 107, 2), (10, 83, 3);
+(10, 104, 1), (10, 106, 2), (10, 82, 3);
 
 -- Time de Whitney (Normal)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(11, 91, 1), (11, 79, 2);
+(11, 91, 1), (11, 78, 2);
 
 -- Time de Morty (Fantasma)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(12, 85, 1), (12, 98, 2), (12, 98, 3), (12, 99, 4);
+(12, 84, 1), (12, 97, 2), (12, 97, 3), (12, 98, 4);
 
 -- Time de Chuck (Lutador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(13, 86, 1), (13, 51, 2);
+(13, 85, 1), (13, 50, 2);
 
 -- Time de Jasmine (Aço)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
@@ -1170,80 +1173,82 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 
 -- Time de Pryce (Gelo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(15, 88, 1), (15, 103, 2), (15, 101, 3);
+(15, 87, 1), (15, 102, 2), (15, 100, 3);
 
 -- Time de Clair (Dragão)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(16, 104, 1), (16, 93, 2), (16, 93, 3), (16, 96, 4);
+(16, 103, 1), (16, 92, 2), (16, 92, 3), (16, 95, 4);
+
 
 -- HOENN
 
 -- Time da Roxanne (Pedra)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
 (17, 1, 1), 
-(17, 125, 2);
+(17, 124, 2);
 
 -- Time de Brawly (Lutador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(18, 110, 1), (18, 111, 2);  -- Makuhita e Meditite
+(18, 110, 1), (18, 109, 2);  -- Makuhita e Meditite
 
 -- Time de Wattson (Elétrico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(19, 10, 1), (19, 9, 2), (19, 45, 3);    -- Electrike e Voltorb
+(19, 10, 1), (19, 9, 2), (19, 47, 3);    -- Electrike e Voltorb
 
 -- Time de Flannery (Fogo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(20, 33, 1), (20, 33, 2), (20, 34, 3);   -- Torkoal e Slugma
+(20, 33, 1), (20, 75, 2), (20, 33, 3);   -- Torkoal e Slugma
 
 -- Time de Norman (Normal)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(21, 122, 1), (21, 121, 2), (21, 122, 3);  -- Slakoth, Vigoroth, Slaking
+(21, 121, 1), (21, 120, 2), (21, 121, 3);  -- Slakoth, Vigoroth, Slaking
 
 -- Time de Winona (Voador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(22, 131, 1), (22, 129, 2), (22, 127, 3), (22, 123, 4);  -- Swablu, Altaria, Skarmory
+(22, 130, 1), (22, 128, 2), (22, 126, 3), (22, 122, 4);  -- Swablu, Altaria, Skarmory
 
 -- Time de Tate & Liza (Psíquico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(23, 132, 1), (23, 133, 2);  -- Lunatone, Solrock, Claydol
+(23, 131, 1), (23, 132, 2);  -- Lunatone, Solrock, Claydol
 
 -- Time de Wallace (Água)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(24, 134, 1), (24, 136, 2), (24, 138, 3), (24, 140, 4), (24, 124, 5);  -- Feebas, Milotic, Luvdisc, Whiscash
+(24, 133, 1), (24, 135, 2), (24, 136, 3), (24, 139, 4), (24, 123, 5);  -- Feebas, Milotic, Luvdisc, Whiscash
+
 
 -- TIMES DE SINNOH
 
 -- Time de Roark (Pedra)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(25, 1, 1), (25, 2, 2), (25, 141, 3);
+(25, 1, 1), (25, 2, 2), (25, 140, 3);
 
 -- Time de Gardenia (Planta)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(26, 146, 1), (26, 143, 2), (26, 55, 3);
+(26, 145, 1), (26, 142, 2), (26, 54, 3);
 
 -- Time de Maylene (Lutador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(27, 111, 1), (27, 153, 2), (27, 149, 3);
+(27, 110, 1), (27, 152, 2), (27, 148, 3);
 
 -- Time de Wake (Água)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(28, 104, 1), (28, 176, 2), (28, 151, 3);
+(28, 103, 1), (28, 175, 2), (28, 150, 3);
 
 -- Time de Fantina (Fantasma)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(29, 178, 1), (29, 99, 2), (29, 180, 3);
+(29, 177, 1), (29, 98, 2), (29, 179, 3);
 
 -- Time de Byron (Aço)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(30, 181, 1), (30, 37, 2), (30, 184, 3);
+(30, 180, 1), (30, 37, 2), (30, 183, 3);
 
 -- Time de Candice (Gelo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(31, 185, 1), (31, 187, 2), (31, 119, 3), (31, 186, 4);
+(31, 184, 1), (31, 186, 2), (31, 118, 3), (31, 185, 4);
 
 -- Time de Volkner (Elétrico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(32, 43, 1), (32, 193, 2), (32, 195, 3), (32, 198, 4);
+(32, 43, 1), (32, 192, 2), (32, 194, 3), (32, 197, 4);
 
 
 -- TIMES DE UNOVA 
@@ -1256,34 +1261,33 @@ INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALU
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
 (35, 161, 1), (35, 159, 2);  -- Cress (Água)
 
-
 -- Time de Lenora (Normal)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(36, 162, 1), (36, 165, 2);
+(36, 162, 1), (36, 164, 2);
 
 -- Time de Burgh (Inseto)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(37, 165, 1), (37, 166, 2), (37, 170, 3);
+(37, 107, 1), (37, 165, 2), (37, 169, 3);
 
 -- Time de Elesa (Elétrico)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(38, 173, 1), (38, 173, 2), (38, 174, 3);
+(38, 172, 1), (38, 172, 2), (38, 173, 3);
 
 -- Time de Clay (Terra)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(39, 200, 1), (39, 203, 2), (39, 206, 3);
+(39, 199, 1), (39, 202, 2), (39, 205, 3);
 
 -- Time de Skyla (Voador)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(40, 208, 1), (40, 211, 2), (40, 213, 3);
+(40, 207, 1), (40, 210, 2), (40, 212, 3);
 
 -- Time de Brycen (Gelo)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(41, 215, 1), (41, 217, 2), (41, 219, 3);
+(41, 214, 1), (41, 216, 2), (41, 218, 3);
 
 -- Time de Drayden (Dragão)
 INSERT INTO timePokemon_membros (idTimePokemon, idPokemon, posicao_no_time) VALUES
-(42, 221, 1), (42, 223, 2), (42, 222, 3);
+(42, 220, 1), (42, 222, 2), (42, 221, 3);
 
 SELECT liderGinasio.nomeLider AS lider, liderGinasio.cidade AS cidade, regiao.nomeRegiao, timePokemon.nomeTime AS nomeT, timePokemon_membros.posicao_no_time AS posicao,
 pokemon.nome AS nomeP, pokemon.imagemUrl AS pokemon, tipoPokemon.tipo AS tipo, tipoPokemon.cor AS tipoCor
@@ -1304,9 +1308,17 @@ SELECT
         WHERE t.idTipoPokemon = 2
         ORDER BY vt.multiplicador DESC, t2.tipo;
         
-        select * from tiposFavoritos;
         
         SELECT tf.idTipoPokemon as idTipo, tf.dataFavoritado, tp.tipo, tp.cor
         FROM tiposFavoritos tf
         JOIN tipoPokemon tp ON tf.idTipoPokemon = tp.idTipoPokemon
         ORDER BY tf.dataFavoritado DESC;
+        
+        SELECT p.nome as pokemon, p.especie as especie, p.descricao as descricao,
+        t.tipo as tipo1, t.cor as cor, t2.tipo as tipo2
+        FROM pokemon p
+        LEFT JOIN tipoPokemon t ON p.idTipoPokemon = t.idTipoPokemon
+        LEFT JOIN tipoPokemon t2 ON p.idTipoPokemon2 = t2.idTipoPokemon;
+        
+        SELECT hpBase, ataqueBase, defesaBase, ataqueEspecial_base, defesaEspecial_base, velocidadeBase from pokemon;
+        

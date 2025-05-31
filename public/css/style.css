@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Gothic+Expanded+One&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -72,11 +73,15 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh; /* Adicionado */
-    width: 100%; /* Adicionado */
+    min-height: 100vh;
+    /* Adicionado */
+    width: 100%;
+    /* Adicionado */
     margin: 0;
-    padding: 20px 0; /* Adicionado um pouco de padding */
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    padding: 20px 0;
+    /* Adicionado um pouco de padding */
+    box-sizing: border-box;
+    /* Garante que o padding não aumente o tamanho total */
 }
 
 .titulo {
@@ -912,7 +917,7 @@ body {
     margin-top: -5rem;
 }
 
-.ginasio-slide{
+.ginasio-slide {
     display: flex;
     justify-content: center;
 }
@@ -1387,14 +1392,14 @@ body {
     height: 250px !important;
 }
 
-.select-style{
+.select-style {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    
+
 }
 
-.tipoPokemon{
+.tipoPokemon {
     width: 13rem;
 }
 
@@ -1410,7 +1415,7 @@ body {
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 1;
     max-width: 200px;
 }
@@ -1428,17 +1433,27 @@ body {
 }
 
 /* Cores específicas para cada KPI */
-#totalFraquezas { color: #e74c3c; }
-#totalResistencias { color: #2ecc71; }
-#totalImunidades { color: #f39c12; }
+#totalFraquezas {
+    color: #e74c3c;
+}
+
+#totalResistencias {
+    color: #2ecc71;
+}
+
+#totalImunidades {
+    color: #f39c12;
+}
 
 
 .pokemons-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os cards quebrem para próxima linha */
-    gap: 15px; /* Espaço entre os cards */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem para próxima linha */
+    gap: 15px;
+    /* Espaço entre os cards */
 }
 
 .pokemon-card {
@@ -1446,33 +1461,39 @@ body {
     flex-direction: column;
     align-items: center;
     width: 150px;
-    min-height: 150px; /* Alterado para min-height */
+    min-height: 150px;
+    /* Alterado para min-height */
     background: white;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    overflow: hidden; /* Impede que o conteúdo vaze */
+    overflow: hidden;
+    /* Impede que o conteúdo vaze */
 }
 
 .pokemon-card img {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin: 5px 0; /* Espaço equilibrado */
+    margin: 5px 0;
+    /* Espaço equilibrado */
 }
 
 .pokemon-card p {
     width: 100%;
     text-align: center;
     margin: 5px 0;
-    padding: 0 5px; /* Padding interno para textos longos */
+    padding: 0 5px;
+    /* Padding interno para textos longos */
     font-weight: 600;
     color: #333;
     font-size: 0.9rem;
-    white-space: nowrap; /* Impede quebra de linha */
+    white-space: nowrap;
+    /* Impede quebra de linha */
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    text-overflow: ellipsis;
+    /* Adiciona "..." se o texto for muito longo */
 }
 
 .tipo-pokemon {
@@ -1482,15 +1503,17 @@ body {
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.7rem; /* Tamanho reduzido */
+    font-size: 0.7rem;
+    /* Tamanho reduzido */
     letter-spacing: 0.5px;
     border-radius: 5px;
-    height: 25px; /* Altura reduzida */
+    height: 25px;
+    /* Altura reduzida */
     width: 100%;
     padding: 0 8px;
     margin: 5px 0;
     box-sizing: border-box;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .todos-tipos-container {
@@ -1513,12 +1536,12 @@ body {
     border-radius: 8px;
     color: white;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tipo-item h3 {
     margin-top: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .tipo-item p {
@@ -1538,7 +1561,7 @@ body {
     border-radius: 8px;
     color: white;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .favorito-btn {
@@ -1572,12 +1595,12 @@ body {
     z-index: 10;
 }
 
-.tipoFavoritados{
+.tipoFavoritados {
     display: flex;
     flex-direction: row;
 }
 
-.informacaoGrafico{
+.informacaoGrafico {
     display: flex;
     border-style: hidden;
     border-radius: 2rem;
@@ -1588,14 +1611,14 @@ body {
     color: rgb(100, 100, 100);
 }
 
-.botaoFechar{
+.botaoFechar {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.botaoFechar button{
+.botaoFechar button {
     font-family: "Press Start 2P", system-ui;
     width: 13rem;
     border-radius: 1rem;
@@ -1607,3 +1630,69 @@ body {
     border-color: #ffb5ac;
 }
 
+.pokemon-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8rem;
+    padding: 20px;
+}
+
+.pokemon-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 20rem;
+
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+}
+
+.pokemon-card img {
+    width: 20rem;
+    height: 15rem;
+}
+
+.pokemon-info {
+    padding: 15px;
+}
+
+.pokemon-name {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.pokemon-species {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 5px;
+}
+
+.type-badge {
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.filter-container {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.select-style {
+    width: 300px;
+    margin: 0 auto;
+}

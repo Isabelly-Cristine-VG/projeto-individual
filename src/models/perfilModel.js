@@ -3,7 +3,7 @@ var database = require("../database/config")
 
 
 function mostrarTiposFavoritos(idUsuario) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT 
             tp.idTipoPokemon,
             tp.tipo as tipoFavorito, 
@@ -23,7 +23,7 @@ function mostrarTiposFavoritos(idUsuario) {
 function informacaoTiposFavoritos(idTipo) {
     console.log(`Buscando informações para o tipo ID: ${idTipo}`);
     
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT 
             t2.tipo AS tipoAtacante,
             vt.multiplicador,
@@ -39,7 +39,7 @@ function informacaoTiposFavoritos(idTipo) {
 }
 
 function contarTiposFavoritos(idTipo) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT 
             SUM(CASE WHEN multiplicador = 2 THEN 1 ELSE 0 END) AS totalFraquezas,
             SUM(CASE WHEN multiplicador = 0.5 THEN 1 ELSE 0 END) AS totalResistencias,

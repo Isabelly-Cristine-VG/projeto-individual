@@ -8,7 +8,7 @@ function buscarTipo() {
 
 function buscarVantagensPorTipo(idTipo) {
     // Remova a validação do ID se já estiver sendo feita no controller
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT 
             t2.tipo AS tipoAtacante,
             vt.multiplicador,
@@ -25,7 +25,7 @@ function buscarVantagensPorTipo(idTipo) {
 }
 
 function contarVantagensPorTipo(idTipo) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT 
             SUM(CASE WHEN multiplicador = 2 THEN 1 ELSE 0 END) AS totalFraquezas,
             SUM(CASE WHEN multiplicador = 0.5 THEN 1 ELSE 0 END) AS totalResistencias,
@@ -40,7 +40,7 @@ function contarVantagensPorTipo(idTipo) {
 
 
 function favoritarTipo(idUsuario, idTipo) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         INSERT INTO tiposFavoritos (idUsuario, idTipoPokemon, dataFavoritado)
         VALUES (${idUsuario}, ${idTipo}, CURRENT_TIMESTAMP)
         ON DUPLICATE KEY UPDATE dataFavoritado = CURRENT_TIMESTAMP;
@@ -49,7 +49,7 @@ function favoritarTipo(idUsuario, idTipo) {
 }
 
 function desfavoritarTipo(idUsuario, idTipo) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         DELETE FROM tiposFavoritos 
         WHERE idUsuario = ${idUsuario} AND idTipoPokemon = ${idTipo};
     `;
@@ -57,7 +57,7 @@ function desfavoritarTipo(idUsuario, idTipo) {
 }
 
 function buscarFavoritos(idUsuario) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT tf.idTipoPokemon as idTipo, tf.dataFavoritado, tp.tipo, tp.cor
         FROM tiposFavoritos tf
         JOIN tipoPokemon tp ON tf.idTipoPokemon = tp.idTipoPokemon

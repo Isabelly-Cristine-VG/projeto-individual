@@ -1,7 +1,7 @@
 var database = require("../database/config")
 
 function buscarGinasios(idRegiao) {
-    const instrucaoSql = `
+    var instrucaoSql = `
         SELECT lg.nomeLider AS lider, lg.cidade, r.nomeRegiao, 
         tm.nomeTime AS nomeT, tpm.posicao_no_time AS posicao,
         p.nome AS nomeP, p.imagemUrl AS pokemon, tp.tipo, tp.cor AS tipoCor, tp2.tipo AS tipo2, tp2.cor AS tipoCor2
