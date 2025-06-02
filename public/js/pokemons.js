@@ -83,11 +83,16 @@ function exibirPokemons(pokemons) {
         }
 
         card.innerHTML = `
-
+                    <button onclick=""
+                    style="background: rgb(246, 89, 89); border: double; border-radius:20px; font-size: 20px; cursor: pointer; color: rgb(255, 229, 208);">
+                     Adicionar ao time
+                    </button>
                     <img src="${imgUrl}" alt="${pokemon.nome}" class="pokemon-image">
                     <div class="pokemon-info">
                         <h3 class="pokemon-name">${pokemon.nome}</h3>
                         <p class="pokemon-species">${pokemon.especie}</p>
+                        
+                        <div class="pokemon-desc"><p style="color: #8e5656; overflow-wrap: break-word;">${pokemon.descricao}</p></div>
                         <div class="pokemon-types">
                             ${tiposHTML}
                         </div>

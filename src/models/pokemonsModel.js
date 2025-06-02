@@ -47,9 +47,19 @@ function buscarPokemonPorTipo(idTipo) {
     return database.executar(instrucaoSql);
 }
 
-// No module.exports, certifique-se que está incluído:
+function criarTime( idUsuario) {
+    var instrucaoSql = `
+        INSERT INTO timePokemon (idUsuario, nomeTime, data_criacao)
+        VALUES (${idUsuario}, ${idPokemon}, CURRENT_TIMESTAMP)
+        ON DUPLICATE KEY UPDATE data_criacao = CURRENT_TIMESTAMP;
+    `;
+    return database.executar(instrucaoSql);
+}
+
+
 module.exports = {
     buscarPokemon,
-    buscarPokemonPorTipo,  // ← Certifique-se que está incluído aqui
-    habilidadesPorPokemon
+    buscarPokemonPorTipo,
+    habilidadesPorPokemon,
+    adicionarAoTime
 };

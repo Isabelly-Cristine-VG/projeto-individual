@@ -12,6 +12,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    word-wrap: break-word;
+    white-space: pre-line; 
+    overflow-wrap: break-word;
 
 }
 
@@ -1635,17 +1638,22 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8rem;
-    padding: 20px;
+    padding: 30px;
 }
 
 .pokemon-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s;
     width: 20rem;
-
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .pokemon-card:hover {
@@ -1673,8 +1681,19 @@ body {
     margin-bottom: 10px;
 }
 
+.pokemon-desc {
+    font-size: 0.9rem;
+    color: #8e5656;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: pre-line; 
+    overflow-wrap: break-word;
+    width: 100%; 
+}
+
 .pokemon-types {
     display: flex;
+    justify-content: center;
     gap: 5px;
 }
 
