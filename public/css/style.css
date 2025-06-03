@@ -152,15 +152,29 @@ body {
 .tipos {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Demonstracao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30%;
 }
 
 .tipos h2 {
     color: rgb(207, 38, 38);
 }
 
-.tipos .tipo-pokemon {
-    width: 4%;
-    margin-bottom: -1%;
+.tipos .tipo-pokemon{
+    width: 6%;
+    height: 6%;
+    margin-bottom: 2%;
+    margin-right: -40%;
 }
 
 .tipo-texto {
@@ -208,7 +222,7 @@ body {
 .tipo-texto3 .fraqueza,
 .tipo-texto3 .vantagem {
     margin-top: -0.9%;
-    width: 4%;
+    width: 2%;
     height: 60%;
 }
 
