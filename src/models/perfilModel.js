@@ -17,7 +17,7 @@ function mostrarTiposFavoritos(idUsuario) {
     `;
 
     return database.executar(instrucaoSql)
-        .then(resultado => resultado || []); // Garante array vazio se undefined
+        .then(resultado => resultado || []);
 }
 
 function informacaoTiposFavoritos(idTipo) {

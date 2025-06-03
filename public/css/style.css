@@ -1264,11 +1264,19 @@ body {
     min-height: calc(100vh - 150px);
     width: 100%;
     min-height: 100vh;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .rottomdex {
     width: 65%;
     margin-top: -8%;
+    margin-left: -10%;
+}
+
+.pikachu {
+    width: 50%;
+    margin-top: -5%;
     margin-left: -10%;
 }
 
@@ -1283,14 +1291,27 @@ body {
     width: 100%;
 }
 
+.lado-esquerdo-login h1 {
+    font-family: "Press Start 2P", system-ui;
+    margin-left: 40%;
+    margin-top: -27%;
+    width: 100%;
+}
+
 .lado-esquerdo h3 {
     font-family: "Press Start 2P", system-ui;
     margin-top: 10%;
     margin-bottom: -12%;
 }
 
+.lado-esquerdo-login h3{
+    font-family: "Press Start 2P", system-ui;
+    margin-top: 20%;
+    margin-bottom: -23%;
+}
+
 /* Lado esquerdo (vermelho) */
-.lado-esquerdo {
+.lado-esquerdo, .lado-esquerdo-login {
     flex: 1;
     /* Ocupa espaço disponível */
     min-width: 300px;
@@ -1300,7 +1321,8 @@ body {
     justify-content: center;
     color: white;
     background-color: rgb(177, 37, 44);
-    ;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Texto no lado esquerdo */
@@ -1640,6 +1662,7 @@ body {
     flex-wrap: wrap;
     gap: 8rem;
     padding: 30px;
+    margin-left: 2rem;
 }
 
 .pokemon-card {
@@ -1652,7 +1675,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s;
-    width: 15rem;
+    width: 18rem;
     overflow-wrap: break-word;
     word-break: break-all;
 }
