@@ -30,7 +30,6 @@ function habilidadesPorPokemon(idPokemon) {
     return database.executar(instrucaoSql);
 }
 
-// pokemonsModel.js
 function buscarPokemonPorTipo(idTipo) {
     var instrucaoSql = `
     SELECT 
@@ -47,19 +46,9 @@ function buscarPokemonPorTipo(idTipo) {
     return database.executar(instrucaoSql);
 }
 
-function criarTime( idUsuario) {
-    var instrucaoSql = `
-        INSERT INTO timePokemon (idUsuario, nomeTime, data_criacao)
-        VALUES (${idUsuario}, ${idPokemon}, CURRENT_TIMESTAMP)
-        ON DUPLICATE KEY UPDATE data_criacao = CURRENT_TIMESTAMP;
-    `;
-    return database.executar(instrucaoSql);
-}
-
 
 module.exports = {
     buscarPokemon,
     buscarPokemonPorTipo,
-    habilidadesPorPokemon,
-    adicionarAoTime
+    habilidadesPorPokemon
 };

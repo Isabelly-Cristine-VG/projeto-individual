@@ -16,7 +16,7 @@ function ginasiosDadosFireRed() {
             if (data.success && data.data && data.data.length > 0) {
                 exibirTimesGinasio(data.data);
             } else {
-                loadingElement.innerHTML = 
+                loadingElement.innerHTML =
                     `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
             }
         })
@@ -26,7 +26,7 @@ function ginasiosDadosFireRed() {
             if (error.details?.sqlError) {
                 errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
             }
-            loadingElement.innerHTML = 
+            loadingElement.innerHTML =
                 `<p class="error">${errorMessage}</p>`;
         });
 }
@@ -49,7 +49,7 @@ function ginasiosDadosHeartGold() {
             if (data.success && data.data && data.data.length > 0) {
                 exibirTimesGinasio(data.data);
             } else {
-                loadingElement.innerHTML = 
+                loadingElement.innerHTML =
                     `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
             }
         })
@@ -59,7 +59,7 @@ function ginasiosDadosHeartGold() {
             if (error.details?.sqlError) {
                 errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
             }
-            loadingElement.innerHTML = 
+            loadingElement.innerHTML =
                 `<p class="error">${errorMessage}</p>`;
         });
 }
@@ -82,7 +82,7 @@ function ginasiosDadosRuby() {
             if (data.success && data.data && data.data.length > 0) {
                 exibirTimesGinasio(data.data);
             } else {
-                loadingElement.innerHTML = 
+                loadingElement.innerHTML =
                     `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
             }
         })
@@ -92,7 +92,7 @@ function ginasiosDadosRuby() {
             if (error.details?.sqlError) {
                 errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
             }
-            loadingElement.innerHTML = 
+            loadingElement.innerHTML =
                 `<p class="error">${errorMessage}</p>`;
         });
 }
@@ -115,7 +115,7 @@ function ginasiosDadosDiamond() {
             if (data.success && data.data && data.data.length > 0) {
                 exibirTimesGinasio(data.data);
             } else {
-                loadingElement.innerHTML = 
+                loadingElement.innerHTML =
                     `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
             }
         })
@@ -125,7 +125,7 @@ function ginasiosDadosDiamond() {
             if (error.details?.sqlError) {
                 errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
             }
-            loadingElement.innerHTML = 
+            loadingElement.innerHTML =
                 `<p class="error">${errorMessage}</p>`;
         });
 }
@@ -148,7 +148,7 @@ function ginasiosDadosBlackWhite() {
             if (data.success && data.data && data.data.length > 0) {
                 exibirTimesGinasio(data.data);
             } else {
-                loadingElement.innerHTML = 
+                loadingElement.innerHTML =
                     `<p class="warning">${data.message || 'Nenhum ginásio encontrado'}</p>`;
             }
         })
@@ -158,7 +158,7 @@ function ginasiosDadosBlackWhite() {
             if (error.details?.sqlError) {
                 errorMessage += `<br><small>Detalhe: ${error.details.sqlError}</small>`;
             }
-            loadingElement.innerHTML = 
+            loadingElement.innerHTML =
                 `<p class="error">${errorMessage}</p>`;
         });
 }
@@ -176,22 +176,36 @@ function exibirTimesGinasio(dados) {
 
     // Construção do HTML
     const lideres = Object.keys(timesPorLider);
-    
+
     for (let i = 0; i < lideres.length; i++) {
         const lider = lideres[i];
         const pokemons = timesPorLider[lider];
         let pokemonsHTML = '';
 
+
+
         for (let j = 0; j < pokemons.length; j++) {
             const p = pokemons[j];
+            console.log('Pokémon:', p);
+
+
+            let tiposHTML = `<span class="type-badge" style="background-color: ${p.tipoCor}">${p.tipo}</span>`;
+
+if (p.tipo2) {
+    tiposHTML += `<span class="type-badge" style="background-color: ${p.tipoCor2}">${p.tipo2}</span>`;
+}
+
+
             pokemonsHTML += `
-                <div class="pokemon-card" style="border-color: ${p.tipoCor}">
-                    <img src="${p.pokemon}" alt="${p.nomeP}">
-                    <p>${p.nomeP}</p>
-                    <span class="tipo-pokemon" style="background-color: ${p.tipoCor}">${p.tipo}</span>
-                     <span class="tipo-pokemon" style="background-color: ${p.tipoCor2}">${p.tipo2}</span>
-                </div>`;
+        <div class="pokemon-card" style="border-color: ${p.tipoCor}">
+            <img src="${p.pokemon}" alt="${p.nomeP}">
+            <p>${p.nomeP}</p>
+            <div class="pokemon-types">
+                ${tiposHTML}
+            </div>
+        </div>`;
         }
+
 
         html += `
             <div class="time-lider">

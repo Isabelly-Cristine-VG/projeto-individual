@@ -7,7 +7,6 @@ function buscarTipo() {
 }
 
 function buscarVantagensPorTipo(idTipo) {
-    // Remova a validação do ID se já estiver sendo feita no controller
     var instrucaoSql = `
         SELECT 
             t2.tipo AS tipoAtacante,

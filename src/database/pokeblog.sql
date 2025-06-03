@@ -103,6 +103,7 @@ CREATE TABLE timePokemon (
     FOREIGN KEY (idLider) REFERENCES liderGinasio(idLider)
 );
 
+
 -- Tabela de membros do time
 CREATE TABLE timePokemon_membros (
     idTimePokemon INT NOT NULL,
@@ -110,7 +111,8 @@ CREATE TABLE timePokemon_membros (
     posicao_no_time TINYINT NOT NULL, -- Posição 1-6 no time
     PRIMARY KEY (idTimePokemon, posicao_no_time), -- Garante que cada posição no time seja única
     FOREIGN KEY (idTimePokemon) REFERENCES timePokemon(idTimePokemon),
-    FOREIGN KEY (idPokemon) REFERENCES pokemon(idPokemon)
+    FOREIGN KEY (idPokemon) REFERENCES pokemon(idPokemon),
+    ADD CONSTRAINT chk_posicao_no_time CHECK (posicao_no_time >= 1 AND posicao_no_time <= 6)
 );
 
 

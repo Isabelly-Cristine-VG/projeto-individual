@@ -57,6 +57,40 @@ function carregarPokemonsPorTipo(idTipo) {
         });
 }
 
+// Função para adicionar Pokémon ao time
+function adicionarAoTime(idPokemon, nomePokemon) {
+    const idUsuario = sessionStorage.getItem('ID_USUARIO');
+    
+    if (!idUsuario) {
+        alert('Você precisa estar logado para adicionar Pokémon ao time!');
+        window.location.href = 'login.html';
+        return;
+    }
+
+    fetch("/perfilUsuario/adicionarPokemonAoTime", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            idUsuario: idUsuario,
+            idPokemon: idPokemon
+        })
+    })
+    .then(res => res.json())
+    .then(resposta => {
+        if (resposta.erro) {
+            alert(resposta.erro);
+        } else {
+            alert(`${nomePokemon} foi adicionado ao seu time com sucesso!`);
+        }
+    })
+    .catch(erro => {
+        console.error("Erro ao adicionar Pokémon:", erro);
+        alert("Ocorreu um erro ao adicionar o Pokémon ao time.");
+    });
+}
+
 function exibirPokemons(pokemons) {
     const container = document.getElementById('pokemonContainer');
     container.innerHTML = '';
@@ -83,16 +117,10 @@ function exibirPokemons(pokemons) {
         }
 
         card.innerHTML = `
-                    <button onclick=""
-                    style="background: rgb(246, 89, 89); border: double; border-radius:20px; font-size: 20px; cursor: pointer; color: rgb(255, 229, 208);">
-                     Adicionar ao time
-                    </button>
                     <img src="${imgUrl}" alt="${pokemon.nome}" class="pokemon-image">
                     <div class="pokemon-info">
                         <h3 class="pokemon-name">${pokemon.nome}</h3>
                         <p class="pokemon-species">${pokemon.especie}</p>
-                        
-                        <div class="pokemon-desc"><p style="color: #8e5656; overflow-wrap: break-word;">${pokemon.descricao}</p></div>
                         <div class="pokemon-types">
                             ${tiposHTML}
                         </div>

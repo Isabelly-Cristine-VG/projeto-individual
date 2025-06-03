@@ -268,3 +268,6 @@ function getChartOptions(titulo) {
         cutout: '60%'
     };
 }
+
+
+

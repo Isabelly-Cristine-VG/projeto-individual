@@ -17,8 +17,6 @@ router.get("/contarTiposFavoritos/:idTipo", function (req, res) {
     perfilController.contarTiposFavoritos(req, res);
 });
 
-router.get("/mostrarTimePokemon/:idUsuario", function (req, res) {
-    perfilController.mostrarTimePokemon(req, res);
-});
 
 module.exports = router;
+
