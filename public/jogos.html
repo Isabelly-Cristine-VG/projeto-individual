@@ -84,7 +84,8 @@
             <h1>Vamos falar um pouco sobre os jogos?</h1>
         </div>
         <div class="texto-inicial">
-            <h3>Pokemon é uma franquia enorme, e por causa disso existem inúmeros jogos e os ditos "spin-offs". Vamos abordar um pouco deles aqui!
+            <h3>Pokemon é uma franquia enorme, e por causa disso existem inúmeros jogos e os ditos "spin-offs". Vamos
+                abordar um pouco deles aqui!
             </h3>
         </div>
 
@@ -141,16 +142,22 @@
                         <h6>Quinta geração dos jogos</h6>
                         <a href="jogos/blackWhite.html"><button type="button" class="info-btn"> Ver mais</button></a>
                     </div>
+                    <!--
+                    <div class="paragrafo-jogo2">
+                        <h1>TCG</h1>
+                        <h3>TCG (Trading Card Game) como o próprio nome diz, é um jogo a partir de cartas colecionáveis. O seu
+                        intuito é </h3>
+                    </div>
 
-                    <!-- Sexta geração -->
-                    <div class="geracao6">
+                     
+                     <div class="geracao6">
                         <img src="assets/31.png" alt="">
                         <h4>Pokemon X & Y</h4>
                         <h6>Sexta geração dos jogos</h6>
                         <a href="jogos/xy.html"><button type="button" class="info-btn"> Ver mais</button></a>
                     </div>
 
-                    <!-- Sétima geração -->
+                   
                     <div class="geracao7">
                         <img src="assets/48.png" alt="">
                         <h4>Pokemon Sun & Moon</h4>
@@ -158,24 +165,20 @@
                         <a href="jogos/sunMoon.html"><button type="button" class="info-btn"> Ver mais</button></a>
                     </div>
 
-                    <!-- Oitava geração -->
+                    
                     <div class="geracao8">
                         <img src="assets/51.png" alt="">
                         <h4>Pokemon Sword & Shield</h4>
                         <h6>oitava geração dos jogos</h6>
                         <a href="jogos/sword.html"><button type="button" class="info-btn"> Ver mais</button></a>
                     </div>
+                    -->
+                   
                 </div>
 
                 <!-- Botões de navegação -->
                 <button class="nav-btn prev" onclick="moveCarousel(-1)">❮</button>
                 <button class="nav-btn next" onclick="moveCarousel(1)">❯</button>
-            </div>
-
-            <div class="paragrafo-jogo2">
-                <h1>TCG</h1>
-                <h3>TCG (Trading Card Game) como o próprio nome diz, é um jogo a partir de cartas colecionáveis. O seu
-                    intuito é </h3>
             </div>
         </div>
     </div>
@@ -217,7 +220,7 @@
         const cards = document.querySelectorAll('.carousel > div');
 
         // Define a largura estimada de cada card (incluindo margens/gaps)
-        const cardWidth = 300; // Valor estimado para a seta percorrer o carousel
+        const cardWidth = 200; // Valor estimado para a seta percorrer o carousel
 
         // Função para mover o carrossel na direção especificada
         function moveCarousel(direction) {
