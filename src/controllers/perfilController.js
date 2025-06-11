@@ -47,7 +47,7 @@ function contarTiposFavoritos(req, res) {
     if (isNaN(idTipo)) {
         return res.status(400).json({ erro: "ID do tipo deve ser um número" });
     }
-
+    // kpis das vantagens e desvantagens
     perfilModel.contarTiposFavoritos(idTipo)
         .then((resultado) => {
             res.json({
