@@ -47,9 +47,9 @@ function buscarPokemonPorTipo(req, res) {
         });
 }
 
-// No final do arquivo, no module.exports, adicione:
+
 module.exports = {
     buscarPokemon,
-    buscarPokemonPorTipo,  // ← Certifique-se que está incluído aqui
+    buscarPokemonPorTipo,  
     habilidadesPorPokemon
 };
