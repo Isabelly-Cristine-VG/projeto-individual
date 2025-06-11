@@ -50,7 +50,6 @@ function contarTiposFavoritos(req, res) {
 
     perfilModel.contarTiposFavoritos(idTipo)
         .then((resultado) => {
-            // Certifique-se que está retornando um objeto com as propriedades corretas
             res.json({
                 totalFraquezas: resultado[0].totalFraquezas || 0,
                 totalResistencias: resultado[0].totalResistencias || 0,
@@ -63,7 +62,6 @@ function contarTiposFavoritos(req, res) {
         });
 }
 
-// Não esqueça de adicionar ao module.exports no final:
 module.exports = {
     mostrarTiposFavoritos,
     informacaoTiposFavoritos,
